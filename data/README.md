@@ -41,3 +41,36 @@ environment could not reach `archive.ics.uci.edu`. They were checked as follows:
 The script verifies a SHA-256 digest of the parsed integer arrays, so either
 route must produce identical contents.
 `sg_hfq.data.load_statlog()` also re-checks the per-class counts on every load.
+
+---
+
+# Hyperspectral benchmarks (`data/hsi/`, not committed)
+
+Run `python scripts/fetch_hsi.py`. It tries the canonical UPV/EHU host
+(<https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes>)
+first, then public GitHub mirrors, and verifies the SHA-256 of every file.
+
+| File | Cube | Labelled pixels | Classes |
+|---|---|---:|---:|
+| `Indian_pines_corrected.mat` + `_gt` | 145 x 145 x 200 (AVIRIS, water-absorption bands removed) | 10,249 | 16 |
+| `PaviaU.mat` + `_gt` | 610 x 340 x 103 (ROSIS) | 42,776 | 9 |
+| `Salinas_corrected.mat` + `_gt` | 512 x 217 x 204 (AVIRIS, water-absorption bands removed) | 54,129 | 16 |
+
+The canonical host was unreachable from the build environment, so the files were
+taken from GitHub mirrors and checked in two ways:
+
+* the Indian Pines cube and ground truth, and the Pavia University and Salinas
+  ground-truth maps, have identical git blob hashes in independent
+  repositories;
+* the cube dimensions and per-class counts of all three scenes match the
+  published values exactly.
+
+# Sentinel-2 crop types, Brittany 2017 (`data/sentinel2/`, not committed)
+
+Run `python scripts/build_sentinel2_breizhcrops.py --cache <dir>`. It needs
+about 3.5 GB of temporary space and takes about 10 minutes. It downloads the
+public BreizhCrops L2A archives
+(<https://breizhcrops.s3.eu-central-1.amazonaws.com>; Russwurm et al., 2020)
+and writes `breizhcrops_l2a_2017_bimonthly.npz` (608,489 parcels x 60
+features) plus a JSON summary. The script documents every preprocessing step;
+see `BENCHMARK.md` for the full dataset description.

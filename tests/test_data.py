@@ -18,7 +18,19 @@ def test_representation_standardises_with_training_stats():
     assert Z.shape == (100, 4) and np.allclose(Z.mean(0), 0) and np.allclose(Z.std(0), 1)
     assert SpectralRepresentation("full36").fit_transform(X).shape == (100, 36)
     with pytest.raises(ValueError):
-        SpectralRepresentation("pca")
+        SpectralRepresentation("ica")
+
+
+def test_pca_representation():
+    rng = np.random.default_rng(1)
+    latent = rng.normal(size=(300, 3))
+    X = latent @ rng.normal(size=(3, 50)) + 0.01 * rng.normal(size=(300, 50))
+    rep = SpectralRepresentation("pca", n_components=5).fit(X)
+    Z = rep.transform(X)
+    assert Z.shape == (300, 5) and rep.n_dims == 5
+    assert rep.explained_variance_ratio_[:3].sum() > 0.99
+    assert np.all(np.diff(Z.var(axis=0)) <= 1e-9)  # ordered by variance, unwhitened
+    assert np.allclose(np.corrcoef(Z[:, :3], rowvar=False), np.eye(3), atol=1e-6)
 
 
 @pytest.mark.skipif(not (DEFAULT_DATA_DIR / "sat.trn").exists(), reason="StatLog data not present")

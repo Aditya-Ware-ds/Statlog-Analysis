@@ -138,7 +138,8 @@ class SGHFQ:
 
     Parameters
     ----------
-    representation : "bandmean4" (paper default) or "full36".
+    representation : Phase 1 representation -- "bandmean4" (paper default for
+        StatLog), "full36"/"standard" or "pca" (with ``n_components``).
     alpha : JM/Wasserstein blend weight in Eq. 7.
     linkage : agglomerative linkage used on the ambiguity graph.
     hierarchy : "spectral" (Phase 3), "semantic", "euclidean", a nested tuple
@@ -149,6 +150,7 @@ class SGHFQ:
     m, max_iter, tol : FCM fuzzifier and stopping rule.
     n_grades : number of confidence grades L.
     q_threshold : grade needed to descend (Eq. 9); 1 disables the gate.
+    cov_estimator : class covariance estimator for JM ("sample" or "ledoit_wolf").
     """
 
     def __init__(
@@ -165,6 +167,8 @@ class SGHFQ:
         q_threshold: int = 2,
         jm_ridge: float = 1e-6,
         random_state: int | None = 0,
+        n_components: int = 10,
+        cov_estimator: str = "sample",
     ):
         if init not in INITS:
             raise ValueError(f"init must be one of {INITS}")
@@ -180,15 +184,17 @@ class SGHFQ:
         self.q_threshold = q_threshold
         self.jm_ridge = jm_ridge
         self.random_state = random_state
+        self.n_components = n_components
+        self.cov_estimator = cov_estimator
 
     # ------------------------------------------------------------------ fit
     def fit(self, X: np.ndarray, y: np.ndarray) -> "SGHFQ":
         y = np.asarray(y)
-        self.rep_ = SpectralRepresentation(self.representation).fit(X)
+        self.rep_ = SpectralRepresentation(self.representation, self.n_components).fit(X)
         Z = self.rep_.transform(X)
         self.classes_ = tuple(int(c) for c in np.unique(y))
         self.relations_: SpectralRelations = spectral_relations(
-            Z, y, self.classes_, alpha=self.alpha, ridge=self.jm_ridge
+            Z, y, self.classes_, alpha=self.alpha, ridge=self.jm_ridge, cov_estimator=self.cov_estimator
         )
         self.hierarchy_, self.linkage_matrix_ = self._build_hierarchy(Z, y)
         rng = np.random.default_rng(self.random_state)

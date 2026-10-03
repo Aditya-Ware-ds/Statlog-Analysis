@@ -15,12 +15,26 @@ import numpy as np
 from scipy.stats import wasserstein_distance
 
 
-def class_statistics(X: np.ndarray, y: np.ndarray, classes) -> tuple[np.ndarray, np.ndarray]:
-    """Per-class mean vectors (C, D) and covariance matrices (C, D, D)."""
+def class_statistics(
+    X: np.ndarray, y: np.ndarray, classes, cov_estimator: str = "sample"
+) -> tuple[np.ndarray, np.ndarray]:
+    """Per-class mean vectors (C, D) and covariance matrices (C, D, D).
+
+    ``cov_estimator="ledoit_wolf"`` shrinks each class covariance towards a
+    scaled identity (Ledoit & Wolf, 2004); this keeps the Bhattacharyya
+    log-determinants finite for classes with fewer samples than dimensions.
+    """
     X = np.asarray(X, dtype=np.float64)
     means = np.stack([X[y == c].mean(axis=0) for c in classes])
-    covs = np.stack([np.atleast_2d(np.cov(X[y == c], rowvar=False)) for c in classes])
-    return means, covs
+    if cov_estimator == "sample":
+        covs = [np.atleast_2d(np.cov(X[y == c], rowvar=False)) for c in classes]
+    elif cov_estimator == "ledoit_wolf":
+        from sklearn.covariance import ledoit_wolf
+
+        covs = [np.atleast_2d(ledoit_wolf(X[y == c])[0]) for c in classes]
+    else:
+        raise ValueError(f"unknown covariance estimator {cov_estimator!r}")
+    return means, np.stack(covs)
 
 
 def _regularise(S: np.ndarray, ridge: float) -> np.ndarray:
@@ -49,9 +63,9 @@ def jeffries_matusita(B: np.ndarray | float) -> np.ndarray | float:
     return 2.0 * (1.0 - np.exp(-np.asarray(B)))
 
 
-def jm_matrix(X, y, classes, ridge: float = 0.0) -> tuple[np.ndarray, np.ndarray]:
+def jm_matrix(X, y, classes, ridge: float = 0.0, cov_estimator: str = "sample") -> tuple[np.ndarray, np.ndarray]:
     """Pairwise Bhattacharyya and JM matrices over ``classes`` (diagonal = 0)."""
-    means, covs = class_statistics(X, y, classes)
+    means, covs = class_statistics(X, y, classes, cov_estimator)
     n = len(classes)
     B = np.zeros((n, n))
     for i in range(n):
@@ -119,7 +133,9 @@ class SpectralRelations:
                 yield i, j
 
 
-def spectral_relations(X, y, classes, alpha: float = 0.5, ridge: float = 0.0) -> SpectralRelations:
-    B, JM = jm_matrix(X, y, classes, ridge=ridge)
+def spectral_relations(
+    X, y, classes, alpha: float = 0.5, ridge: float = 0.0, cov_estimator: str = "sample"
+) -> SpectralRelations:
+    B, JM = jm_matrix(X, y, classes, ridge=ridge, cov_estimator=cov_estimator)
     W = wasserstein_matrix(X, y, classes)
     return SpectralRelations(tuple(classes), B, JM, W, ambiguity_matrix(JM, W, alpha), alpha)

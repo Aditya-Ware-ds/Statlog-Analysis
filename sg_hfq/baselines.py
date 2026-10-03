@@ -29,8 +29,10 @@ class FlatFCM:
     matching against the training labels.
     """
 
-    def __init__(self, representation="bandmean4", init="class", m=2.0, max_iter=1000, tol=1e-6, random_state=0):
+    def __init__(self, representation="bandmean4", init="class", m=2.0, max_iter=1000, tol=1e-6, random_state=0,
+                 n_components=10):
         self.representation = representation
+        self.n_components = n_components
         self.init = init
         self.m = m
         self.max_iter = max_iter
@@ -39,7 +41,7 @@ class FlatFCM:
 
     def fit(self, X, y):
         y = np.asarray(y)
-        self.rep_ = SpectralRepresentation(self.representation).fit(X)
+        self.rep_ = SpectralRepresentation(self.representation, self.n_components).fit(X)
         Z = self.rep_.transform(X)
         self.classes_ = np.unique(y)
         idx = np.searchsorted(self.classes_, y)
@@ -86,25 +88,44 @@ def _svm_with_probabilities(params: dict, random_state: int):
             return CalibratedClassifierCV(SVC(kernel="rbf", **params), method="sigmoid", cv=5, ensemble=False)
 
 
-class SupervisedReference:
-    """Supervised classifier on a Phase 1 representation; selection score = max class probability."""
+#: RBF-SVM grid shared by every dataset (covers the StatLog CV choices and
+#: the 100-200-band hyperspectral cases).
+SVM_GRID = {"C": [1, 10, 100, 1000], "gamma": [0.0001, 0.001, 0.01, 0.1, 1.0]}
 
-    def __init__(self, kind: str, representation: str = "bandmean4", random_state: int = 0):
+
+class SupervisedReference:
+    """Supervised classifier on a Phase 1 representation; selection score = max class probability.
+
+    SVM hyper-parameters are chosen on ``(X_val, y_val)`` when given, otherwise
+    by stratified 5-fold cross-validation on the training data.
+    """
+
+    def __init__(self, kind: str, representation: str = "bandmean4", random_state: int = 0, n_components: int = 10,
+                 svm_grid: dict | None = None):
         self.kind = kind
         self.representation = representation
         self.random_state = random_state
+        self.n_components = n_components
+        self.svm_grid = svm_grid
 
-    def _estimator(self, Z, y):
-        if self.kind == "svm":
+    def _select_svm(self, Z, y, Zv, yv) -> dict:
+        grid = self.svm_grid or SVM_GRID
+        if Zv is None:
             cv = StratifiedKFold(5, shuffle=True, random_state=self.random_state)
-            grid = GridSearchCV(
-                SVC(kernel="rbf"),
-                {"C": [1, 10, 100], "gamma": ["scale", 0.1, 1.0]},
-                cv=cv,
-                n_jobs=-1,
-            ).fit(Z, y)
-            self.best_params_ = grid.best_params_
-            return _svm_with_probabilities(grid.best_params_, self.random_state)
+            return GridSearchCV(SVC(kernel="rbf"), grid, cv=cv, n_jobs=-1).fit(Z, y).best_params_
+        best, best_acc = None, -1.0
+        for C in grid["C"]:
+            for g in grid["gamma"]:
+                acc = (SVC(kernel="rbf", C=C, gamma=g).fit(Z, y).predict(Zv) == yv).mean()
+                if acc > best_acc:
+                    best, best_acc = {"C": C, "gamma": g}, acc
+        self.validation_accuracy_ = best_acc
+        return best
+
+    def _estimator(self, Z, y, Zv=None, yv=None):
+        if self.kind == "svm":
+            self.best_params_ = self._select_svm(Z, y, Zv, yv)
+            return _svm_with_probabilities(self.best_params_, self.random_state)
         if self.kind == "rf":
             self.best_params_ = {"n_estimators": 500}
             return RandomForestClassifier(n_estimators=500, n_jobs=-1, random_state=self.random_state)
@@ -113,12 +134,13 @@ class SupervisedReference:
             return QuadraticDiscriminantAnalysis(reg_param=1e-6)
         raise ValueError(f"unknown supervised reference {self.kind!r}")
 
-    def fit(self, X, y):
-        self.rep_ = SpectralRepresentation(self.representation).fit(X)
+    def fit(self, X, y, X_val=None, y_val=None):
+        self.rep_ = SpectralRepresentation(self.representation, self.n_components).fit(X)
         Z = self.rep_.transform(X)
+        Zv = None if X_val is None else self.rep_.transform(X_val)
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", FutureWarning)
-            self.model_ = self._estimator(Z, y).fit(Z, y)
+            self.model_ = self._estimator(Z, y, Zv, y_val).fit(Z, y)
         return self
 
     def scores(self, X) -> dict[str, np.ndarray]:

@@ -62,3 +62,11 @@ def test_ambiguity_inverts_both_distances():
     assert np.allclose(A, A.T) and np.all(np.diag(A) == 1)
     with pytest.raises(ValueError):
         ambiguity_matrix(JM, W, alpha=1.5)
+
+
+def test_ledoit_wolf_handles_tiny_classes():
+    rng = np.random.default_rng(0)
+    X = np.vstack([rng.normal(0, 1, (4, 10)), rng.normal(3, 1, (200, 10))])
+    y = np.r_[np.zeros(4, int), np.ones(200, int)]
+    B, JM = jm_matrix(X, y, (0, 1), cov_estimator="ledoit_wolf")
+    assert np.isfinite(B).all() and 0 < JM[0, 1] <= 2

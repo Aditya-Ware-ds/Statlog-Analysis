@@ -43,6 +43,8 @@ from .separability import minmax_offdiag
 N_GRADES = 5
 Q_THRESHOLD = 2
 N_RANDOM_INITS = 10
+#: SVM grid used for the StatLog study (5-fold CV on the official training split).
+STATLOG_SVM_GRID = {"C": [1, 10, 100], "gamma": ["scale", 0.1, 1.0]}
 
 #: The two hierarchical variants evaluated throughout: the paper's
 #: graph-seeded FCM (one cluster per child group) and E2 option B
@@ -79,7 +81,7 @@ class Ctx:
         """Test-set scores and chosen hyper-parameters of a supervised reference."""
         key = ("supervised", kind, representation)
         if key not in self.cache:
-            ref = SupervisedReference(kind, representation, random_state=self.seed)
+            ref = SupervisedReference(kind, representation, random_state=self.seed, svm_grid=STATLOG_SVM_GRID)
             ref.fit(self.data.X_train, self.data.y_train)
             self.cache[key] = (ref.scores(self.data.X_test), ref.best_params_)
         return self.cache[key]

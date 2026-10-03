@@ -7,3 +7,7 @@ venv/
 build/
 dist/
 data/statlog/Satellite.rda
+# large benchmark data (re-create with scripts/fetch_hsi.py and scripts/build_sentinel2_breizhcrops.py)
+data/hsi/*.mat
+data/sentinel2/*.npz
+breizhcrops_cache/

@@ -96,17 +96,24 @@ def band_mean(X: np.ndarray) -> np.ndarray:
 class SpectralRepresentation:
     """Phase 1: spectral representation standardised with training statistics.
 
-    ``kind="bandmean4"`` (recommended in the paper) maps the 36 raw features to
-    the 4 band means and then z-scores them (Eq. 1); ``kind="full36"`` z-scores
-    the 36 raw features directly.
+    * ``"bandmean4"`` (the paper's recommendation for StatLog): the 36 raw
+      features are reduced to the 4 band means over the 3x3 window, then
+      z-scored (Eq. 1).
+    * ``"full36"`` / ``"standard"``: every raw feature z-scored.
+    * ``"pca"``: every feature z-scored, then projected on the first
+      ``n_components`` principal axes of the training data (unwhitened). This
+      is the high-dimensional analogue of the band-mean reduction: it keeps the
+      dominant spectral structure while avoiding near-singular class
+      covariances in hundreds of bands.
     """
 
-    KINDS = ("bandmean4", "full36")
+    KINDS = ("bandmean4", "full36", "standard", "pca")
 
-    def __init__(self, kind: str = "bandmean4"):
+    def __init__(self, kind: str = "bandmean4", n_components: int = 10):
         if kind not in self.KINDS:
             raise ValueError(f"unknown representation {kind!r}; choose from {self.KINDS}")
         self.kind = kind
+        self.n_components = n_components
 
     def _project(self, X: np.ndarray) -> np.ndarray:
         X = np.asarray(X, dtype=np.float64)
@@ -117,14 +124,27 @@ class SpectralRepresentation:
         self.mean_ = P.mean(axis=0)
         std = P.std(axis=0)
         self.std_ = np.where(std > 0, std, 1.0)
+        if self.kind == "pca":
+            Z = (P - self.mean_) / self.std_
+            k = min(self.n_components, Z.shape[1], Z.shape[0])
+            _, s, Vt = np.linalg.svd(Z - Z.mean(axis=0), full_matrices=False)
+            # deterministic sign: largest loading of each axis is positive
+            signs = np.sign(Vt[np.arange(k), np.abs(Vt[:k]).argmax(axis=1)])
+            self.components_ = Vt[:k] * signs[:, None]
+            self.explained_variance_ratio_ = (s[:k] ** 2) / (s**2).sum()
         return self
 
     def transform(self, X: np.ndarray) -> np.ndarray:
-        return (self._project(X) - self.mean_) / self.std_
+        Z = (self._project(X) - self.mean_) / self.std_
+        return Z @ self.components_.T if self.kind == "pca" else Z
 
     def fit_transform(self, X: np.ndarray) -> np.ndarray:
         return self.fit(X).transform(X)
 
     @property
     def n_dims(self) -> int:
-        return N_BANDS if self.kind == "bandmean4" else N_FEATURES
+        if self.kind == "bandmean4":
+            return N_BANDS
+        if self.kind == "pca":
+            return len(self.components_)
+        return len(self.mean_)
