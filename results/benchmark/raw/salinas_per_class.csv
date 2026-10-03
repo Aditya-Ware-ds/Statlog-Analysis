@@ -1,0 +1,801 @@
+dataset,seed,method,class,class_name,accuracy
+salinas,0,B1 Flat FCM,1,Brocoli_green_weeds_1,0.9928137092316197
+salinas,0,B1 Flat FCM,2,Brocoli_green_weeds_2,0.6651759093619559
+salinas,0,B1 Flat FCM,3,Fallow,0.5371203599550056
+salinas,0,B1 Flat FCM,4,Fallow_rough_plow,0.9665071770334929
+salinas,0,B1 Flat FCM,5,Fallow_smooth,0.8120331950207469
+salinas,0,B1 Flat FCM,6,Stubble,0.9705304518664047
+salinas,0,B1 Flat FCM,7,Celery,0.9931698230363242
+salinas,0,B1 Flat FCM,8,Grapes_untrained,0.36310756186532583
+salinas,0,B1 Flat FCM,9,Soil_vinyard_develop,0.6448146157979581
+salinas,0,B1 Flat FCM,10,Corn_senesced_green_weeds,0.6081355932203389
+salinas,0,B1 Flat FCM,11,Lettuce_romaine_4wk,0.5550935550935551
+salinas,0,B1 Flat FCM,12,Lettuce_romaine_5wk,0.9919308357348703
+salinas,0,B1 Flat FCM,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,0,B1 Flat FCM,14,Lettuce_romaine_7wk,0.8659043659043659
+salinas,0,B1 Flat FCM,15,Vinyard_untrained,0.4818098440843779
+salinas,0,B1 Flat FCM,16,Vinyard_vertical_trellis,0.6416717885679164
+salinas,0,B2 Flat FCM + max-membership,1,Brocoli_green_weeds_1,0.9928137092316197
+salinas,0,B2 Flat FCM + max-membership,2,Brocoli_green_weeds_2,0.6651759093619559
+salinas,0,B2 Flat FCM + max-membership,3,Fallow,0.5371203599550056
+salinas,0,B2 Flat FCM + max-membership,4,Fallow_rough_plow,0.9665071770334929
+salinas,0,B2 Flat FCM + max-membership,5,Fallow_smooth,0.8120331950207469
+salinas,0,B2 Flat FCM + max-membership,6,Stubble,0.9705304518664047
+salinas,0,B2 Flat FCM + max-membership,7,Celery,0.9931698230363242
+salinas,0,B2 Flat FCM + max-membership,8,Grapes_untrained,0.36310756186532583
+salinas,0,B2 Flat FCM + max-membership,9,Soil_vinyard_develop,0.6448146157979581
+salinas,0,B2 Flat FCM + max-membership,10,Corn_senesced_green_weeds,0.6081355932203389
+salinas,0,B2 Flat FCM + max-membership,11,Lettuce_romaine_4wk,0.5550935550935551
+salinas,0,B2 Flat FCM + max-membership,12,Lettuce_romaine_5wk,0.9919308357348703
+salinas,0,B2 Flat FCM + max-membership,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,0,B2 Flat FCM + max-membership,14,Lettuce_romaine_7wk,0.8659043659043659
+salinas,0,B2 Flat FCM + max-membership,15,Vinyard_untrained,0.4818098440843779
+salinas,0,B2 Flat FCM + max-membership,16,Vinyard_vertical_trellis,0.6416717885679164
+salinas,0,SG-HFQ,1,Brocoli_green_weeds_1,0.9944720840243229
+salinas,0,SG-HFQ,2,Brocoli_green_weeds_2,0.5316040548598688
+salinas,0,SG-HFQ,3,Fallow,0.0
+salinas,0,SG-HFQ,4,Fallow_rough_plow,0.18341307814992025
+salinas,0,SG-HFQ,5,Fallow_smooth,0.0
+salinas,0,SG-HFQ,6,Stubble,0.9918607914678642
+salinas,0,SG-HFQ,7,Celery,0.9832350201800683
+salinas,0,SG-HFQ,8,Grapes_untrained,0.08843537414965986
+salinas,0,SG-HFQ,9,Soil_vinyard_develop,0.999820884828945
+salinas,0,SG-HFQ,10,Corn_senesced_green_weeds,0.004406779661016949
+salinas,0,SG-HFQ,11,Lettuce_romaine_4wk,0.0
+salinas,0,SG-HFQ,12,Lettuce_romaine_5wk,0.4507204610951009
+salinas,0,SG-HFQ,13,Lettuce_romaine_6wk,0.09223300970873786
+salinas,0,SG-HFQ,14,Lettuce_romaine_7wk,0.8877338877338877
+salinas,0,SG-HFQ,15,Vinyard_untrained,0.011311525527361662
+salinas,0,SG-HFQ,16,Vinyard_vertical_trellis,0.8506453595574678
+salinas,0,"B3 HFCM, no gating",1,Brocoli_green_weeds_1,0.9944720840243229
+salinas,0,"B3 HFCM, no gating",2,Brocoli_green_weeds_2,0.5316040548598688
+salinas,0,"B3 HFCM, no gating",3,Fallow,0.0
+salinas,0,"B3 HFCM, no gating",4,Fallow_rough_plow,0.18341307814992025
+salinas,0,"B3 HFCM, no gating",5,Fallow_smooth,0.0
+salinas,0,"B3 HFCM, no gating",6,Stubble,0.9918607914678642
+salinas,0,"B3 HFCM, no gating",7,Celery,0.9832350201800683
+salinas,0,"B3 HFCM, no gating",8,Grapes_untrained,0.08843537414965986
+salinas,0,"B3 HFCM, no gating",9,Soil_vinyard_develop,0.999820884828945
+salinas,0,"B3 HFCM, no gating",10,Corn_senesced_green_weeds,0.004406779661016949
+salinas,0,"B3 HFCM, no gating",11,Lettuce_romaine_4wk,0.0
+salinas,0,"B3 HFCM, no gating",12,Lettuce_romaine_5wk,0.4507204610951009
+salinas,0,"B3 HFCM, no gating",13,Lettuce_romaine_6wk,0.09223300970873786
+salinas,0,"B3 HFCM, no gating",14,Lettuce_romaine_7wk,0.8877338877338877
+salinas,0,"B3 HFCM, no gating",15,Vinyard_untrained,0.011311525527361662
+salinas,0,"B3 HFCM, no gating",16,Vinyard_vertical_trellis,0.8506453595574678
+salinas,0,B4 HFCM + entropy gating,1,Brocoli_green_weeds_1,0.9944720840243229
+salinas,0,B4 HFCM + entropy gating,2,Brocoli_green_weeds_2,0.5316040548598688
+salinas,0,B4 HFCM + entropy gating,3,Fallow,0.0
+salinas,0,B4 HFCM + entropy gating,4,Fallow_rough_plow,0.18341307814992025
+salinas,0,B4 HFCM + entropy gating,5,Fallow_smooth,0.0
+salinas,0,B4 HFCM + entropy gating,6,Stubble,0.9918607914678642
+salinas,0,B4 HFCM + entropy gating,7,Celery,0.9832350201800683
+salinas,0,B4 HFCM + entropy gating,8,Grapes_untrained,0.08843537414965986
+salinas,0,B4 HFCM + entropy gating,9,Soil_vinyard_develop,0.999820884828945
+salinas,0,B4 HFCM + entropy gating,10,Corn_senesced_green_weeds,0.004406779661016949
+salinas,0,B4 HFCM + entropy gating,11,Lettuce_romaine_4wk,0.0
+salinas,0,B4 HFCM + entropy gating,12,Lettuce_romaine_5wk,0.4507204610951009
+salinas,0,B4 HFCM + entropy gating,13,Lettuce_romaine_6wk,0.09223300970873786
+salinas,0,B4 HFCM + entropy gating,14,Lettuce_romaine_7wk,0.8877338877338877
+salinas,0,B4 HFCM + entropy gating,15,Vinyard_untrained,0.011311525527361662
+salinas,0,B4 HFCM + entropy gating,16,Vinyard_vertical_trellis,0.8506453595574678
+salinas,0,SG-HFQ (class-seeded),1,Brocoli_green_weeds_1,0.9944720840243229
+salinas,0,SG-HFQ (class-seeded),2,Brocoli_green_weeds_2,0.562015503875969
+salinas,0,SG-HFQ (class-seeded),3,Fallow,0.18053993250843645
+salinas,0,SG-HFQ (class-seeded),4,Fallow_rough_plow,0.9354066985645934
+salinas,0,SG-HFQ (class-seeded),5,Fallow_smooth,0.9867219917012449
+salinas,0,SG-HFQ (class-seeded),6,Stubble,0.9110300308728599
+salinas,0,SG-HFQ (class-seeded),7,Celery,0.9909965849115182
+salinas,0,SG-HFQ (class-seeded),8,Grapes_untrained,0.39445923296854973
+salinas,0,SG-HFQ (class-seeded),9,Soil_vinyard_develop,0.9867454773419309
+salinas,0,SG-HFQ (class-seeded),10,Corn_senesced_green_weeds,0.6403389830508475
+salinas,0,SG-HFQ (class-seeded),11,Lettuce_romaine_4wk,0.0
+salinas,0,SG-HFQ (class-seeded),12,Lettuce_romaine_5wk,0.9654178674351584
+salinas,0,SG-HFQ (class-seeded),13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,0,SG-HFQ (class-seeded),14,Lettuce_romaine_7wk,0.8513513513513513
+salinas,0,SG-HFQ (class-seeded),15,Vinyard_untrained,0.4486395597676551
+salinas,0,SG-HFQ (class-seeded),16,Vinyard_vertical_trellis,0.32022126613398894
+salinas,0,SVM (RBF),1,Brocoli_green_weeds_1,0.9928137092316197
+salinas,0,SVM (RBF),2,Brocoli_green_weeds_2,0.9961240310077519
+salinas,0,SVM (RBF),3,Fallow,0.9803149606299213
+salinas,0,SVM (RBF),4,Fallow_rough_plow,0.9944178628389154
+salinas,0,SVM (RBF),5,Fallow_smooth,0.9775933609958506
+salinas,0,SVM (RBF),6,Stubble,0.9980353634577603
+salinas,0,SVM (RBF),7,Celery,0.9959639863396461
+salinas,0,SVM (RBF),8,Grapes_untrained,0.8821847579611555
+salinas,0,SVM (RBF),9,Soil_vinyard_develop,0.9973132724341752
+salinas,0,SVM (RBF),10,Corn_senesced_green_weeds,0.9389830508474576
+salinas,0,SVM (RBF),11,Lettuce_romaine_4wk,0.9459459459459459
+salinas,0,SVM (RBF),12,Lettuce_romaine_5wk,0.9959654178674352
+salinas,0,SVM (RBF),13,Lettuce_romaine_6wk,0.9648058252427184
+salinas,0,SVM (RBF),14,Lettuce_romaine_7wk,0.9760914760914761
+salinas,0,SVM (RBF),15,Vinyard_untrained,0.674717211861816
+salinas,0,SVM (RBF),16,Vinyard_vertical_trellis,0.990780577750461
+salinas,0,"SVM (RBF), Phase 1 features",1,Brocoli_green_weeds_1,0.9856274184632393
+salinas,0,"SVM (RBF), Phase 1 features",2,Brocoli_green_weeds_2,0.9946332737030411
+salinas,0,"SVM (RBF), Phase 1 features",3,Fallow,0.9673790776152981
+salinas,0,"SVM (RBF), Phase 1 features",4,Fallow_rough_plow,0.9960127591706539
+salinas,0,"SVM (RBF), Phase 1 features",5,Fallow_smooth,0.9676348547717842
+salinas,0,"SVM (RBF), Phase 1 features",6,Stubble,0.9980353634577603
+salinas,0,"SVM (RBF), Phase 1 features",7,Celery,0.9953430611611301
+salinas,0,"SVM (RBF), Phase 1 features",8,Grapes_untrained,0.8943113477274968
+salinas,0,"SVM (RBF), Phase 1 features",9,Soil_vinyard_develop,0.9971341572631202
+salinas,0,"SVM (RBF), Phase 1 features",10,Corn_senesced_green_weeds,0.9077966101694915
+salinas,0,"SVM (RBF), Phase 1 features",11,Lettuce_romaine_4wk,0.896049896049896
+salinas,0,"SVM (RBF), Phase 1 features",12,Lettuce_romaine_5wk,0.9942363112391931
+salinas,0,"SVM (RBF), Phase 1 features",13,Lettuce_romaine_6wk,0.9696601941747572
+salinas,0,"SVM (RBF), Phase 1 features",14,Lettuce_romaine_7wk,0.9428274428274428
+salinas,0,"SVM (RBF), Phase 1 features",15,Vinyard_untrained,0.5629776826658515
+salinas,0,"SVM (RBF), Phase 1 features",16,Vinyard_vertical_trellis,0.984019668100799
+salinas,0,Random Forest,1,Brocoli_green_weeds_1,0.9911553344389166
+salinas,0,Random Forest,2,Brocoli_green_weeds_2,0.9970184853905785
+salinas,0,Random Forest,3,Fallow,0.9707536557930259
+salinas,0,Random Forest,4,Fallow_rough_plow,0.9904306220095693
+salinas,0,Random Forest,5,Fallow_smooth,0.9813278008298755
+salinas,0,Random Forest,6,Stubble,0.9960707269155207
+salinas,0,Random Forest,7,Celery,0.9931698230363242
+salinas,0,Random Forest,8,Grapes_untrained,0.844424726412304
+salinas,0,Random Forest,9,Soil_vinyard_develop,0.9924771628156905
+salinas,0,Random Forest,10,Corn_senesced_green_weeds,0.8972881355932203
+salinas,0,Random Forest,11,Lettuce_romaine_4wk,0.91995841995842
+salinas,0,Random Forest,12,Lettuce_romaine_5wk,0.9896253602305476
+salinas,0,Random Forest,13,Lettuce_romaine_6wk,0.9696601941747572
+salinas,0,Random Forest,14,Lettuce_romaine_7wk,0.9365904365904366
+salinas,0,Random Forest,15,Vinyard_untrained,0.6360440232344848
+salinas,0,Random Forest,16,Vinyard_vertical_trellis,0.9858635525507068
+salinas,0,"Random Forest, Phase 1 features",1,Brocoli_green_weeds_1,0.9828634604754007
+salinas,0,"Random Forest, Phase 1 features",2,Brocoli_green_weeds_2,0.9952295766249255
+salinas,0,"Random Forest, Phase 1 features",3,Fallow,0.9454443194600675
+salinas,0,"Random Forest, Phase 1 features",4,Fallow_rough_plow,0.9912280701754386
+salinas,0,"Random Forest, Phase 1 features",5,Fallow_smooth,0.9701244813278008
+salinas,0,"Random Forest, Phase 1 features",6,Stubble,0.9985966881841145
+salinas,0,"Random Forest, Phase 1 features",7,Celery,0.9916175100900342
+salinas,0,"Random Forest, Phase 1 features",8,Grapes_untrained,0.852509119589865
+salinas,0,"Random Forest, Phase 1 features",9,Soil_vinyard_develop,0.9955221207236253
+salinas,0,"Random Forest, Phase 1 features",10,Corn_senesced_green_weeds,0.8979661016949153
+salinas,0,"Random Forest, Phase 1 features",11,Lettuce_romaine_4wk,0.8856548856548857
+salinas,0,"Random Forest, Phase 1 features",12,Lettuce_romaine_5wk,0.9936599423631124
+salinas,0,"Random Forest, Phase 1 features",13,Lettuce_romaine_6wk,0.9793689320388349
+salinas,0,"Random Forest, Phase 1 features",14,Lettuce_romaine_7wk,0.9324324324324325
+salinas,0,"Random Forest, Phase 1 features",15,Vinyard_untrained,0.5738306328339957
+salinas,0,"Random Forest, Phase 1 features",16,Vinyard_vertical_trellis,0.9778733866011063
+salinas,1,B1 Flat FCM,1,Brocoli_green_weeds_1,0.992260917634052
+salinas,1,B1 Flat FCM,2,Brocoli_green_weeds_2,0.5679785330948122
+salinas,1,B1 Flat FCM,3,Fallow,0.5483689538807649
+salinas,1,B1 Flat FCM,4,Fallow_rough_plow,0.9752791068580542
+salinas,1,B1 Flat FCM,5,Fallow_smooth,0.8423236514522822
+salinas,1,B1 Flat FCM,6,Stubble,0.9702497895032276
+salinas,1,B1 Flat FCM,7,Celery,0.9941012108040981
+salinas,1,B1 Flat FCM,8,Grapes_untrained,0.3813467415951888
+salinas,1,B1 Flat FCM,9,Soil_vinyard_develop,0.5808704997313272
+salinas,1,B1 Flat FCM,10,Corn_senesced_green_weeds,0.6125423728813559
+salinas,1,B1 Flat FCM,11,Lettuce_romaine_4wk,0.3877338877338877
+salinas,1,B1 Flat FCM,12,Lettuce_romaine_5wk,0.9930835734870317
+salinas,1,B1 Flat FCM,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,1,B1 Flat FCM,14,Lettuce_romaine_7wk,0.8596673596673596
+salinas,1,B1 Flat FCM,15,Vinyard_untrained,0.4532253133598288
+salinas,1,B1 Flat FCM,16,Vinyard_vertical_trellis,0.6232329440688383
+salinas,1,B2 Flat FCM + max-membership,1,Brocoli_green_weeds_1,0.992260917634052
+salinas,1,B2 Flat FCM + max-membership,2,Brocoli_green_weeds_2,0.5679785330948122
+salinas,1,B2 Flat FCM + max-membership,3,Fallow,0.5483689538807649
+salinas,1,B2 Flat FCM + max-membership,4,Fallow_rough_plow,0.9752791068580542
+salinas,1,B2 Flat FCM + max-membership,5,Fallow_smooth,0.8423236514522822
+salinas,1,B2 Flat FCM + max-membership,6,Stubble,0.9702497895032276
+salinas,1,B2 Flat FCM + max-membership,7,Celery,0.9941012108040981
+salinas,1,B2 Flat FCM + max-membership,8,Grapes_untrained,0.3813467415951888
+salinas,1,B2 Flat FCM + max-membership,9,Soil_vinyard_develop,0.5808704997313272
+salinas,1,B2 Flat FCM + max-membership,10,Corn_senesced_green_weeds,0.6125423728813559
+salinas,1,B2 Flat FCM + max-membership,11,Lettuce_romaine_4wk,0.3877338877338877
+salinas,1,B2 Flat FCM + max-membership,12,Lettuce_romaine_5wk,0.9930835734870317
+salinas,1,B2 Flat FCM + max-membership,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,1,B2 Flat FCM + max-membership,14,Lettuce_romaine_7wk,0.8596673596673596
+salinas,1,B2 Flat FCM + max-membership,15,Vinyard_untrained,0.4532253133598288
+salinas,1,B2 Flat FCM + max-membership,16,Vinyard_vertical_trellis,0.6232329440688383
+salinas,1,SG-HFQ,1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,1,SG-HFQ,2,Brocoli_green_weeds_2,0.4654144305307096
+salinas,1,SG-HFQ,3,Fallow,0.0843644544431946
+salinas,1,SG-HFQ,4,Fallow_rough_plow,0.16028708133971292
+salinas,1,SG-HFQ,5,Fallow_smooth,0.0
+salinas,1,SG-HFQ,6,Stubble,0.9918607914678642
+salinas,1,SG-HFQ,7,Celery,0.9832350201800683
+salinas,1,SG-HFQ,8,Grapes_untrained,0.6095829636202307
+salinas,1,SG-HFQ,9,Soil_vinyard_develop,0.9992835393157801
+salinas,1,SG-HFQ,10,Corn_senesced_green_weeds,0.0
+salinas,1,SG-HFQ,11,Lettuce_romaine_4wk,0.0
+salinas,1,SG-HFQ,12,Lettuce_romaine_5wk,0.01440922190201729
+salinas,1,SG-HFQ,13,Lettuce_romaine_6wk,0.0
+salinas,1,SG-HFQ,14,Lettuce_romaine_7wk,0.0
+salinas,1,SG-HFQ,15,Vinyard_untrained,0.003974319779883827
+salinas,1,SG-HFQ,16,Vinyard_vertical_trellis,0.0018438844499078057
+salinas,1,"B3 HFCM, no gating",1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,1,"B3 HFCM, no gating",2,Brocoli_green_weeds_2,0.4654144305307096
+salinas,1,"B3 HFCM, no gating",3,Fallow,0.0843644544431946
+salinas,1,"B3 HFCM, no gating",4,Fallow_rough_plow,0.16028708133971292
+salinas,1,"B3 HFCM, no gating",5,Fallow_smooth,0.0
+salinas,1,"B3 HFCM, no gating",6,Stubble,0.9918607914678642
+salinas,1,"B3 HFCM, no gating",7,Celery,0.9832350201800683
+salinas,1,"B3 HFCM, no gating",8,Grapes_untrained,0.6095829636202307
+salinas,1,"B3 HFCM, no gating",9,Soil_vinyard_develop,0.9992835393157801
+salinas,1,"B3 HFCM, no gating",10,Corn_senesced_green_weeds,0.0
+salinas,1,"B3 HFCM, no gating",11,Lettuce_romaine_4wk,0.0
+salinas,1,"B3 HFCM, no gating",12,Lettuce_romaine_5wk,0.01440922190201729
+salinas,1,"B3 HFCM, no gating",13,Lettuce_romaine_6wk,0.0
+salinas,1,"B3 HFCM, no gating",14,Lettuce_romaine_7wk,0.0
+salinas,1,"B3 HFCM, no gating",15,Vinyard_untrained,0.003974319779883827
+salinas,1,"B3 HFCM, no gating",16,Vinyard_vertical_trellis,0.0018438844499078057
+salinas,1,B4 HFCM + entropy gating,1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,1,B4 HFCM + entropy gating,2,Brocoli_green_weeds_2,0.4654144305307096
+salinas,1,B4 HFCM + entropy gating,3,Fallow,0.0843644544431946
+salinas,1,B4 HFCM + entropy gating,4,Fallow_rough_plow,0.16028708133971292
+salinas,1,B4 HFCM + entropy gating,5,Fallow_smooth,0.0
+salinas,1,B4 HFCM + entropy gating,6,Stubble,0.9918607914678642
+salinas,1,B4 HFCM + entropy gating,7,Celery,0.9832350201800683
+salinas,1,B4 HFCM + entropy gating,8,Grapes_untrained,0.6095829636202307
+salinas,1,B4 HFCM + entropy gating,9,Soil_vinyard_develop,0.9992835393157801
+salinas,1,B4 HFCM + entropy gating,10,Corn_senesced_green_weeds,0.0
+salinas,1,B4 HFCM + entropy gating,11,Lettuce_romaine_4wk,0.0
+salinas,1,B4 HFCM + entropy gating,12,Lettuce_romaine_5wk,0.01440922190201729
+salinas,1,B4 HFCM + entropy gating,13,Lettuce_romaine_6wk,0.0
+salinas,1,B4 HFCM + entropy gating,14,Lettuce_romaine_7wk,0.0
+salinas,1,B4 HFCM + entropy gating,15,Vinyard_untrained,0.003974319779883827
+salinas,1,B4 HFCM + entropy gating,16,Vinyard_vertical_trellis,0.0018438844499078057
+salinas,1,SG-HFQ (class-seeded),1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,1,SG-HFQ (class-seeded),2,Brocoli_green_weeds_2,0.4970184853905784
+salinas,1,SG-HFQ (class-seeded),3,Fallow,0.18841394825646793
+salinas,1,SG-HFQ (class-seeded),4,Fallow_rough_plow,0.9569377990430622
+salinas,1,SG-HFQ (class-seeded),5,Fallow_smooth,0.9854771784232366
+salinas,1,SG-HFQ (class-seeded),6,Stubble,0.9107493685096828
+salinas,1,SG-HFQ (class-seeded),7,Celery,0.9913070475007761
+salinas,1,SG-HFQ (class-seeded),8,Grapes_untrained,0.4751059844227546
+salinas,1,SG-HFQ (class-seeded),9,Soil_vinyard_develop,0.9869245925129858
+salinas,1,SG-HFQ (class-seeded),10,Corn_senesced_green_weeds,0.6552542372881356
+salinas,1,SG-HFQ (class-seeded),11,Lettuce_romaine_4wk,0.0
+salinas,1,SG-HFQ (class-seeded),12,Lettuce_romaine_5wk,0.9579250720461095
+salinas,1,SG-HFQ (class-seeded),13,Lettuce_romaine_6wk,0.9902912621359223
+salinas,1,SG-HFQ (class-seeded),14,Lettuce_romaine_7wk,0.8482328482328483
+salinas,1,SG-HFQ (class-seeded),15,Vinyard_untrained,0.3894833384286151
+salinas,1,SG-HFQ (class-seeded),16,Vinyard_vertical_trellis,0.3079287031346036
+salinas,1,SVM (RBF),1,Brocoli_green_weeds_1,0.9889441680486457
+salinas,1,SVM (RBF),2,Brocoli_green_weeds_2,0.9997018485390579
+salinas,1,SVM (RBF),3,Fallow,0.9797525309336333
+salinas,1,SVM (RBF),4,Fallow_rough_plow,0.9952153110047847
+salinas,1,SVM (RBF),5,Fallow_smooth,0.9829875518672199
+salinas,1,SVM (RBF),6,Stubble,0.9955094021891664
+salinas,1,SVM (RBF),7,Celery,0.9953430611611301
+salinas,1,SVM (RBF),8,Grapes_untrained,0.8881001676032731
+salinas,1,SVM (RBF),9,Soil_vinyard_develop,0.9931936234999105
+salinas,1,SVM (RBF),10,Corn_senesced_green_weeds,0.9477966101694916
+salinas,1,SVM (RBF),11,Lettuce_romaine_4wk,0.9511434511434511
+salinas,1,SVM (RBF),12,Lettuce_romaine_5wk,0.9959654178674352
+salinas,1,SVM (RBF),13,Lettuce_romaine_6wk,0.9866504854368932
+salinas,1,SVM (RBF),14,Lettuce_romaine_7wk,0.9355509355509356
+salinas,1,SVM (RBF),15,Vinyard_untrained,0.6832772852338734
+salinas,1,SVM (RBF),16,Vinyard_vertical_trellis,0.9754148740012293
+salinas,1,"SVM (RBF), Phase 1 features",1,Brocoli_green_weeds_1,0.9834162520729685
+salinas,1,"SVM (RBF), Phase 1 features",2,Brocoli_green_weeds_2,0.9997018485390579
+salinas,1,"SVM (RBF), Phase 1 features",3,Fallow,0.9431946006749157
+salinas,1,"SVM (RBF), Phase 1 features",4,Fallow_rough_plow,0.9952153110047847
+salinas,1,"SVM (RBF), Phase 1 features",5,Fallow_smooth,0.9825726141078838
+salinas,1,"SVM (RBF), Phase 1 features",6,Stubble,0.9960707269155207
+salinas,1,"SVM (RBF), Phase 1 features",7,Celery,0.994722135982614
+salinas,1,"SVM (RBF), Phase 1 features",8,Grapes_untrained,0.8874100364783595
+salinas,1,"SVM (RBF), Phase 1 features",9,Soil_vinyard_develop,0.9937309690130754
+salinas,1,"SVM (RBF), Phase 1 features",10,Corn_senesced_green_weeds,0.9044067796610169
+salinas,1,"SVM (RBF), Phase 1 features",11,Lettuce_romaine_4wk,0.920997920997921
+salinas,1,"SVM (RBF), Phase 1 features",12,Lettuce_romaine_5wk,0.9884726224783862
+salinas,1,"SVM (RBF), Phase 1 features",13,Lettuce_romaine_6wk,0.9842233009708737
+salinas,1,"SVM (RBF), Phase 1 features",14,Lettuce_romaine_7wk,0.9355509355509356
+salinas,1,"SVM (RBF), Phase 1 features",15,Vinyard_untrained,0.6274839498624274
+salinas,1,"SVM (RBF), Phase 1 features",16,Vinyard_vertical_trellis,0.9729563614013522
+salinas,1,Random Forest,1,Brocoli_green_weeds_1,0.996130458817026
+salinas,1,Random Forest,2,Brocoli_green_weeds_2,0.9976147883124628
+salinas,1,Random Forest,3,Fallow,0.9398200224971879
+salinas,1,Random Forest,4,Fallow_rough_plow,0.9968102073365231
+salinas,1,Random Forest,5,Fallow_smooth,0.9809128630705394
+salinas,1,Random Forest,6,Stubble,0.9879315183833848
+salinas,1,Random Forest,7,Celery,0.9941012108040981
+salinas,1,Random Forest,8,Grapes_untrained,0.8766637089618456
+salinas,1,Random Forest,9,Soil_vinyard_develop,0.9908651262761956
+salinas,1,Random Forest,10,Corn_senesced_green_weeds,0.9047457627118644
+salinas,1,Random Forest,11,Lettuce_romaine_4wk,0.9033264033264033
+salinas,1,Random Forest,12,Lettuce_romaine_5wk,0.9798270893371758
+salinas,1,Random Forest,13,Lettuce_romaine_6wk,0.9793689320388349
+salinas,1,Random Forest,14,Lettuce_romaine_7wk,0.9272349272349273
+salinas,1,Random Forest,15,Vinyard_untrained,0.5921736472026903
+salinas,1,Random Forest,16,Vinyard_vertical_trellis,0.9717271051014137
+salinas,1,"Random Forest, Phase 1 features",1,Brocoli_green_weeds_1,0.9889441680486457
+salinas,1,"Random Forest, Phase 1 features",2,Brocoli_green_weeds_2,0.9961240310077519
+salinas,1,"Random Forest, Phase 1 features",3,Fallow,0.9229471316085489
+salinas,1,"Random Forest, Phase 1 features",4,Fallow_rough_plow,0.9960127591706539
+salinas,1,"Random Forest, Phase 1 features",5,Fallow_smooth,0.9817427385892116
+salinas,1,"Random Forest, Phase 1 features",6,Stubble,0.9969127140050519
+salinas,1,"Random Forest, Phase 1 features",7,Celery,0.9925488978578081
+salinas,1,"Random Forest, Phase 1 features",8,Grapes_untrained,0.8532978408754807
+salinas,1,"Random Forest, Phase 1 features",9,Soil_vinyard_develop,0.9914024717893606
+salinas,1,"Random Forest, Phase 1 features",10,Corn_senesced_green_weeds,0.8905084745762711
+salinas,1,"Random Forest, Phase 1 features",11,Lettuce_romaine_4wk,0.8762993762993763
+salinas,1,"Random Forest, Phase 1 features",12,Lettuce_romaine_5wk,0.9919308357348703
+salinas,1,"Random Forest, Phase 1 features",13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,1,"Random Forest, Phase 1 features",14,Lettuce_romaine_7wk,0.9230769230769231
+salinas,1,"Random Forest, Phase 1 features",15,Vinyard_untrained,0.591409354937328
+salinas,1,"Random Forest, Phase 1 features",16,Vinyard_vertical_trellis,0.9600491702519975
+salinas,2,B1 Flat FCM,1,Brocoli_green_weeds_1,0.988391376451078
+salinas,2,B1 Flat FCM,2,Brocoli_green_weeds_2,0.7271914132379249
+salinas,2,B1 Flat FCM,3,Fallow,0.5500562429696289
+salinas,2,B1 Flat FCM,4,Fallow_rough_plow,0.9720893141945773
+salinas,2,B1 Flat FCM,5,Fallow_smooth,0.8360995850622407
+salinas,2,B1 Flat FCM,6,Stubble,0.9702497895032276
+salinas,2,B1 Flat FCM,7,Celery,0.994722135982614
+salinas,2,B1 Flat FCM,8,Grapes_untrained,0.3883466430050281
+salinas,2,B1 Flat FCM,9,Soil_vinyard_develop,0.5563317212967939
+salinas,2,B1 Flat FCM,10,Corn_senesced_green_weeds,0.6220338983050847
+salinas,2,B1 Flat FCM,11,Lettuce_romaine_4wk,0.44282744282744285
+salinas,2,B1 Flat FCM,12,Lettuce_romaine_5wk,0.992507204610951
+salinas,2,B1 Flat FCM,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,2,B1 Flat FCM,14,Lettuce_romaine_7wk,0.8575883575883576
+salinas,2,B1 Flat FCM,15,Vinyard_untrained,0.4426780800978294
+salinas,2,B1 Flat FCM,16,Vinyard_vertical_trellis,0.6564228641671789
+salinas,2,B2 Flat FCM + max-membership,1,Brocoli_green_weeds_1,0.988391376451078
+salinas,2,B2 Flat FCM + max-membership,2,Brocoli_green_weeds_2,0.7271914132379249
+salinas,2,B2 Flat FCM + max-membership,3,Fallow,0.5500562429696289
+salinas,2,B2 Flat FCM + max-membership,4,Fallow_rough_plow,0.9720893141945773
+salinas,2,B2 Flat FCM + max-membership,5,Fallow_smooth,0.8360995850622407
+salinas,2,B2 Flat FCM + max-membership,6,Stubble,0.9702497895032276
+salinas,2,B2 Flat FCM + max-membership,7,Celery,0.994722135982614
+salinas,2,B2 Flat FCM + max-membership,8,Grapes_untrained,0.3883466430050281
+salinas,2,B2 Flat FCM + max-membership,9,Soil_vinyard_develop,0.5563317212967939
+salinas,2,B2 Flat FCM + max-membership,10,Corn_senesced_green_weeds,0.6220338983050847
+salinas,2,B2 Flat FCM + max-membership,11,Lettuce_romaine_4wk,0.44282744282744285
+salinas,2,B2 Flat FCM + max-membership,12,Lettuce_romaine_5wk,0.992507204610951
+salinas,2,B2 Flat FCM + max-membership,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,2,B2 Flat FCM + max-membership,14,Lettuce_romaine_7wk,0.8575883575883576
+salinas,2,B2 Flat FCM + max-membership,15,Vinyard_untrained,0.4426780800978294
+salinas,2,B2 Flat FCM + max-membership,16,Vinyard_vertical_trellis,0.6564228641671789
+salinas,2,SG-HFQ,1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,2,SG-HFQ,2,Brocoli_green_weeds_2,0.5360763267740012
+salinas,2,SG-HFQ,3,Fallow,0.0
+salinas,2,SG-HFQ,4,Fallow_rough_plow,0.13078149920255183
+salinas,2,SG-HFQ,5,Fallow_smooth,0.004564315352697096
+salinas,2,SG-HFQ,6,Stubble,0.9974740387314062
+salinas,2,SG-HFQ,7,Celery,0.999689537410742
+salinas,2,SG-HFQ,8,Grapes_untrained,0.0
+salinas,2,SG-HFQ,9,Soil_vinyard_develop,0.0
+salinas,2,SG-HFQ,10,Corn_senesced_green_weeds,0.0
+salinas,2,SG-HFQ,11,Lettuce_romaine_4wk,0.0
+salinas,2,SG-HFQ,12,Lettuce_romaine_5wk,0.0
+salinas,2,SG-HFQ,13,Lettuce_romaine_6wk,0.0012135922330097086
+salinas,2,SG-HFQ,14,Lettuce_romaine_7wk,0.0
+salinas,2,SG-HFQ,15,Vinyard_untrained,0.0003057169061449098
+salinas,2,SG-HFQ,16,Vinyard_vertical_trellis,0.0
+salinas,2,"B3 HFCM, no gating",1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,2,"B3 HFCM, no gating",2,Brocoli_green_weeds_2,0.5360763267740012
+salinas,2,"B3 HFCM, no gating",3,Fallow,0.0
+salinas,2,"B3 HFCM, no gating",4,Fallow_rough_plow,0.13078149920255183
+salinas,2,"B3 HFCM, no gating",5,Fallow_smooth,0.004564315352697096
+salinas,2,"B3 HFCM, no gating",6,Stubble,0.9974740387314062
+salinas,2,"B3 HFCM, no gating",7,Celery,0.999689537410742
+salinas,2,"B3 HFCM, no gating",8,Grapes_untrained,0.0
+salinas,2,"B3 HFCM, no gating",9,Soil_vinyard_develop,0.0
+salinas,2,"B3 HFCM, no gating",10,Corn_senesced_green_weeds,0.0
+salinas,2,"B3 HFCM, no gating",11,Lettuce_romaine_4wk,0.0
+salinas,2,"B3 HFCM, no gating",12,Lettuce_romaine_5wk,0.0
+salinas,2,"B3 HFCM, no gating",13,Lettuce_romaine_6wk,0.0012135922330097086
+salinas,2,"B3 HFCM, no gating",14,Lettuce_romaine_7wk,0.0
+salinas,2,"B3 HFCM, no gating",15,Vinyard_untrained,0.0003057169061449098
+salinas,2,"B3 HFCM, no gating",16,Vinyard_vertical_trellis,0.0
+salinas,2,B4 HFCM + entropy gating,1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,2,B4 HFCM + entropy gating,2,Brocoli_green_weeds_2,0.5360763267740012
+salinas,2,B4 HFCM + entropy gating,3,Fallow,0.0
+salinas,2,B4 HFCM + entropy gating,4,Fallow_rough_plow,0.13078149920255183
+salinas,2,B4 HFCM + entropy gating,5,Fallow_smooth,0.004564315352697096
+salinas,2,B4 HFCM + entropy gating,6,Stubble,0.9974740387314062
+salinas,2,B4 HFCM + entropy gating,7,Celery,0.999689537410742
+salinas,2,B4 HFCM + entropy gating,8,Grapes_untrained,0.0
+salinas,2,B4 HFCM + entropy gating,9,Soil_vinyard_develop,0.0
+salinas,2,B4 HFCM + entropy gating,10,Corn_senesced_green_weeds,0.0
+salinas,2,B4 HFCM + entropy gating,11,Lettuce_romaine_4wk,0.0
+salinas,2,B4 HFCM + entropy gating,12,Lettuce_romaine_5wk,0.0
+salinas,2,B4 HFCM + entropy gating,13,Lettuce_romaine_6wk,0.0012135922330097086
+salinas,2,B4 HFCM + entropy gating,14,Lettuce_romaine_7wk,0.0
+salinas,2,B4 HFCM + entropy gating,15,Vinyard_untrained,0.0003057169061449098
+salinas,2,B4 HFCM + entropy gating,16,Vinyard_vertical_trellis,0.0
+salinas,2,SG-HFQ (class-seeded),1,Brocoli_green_weeds_1,0.9933665008291874
+salinas,2,SG-HFQ (class-seeded),2,Brocoli_green_weeds_2,0.5661896243291592
+salinas,2,SG-HFQ (class-seeded),3,Fallow,0.5759280089988752
+salinas,2,SG-HFQ (class-seeded),4,Fallow_rough_plow,0.9760765550239234
+salinas,2,SG-HFQ (class-seeded),5,Fallow_smooth,0.8356846473029046
+salinas,2,SG-HFQ (class-seeded),6,Stubble,0.8992422116194219
+salinas,2,SG-HFQ (class-seeded),7,Celery,0.9897547345544861
+salinas,2,SG-HFQ (class-seeded),8,Grapes_untrained,0.3689243813467416
+salinas,2,SG-HFQ (class-seeded),9,Soil_vinyard_develop,0.984416980118216
+salinas,2,SG-HFQ (class-seeded),10,Corn_senesced_green_weeds,0.6491525423728813
+salinas,2,SG-HFQ (class-seeded),11,Lettuce_romaine_4wk,0.0
+salinas,2,SG-HFQ (class-seeded),12,Lettuce_romaine_5wk,0.9677233429394813
+salinas,2,SG-HFQ (class-seeded),13,Lettuce_romaine_6wk,0.9781553398058253
+salinas,2,SG-HFQ (class-seeded),14,Lettuce_romaine_7wk,0.8596673596673596
+salinas,2,SG-HFQ (class-seeded),15,Vinyard_untrained,0.43106083766432285
+salinas,2,SG-HFQ (class-seeded),16,Vinyard_vertical_trellis,0.6035648432698217
+salinas,2,SVM (RBF),1,Brocoli_green_weeds_1,0.9894969596462134
+salinas,2,SVM (RBF),2,Brocoli_green_weeds_2,1.0
+salinas,2,SVM (RBF),3,Fallow,0.9836895388076491
+salinas,2,SVM (RBF),4,Fallow_rough_plow,0.9784688995215312
+salinas,2,SVM (RBF),5,Fallow_smooth,0.9912863070539419
+salinas,2,SVM (RBF),6,Stubble,0.9963513892786977
+salinas,2,SVM (RBF),7,Celery,0.9981372244644521
+salinas,2,SVM (RBF),8,Grapes_untrained,0.9091984619934931
+salinas,2,SVM (RBF),9,Soil_vinyard_develop,0.9937309690130754
+salinas,2,SVM (RBF),10,Corn_senesced_green_weeds,0.9623728813559322
+salinas,2,SVM (RBF),11,Lettuce_romaine_4wk,0.972972972972973
+salinas,2,SVM (RBF),12,Lettuce_romaine_5wk,0.9982708933717579
+salinas,2,SVM (RBF),13,Lettuce_romaine_6wk,0.9927184466019418
+salinas,2,SVM (RBF),14,Lettuce_romaine_7wk,0.9293139293139293
+salinas,2,SVM (RBF),15,Vinyard_untrained,0.6556099052277591
+salinas,2,SVM (RBF),16,Vinyard_vertical_trellis,0.9846342962507683
+salinas,2,"SVM (RBF), Phase 1 features",1,Brocoli_green_weeds_1,0.9856274184632393
+salinas,2,"SVM (RBF), Phase 1 features",2,Brocoli_green_weeds_2,1.0
+salinas,2,"SVM (RBF), Phase 1 features",3,Fallow,0.96962879640045
+salinas,2,"SVM (RBF), Phase 1 features",4,Fallow_rough_plow,0.9824561403508771
+salinas,2,"SVM (RBF), Phase 1 features",5,Fallow_smooth,0.9867219917012449
+salinas,2,"SVM (RBF), Phase 1 features",6,Stubble,0.9963513892786977
+salinas,2,"SVM (RBF), Phase 1 features",7,Celery,0.99689537410742
+salinas,2,"SVM (RBF), Phase 1 features",8,Grapes_untrained,0.8984521344769792
+salinas,2,"SVM (RBF), Phase 1 features",9,Soil_vinyard_develop,0.9949847752104604
+salinas,2,"SVM (RBF), Phase 1 features",10,Corn_senesced_green_weeds,0.9261016949152543
+salinas,2,"SVM (RBF), Phase 1 features",11,Lettuce_romaine_4wk,0.9459459459459459
+salinas,2,"SVM (RBF), Phase 1 features",12,Lettuce_romaine_5wk,0.9953890489913545
+salinas,2,"SVM (RBF), Phase 1 features",13,Lettuce_romaine_6wk,0.9878640776699029
+salinas,2,"SVM (RBF), Phase 1 features",14,Lettuce_romaine_7wk,0.9355509355509356
+salinas,2,"SVM (RBF), Phase 1 features",15,Vinyard_untrained,0.6004280036686028
+salinas,2,"SVM (RBF), Phase 1 features",16,Vinyard_vertical_trellis,0.9821757836508912
+salinas,2,Random Forest,1,Brocoli_green_weeds_1,0.9906025428413489
+salinas,2,Random Forest,2,Brocoli_green_weeds_2,1.0
+salinas,2,Random Forest,3,Fallow,0.9741282339707537
+salinas,2,Random Forest,4,Fallow_rough_plow,0.9912280701754386
+salinas,2,Random Forest,5,Fallow_smooth,0.9759336099585062
+salinas,2,Random Forest,6,Stubble,0.9960707269155207
+salinas,2,Random Forest,7,Celery,0.9916175100900342
+salinas,2,Random Forest,8,Grapes_untrained,0.8637483979098886
+salinas,2,Random Forest,9,Soil_vinyard_develop,0.9896113200788107
+salinas,2,Random Forest,10,Corn_senesced_green_weeds,0.9230508474576271
+salinas,2,Random Forest,11,Lettuce_romaine_4wk,0.9563409563409564
+salinas,2,Random Forest,12,Lettuce_romaine_5wk,0.9786743515850144
+salinas,2,Random Forest,13,Lettuce_romaine_6wk,0.9902912621359223
+salinas,2,Random Forest,14,Lettuce_romaine_7wk,0.9064449064449065
+salinas,2,Random Forest,15,Vinyard_untrained,0.6001222867624579
+salinas,2,Random Forest,16,Vinyard_vertical_trellis,0.9766441303011678
+salinas,2,"Random Forest, Phase 1 features",1,Brocoli_green_weeds_1,0.9718076285240465
+salinas,2,"Random Forest, Phase 1 features",2,Brocoli_green_weeds_2,0.9994036970781157
+salinas,2,"Random Forest, Phase 1 features",3,Fallow,0.9600674915635545
+salinas,2,"Random Forest, Phase 1 features",4,Fallow_rough_plow,0.9872408293460925
+salinas,2,"Random Forest, Phase 1 features",5,Fallow_smooth,0.9825726141078838
+salinas,2,"Random Forest, Phase 1 features",6,Stubble,0.9977547010945832
+salinas,2,"Random Forest, Phase 1 features",7,Celery,0.9928593604470661
+salinas,2,"Random Forest, Phase 1 features",8,Grapes_untrained,0.8538893818396924
+salinas,2,"Random Forest, Phase 1 features",9,Soil_vinyard_develop,0.9928353931578004
+salinas,2,"Random Forest, Phase 1 features",10,Corn_senesced_green_weeds,0.9027118644067796
+salinas,2,"Random Forest, Phase 1 features",11,Lettuce_romaine_4wk,0.9334719334719335
+salinas,2,"Random Forest, Phase 1 features",12,Lettuce_romaine_5wk,0.9867435158501441
+salinas,2,"Random Forest, Phase 1 features",13,Lettuce_romaine_6wk,0.9927184466019418
+salinas,2,"Random Forest, Phase 1 features",14,Lettuce_romaine_7wk,0.9085239085239085
+salinas,2,"Random Forest, Phase 1 features",15,Vinyard_untrained,0.5943136655457046
+salinas,2,"Random Forest, Phase 1 features",16,Vinyard_vertical_trellis,0.9637369391518131
+salinas,3,B1 Flat FCM,1,Brocoli_green_weeds_1,0.9894969596462134
+salinas,3,B1 Flat FCM,2,Brocoli_green_weeds_2,0.7030411449016101
+salinas,3,B1 Flat FCM,3,Fallow,0.5506186726659168
+salinas,3,B1 Flat FCM,4,Fallow_rough_plow,0.9633173843700159
+salinas,3,B1 Flat FCM,5,Fallow_smooth,0.8315352697095436
+salinas,3,B1 Flat FCM,6,Stubble,0.9733370754981757
+salinas,3,B1 Flat FCM,7,Celery,0.9934802856255821
+salinas,3,B1 Flat FCM,8,Grapes_untrained,0.3663610371684906
+salinas,3,B1 Flat FCM,9,Soil_vinyard_develop,0.5217624932831811
+salinas,3,B1 Flat FCM,10,Corn_senesced_green_weeds,0.6189830508474576
+salinas,3,B1 Flat FCM,11,Lettuce_romaine_4wk,0.27546777546777546
+salinas,3,B1 Flat FCM,12,Lettuce_romaine_5wk,0.9919308357348703
+salinas,3,B1 Flat FCM,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,3,B1 Flat FCM,14,Lettuce_romaine_7wk,0.8700623700623701
+salinas,3,B1 Flat FCM,15,Vinyard_untrained,0.4894527667380006
+salinas,3,B1 Flat FCM,16,Vinyard_vertical_trellis,0.6797787338660111
+salinas,3,B2 Flat FCM + max-membership,1,Brocoli_green_weeds_1,0.9894969596462134
+salinas,3,B2 Flat FCM + max-membership,2,Brocoli_green_weeds_2,0.7030411449016101
+salinas,3,B2 Flat FCM + max-membership,3,Fallow,0.5506186726659168
+salinas,3,B2 Flat FCM + max-membership,4,Fallow_rough_plow,0.9633173843700159
+salinas,3,B2 Flat FCM + max-membership,5,Fallow_smooth,0.8315352697095436
+salinas,3,B2 Flat FCM + max-membership,6,Stubble,0.9733370754981757
+salinas,3,B2 Flat FCM + max-membership,7,Celery,0.9934802856255821
+salinas,3,B2 Flat FCM + max-membership,8,Grapes_untrained,0.3663610371684906
+salinas,3,B2 Flat FCM + max-membership,9,Soil_vinyard_develop,0.5217624932831811
+salinas,3,B2 Flat FCM + max-membership,10,Corn_senesced_green_weeds,0.6189830508474576
+salinas,3,B2 Flat FCM + max-membership,11,Lettuce_romaine_4wk,0.27546777546777546
+salinas,3,B2 Flat FCM + max-membership,12,Lettuce_romaine_5wk,0.9919308357348703
+salinas,3,B2 Flat FCM + max-membership,13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,3,B2 Flat FCM + max-membership,14,Lettuce_romaine_7wk,0.8700623700623701
+salinas,3,B2 Flat FCM + max-membership,15,Vinyard_untrained,0.4894527667380006
+salinas,3,B2 Flat FCM + max-membership,16,Vinyard_vertical_trellis,0.6797787338660111
+salinas,3,SG-HFQ,1,Brocoli_green_weeds_1,0.9939192924267551
+salinas,3,SG-HFQ,2,Brocoli_green_weeds_2,0.5882528324388789
+salinas,3,SG-HFQ,3,Fallow,0.0
+salinas,3,SG-HFQ,4,Fallow_rough_plow,0.1674641148325359
+salinas,3,SG-HFQ,5,Fallow_smooth,0.0
+salinas,3,SG-HFQ,6,Stubble,0.9915801291046871
+salinas,3,SG-HFQ,7,Celery,0.9838559453585843
+salinas,3,SG-HFQ,8,Grapes_untrained,0.0875480627033422
+salinas,3,SG-HFQ,9,Soil_vinyard_develop,0.8002865842736879
+salinas,3,SG-HFQ,10,Corn_senesced_green_weeds,0.00576271186440678
+salinas,3,SG-HFQ,11,Lettuce_romaine_4wk,0.8607068607068608
+salinas,3,SG-HFQ,12,Lettuce_romaine_5wk,0.0
+salinas,3,SG-HFQ,13,Lettuce_romaine_6wk,0.0
+salinas,3,SG-HFQ,14,Lettuce_romaine_7wk,0.8887733887733887
+salinas,3,SG-HFQ,15,Vinyard_untrained,0.00840721491898502
+salinas,3,SG-HFQ,16,Vinyard_vertical_trellis,0.8488014751075599
+salinas,3,"B3 HFCM, no gating",1,Brocoli_green_weeds_1,0.9939192924267551
+salinas,3,"B3 HFCM, no gating",2,Brocoli_green_weeds_2,0.5882528324388789
+salinas,3,"B3 HFCM, no gating",3,Fallow,0.0
+salinas,3,"B3 HFCM, no gating",4,Fallow_rough_plow,0.1674641148325359
+salinas,3,"B3 HFCM, no gating",5,Fallow_smooth,0.0
+salinas,3,"B3 HFCM, no gating",6,Stubble,0.9915801291046871
+salinas,3,"B3 HFCM, no gating",7,Celery,0.9838559453585843
+salinas,3,"B3 HFCM, no gating",8,Grapes_untrained,0.0875480627033422
+salinas,3,"B3 HFCM, no gating",9,Soil_vinyard_develop,0.8002865842736879
+salinas,3,"B3 HFCM, no gating",10,Corn_senesced_green_weeds,0.00576271186440678
+salinas,3,"B3 HFCM, no gating",11,Lettuce_romaine_4wk,0.8607068607068608
+salinas,3,"B3 HFCM, no gating",12,Lettuce_romaine_5wk,0.0
+salinas,3,"B3 HFCM, no gating",13,Lettuce_romaine_6wk,0.0
+salinas,3,"B3 HFCM, no gating",14,Lettuce_romaine_7wk,0.8887733887733887
+salinas,3,"B3 HFCM, no gating",15,Vinyard_untrained,0.00840721491898502
+salinas,3,"B3 HFCM, no gating",16,Vinyard_vertical_trellis,0.8488014751075599
+salinas,3,B4 HFCM + entropy gating,1,Brocoli_green_weeds_1,0.9939192924267551
+salinas,3,B4 HFCM + entropy gating,2,Brocoli_green_weeds_2,0.5882528324388789
+salinas,3,B4 HFCM + entropy gating,3,Fallow,0.0
+salinas,3,B4 HFCM + entropy gating,4,Fallow_rough_plow,0.1674641148325359
+salinas,3,B4 HFCM + entropy gating,5,Fallow_smooth,0.0
+salinas,3,B4 HFCM + entropy gating,6,Stubble,0.9915801291046871
+salinas,3,B4 HFCM + entropy gating,7,Celery,0.9838559453585843
+salinas,3,B4 HFCM + entropy gating,8,Grapes_untrained,0.0875480627033422
+salinas,3,B4 HFCM + entropy gating,9,Soil_vinyard_develop,0.8002865842736879
+salinas,3,B4 HFCM + entropy gating,10,Corn_senesced_green_weeds,0.00576271186440678
+salinas,3,B4 HFCM + entropy gating,11,Lettuce_romaine_4wk,0.8607068607068608
+salinas,3,B4 HFCM + entropy gating,12,Lettuce_romaine_5wk,0.0
+salinas,3,B4 HFCM + entropy gating,13,Lettuce_romaine_6wk,0.0
+salinas,3,B4 HFCM + entropy gating,14,Lettuce_romaine_7wk,0.8887733887733887
+salinas,3,B4 HFCM + entropy gating,15,Vinyard_untrained,0.00840721491898502
+salinas,3,B4 HFCM + entropy gating,16,Vinyard_vertical_trellis,0.8488014751075599
+salinas,3,SG-HFQ (class-seeded),1,Brocoli_green_weeds_1,0.9939192924267551
+salinas,3,SG-HFQ (class-seeded),2,Brocoli_green_weeds_2,0.6171735241502684
+salinas,3,SG-HFQ (class-seeded),3,Fallow,0.12992125984251968
+salinas,3,SG-HFQ (class-seeded),4,Fallow_rough_plow,0.9354066985645934
+salinas,3,SG-HFQ (class-seeded),5,Fallow_smooth,0.9900414937759336
+salinas,3,SG-HFQ (class-seeded),6,Stubble,0.9205725512208813
+salinas,3,SG-HFQ (class-seeded),7,Celery,0.9919279726792921
+salinas,3,SG-HFQ (class-seeded),8,Grapes_untrained,0.39721975746820465
+salinas,3,SG-HFQ (class-seeded),9,Soil_vinyard_develop,0.7992118932473581
+salinas,3,SG-HFQ (class-seeded),10,Corn_senesced_green_weeds,0.6393220338983051
+salinas,3,SG-HFQ (class-seeded),11,Lettuce_romaine_4wk,0.017671517671517672
+salinas,3,SG-HFQ (class-seeded),12,Lettuce_romaine_5wk,0.9487031700288184
+salinas,3,SG-HFQ (class-seeded),13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,3,SG-HFQ (class-seeded),14,Lettuce_romaine_7wk,0.8617463617463618
+salinas,3,SG-HFQ (class-seeded),15,Vinyard_untrained,0.4590339345765821
+salinas,3,SG-HFQ (class-seeded),16,Vinyard_vertical_trellis,0.49846342962507684
+salinas,3,SVM (RBF),1,Brocoli_green_weeds_1,0.9917081260364843
+salinas,3,SVM (RBF),2,Brocoli_green_weeds_2,0.9985092426952892
+salinas,3,SVM (RBF),3,Fallow,0.9820022497187851
+salinas,3,SVM (RBF),4,Fallow_rough_plow,0.9864433811802232
+salinas,3,SVM (RBF),5,Fallow_smooth,0.9950207468879668
+salinas,3,SVM (RBF),6,Stubble,0.9980353634577603
+salinas,3,SVM (RBF),7,Celery,0.9937907482148401
+salinas,3,SVM (RBF),8,Grapes_untrained,0.8924381346741596
+salinas,3,SVM (RBF),9,Soil_vinyard_develop,0.9962385814078453
+salinas,3,SVM (RBF),10,Corn_senesced_green_weeds,0.9498305084745763
+salinas,3,SVM (RBF),11,Lettuce_romaine_4wk,0.9178794178794178
+salinas,3,SVM (RBF),12,Lettuce_romaine_5wk,0.9971181556195965
+salinas,3,SVM (RBF),13,Lettuce_romaine_6wk,0.9842233009708737
+salinas,3,SVM (RBF),14,Lettuce_romaine_7wk,0.9449064449064449
+salinas,3,SVM (RBF),15,Vinyard_untrained,0.6608070926322226
+salinas,3,SVM (RBF),16,Vinyard_vertical_trellis,0.9877074370006146
+salinas,3,"SVM (RBF), Phase 1 features",1,Brocoli_green_weeds_1,0.9817578772802653
+salinas,3,"SVM (RBF), Phase 1 features",2,Brocoli_green_weeds_2,0.9988073941562313
+salinas,3,"SVM (RBF), Phase 1 features",3,Fallow,0.9853768278965129
+salinas,3,"SVM (RBF), Phase 1 features",4,Fallow_rough_plow,0.9880382775119617
+salinas,3,"SVM (RBF), Phase 1 features",5,Fallow_smooth,0.9875518672199171
+salinas,3,"SVM (RBF), Phase 1 features",6,Stubble,0.9974740387314062
+salinas,3,"SVM (RBF), Phase 1 features",7,Celery,0.9937907482148401
+salinas,3,"SVM (RBF), Phase 1 features",8,Grapes_untrained,0.8744947254264025
+salinas,3,"SVM (RBF), Phase 1 features",9,Soil_vinyard_develop,0.9930145083288554
+salinas,3,"SVM (RBF), Phase 1 features",10,Corn_senesced_green_weeds,0.9176271186440678
+salinas,3,"SVM (RBF), Phase 1 features",11,Lettuce_romaine_4wk,0.8783783783783784
+salinas,3,"SVM (RBF), Phase 1 features",12,Lettuce_romaine_5wk,0.9948126801152738
+salinas,3,"SVM (RBF), Phase 1 features",13,Lettuce_romaine_6wk,0.9781553398058253
+salinas,3,"SVM (RBF), Phase 1 features",14,Lettuce_romaine_7wk,0.9501039501039501
+salinas,3,"SVM (RBF), Phase 1 features",15,Vinyard_untrained,0.6007337205747478
+salinas,3,"SVM (RBF), Phase 1 features",16,Vinyard_vertical_trellis,0.986478180700676
+salinas,3,Random Forest,1,Brocoli_green_weeds_1,0.996130458817026
+salinas,3,Random Forest,2,Brocoli_green_weeds_2,0.9979129397734049
+salinas,3,Random Forest,3,Fallow,0.9836895388076491
+salinas,3,Random Forest,4,Fallow_rough_plow,0.9760765550239234
+salinas,3,Random Forest,5,Fallow_smooth,0.9838174273858921
+salinas,3,Random Forest,6,Stubble,0.9966320516418748
+salinas,3,Random Forest,7,Celery,0.9928593604470661
+salinas,3,Random Forest,8,Grapes_untrained,0.852410529429163
+salinas,3,Random Forest,9,Soil_vinyard_develop,0.9903277807630306
+salinas,3,Random Forest,10,Corn_senesced_green_weeds,0.911864406779661
+salinas,3,Random Forest,11,Lettuce_romaine_4wk,0.8742203742203742
+salinas,3,Random Forest,12,Lettuce_romaine_5wk,0.9861671469740634
+salinas,3,Random Forest,13,Lettuce_romaine_6wk,0.9720873786407767
+salinas,3,Random Forest,14,Lettuce_romaine_7wk,0.9428274428274428
+salinas,3,Random Forest,15,Vinyard_untrained,0.6198410272088046
+salinas,3,Random Forest,16,Vinyard_vertical_trellis,0.9809465273509527
+salinas,3,"Random Forest, Phase 1 features",1,Brocoli_green_weeds_1,0.9894969596462134
+salinas,3,"Random Forest, Phase 1 features",2,Brocoli_green_weeds_2,0.9961240310077519
+salinas,3,"Random Forest, Phase 1 features",3,Fallow,0.9673790776152981
+salinas,3,"Random Forest, Phase 1 features",4,Fallow_rough_plow,0.9696969696969697
+salinas,3,"Random Forest, Phase 1 features",5,Fallow_smooth,0.9813278008298755
+salinas,3,"Random Forest, Phase 1 features",6,Stubble,0.9985966881841145
+salinas,3,"Random Forest, Phase 1 features",7,Celery,0.9916175100900342
+salinas,3,"Random Forest, Phase 1 features",8,Grapes_untrained,0.8558611850537317
+salinas,3,"Random Forest, Phase 1 features",9,Soil_vinyard_develop,0.9933727386709654
+salinas,3,"Random Forest, Phase 1 features",10,Corn_senesced_green_weeds,0.8884745762711864
+salinas,3,"Random Forest, Phase 1 features",11,Lettuce_romaine_4wk,0.8783783783783784
+salinas,3,"Random Forest, Phase 1 features",12,Lettuce_romaine_5wk,0.9855907780979827
+salinas,3,"Random Forest, Phase 1 features",13,Lettuce_romaine_6wk,0.9842233009708737
+salinas,3,"Random Forest, Phase 1 features",14,Lettuce_romaine_7wk,0.9397089397089398
+salinas,3,"Random Forest, Phase 1 features",15,Vinyard_untrained,0.5564047691837358
+salinas,3,"Random Forest, Phase 1 features",16,Vinyard_vertical_trellis,0.9711124769514444
+salinas,4,B1 Flat FCM,1,Brocoli_green_weeds_1,0.982310668877833
+salinas,4,B1 Flat FCM,2,Brocoli_green_weeds_2,0.748062015503876
+salinas,4,B1 Flat FCM,3,Fallow,0.5663667041619798
+salinas,4,B1 Flat FCM,4,Fallow_rough_plow,0.9657097288676236
+salinas,4,B1 Flat FCM,5,Fallow_smooth,0.8518672199170124
+salinas,4,B1 Flat FCM,6,Stubble,0.9702497895032276
+salinas,4,B1 Flat FCM,7,Celery,0.9941012108040981
+salinas,4,B1 Flat FCM,8,Grapes_untrained,0.3492063492063492
+salinas,4,B1 Flat FCM,9,Soil_vinyard_develop,0.6272613290345692
+salinas,4,B1 Flat FCM,10,Corn_senesced_green_weeds,0.6091525423728813
+salinas,4,B1 Flat FCM,11,Lettuce_romaine_4wk,0.4490644490644491
+salinas,4,B1 Flat FCM,12,Lettuce_romaine_5wk,0.9884726224783862
+salinas,4,B1 Flat FCM,13,Lettuce_romaine_6wk,0.9878640776699029
+salinas,4,B1 Flat FCM,14,Lettuce_romaine_7wk,0.8659043659043659
+salinas,4,B1 Flat FCM,15,Vinyard_untrained,0.49984714154692755
+salinas,4,B1 Flat FCM,16,Vinyard_vertical_trellis,0.6631837738168408
+salinas,4,B2 Flat FCM + max-membership,1,Brocoli_green_weeds_1,0.982310668877833
+salinas,4,B2 Flat FCM + max-membership,2,Brocoli_green_weeds_2,0.748062015503876
+salinas,4,B2 Flat FCM + max-membership,3,Fallow,0.5663667041619798
+salinas,4,B2 Flat FCM + max-membership,4,Fallow_rough_plow,0.9657097288676236
+salinas,4,B2 Flat FCM + max-membership,5,Fallow_smooth,0.8518672199170124
+salinas,4,B2 Flat FCM + max-membership,6,Stubble,0.9702497895032276
+salinas,4,B2 Flat FCM + max-membership,7,Celery,0.9941012108040981
+salinas,4,B2 Flat FCM + max-membership,8,Grapes_untrained,0.3492063492063492
+salinas,4,B2 Flat FCM + max-membership,9,Soil_vinyard_develop,0.6272613290345692
+salinas,4,B2 Flat FCM + max-membership,10,Corn_senesced_green_weeds,0.6091525423728813
+salinas,4,B2 Flat FCM + max-membership,11,Lettuce_romaine_4wk,0.4490644490644491
+salinas,4,B2 Flat FCM + max-membership,12,Lettuce_romaine_5wk,0.9884726224783862
+salinas,4,B2 Flat FCM + max-membership,13,Lettuce_romaine_6wk,0.9878640776699029
+salinas,4,B2 Flat FCM + max-membership,14,Lettuce_romaine_7wk,0.8659043659043659
+salinas,4,B2 Flat FCM + max-membership,15,Vinyard_untrained,0.49984714154692755
+salinas,4,B2 Flat FCM + max-membership,16,Vinyard_vertical_trellis,0.6631837738168408
+salinas,4,SG-HFQ,1,Brocoli_green_weeds_1,0.9900497512437811
+salinas,4,SG-HFQ,2,Brocoli_green_weeds_2,0.554561717352415
+salinas,4,SG-HFQ,3,Fallow,0.08267716535433071
+salinas,4,SG-HFQ,4,Fallow_rough_plow,0.17304625199362042
+salinas,4,SG-HFQ,5,Fallow_smooth,0.0
+salinas,4,SG-HFQ,6,Stubble,0.9921414538310412
+salinas,4,SG-HFQ,7,Celery,0.9813722446445203
+salinas,4,SG-HFQ,8,Grapes_untrained,0.10756186532584049
+salinas,4,SG-HFQ,9,Soil_vinyard_develop,0.9992835393157801
+salinas,4,SG-HFQ,10,Corn_senesced_green_weeds,0.0
+salinas,4,SG-HFQ,11,Lettuce_romaine_4wk,0.0
+salinas,4,SG-HFQ,12,Lettuce_romaine_5wk,0.02190201729106628
+salinas,4,SG-HFQ,13,Lettuce_romaine_6wk,0.0
+salinas,4,SG-HFQ,14,Lettuce_romaine_7wk,0.8887733887733887
+salinas,4,SG-HFQ,15,Vinyard_untrained,0.009630082543564658
+salinas,4,SG-HFQ,16,Vinyard_vertical_trellis,0.8549477566072526
+salinas,4,"B3 HFCM, no gating",1,Brocoli_green_weeds_1,0.9900497512437811
+salinas,4,"B3 HFCM, no gating",2,Brocoli_green_weeds_2,0.554561717352415
+salinas,4,"B3 HFCM, no gating",3,Fallow,0.08267716535433071
+salinas,4,"B3 HFCM, no gating",4,Fallow_rough_plow,0.17304625199362042
+salinas,4,"B3 HFCM, no gating",5,Fallow_smooth,0.0
+salinas,4,"B3 HFCM, no gating",6,Stubble,0.9921414538310412
+salinas,4,"B3 HFCM, no gating",7,Celery,0.9813722446445203
+salinas,4,"B3 HFCM, no gating",8,Grapes_untrained,0.10756186532584049
+salinas,4,"B3 HFCM, no gating",9,Soil_vinyard_develop,0.9992835393157801
+salinas,4,"B3 HFCM, no gating",10,Corn_senesced_green_weeds,0.0
+salinas,4,"B3 HFCM, no gating",11,Lettuce_romaine_4wk,0.0
+salinas,4,"B3 HFCM, no gating",12,Lettuce_romaine_5wk,0.02190201729106628
+salinas,4,"B3 HFCM, no gating",13,Lettuce_romaine_6wk,0.0
+salinas,4,"B3 HFCM, no gating",14,Lettuce_romaine_7wk,0.8887733887733887
+salinas,4,"B3 HFCM, no gating",15,Vinyard_untrained,0.009630082543564658
+salinas,4,"B3 HFCM, no gating",16,Vinyard_vertical_trellis,0.8549477566072526
+salinas,4,B4 HFCM + entropy gating,1,Brocoli_green_weeds_1,0.9900497512437811
+salinas,4,B4 HFCM + entropy gating,2,Brocoli_green_weeds_2,0.554561717352415
+salinas,4,B4 HFCM + entropy gating,3,Fallow,0.08267716535433071
+salinas,4,B4 HFCM + entropy gating,4,Fallow_rough_plow,0.17304625199362042
+salinas,4,B4 HFCM + entropy gating,5,Fallow_smooth,0.0
+salinas,4,B4 HFCM + entropy gating,6,Stubble,0.9921414538310412
+salinas,4,B4 HFCM + entropy gating,7,Celery,0.9813722446445203
+salinas,4,B4 HFCM + entropy gating,8,Grapes_untrained,0.10756186532584049
+salinas,4,B4 HFCM + entropy gating,9,Soil_vinyard_develop,0.9992835393157801
+salinas,4,B4 HFCM + entropy gating,10,Corn_senesced_green_weeds,0.0
+salinas,4,B4 HFCM + entropy gating,11,Lettuce_romaine_4wk,0.0
+salinas,4,B4 HFCM + entropy gating,12,Lettuce_romaine_5wk,0.02190201729106628
+salinas,4,B4 HFCM + entropy gating,13,Lettuce_romaine_6wk,0.0
+salinas,4,B4 HFCM + entropy gating,14,Lettuce_romaine_7wk,0.8887733887733887
+salinas,4,B4 HFCM + entropy gating,15,Vinyard_untrained,0.009630082543564658
+salinas,4,B4 HFCM + entropy gating,16,Vinyard_vertical_trellis,0.8549477566072526
+salinas,4,SG-HFQ (class-seeded),1,Brocoli_green_weeds_1,0.9900497512437811
+salinas,4,SG-HFQ (class-seeded),2,Brocoli_green_weeds_2,0.5870602265951104
+salinas,4,SG-HFQ (class-seeded),3,Fallow,0.15916760404949382
+salinas,4,SG-HFQ (class-seeded),4,Fallow_rough_plow,0.937799043062201
+salinas,4,SG-HFQ (class-seeded),5,Fallow_smooth,0.9883817427385893
+salinas,4,SG-HFQ (class-seeded),6,Stubble,0.9124333426887454
+salinas,4,SG-HFQ (class-seeded),7,Celery,0.9916175100900342
+salinas,4,SG-HFQ (class-seeded),8,Grapes_untrained,0.6072167997633836
+salinas,4,SG-HFQ (class-seeded),9,Soil_vinyard_develop,0.9879992835393158
+salinas,4,SG-HFQ (class-seeded),10,Corn_senesced_green_weeds,0.6569491525423728
+salinas,4,SG-HFQ (class-seeded),11,Lettuce_romaine_4wk,0.0
+salinas,4,SG-HFQ (class-seeded),12,Lettuce_romaine_5wk,0.9521613832853026
+salinas,4,SG-HFQ (class-seeded),13,Lettuce_romaine_6wk,0.9890776699029126
+salinas,4,SG-HFQ (class-seeded),14,Lettuce_romaine_7wk,0.8555093555093555
+salinas,4,SG-HFQ (class-seeded),15,Vinyard_untrained,0.4863955976765515
+salinas,4,SG-HFQ (class-seeded),16,Vinyard_vertical_trellis,0.6152427781192379
+salinas,4,SVM (RBF),1,Brocoli_green_weeds_1,0.9939192924267551
+salinas,4,SVM (RBF),2,Brocoli_green_weeds_2,0.9997018485390579
+salinas,4,SVM (RBF),3,Fallow,0.9887514060742407
+salinas,4,SVM (RBF),4,Fallow_rough_plow,0.9856459330143541
+salinas,4,SVM (RBF),5,Fallow_smooth,0.9809128630705394
+salinas,4,SVM (RBF),6,Stubble,0.9969127140050519
+salinas,4,SVM (RBF),7,Celery,0.9959639863396461
+salinas,4,SVM (RBF),8,Grapes_untrained,0.8788326924972888
+salinas,4,SVM (RBF),9,Soil_vinyard_develop,0.9992835393157801
+salinas,4,SVM (RBF),10,Corn_senesced_green_weeds,0.9525423728813559
+salinas,4,SVM (RBF),11,Lettuce_romaine_4wk,0.9771309771309772
+salinas,4,SVM (RBF),12,Lettuce_romaine_5wk,0.992507204610951
+salinas,4,SVM (RBF),13,Lettuce_romaine_6wk,0.9830097087378641
+salinas,4,SVM (RBF),14,Lettuce_romaine_7wk,0.9532224532224532
+salinas,4,SVM (RBF),15,Vinyard_untrained,0.6788443900947723
+salinas,4,SVM (RBF),16,Vinyard_vertical_trellis,0.9846342962507683
+salinas,4,"SVM (RBF), Phase 1 features",1,Brocoli_green_weeds_1,0.9900497512437811
+salinas,4,"SVM (RBF), Phase 1 features",2,Brocoli_green_weeds_2,0.9997018485390579
+salinas,4,"SVM (RBF), Phase 1 features",3,Fallow,0.9808773903262092
+salinas,4,"SVM (RBF), Phase 1 features",4,Fallow_rough_plow,0.9856459330143541
+salinas,4,"SVM (RBF), Phase 1 features",5,Fallow_smooth,0.9775933609958506
+salinas,4,"SVM (RBF), Phase 1 features",6,Stubble,0.997193376368229
+salinas,4,"SVM (RBF), Phase 1 features",7,Celery,0.9956535237503881
+salinas,4,"SVM (RBF), Phase 1 features",8,Grapes_untrained,0.8873114463176575
+salinas,4,"SVM (RBF), Phase 1 features",9,Soil_vinyard_develop,0.9992835393157801
+salinas,4,"SVM (RBF), Phase 1 features",10,Corn_senesced_green_weeds,0.916271186440678
+salinas,4,"SVM (RBF), Phase 1 features",11,Lettuce_romaine_4wk,0.9604989604989606
+salinas,4,"SVM (RBF), Phase 1 features",12,Lettuce_romaine_5wk,0.9804034582132565
+salinas,4,"SVM (RBF), Phase 1 features",13,Lettuce_romaine_6wk,0.9745145631067961
+salinas,4,"SVM (RBF), Phase 1 features",14,Lettuce_romaine_7wk,0.9480249480249481
+salinas,4,"SVM (RBF), Phase 1 features",15,Vinyard_untrained,0.5966065423417914
+salinas,4,"SVM (RBF), Phase 1 features",16,Vinyard_vertical_trellis,0.9815611555009219
+salinas,4,Random Forest,1,Brocoli_green_weeds_1,0.9944720840243229
+salinas,4,Random Forest,2,Brocoli_green_weeds_2,0.9991055456171736
+salinas,4,Random Forest,3,Fallow,0.9746906636670416
+salinas,4,Random Forest,4,Fallow_rough_plow,0.9864433811802232
+salinas,4,Random Forest,5,Fallow_smooth,0.9796680497925311
+salinas,4,Random Forest,6,Stubble,0.9932641032837497
+salinas,4,Random Forest,7,Celery,0.994722135982614
+salinas,4,Random Forest,8,Grapes_untrained,0.8623681356600611
+salinas,4,Random Forest,9,Soil_vinyard_develop,0.9931936234999105
+salinas,4,Random Forest,10,Corn_senesced_green_weeds,0.903728813559322
+salinas,4,Random Forest,11,Lettuce_romaine_4wk,0.9480249480249481
+salinas,4,Random Forest,12,Lettuce_romaine_5wk,0.9717579250720461
+salinas,4,Random Forest,13,Lettuce_romaine_6wk,0.970873786407767
+salinas,4,Random Forest,14,Lettuce_romaine_7wk,0.9261954261954262
+salinas,4,Random Forest,15,Vinyard_untrained,0.6264139406909202
+salinas,4,Random Forest,16,Vinyard_vertical_trellis,0.9643515673017824
+salinas,4,"Random Forest, Phase 1 features",1,Brocoli_green_weeds_1,0.9911553344389166
+salinas,4,"Random Forest, Phase 1 features",2,Brocoli_green_weeds_2,0.994335122242099
+salinas,4,"Random Forest, Phase 1 features",3,Fallow,0.9516310461192351
+salinas,4,"Random Forest, Phase 1 features",4,Fallow_rough_plow,0.9832535885167464
+salinas,4,"Random Forest, Phase 1 features",5,Fallow_smooth,0.9809128630705394
+salinas,4,"Random Forest, Phase 1 features",6,Stubble,0.9960707269155207
+salinas,4,"Random Forest, Phase 1 features",7,Celery,0.9928593604470661
+salinas,4,"Random Forest, Phase 1 features",8,Grapes_untrained,0.8455092181800257
+salinas,4,"Random Forest, Phase 1 features",9,Soil_vinyard_develop,0.9926562779867455
+salinas,4,"Random Forest, Phase 1 features",10,Corn_senesced_green_weeds,0.8996610169491526
+salinas,4,"Random Forest, Phase 1 features",11,Lettuce_romaine_4wk,0.9282744282744283
+salinas,4,"Random Forest, Phase 1 features",12,Lettuce_romaine_5wk,0.9867435158501441
+salinas,4,"Random Forest, Phase 1 features",13,Lettuce_romaine_6wk,0.9745145631067961
+salinas,4,"Random Forest, Phase 1 features",14,Lettuce_romaine_7wk,0.9261954261954262
+salinas,4,"Random Forest, Phase 1 features",15,Vinyard_untrained,0.6028737389177622
+salinas,4,"Random Forest, Phase 1 features",16,Vinyard_vertical_trellis,0.9385371850030731

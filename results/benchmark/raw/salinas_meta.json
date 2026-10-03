@@ -1,0 +1,192 @@
+{
+  "key": "salinas",
+  "title": "Salinas (AVIRIS)",
+  "info": {
+    "sensor": "AVIRIS, 3.7 m GSD, 400-2500 nm",
+    "image": "512 x 217 pixels",
+    "bands": 204,
+    "classes": 16,
+    "labelled": 54129,
+    "split": "stratified random per class: 5% train (min 5), 5% validation (min 3), rest test; 5 seeds",
+    "preprocessing": "corrected cube: 20 water-absorption bands removed (224 -> 204)"
+  },
+  "class_counts": {
+    "Brocoli_green_weeds_1": 2009,
+    "Brocoli_green_weeds_2": 3726,
+    "Fallow": 1976,
+    "Fallow_rough_plow": 1394,
+    "Fallow_smooth": 2678,
+    "Stubble": 3959,
+    "Celery": 3579,
+    "Grapes_untrained": 11271,
+    "Soil_vinyard_develop": 6203,
+    "Corn_senesced_green_weeds": 3278,
+    "Lettuce_romaine_4wk": 1068,
+    "Lettuce_romaine_5wk": 1927,
+    "Lettuce_romaine_6wk": 916,
+    "Lettuce_romaine_7wk": 1070,
+    "Vinyard_untrained": 7268,
+    "Vinyard_vertical_trellis": 1807
+  },
+  "phase1": {
+    "representation": "pca",
+    "n_components": 10
+  },
+  "full": {
+    "representation": "standard"
+  },
+  "cov_estimator": "ledoit_wolf",
+  "seeds": [
+    {
+      "seed": 0,
+      "n_train": 2706,
+      "n_val": 2706,
+      "n_test": 48717,
+      "hierarchy": "((((1, 2), 7), (((8, 15), 16), 14)), (((((3, 5), (12, 13)), (9, (10, 11))), 4), 6))",
+      "max_depth": 6,
+      "fcm_nodes": 15,
+      "fcm_nodes_converged": 15,
+      "mean_xie_beni": 0.21890876716023533,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.997148744536259,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 7.3,
+        "SG-HFQ": 5.8,
+        "SG-HFQ (class-seeded)": 9.6,
+        "SVM (RBF)": 89.8,
+        "SVM (RBF), Phase 1 features": 26.3,
+        "Random Forest": 14.0,
+        "Random Forest, Phase 1 features": 13.6
+      }
+    },
+    {
+      "seed": 1,
+      "n_train": 2706,
+      "n_val": 2706,
+      "n_test": 48717,
+      "hierarchy": "((((1, 2), 7), (((8, 15), 14), 16)), ((((3, 5), ((9, (10, 11)), (12, 13))), 4), 6))",
+      "max_depth": 7,
+      "fcm_nodes": 15,
+      "fcm_nodes_converged": 15,
+      "mean_xie_beni": 0.20024223372161862,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9971989642776395,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 4.1,
+        "SG-HFQ": 4.7,
+        "SG-HFQ (class-seeded)": 7.4,
+        "SVM (RBF)": 93.6,
+        "SVM (RBF), Phase 1 features": 31.2,
+        "Random Forest": 10.3,
+        "Random Forest, Phase 1 features": 6.4
+      }
+    },
+    {
+      "seed": 2,
+      "n_train": 2706,
+      "n_val": 2706,
+      "n_test": 48717,
+      "hierarchy": "(((1, 2), 7), (((((3, 12), (9, (10, 11))), (13, 14)), ((4, 5), ((8, 15), 16))), 6))",
+      "max_depth": 7,
+      "fcm_nodes": 15,
+      "fcm_nodes_converged": 15,
+      "mean_xie_beni": 0.19348322144423638,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9973784302966903,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 2.1,
+        "SG-HFQ": 6.3,
+        "SG-HFQ (class-seeded)": 7.6,
+        "SVM (RBF)": 55.0,
+        "SVM (RBF), Phase 1 features": 22.4,
+        "Random Forest": 8.5,
+        "Random Forest, Phase 1 features": 6.7
+      }
+    },
+    {
+      "seed": 3,
+      "n_train": 2706,
+      "n_val": 2706,
+      "n_test": 48717,
+      "hierarchy": "((((1, 2), 7), (((8, 15), 16), 14)), (((((3, 5), (12, 13)), ((9, 11), 10)), 6), 4))",
+      "max_depth": 6,
+      "fcm_nodes": 15,
+      "fcm_nodes_converged": 15,
+      "mean_xie_beni": 0.2649344091590852,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9971746428762963,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 1.8,
+        "SG-HFQ": 4.0,
+        "SG-HFQ (class-seeded)": 2.9,
+        "SVM (RBF)": 53.9,
+        "SVM (RBF), Phase 1 features": 15.4,
+        "Random Forest": 6.2,
+        "Random Forest, Phase 1 features": 5.1
+      }
+    },
+    {
+      "seed": 4,
+      "n_train": 2706,
+      "n_val": 2706,
+      "n_test": 48717,
+      "hierarchy": "((((1, 2), 7), (((8, 15), 16), 14)), ((((3, 5), ((9, (10, 11)), (12, 13))), 4), 6))",
+      "max_depth": 7,
+      "fcm_nodes": 15,
+      "fcm_nodes_converged": 15,
+      "mean_xie_beni": 0.2172608349983384,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9972107705386501,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 1.7,
+        "SG-HFQ": 1.6,
+        "SG-HFQ (class-seeded)": 3.0,
+        "SVM (RBF)": 53.1,
+        "SVM (RBF), Phase 1 features": 14.2,
+        "Random Forest": 6.3,
+        "Random Forest, Phase 1 features": 4.6
+      }
+    }
+  ],
+  "runtime_s": 614.4
+}

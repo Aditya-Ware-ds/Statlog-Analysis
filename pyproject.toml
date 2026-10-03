@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7", "scikit-fuzzy>=0.4.2", "pyreadr>=0.5"]
+dev = ["pytest>=7", "scikit-fuzzy>=0.4.2", "pyreadr>=0.5", "h5py>=3"]
 
 [project.scripts]
 sg-hfq-experiments = "sg_hfq.experiments:main"

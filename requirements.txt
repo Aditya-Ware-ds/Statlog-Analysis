@@ -8,3 +8,4 @@ matplotlib==3.11.2
 pytest==9.1.1
 scikit-fuzzy==0.5.0
 pyreadr==0.5.7
+h5py  # only for scripts/build_sentinel2_breizhcrops.py

@@ -1,0 +1,183 @@
+{
+  "key": "sentinel2_breizhcrops",
+  "title": "Sentinel-2 crop types (Brittany)",
+  "info": {
+    "sensor": "Sentinel-2 L2A, bands B2-B8A, B11, B12 (10 m / 20 m)",
+    "features": 60,
+    "classes": 9,
+    "labelled": 608489,
+    "split": "spatial (by department): train = up to 500/class from FRH01+FRH02, validation = up to 200/class from FRH03, test = all of FRH04; 5 seeds"
+  },
+  "class_counts": {
+    "barley": 36922,
+    "wheat": 89617,
+    "rapeseed": 14746,
+    "corn": 153995,
+    "sunflower": 19,
+    "orchards": 3054,
+    "nuts": 49,
+    "permanent meadows": 127835,
+    "temporary meadows": 182252
+  },
+  "phase1": {
+    "representation": "pca",
+    "n_components": 10
+  },
+  "full": {
+    "representation": "standard"
+  },
+  "cov_estimator": "ledoit_wolf",
+  "seeds": [
+    {
+      "seed": 0,
+      "n_train": 3535,
+      "n_val": 1420,
+      "n_test": 122708,
+      "hierarchy": "((((0, 1), 2), ((5, (7, 8)), 6)), (3, 4))",
+      "max_depth": 5,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 32308200004.173157,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.8746189283632335,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.0001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 10,
+        "gamma": 0.001
+      },
+      "timing_s": {
+        "flat FCM": 3.6,
+        "SG-HFQ": 6.4,
+        "SG-HFQ (class-seeded)": 8.0,
+        "SVM (RBF)": 108.0,
+        "SVM (RBF), Phase 1 features": 70.3,
+        "Random Forest": 15.9,
+        "Random Forest, Phase 1 features": 14.4
+      }
+    },
+    {
+      "seed": 1,
+      "n_train": 3535,
+      "n_val": 1420,
+      "n_test": 122708,
+      "hierarchy": "((((0, 1), ((5, (7, 8)), 6)), 2), (3, 4))",
+      "max_depth": 6,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 7,
+      "mean_xie_beni": 35943375587.23348,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.8752252641147017,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 10,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 3.4,
+        "SG-HFQ": 5.1,
+        "SG-HFQ (class-seeded)": 6.1,
+        "SVM (RBF)": 104.8,
+        "SVM (RBF), Phase 1 features": 39.1,
+        "Random Forest": 11.4,
+        "Random Forest, Phase 1 features": 9.1
+      }
+    },
+    {
+      "seed": 2,
+      "n_train": 3535,
+      "n_val": 1420,
+      "n_test": 122708,
+      "hierarchy": "((((0, 1), 2), ((5, (7, 8)), 6)), (3, 4))",
+      "max_depth": 5,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 7,
+      "mean_xie_beni": 30717141164.28959,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.8757990542190146,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.001
+      },
+      "timing_s": {
+        "flat FCM": 0.8,
+        "SG-HFQ": 3.4,
+        "SG-HFQ (class-seeded)": 4.7,
+        "SVM (RBF)": 70.3,
+        "SVM (RBF), Phase 1 features": 37.8,
+        "Random Forest": 7.5,
+        "Random Forest, Phase 1 features": 6.0
+      }
+    },
+    {
+      "seed": 3,
+      "n_train": 3535,
+      "n_val": 1420,
+      "n_test": 122708,
+      "hierarchy": "((((0, 1), ((5, (7, 8)), 6)), 2), (3, 4))",
+      "max_depth": 6,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 7,
+      "mean_xie_beni": 23738905052.064438,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.8768774584449343,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 1000,
+        "gamma": 0.001
+      },
+      "timing_s": {
+        "flat FCM": 0.7,
+        "SG-HFQ": 3.0,
+        "SG-HFQ (class-seeded)": 4.1,
+        "SVM (RBF)": 64.9,
+        "SVM (RBF), Phase 1 features": 36.7,
+        "Random Forest": 6.0,
+        "Random Forest, Phase 1 features": 5.3
+      }
+    },
+    {
+      "seed": 4,
+      "n_train": 3535,
+      "n_val": 1420,
+      "n_test": 122708,
+      "hierarchy": "((((0, 1), ((5, (7, 8)), 6)), 2), (3, 4))",
+      "max_depth": 6,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 30302498845.967377,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.8757627298587208,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.0001
+      },
+      "svm_params, Phase 1 features": {
+        "C": 10,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 0.6,
+        "SG-HFQ": 1.8,
+        "SG-HFQ (class-seeded)": 3.2,
+        "SVM (RBF)": 62.7,
+        "SVM (RBF), Phase 1 features": 34.7,
+        "Random Forest": 5.6,
+        "Random Forest, Phase 1 features": 5.2
+      }
+    }
+  ],
+  "runtime_s": 786.4
+}

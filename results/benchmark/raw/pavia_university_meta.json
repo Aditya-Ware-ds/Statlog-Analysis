@@ -1,0 +1,185 @@
+{
+  "key": "pavia_university",
+  "title": "Pavia University (ROSIS)",
+  "info": {
+    "sensor": "ROSIS, 1.3 m GSD, 430-860 nm",
+    "image": "610 x 340 pixels",
+    "bands": 103,
+    "classes": 9,
+    "labelled": 42776,
+    "split": "stratified random per class: 5% train (min 5), 5% validation (min 3), rest test; 5 seeds",
+    "preprocessing": "103 bands as distributed (noisy bands removed by the providers)"
+  },
+  "class_counts": {
+    "Asphalt": 6631,
+    "Meadows": 18649,
+    "Gravel": 2099,
+    "Trees": 3064,
+    "Painted metal sheets": 1345,
+    "Bare Soil": 5029,
+    "Bitumen": 1330,
+    "Self-Blocking Bricks": 3682,
+    "Shadows": 947
+  },
+  "phase1": {
+    "representation": "pca",
+    "n_components": 10
+  },
+  "full": {
+    "representation": "standard"
+  },
+  "cov_estimator": "ledoit_wolf",
+  "seeds": [
+    {
+      "seed": 0,
+      "n_train": 2137,
+      "n_val": 2137,
+      "n_test": 38502,
+      "hierarchy": "((((((1, 7), (3, 8)), (2, 6)), 4), 9), 5)",
+      "max_depth": 6,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 0.2713822262500424,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9985925089708211,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 3.2,
+        "SG-HFQ": 4.4,
+        "SG-HFQ (class-seeded)": 3.0,
+        "SVM (RBF)": 33.1,
+        "SVM (RBF), Phase 1 features": 14.0,
+        "Random Forest": 7.6,
+        "Random Forest, Phase 1 features": 6.2
+      }
+    },
+    {
+      "seed": 1,
+      "n_train": 2137,
+      "n_val": 2137,
+      "n_test": 38502,
+      "hierarchy": "(((((1, 7), (3, 8)), ((2, 6), 4)), 9), 5)",
+      "max_depth": 5,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 0.268240088525795,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9985989714223328,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 1.3,
+        "SG-HFQ": 2.8,
+        "SG-HFQ (class-seeded)": 3.3,
+        "SVM (RBF)": 30.6,
+        "SVM (RBF), Phase 1 features": 13.9,
+        "Random Forest": 7.4,
+        "Random Forest, Phase 1 features": 8.9
+      }
+    },
+    {
+      "seed": 2,
+      "n_train": 2137,
+      "n_val": 2137,
+      "n_test": 38502,
+      "hierarchy": "((((((1, 7), (3, 8)), (2, 6)), 4), 9), 5)",
+      "max_depth": 6,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 0.26039933777750923,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9986072457307423,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 2.8,
+        "SG-HFQ": 4.3,
+        "SG-HFQ (class-seeded)": 4.2,
+        "SVM (RBF)": 34.4,
+        "SVM (RBF), Phase 1 features": 11.4,
+        "Random Forest": 9.2,
+        "Random Forest, Phase 1 features": 10.2
+      }
+    },
+    {
+      "seed": 3,
+      "n_train": 2137,
+      "n_val": 2137,
+      "n_test": 38502,
+      "hierarchy": "(((((1, 7), (3, 8)), ((2, 6), 4)), 9), 5)",
+      "max_depth": 5,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 0.26378722166843027,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9985975120412357,
+      "svm_params": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 3.0,
+        "SG-HFQ": 5.2,
+        "SG-HFQ (class-seeded)": 4.6,
+        "SVM (RBF)": 27.4,
+        "SVM (RBF), Phase 1 features": 12.1,
+        "Random Forest": 9.5,
+        "Random Forest, Phase 1 features": 9.2
+      }
+    },
+    {
+      "seed": 4,
+      "n_train": 2137,
+      "n_val": 2137,
+      "n_test": 38502,
+      "hierarchy": "(((((1, 7), (3, 8)), ((2, 6), 4)), 9), 5)",
+      "max_depth": 5,
+      "fcm_nodes": 8,
+      "fcm_nodes_converged": 8,
+      "mean_xie_beni": 0.2666551115916249,
+      "phase1_dims": 10,
+      "phase1_explained_variance": 0.9986606043508928,
+      "svm_params": {
+        "C": 100,
+        "gamma": 0.01
+      },
+      "svm_params, Phase 1 features": {
+        "C": 1000,
+        "gamma": 0.01
+      },
+      "timing_s": {
+        "flat FCM": 1.8,
+        "SG-HFQ": 2.4,
+        "SG-HFQ (class-seeded)": 3.4,
+        "SVM (RBF)": 26.9,
+        "SVM (RBF), Phase 1 features": 14.8,
+        "Random Forest": 7.3,
+        "Random Forest, Phase 1 features": 5.4
+      }
+    }
+  ],
+  "runtime_s": 355.5
+}
