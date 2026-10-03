@@ -1,0 +1,22 @@
+{
+  "Ref. SVM (4-D)": {
+    "C": 100,
+    "gamma": 1.0
+  },
+  "Ref. SVM (36-D)": {
+    "C": 10,
+    "gamma": 0.1
+  },
+  "Ref. Random Forest (4-D)": {
+    "n_estimators": 500
+  },
+  "Ref. Random Forest (36-D)": {
+    "n_estimators": 500
+  },
+  "Ref. Gaussian ML (4-D)": {
+    "reg_param": 1e-06
+  },
+  "Ref. Gaussian ML (36-D)": {
+    "reg_param": 1e-06
+  }
+}
