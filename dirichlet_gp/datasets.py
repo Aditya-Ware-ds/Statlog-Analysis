@@ -57,6 +57,9 @@ class BenchmarkDataset:
     split: Callable[[int], Split]
     info: dict = field(default_factory=dict)
     gp: dict = field(default_factory=dict)  # GPDirichletClassifier keyword arguments
+    #: labelled samples from the training side whose class frequencies estimate the deployment priors
+    #: (Sentinel-2 only: all parcels of the training and held-out departments); None = no prior shift
+    prior_pool: np.ndarray | None = None
 
     @property
     def classes(self) -> tuple[int, ...]:
@@ -183,6 +186,7 @@ def sentinel2_breizhcrops(train_cap: int = 500, val_cap: int = 200) -> Benchmark
             "split": f"spatial (by department): train = up to {train_cap}/class from FRH01+FRH02, "
                      f"held out = up to {val_cap}/class from FRH03 (unused), test = all of FRH04; 5 seeds",
         },
+        prior_pool=np.flatnonzero(np.isin(region, ["frh01", "frh02", "frh03"])),
     )
 
 
