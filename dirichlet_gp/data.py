@@ -103,3 +103,82 @@ class Standardizer:
 
     def fit_transform(self, X: np.ndarray) -> np.ndarray:
         return self.fit(X).transform(X)
+
+
+class CompositeFeatures:
+    """Concatenate feature blocks computed from raw spectra (all statistics from training data).
+
+    * ``"z"``: every band z-scored (the standard representation);
+    * ``"angle"``: the raw spectrum scaled to unit L2 norm (spectral shape, brightness removed),
+      then centred and divided by one *global* scale (average per-feature variance 1), so that
+      Euclidean distances in this block are proportional to chordal spectral-angle distances;
+    * ``"deriv"``: first difference along the bands of the 3-band moving-average-smoothed raw
+      spectrum, z-scored per feature.
+
+    With ``segment = L`` the angle block normalises every run of L consecutive features
+    separately (for a time series stored date-major, the spectrum of each date).
+    ``block_slices_`` gives the column range of each block in the output.
+    """
+
+    BLOCKS = ("z", "angle", "deriv")
+
+    def __init__(self, blocks=("z", "angle", "deriv"), segment: int | None = None):
+        unknown = set(blocks) - set(self.BLOCKS)
+        if unknown:
+            raise ValueError(f"unknown blocks {unknown}")
+        self.blocks = tuple(blocks)
+        self.segment = segment
+
+    def _unit(self, X):
+        if self.segment is None:
+            return X / np.maximum(np.linalg.norm(X, axis=1, keepdims=True), 1e-12)
+        n, d = X.shape
+        if d % self.segment:
+            raise ValueError(f"{d} features are not a multiple of segment={self.segment}")
+        S = X.reshape(n, d // self.segment, self.segment)
+        return (S / np.maximum(np.linalg.norm(S, axis=2, keepdims=True), 1e-12)).reshape(n, d)
+
+    @staticmethod
+    def _deriv(X):
+        c = np.cumsum(np.pad(X, ((0, 0), (1, 1)), mode="edge"), axis=1)
+        smooth = np.concatenate([c[:, 2:3], c[:, 3:] - c[:, :-3]], axis=1) / 3.0
+        smooth[:, 0] = (X[:, 0] * 2 + X[:, 1]) / 3.0
+        return np.diff(smooth, axis=1)
+
+    def _raw_blocks(self, X):
+        X = np.asarray(X, dtype=np.float64)
+        out = {}
+        if "z" in self.blocks:
+            out["z"] = X
+        if "angle" in self.blocks:
+            out["angle"] = self._unit(X)
+        if "deriv" in self.blocks:
+            out["deriv"] = self._deriv(X)
+        return out
+
+    def fit(self, X: np.ndarray) -> "CompositeFeatures":
+        raw = self._raw_blocks(X)
+        self.stats_ = {}
+        self.block_slices_ = {}
+        start = 0
+        for b in self.blocks:
+            R = raw[b]
+            mean = R.mean(axis=0)
+            if b == "angle":
+                # one global scale (keeps angles' geometry) giving an average per-feature variance of 1
+                scale = np.full(R.shape[1], np.sqrt(((R - mean) ** 2).mean()) or 1.0)
+            else:
+                std = R.std(axis=0)
+                scale = np.where(std > 0, std, 1.0)
+            self.stats_[b] = (mean, scale)
+            self.block_slices_[b] = slice(start, start + R.shape[1])
+            start += R.shape[1]
+        self.n_features_ = start
+        return self
+
+    def transform(self, X: np.ndarray) -> np.ndarray:
+        raw = self._raw_blocks(X)
+        return np.concatenate([(raw[b] - self.stats_[b][0]) / self.stats_[b][1] for b in self.blocks], axis=1)
+
+    def fit_transform(self, X: np.ndarray) -> np.ndarray:
+        return self.fit(X).transform(X)

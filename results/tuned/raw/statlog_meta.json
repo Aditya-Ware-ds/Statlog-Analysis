@@ -1,0 +1,24 @@
+{
+ "key": "statlog",
+ "title": "StatLog (Landsat MSS)",
+ "info": {
+  "sensor": "Landsat MSS (4 bands), 3x3 neighbourhoods",
+  "features": 36,
+  "classes": 6,
+  "labelled": 6435,
+  "split": "official UCI split: 4,435 train / 2,000 test"
+ },
+ "seeds": [
+  {
+   "seed": 0,
+   "n_train": 4435,
+   "n_heldout": 0,
+   "n_test": 2000,
+   "selection": "none (frozen StatLog model)",
+   "alpha_eps": 0.01,
+   "scale": 1.0,
+   "temperature": 1.0,
+   "seconds": 73.4
+  }
+ ]
+}

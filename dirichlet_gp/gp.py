@@ -190,40 +190,119 @@ class GroupedKernel:
 
         return K, trace_grad
 
+    def lengthscale_mask(self) -> np.ndarray:
+        """True for the log-length-scale entries of theta (False for the log signal variance)."""
+        return np.r_[np.ones(self.n_groups, bool), False]
 
-class SumKernel:
-    """k1 + k2 with concatenated hyper-parameters (theta = [theta1, theta2])."""
+    def initial_theta(self, target_var: float) -> np.ndarray:
+        return _initial_theta(self, target_var)
 
-    def __init__(self, k1: GroupedKernel, k2: GroupedKernel):
-        self.k1, self.k2 = k1, k2
-        self.n_groups = k1.n_groups + k2.n_groups
+
+class LinearKernel:
+    """Grouped linear (dot-product) kernel k(x, x') = sum_g v_g <x_g, x'_g>, theta = log v_g.
+
+    Used inside a :class:`SumKernel` it adds a Bayesian linear model on the (standardised)
+    inputs to a stationary kernel. It has no length-scales, so ``refit``'s length-scale
+    multiplier leaves it unchanged.
+    """
+
+    def __init__(self, groups: np.ndarray):
+        self.groups = np.asarray(groups, dtype=int)  # -1 = feature not used
+        self.n_groups = int(self.groups.max()) + 1
+        self.members = [np.flatnonzero(self.groups == g) for g in range(self.n_groups)]
 
     @property
     def n_params(self) -> int:
-        return self.k1.n_params + self.k2.n_params
+        return self.n_groups
 
-    def _split(self, theta):
-        return theta[: self.k1.n_params], theta[self.k1.n_params:]
+    def _dot(self, A, B, g):
+        idx = self.members[g]
+        return A[:, idx] @ B[:, idx].T
 
     def __call__(self, A, B, theta):
-        t1, t2 = self._split(theta)
-        return self.k1(A, B, t1) + self.k2(A, B, t2)
+        v = np.exp(theta)
+        return sum(v[g] * self._dot(A, B, g) for g in range(self.n_groups))
 
     def diag(self, A, theta):
-        t1, t2 = self._split(theta)
-        return self.k1.diag(A, t1) + self.k2.diag(A, t2)
+        v = np.exp(theta)
+        return sum(v[g] * (A[:, idx] ** 2).sum(1) for g, idx in enumerate(self.members))
 
     def precompute(self, X, cache: bool = True):
-        return self.k1.precompute(X, cache), self.k2.precompute(X, cache)
+        if not cache:
+            return ("uncached", X)
+        return np.stack([self._dot(X, X, g) for g in range(self.n_groups)]).astype(np.float32)
 
     def gram_and_grad_fn(self, D, theta):
-        t1, t2 = self._split(theta)
-        K1, g1 = self.k1.gram_and_grad_fn(D[0], t1)
-        K2, g2 = self.k2.gram_and_grad_fn(D[1], t2)
-        return K1 + K2, lambda W: np.r_[g1(W), g2(W)]
+        v = np.exp(theta)
+        if isinstance(D, tuple) and D[0] == "uncached":
+            X = D[1]
+            dots = [self._dot(X, X, g) for g in range(self.n_groups)]
+        else:
+            dots = list(D)
+        K = sum(v[g] * dots[g] for g in range(self.n_groups))
+
+        def trace_grad(W):
+            return np.array([v[g] * np.sum(W * dots[g]) for g in range(self.n_groups)])
+
+        return K, trace_grad
+
+    def lengthscale_mask(self) -> np.ndarray:
+        return np.zeros(self.n_groups, bool)
 
     def initial_theta(self, target_var: float) -> np.ndarray:
-        return np.r_[_initial_theta(self.k1, 0.5 * target_var), _initial_theta(self.k2, 0.5 * target_var)]
+        used = sum(len(m) for m in self.members)
+        return np.full(self.n_groups, np.log(target_var / max(used, 1)))
+
+
+class SumKernel:
+    """k_1 + ... + k_N with concatenated hyper-parameters (theta = [theta_1, ..., theta_N])."""
+
+    def __init__(self, *kernels):
+        if len(kernels) < 2:
+            raise ValueError("a sum kernel needs at least two terms")
+        self.kernels = list(kernels)
+        self.n_groups = sum(k.n_groups for k in self.kernels)
+
+    @property
+    def k1(self) -> GroupedKernel:
+        return self.kernels[0]
+
+    @property
+    def k2(self) -> GroupedKernel:
+        return self.kernels[1]
+
+    @property
+    def n_params(self) -> int:
+        return sum(k.n_params for k in self.kernels)
+
+    def _split(self, theta):
+        out, i = [], 0
+        for k in self.kernels:
+            out.append(theta[i:i + k.n_params])
+            i += k.n_params
+        return out
+
+    def __call__(self, A, B, theta):
+        return sum(k(A, B, t) for k, t in zip(self.kernels, self._split(theta)))
+
+    def diag(self, A, theta):
+        return sum(k.diag(A, t) for k, t in zip(self.kernels, self._split(theta)))
+
+    def precompute(self, X, cache: bool = True):
+        return tuple(k.precompute(X, cache) for k in self.kernels)
+
+    def gram_and_grad_fn(self, D, theta):
+        parts = [k.gram_and_grad_fn(d, t) for k, d, t in zip(self.kernels, D, self._split(theta))]
+        K = sum(p[0] for p in parts)
+        return K, lambda W: np.concatenate([p[1](W) for p in parts])
+
+    def initial_theta(self, target_var: float) -> np.ndarray:
+        share = target_var / len(self.kernels)
+        return np.concatenate([k.initial_theta(share) for k in self.kernels])
+
+    def lengthscale_mask(self) -> np.ndarray:
+        """True for the log-length-scale entries of theta (False for variances)."""
+        return np.concatenate([k.lengthscale_mask() for k in self.kernels])
 
 
 def _initial_theta(k: GroupedKernel, target_var: float) -> np.ndarray:
@@ -246,6 +325,13 @@ class GPDirichletClassifier:
     cache : cache the pairwise group distances during optimisation (fast,
         O(T G n^2) memory); set False for large n with invariant kernels.
     theta : fixed hyper-parameters (no optimisation); theta_init : optimiser start.
+    features : optional feature map with ``fit``/``transform`` used instead of
+        ``representation`` (e.g. ``CompositeFeatures``).
+    rule : class-probability rule -- "mc" (Monte-Carlo mean of softmax(f)) or
+        "lognormal" (deterministic, p_c proportional to exp(mu_c + var_c / 2),
+        the mean of the Gamma-like variable each latent approximates).
+    temperature : the latent functions are divided by it before the rule is applied
+        (calibration only: it does not change the "lognormal" decisions).
     n_opt : at most this many (class-stratified) training samples are used to
         optimise the hyper-parameters; the final model uses all of them.
     """
@@ -253,7 +339,7 @@ class GPDirichletClassifier:
     def __init__(self, representation: str = "standard", groups=None, kernel: str = "rbf", permutations=None,
                  alpha_eps: float = 0.01, n_opt: int = 2000, max_iter: int = 100, n_mc: int = 256,
                  jitter: float = 1e-6, random_state: int = 0, theta=None,
-                 cache: bool = True, theta_init=None):
+                 cache: bool = True, theta_init=None, features=None, rule: str = "mc", temperature: float = 1.0):
         self.representation = representation
         self.groups = groups
         self.kernel = kernel
@@ -267,6 +353,12 @@ class GPDirichletClassifier:
         self.theta = theta
         self.cache = cache
         self.theta_init = theta_init
+        self.features = features
+        if rule not in ("mc", "lognormal"):
+            raise ValueError("rule must be 'mc' or 'lognormal'")
+        self.rule = rule
+        self.temperature = temperature
+        self.prior_ratio_ = None
 
     # -- label transformation
     def _noise_levels(self, alpha_eps: float) -> tuple[float, float]:
@@ -341,11 +433,11 @@ class GPDirichletClassifier:
 
     def fit(self, X: np.ndarray, y: np.ndarray, X_val=None, y_val=None):
         y = np.asarray(y)
-        self.rep_ = Standardizer(self.representation).fit(X)
+        self.rep_ = (self.features if self.features is not None else Standardizer(self.representation)).fit(X)
         Z = self.rep_.transform(X)
         self.classes_ = np.unique(y)
         self.s_on_, self.s_off_ = self._noise_levels(self.alpha_eps)
-        if isinstance(self.kernel, (GroupedKernel, SumKernel)):
+        if isinstance(self.kernel, (GroupedKernel, SumKernel, LinearKernel)):
             self.kernel_ = self.kernel
         else:
             groups = np.arange(Z.shape[1]) if self.groups is None else np.asarray(self.groups)
@@ -365,16 +457,31 @@ class GPDirichletClassifier:
             target_var = T.var(axis=0).mean()
             if self.theta_init is not None:
                 theta0 = np.asarray(self.theta_init, dtype=float)
-            elif isinstance(self.kernel_, SumKernel):
-                theta0 = self.kernel_.initial_theta(target_var)
             else:
-                theta0 = _initial_theta(self.kernel_, target_var)
+                theta0 = self.kernel_.initial_theta(target_var)
             bounds = [(np.log(1e-2), np.log(1e3))] * self.kernel_.n_params
             res = minimize(self._neg_lml, theta0, args=(self._D_opt, self._T_opt, self._members_opt), jac=True,
                            method="L-BFGS-B", bounds=bounds, options={"maxiter": self.max_iter})
             self.theta_ = res.x
             self.opt_result_ = res
+        self.theta_ml_ = self.theta_.copy()
+        self.y_ = y
         self._fit_final(Z, y, T)
+        return self
+
+    def _lengthscale_mask(self) -> np.ndarray:
+        return self.kernel_.lengthscale_mask()
+
+    def refit(self, alpha_eps: float | None = None, lengthscale_scale: float = 1.0) -> "GPDirichletClassifier":
+        """Re-condition on the training data with a new alpha_eps and/or all length-scales multiplied
+        by ``lengthscale_scale`` (relative to the maximum-likelihood values); no re-optimisation."""
+        if alpha_eps is not None:
+            self.alpha_eps = alpha_eps
+        self.s_on_, self.s_off_ = self._noise_levels(self.alpha_eps)
+        self.theta_ = self.theta_ml_ + np.log(lengthscale_scale) * self._lengthscale_mask()
+        T, _ = self._targets(self.y_)
+        self.means_ = T.mean(axis=0)
+        self._fit_final(self.Z_, self.y_, T)
         return self
 
     def _fit_final(self, Z: np.ndarray, y: np.ndarray, T: np.ndarray) -> None:
@@ -416,18 +523,32 @@ class GPDirichletClassifier:
                 var[s:s + chunk, c] = np.maximum(base - (w * w).sum(0), 1e-12)
         return mu, var
 
+    def probabilities_from_latent(self, mu: np.ndarray, var: np.ndarray, chunk: int = 2000) -> np.ndarray:
+        """Class probabilities from latent means/variances under ``self.rule`` (and prior ratio, if set)."""
+        T = self.temperature
+        if self.rule == "lognormal":
+            logit = (mu + 0.5 * var) / T
+            logit -= logit.max(axis=1, keepdims=True)
+            P = np.exp(logit)
+            P /= P.sum(axis=1, keepdims=True)
+        else:
+            rng = np.random.default_rng(self.random_state)
+            P = np.empty_like(mu)
+            sd = np.sqrt(var)
+            for s in range(0, len(mu), chunk):
+                m, d = mu[s:s + chunk], sd[s:s + chunk]
+                f = (m[:, :, None] + d[:, :, None] * rng.standard_normal((*m.shape, self.n_mc))) / T
+                f -= f.max(axis=1, keepdims=True)
+                e = np.exp(f)
+                P[s:s + chunk] = (e / e.sum(axis=1, keepdims=True)).mean(axis=2)
+        if self.prior_ratio_ is not None:
+            P = P * self.prior_ratio_[None, :]
+            P /= P.sum(axis=1, keepdims=True)
+        return P
+
     def predict_proba(self, X: np.ndarray, chunk: int = 2000) -> np.ndarray:
         mu, var = self.predict_latent(X)
-        rng = np.random.default_rng(self.random_state)
-        P = np.empty_like(mu)
-        sd = np.sqrt(var)
-        for s in range(0, len(mu), chunk):
-            m, d = mu[s:s + chunk], sd[s:s + chunk]
-            f = m[:, :, None] + d[:, :, None] * rng.standard_normal((*m.shape, self.n_mc))
-            f -= f.max(axis=1, keepdims=True)
-            e = np.exp(f)
-            P[s:s + chunk] = (e / e.sum(axis=1, keepdims=True)).mean(axis=2)
-        return P
+        return self.probabilities_from_latent(mu, var, chunk)
 
     def predict(self, X: np.ndarray) -> np.ndarray:
         return self.classes_[self.predict_proba(X).argmax(axis=1)]
@@ -438,15 +559,13 @@ class GPDirichletClassifier:
 
     @property
     def lengthscales_(self) -> np.ndarray:
-        """Length-scales (for a sum kernel: those of both kernels, signal variances excluded)."""
-        if isinstance(self.kernel_, SumKernel):
-            t1, t2 = self.kernel_._split(self.theta_)
-            return np.exp(np.r_[t1[:-1], t2[:-1]])
-        return np.exp(self.theta_[:-1])
+        """Length-scales (for a sum kernel: those of all its stationary terms, in order)."""
+        return np.exp(self.theta_[self._lengthscale_mask()])
 
     @property
     def signal_variance_(self) -> float:
+        """Signal variance of the stationary term(s) (summed for a sum kernel)."""
         if isinstance(self.kernel_, SumKernel):
-            t1, t2 = self.kernel_._split(self.theta_)
-            return float(np.exp(t1[-1]) + np.exp(t2[-1]))
+            return float(sum(np.exp(t[-1]) for k, t in zip(self.kernel_.kernels, self.kernel_._split(self.theta_))
+                             if isinstance(k, GroupedKernel)))
         return float(np.exp(self.theta_[-1]))

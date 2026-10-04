@@ -1,0 +1,26 @@
+{
+ "row": {
+  "dataset": "statlog",
+  "seed": 0,
+  "method": "GP v2 (validation-tuned Dirichlet GP)",
+  "OA": 0.9165,
+  "AA": 0.8964837467320707,
+  "kappa": 0.8971149364777143,
+  "macro_F1": 0.901947257331379,
+  "AURC": 0.011507028873509389,
+  "risk@80": 0.019375,
+  "NLL": 0.22989314545769987,
+  "ECE": 0.022401964935235757
+ },
+ "info": {
+  "seed": 0,
+  "n_train": 4435,
+  "n_heldout": 0,
+  "n_test": 2000,
+  "selection": "none (frozen StatLog model)",
+  "alpha_eps": 0.01,
+  "scale": 1.0,
+  "temperature": 1.0,
+  "seconds": 73.4
+ }
+}
