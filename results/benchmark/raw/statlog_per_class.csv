@@ -1,53 +1,53 @@
 dataset,seed,method,class,class_name,accuracy
 statlog,0,B1 Flat FCM,1,red soil,0.6290672451193059
 statlog,0,B1 Flat FCM,2,cotton crop,0.8258928571428571
-statlog,0,B1 Flat FCM,3,grey soil,0.9093198992443325
+statlog,0,B1 Flat FCM,3,grey soil,0.9093198992443324
 statlog,0,B1 Flat FCM,4,damp grey soil,0.7819905213270142
-statlog,0,B1 Flat FCM,5,soil with vegetation stubble,0.29957805907172996
+statlog,0,B1 Flat FCM,5,soil with vegetation stubble,0.2995780590717299
 statlog,0,B1 Flat FCM,7,very damp grey soil,0.6617021276595745
 statlog,0,B2 Flat FCM + max-membership,1,red soil,0.6290672451193059
 statlog,0,B2 Flat FCM + max-membership,2,cotton crop,0.8258928571428571
-statlog,0,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443325
+statlog,0,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443324
 statlog,0,B2 Flat FCM + max-membership,4,damp grey soil,0.7819905213270142
-statlog,0,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.29957805907172996
+statlog,0,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.2995780590717299
 statlog,0,B2 Flat FCM + max-membership,7,very damp grey soil,0.6617021276595745
-statlog,0,SG-HFQ,1,red soil,0.37093275488069416
+statlog,0,SG-HFQ,1,red soil,0.3709327548806941
 statlog,0,SG-HFQ,2,cotton crop,0.6383928571428571
-statlog,0,SG-HFQ,3,grey soil,0.9773299748110831
-statlog,0,SG-HFQ,4,damp grey soil,0.004739336492890996
+statlog,0,SG-HFQ,3,grey soil,0.9773299748110832
+statlog,0,SG-HFQ,4,damp grey soil,0.0047393364928909
 statlog,0,SG-HFQ,5,soil with vegetation stubble,0.0
 statlog,0,SG-HFQ,7,very damp grey soil,0.0
-statlog,0,"B3 HFCM, no gating",1,red soil,0.37093275488069416
+statlog,0,"B3 HFCM, no gating",1,red soil,0.3709327548806941
 statlog,0,"B3 HFCM, no gating",2,cotton crop,0.6383928571428571
-statlog,0,"B3 HFCM, no gating",3,grey soil,0.9773299748110831
-statlog,0,"B3 HFCM, no gating",4,damp grey soil,0.004739336492890996
+statlog,0,"B3 HFCM, no gating",3,grey soil,0.9773299748110832
+statlog,0,"B3 HFCM, no gating",4,damp grey soil,0.0047393364928909
 statlog,0,"B3 HFCM, no gating",5,soil with vegetation stubble,0.0
 statlog,0,"B3 HFCM, no gating",7,very damp grey soil,0.0
-statlog,0,B4 HFCM + entropy gating,1,red soil,0.37093275488069416
+statlog,0,B4 HFCM + entropy gating,1,red soil,0.3709327548806941
 statlog,0,B4 HFCM + entropy gating,2,cotton crop,0.6383928571428571
-statlog,0,B4 HFCM + entropy gating,3,grey soil,0.9773299748110831
-statlog,0,B4 HFCM + entropy gating,4,damp grey soil,0.004739336492890996
+statlog,0,B4 HFCM + entropy gating,3,grey soil,0.9773299748110832
+statlog,0,B4 HFCM + entropy gating,4,damp grey soil,0.0047393364928909
 statlog,0,B4 HFCM + entropy gating,5,soil with vegetation stubble,0.0
 statlog,0,B4 HFCM + entropy gating,7,very damp grey soil,0.0
 statlog,0,SG-HFQ (class-seeded),1,red soil,0.2668112798264642
 statlog,0,SG-HFQ (class-seeded),2,cotton crop,0.78125
-statlog,0,SG-HFQ (class-seeded),3,grey soil,0.9143576826196473
+statlog,0,SG-HFQ (class-seeded),3,grey soil,0.9143576826196472
 statlog,0,SG-HFQ (class-seeded),4,damp grey soil,0.7298578199052133
 statlog,0,SG-HFQ (class-seeded),5,soil with vegetation stubble,0.5232067510548524
 statlog,0,SG-HFQ (class-seeded),7,very damp grey soil,0.4148936170212766
-statlog,0,SVM (RBF),1,red soil,0.9978308026030369
-statlog,0,SVM (RBF),2,cotton crop,0.9732142857142857
+statlog,0,SVM (RBF),1,red soil,0.9978308026030368
+statlog,0,SVM (RBF),2,cotton crop,0.9732142857142856
 statlog,0,SVM (RBF),3,grey soil,0.9345088161209067
 statlog,0,SVM (RBF),4,damp grey soil,0.6445497630331753
 statlog,0,SVM (RBF),5,soil with vegetation stubble,0.919831223628692
 statlog,0,SVM (RBF),7,very damp grey soil,0.9085106382978724
 statlog,0,"SVM (RBF), Phase 1 features",1,red soil,0.982646420824295
-statlog,0,"SVM (RBF), Phase 1 features",2,cotton crop,0.9553571428571429
-statlog,0,"SVM (RBF), Phase 1 features",3,grey soil,0.9168765743073047
+statlog,0,"SVM (RBF), Phase 1 features",2,cotton crop,0.9553571428571428
+statlog,0,"SVM (RBF), Phase 1 features",3,grey soil,0.9168765743073048
 statlog,0,"SVM (RBF), Phase 1 features",4,damp grey soil,0.5165876777251185
 statlog,0,"SVM (RBF), Phase 1 features",5,soil with vegetation stubble,0.7932489451476793
 statlog,0,"SVM (RBF), Phase 1 features",7,very damp grey soil,0.9042553191489362
-statlog,0,Random Forest,1,red soil,0.9956616052060737
+statlog,0,Random Forest,1,red soil,0.9956616052060736
 statlog,0,Random Forest,2,cotton crop,0.9776785714285714
 statlog,0,Random Forest,3,grey soil,0.9521410579345088
 statlog,0,Random Forest,4,damp grey soil,0.6303317535545023
@@ -61,49 +61,49 @@ statlog,0,"Random Forest, Phase 1 features",5,soil with vegetation stubble,0.831
 statlog,0,"Random Forest, Phase 1 features",7,very damp grey soil,0.874468085106383
 statlog,1,B1 Flat FCM,1,red soil,0.6290672451193059
 statlog,1,B1 Flat FCM,2,cotton crop,0.8258928571428571
-statlog,1,B1 Flat FCM,3,grey soil,0.9093198992443325
+statlog,1,B1 Flat FCM,3,grey soil,0.9093198992443324
 statlog,1,B1 Flat FCM,4,damp grey soil,0.7819905213270142
-statlog,1,B1 Flat FCM,5,soil with vegetation stubble,0.29957805907172996
+statlog,1,B1 Flat FCM,5,soil with vegetation stubble,0.2995780590717299
 statlog,1,B1 Flat FCM,7,very damp grey soil,0.6617021276595745
 statlog,1,B2 Flat FCM + max-membership,1,red soil,0.6290672451193059
 statlog,1,B2 Flat FCM + max-membership,2,cotton crop,0.8258928571428571
-statlog,1,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443325
+statlog,1,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443324
 statlog,1,B2 Flat FCM + max-membership,4,damp grey soil,0.7819905213270142
-statlog,1,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.29957805907172996
+statlog,1,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.2995780590717299
 statlog,1,B2 Flat FCM + max-membership,7,very damp grey soil,0.6617021276595745
-statlog,1,SG-HFQ,1,red soil,0.37093275488069416
+statlog,1,SG-HFQ,1,red soil,0.3709327548806941
 statlog,1,SG-HFQ,2,cotton crop,0.6383928571428571
-statlog,1,SG-HFQ,3,grey soil,0.9773299748110831
-statlog,1,SG-HFQ,4,damp grey soil,0.004739336492890996
+statlog,1,SG-HFQ,3,grey soil,0.9773299748110832
+statlog,1,SG-HFQ,4,damp grey soil,0.0047393364928909
 statlog,1,SG-HFQ,5,soil with vegetation stubble,0.0
 statlog,1,SG-HFQ,7,very damp grey soil,0.0
-statlog,1,"B3 HFCM, no gating",1,red soil,0.37093275488069416
+statlog,1,"B3 HFCM, no gating",1,red soil,0.3709327548806941
 statlog,1,"B3 HFCM, no gating",2,cotton crop,0.6383928571428571
-statlog,1,"B3 HFCM, no gating",3,grey soil,0.9773299748110831
-statlog,1,"B3 HFCM, no gating",4,damp grey soil,0.004739336492890996
+statlog,1,"B3 HFCM, no gating",3,grey soil,0.9773299748110832
+statlog,1,"B3 HFCM, no gating",4,damp grey soil,0.0047393364928909
 statlog,1,"B3 HFCM, no gating",5,soil with vegetation stubble,0.0
 statlog,1,"B3 HFCM, no gating",7,very damp grey soil,0.0
-statlog,1,B4 HFCM + entropy gating,1,red soil,0.37093275488069416
+statlog,1,B4 HFCM + entropy gating,1,red soil,0.3709327548806941
 statlog,1,B4 HFCM + entropy gating,2,cotton crop,0.6383928571428571
-statlog,1,B4 HFCM + entropy gating,3,grey soil,0.9773299748110831
-statlog,1,B4 HFCM + entropy gating,4,damp grey soil,0.004739336492890996
+statlog,1,B4 HFCM + entropy gating,3,grey soil,0.9773299748110832
+statlog,1,B4 HFCM + entropy gating,4,damp grey soil,0.0047393364928909
 statlog,1,B4 HFCM + entropy gating,5,soil with vegetation stubble,0.0
 statlog,1,B4 HFCM + entropy gating,7,very damp grey soil,0.0
 statlog,1,SG-HFQ (class-seeded),1,red soil,0.2668112798264642
 statlog,1,SG-HFQ (class-seeded),2,cotton crop,0.78125
-statlog,1,SG-HFQ (class-seeded),3,grey soil,0.9143576826196473
+statlog,1,SG-HFQ (class-seeded),3,grey soil,0.9143576826196472
 statlog,1,SG-HFQ (class-seeded),4,damp grey soil,0.7298578199052133
 statlog,1,SG-HFQ (class-seeded),5,soil with vegetation stubble,0.5232067510548524
 statlog,1,SG-HFQ (class-seeded),7,very damp grey soil,0.4148936170212766
-statlog,1,SVM (RBF),1,red soil,0.9978308026030369
+statlog,1,SVM (RBF),1,red soil,0.9978308026030368
 statlog,1,SVM (RBF),2,cotton crop,0.9776785714285714
 statlog,1,SVM (RBF),3,grey soil,0.9345088161209067
 statlog,1,SVM (RBF),4,damp grey soil,0.6445497630331753
 statlog,1,SVM (RBF),5,soil with vegetation stubble,0.919831223628692
 statlog,1,SVM (RBF),7,very damp grey soil,0.9042553191489362
 statlog,1,"SVM (RBF), Phase 1 features",1,red soil,0.982646420824295
-statlog,1,"SVM (RBF), Phase 1 features",2,cotton crop,0.9642857142857143
-statlog,1,"SVM (RBF), Phase 1 features",3,grey soil,0.9168765743073047
+statlog,1,"SVM (RBF), Phase 1 features",2,cotton crop,0.9642857142857144
+statlog,1,"SVM (RBF), Phase 1 features",3,grey soil,0.9168765743073048
 statlog,1,"SVM (RBF), Phase 1 features",4,damp grey soil,0.5071090047393365
 statlog,1,"SVM (RBF), Phase 1 features",5,soil with vegetation stubble,0.7932489451476793
 statlog,1,"SVM (RBF), Phase 1 features",7,very damp grey soil,0.9042553191489362
@@ -113,7 +113,7 @@ statlog,1,Random Forest,3,grey soil,0.947103274559194
 statlog,1,Random Forest,4,damp grey soil,0.6350710900473934
 statlog,1,Random Forest,5,soil with vegetation stubble,0.8860759493670886
 statlog,1,Random Forest,7,very damp grey soil,0.9
-statlog,1,"Random Forest, Phase 1 features",1,red soil,0.9956616052060737
+statlog,1,"Random Forest, Phase 1 features",1,red soil,0.9956616052060736
 statlog,1,"Random Forest, Phase 1 features",2,cotton crop,0.9464285714285714
 statlog,1,"Random Forest, Phase 1 features",3,grey soil,0.9219143576826196
 statlog,1,"Random Forest, Phase 1 features",4,damp grey soil,0.5355450236966824
@@ -121,161 +121,161 @@ statlog,1,"Random Forest, Phase 1 features",5,soil with vegetation stubble,0.831
 statlog,1,"Random Forest, Phase 1 features",7,very damp grey soil,0.874468085106383
 statlog,2,B1 Flat FCM,1,red soil,0.6290672451193059
 statlog,2,B1 Flat FCM,2,cotton crop,0.8258928571428571
-statlog,2,B1 Flat FCM,3,grey soil,0.9093198992443325
+statlog,2,B1 Flat FCM,3,grey soil,0.9093198992443324
 statlog,2,B1 Flat FCM,4,damp grey soil,0.7819905213270142
-statlog,2,B1 Flat FCM,5,soil with vegetation stubble,0.29957805907172996
+statlog,2,B1 Flat FCM,5,soil with vegetation stubble,0.2995780590717299
 statlog,2,B1 Flat FCM,7,very damp grey soil,0.6617021276595745
 statlog,2,B2 Flat FCM + max-membership,1,red soil,0.6290672451193059
 statlog,2,B2 Flat FCM + max-membership,2,cotton crop,0.8258928571428571
-statlog,2,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443325
+statlog,2,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443324
 statlog,2,B2 Flat FCM + max-membership,4,damp grey soil,0.7819905213270142
-statlog,2,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.29957805907172996
+statlog,2,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.2995780590717299
 statlog,2,B2 Flat FCM + max-membership,7,very damp grey soil,0.6617021276595745
-statlog,2,SG-HFQ,1,red soil,0.37093275488069416
+statlog,2,SG-HFQ,1,red soil,0.3709327548806941
 statlog,2,SG-HFQ,2,cotton crop,0.6383928571428571
-statlog,2,SG-HFQ,3,grey soil,0.9773299748110831
-statlog,2,SG-HFQ,4,damp grey soil,0.004739336492890996
+statlog,2,SG-HFQ,3,grey soil,0.9773299748110832
+statlog,2,SG-HFQ,4,damp grey soil,0.0047393364928909
 statlog,2,SG-HFQ,5,soil with vegetation stubble,0.0
 statlog,2,SG-HFQ,7,very damp grey soil,0.0
-statlog,2,"B3 HFCM, no gating",1,red soil,0.37093275488069416
+statlog,2,"B3 HFCM, no gating",1,red soil,0.3709327548806941
 statlog,2,"B3 HFCM, no gating",2,cotton crop,0.6383928571428571
-statlog,2,"B3 HFCM, no gating",3,grey soil,0.9773299748110831
-statlog,2,"B3 HFCM, no gating",4,damp grey soil,0.004739336492890996
+statlog,2,"B3 HFCM, no gating",3,grey soil,0.9773299748110832
+statlog,2,"B3 HFCM, no gating",4,damp grey soil,0.0047393364928909
 statlog,2,"B3 HFCM, no gating",5,soil with vegetation stubble,0.0
 statlog,2,"B3 HFCM, no gating",7,very damp grey soil,0.0
-statlog,2,B4 HFCM + entropy gating,1,red soil,0.37093275488069416
+statlog,2,B4 HFCM + entropy gating,1,red soil,0.3709327548806941
 statlog,2,B4 HFCM + entropy gating,2,cotton crop,0.6383928571428571
-statlog,2,B4 HFCM + entropy gating,3,grey soil,0.9773299748110831
-statlog,2,B4 HFCM + entropy gating,4,damp grey soil,0.004739336492890996
+statlog,2,B4 HFCM + entropy gating,3,grey soil,0.9773299748110832
+statlog,2,B4 HFCM + entropy gating,4,damp grey soil,0.0047393364928909
 statlog,2,B4 HFCM + entropy gating,5,soil with vegetation stubble,0.0
 statlog,2,B4 HFCM + entropy gating,7,very damp grey soil,0.0
 statlog,2,SG-HFQ (class-seeded),1,red soil,0.2668112798264642
 statlog,2,SG-HFQ (class-seeded),2,cotton crop,0.78125
-statlog,2,SG-HFQ (class-seeded),3,grey soil,0.9143576826196473
+statlog,2,SG-HFQ (class-seeded),3,grey soil,0.9143576826196472
 statlog,2,SG-HFQ (class-seeded),4,damp grey soil,0.7298578199052133
 statlog,2,SG-HFQ (class-seeded),5,soil with vegetation stubble,0.5232067510548524
 statlog,2,SG-HFQ (class-seeded),7,very damp grey soil,0.4148936170212766
-statlog,2,SVM (RBF),1,red soil,0.9978308026030369
-statlog,2,SVM (RBF),2,cotton crop,0.9732142857142857
+statlog,2,SVM (RBF),1,red soil,0.9978308026030368
+statlog,2,SVM (RBF),2,cotton crop,0.9732142857142856
 statlog,2,SVM (RBF),3,grey soil,0.929471032745592
 statlog,2,SVM (RBF),4,damp grey soil,0.6492890995260664
 statlog,2,SVM (RBF),5,soil with vegetation stubble,0.9156118143459916
 statlog,2,SVM (RBF),7,very damp grey soil,0.9063829787234042
-statlog,2,"SVM (RBF), Phase 1 features",1,red soil,0.9978308026030369
-statlog,2,"SVM (RBF), Phase 1 features",2,cotton crop,0.9553571428571429
+statlog,2,"SVM (RBF), Phase 1 features",1,red soil,0.9978308026030368
+statlog,2,"SVM (RBF), Phase 1 features",2,cotton crop,0.9553571428571428
 statlog,2,"SVM (RBF), Phase 1 features",3,grey soil,0.9496221662468514
-statlog,2,"SVM (RBF), Phase 1 features",4,damp grey soil,0.44075829383886256
+statlog,2,"SVM (RBF), Phase 1 features",4,damp grey soil,0.4407582938388625
 statlog,2,"SVM (RBF), Phase 1 features",5,soil with vegetation stubble,0.8185654008438819
 statlog,2,"SVM (RBF), Phase 1 features",7,very damp grey soil,0.8680851063829788
 statlog,2,Random Forest,1,red soil,0.9934924078091106
 statlog,2,Random Forest,2,cotton crop,0.9776785714285714
 statlog,2,Random Forest,3,grey soil,0.947103274559194
 statlog,2,Random Forest,4,damp grey soil,0.6445497630331753
-statlog,2,Random Forest,5,soil with vegetation stubble,0.9071729957805907
+statlog,2,Random Forest,5,soil with vegetation stubble,0.9071729957805909
 statlog,2,Random Forest,7,very damp grey soil,0.8978723404255319
 statlog,2,"Random Forest, Phase 1 features",1,red soil,0.9913232104121475
-statlog,2,"Random Forest, Phase 1 features",2,cotton crop,0.9419642857142857
+statlog,2,"Random Forest, Phase 1 features",2,cotton crop,0.9419642857142856
 statlog,2,"Random Forest, Phase 1 features",3,grey soil,0.929471032745592
 statlog,2,"Random Forest, Phase 1 features",4,damp grey soil,0.5355450236966824
 statlog,2,"Random Forest, Phase 1 features",5,soil with vegetation stubble,0.8270042194092827
 statlog,2,"Random Forest, Phase 1 features",7,very damp grey soil,0.8702127659574468
 statlog,3,B1 Flat FCM,1,red soil,0.6290672451193059
 statlog,3,B1 Flat FCM,2,cotton crop,0.8258928571428571
-statlog,3,B1 Flat FCM,3,grey soil,0.9093198992443325
+statlog,3,B1 Flat FCM,3,grey soil,0.9093198992443324
 statlog,3,B1 Flat FCM,4,damp grey soil,0.7819905213270142
-statlog,3,B1 Flat FCM,5,soil with vegetation stubble,0.29957805907172996
+statlog,3,B1 Flat FCM,5,soil with vegetation stubble,0.2995780590717299
 statlog,3,B1 Flat FCM,7,very damp grey soil,0.6617021276595745
 statlog,3,B2 Flat FCM + max-membership,1,red soil,0.6290672451193059
 statlog,3,B2 Flat FCM + max-membership,2,cotton crop,0.8258928571428571
-statlog,3,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443325
+statlog,3,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443324
 statlog,3,B2 Flat FCM + max-membership,4,damp grey soil,0.7819905213270142
-statlog,3,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.29957805907172996
+statlog,3,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.2995780590717299
 statlog,3,B2 Flat FCM + max-membership,7,very damp grey soil,0.6617021276595745
-statlog,3,SG-HFQ,1,red soil,0.37093275488069416
+statlog,3,SG-HFQ,1,red soil,0.3709327548806941
 statlog,3,SG-HFQ,2,cotton crop,0.6383928571428571
-statlog,3,SG-HFQ,3,grey soil,0.9773299748110831
-statlog,3,SG-HFQ,4,damp grey soil,0.004739336492890996
+statlog,3,SG-HFQ,3,grey soil,0.9773299748110832
+statlog,3,SG-HFQ,4,damp grey soil,0.0047393364928909
 statlog,3,SG-HFQ,5,soil with vegetation stubble,0.0
 statlog,3,SG-HFQ,7,very damp grey soil,0.0
-statlog,3,"B3 HFCM, no gating",1,red soil,0.37093275488069416
+statlog,3,"B3 HFCM, no gating",1,red soil,0.3709327548806941
 statlog,3,"B3 HFCM, no gating",2,cotton crop,0.6383928571428571
-statlog,3,"B3 HFCM, no gating",3,grey soil,0.9773299748110831
-statlog,3,"B3 HFCM, no gating",4,damp grey soil,0.004739336492890996
+statlog,3,"B3 HFCM, no gating",3,grey soil,0.9773299748110832
+statlog,3,"B3 HFCM, no gating",4,damp grey soil,0.0047393364928909
 statlog,3,"B3 HFCM, no gating",5,soil with vegetation stubble,0.0
 statlog,3,"B3 HFCM, no gating",7,very damp grey soil,0.0
-statlog,3,B4 HFCM + entropy gating,1,red soil,0.37093275488069416
+statlog,3,B4 HFCM + entropy gating,1,red soil,0.3709327548806941
 statlog,3,B4 HFCM + entropy gating,2,cotton crop,0.6383928571428571
-statlog,3,B4 HFCM + entropy gating,3,grey soil,0.9773299748110831
-statlog,3,B4 HFCM + entropy gating,4,damp grey soil,0.004739336492890996
+statlog,3,B4 HFCM + entropy gating,3,grey soil,0.9773299748110832
+statlog,3,B4 HFCM + entropy gating,4,damp grey soil,0.0047393364928909
 statlog,3,B4 HFCM + entropy gating,5,soil with vegetation stubble,0.0
 statlog,3,B4 HFCM + entropy gating,7,very damp grey soil,0.0
 statlog,3,SG-HFQ (class-seeded),1,red soil,0.2668112798264642
 statlog,3,SG-HFQ (class-seeded),2,cotton crop,0.78125
-statlog,3,SG-HFQ (class-seeded),3,grey soil,0.9143576826196473
+statlog,3,SG-HFQ (class-seeded),3,grey soil,0.9143576826196472
 statlog,3,SG-HFQ (class-seeded),4,damp grey soil,0.7298578199052133
 statlog,3,SG-HFQ (class-seeded),5,soil with vegetation stubble,0.5232067510548524
 statlog,3,SG-HFQ (class-seeded),7,very damp grey soil,0.4148936170212766
-statlog,3,SVM (RBF),1,red soil,0.9978308026030369
+statlog,3,SVM (RBF),1,red soil,0.9978308026030368
 statlog,3,SVM (RBF),2,cotton crop,0.9776785714285714
 statlog,3,SVM (RBF),3,grey soil,0.929471032745592
 statlog,3,SVM (RBF),4,damp grey soil,0.6635071090047393
 statlog,3,SVM (RBF),5,soil with vegetation stubble,0.919831223628692
 statlog,3,SVM (RBF),7,very damp grey soil,0.9063829787234042
-statlog,3,"SVM (RBF), Phase 1 features",1,red soil,0.9978308026030369
-statlog,3,"SVM (RBF), Phase 1 features",2,cotton crop,0.9553571428571429
+statlog,3,"SVM (RBF), Phase 1 features",1,red soil,0.9978308026030368
+statlog,3,"SVM (RBF), Phase 1 features",2,cotton crop,0.9553571428571428
 statlog,3,"SVM (RBF), Phase 1 features",3,grey soil,0.9496221662468514
-statlog,3,"SVM (RBF), Phase 1 features",4,damp grey soil,0.44075829383886256
+statlog,3,"SVM (RBF), Phase 1 features",4,damp grey soil,0.4407582938388625
 statlog,3,"SVM (RBF), Phase 1 features",5,soil with vegetation stubble,0.8185654008438819
 statlog,3,"SVM (RBF), Phase 1 features",7,very damp grey soil,0.8680851063829788
 statlog,3,Random Forest,1,red soil,0.9934924078091106
-statlog,3,Random Forest,2,cotton crop,0.9732142857142857
+statlog,3,Random Forest,2,cotton crop,0.9732142857142856
 statlog,3,Random Forest,3,grey soil,0.9445843828715366
 statlog,3,Random Forest,4,damp grey soil,0.6445497630331753
-statlog,3,Random Forest,5,soil with vegetation stubble,0.9029535864978903
+statlog,3,Random Forest,5,soil with vegetation stubble,0.9029535864978904
 statlog,3,Random Forest,7,very damp grey soil,0.8914893617021277
 statlog,3,"Random Forest, Phase 1 features",1,red soil,0.9913232104121475
-statlog,3,"Random Forest, Phase 1 features",2,cotton crop,0.9419642857142857
+statlog,3,"Random Forest, Phase 1 features",2,cotton crop,0.9419642857142856
 statlog,3,"Random Forest, Phase 1 features",3,grey soil,0.9193954659949622
 statlog,3,"Random Forest, Phase 1 features",4,damp grey soil,0.5308056872037915
 statlog,3,"Random Forest, Phase 1 features",5,soil with vegetation stubble,0.8438818565400844
 statlog,3,"Random Forest, Phase 1 features",7,very damp grey soil,0.8680851063829788
 statlog,4,B1 Flat FCM,1,red soil,0.6290672451193059
 statlog,4,B1 Flat FCM,2,cotton crop,0.8258928571428571
-statlog,4,B1 Flat FCM,3,grey soil,0.9093198992443325
+statlog,4,B1 Flat FCM,3,grey soil,0.9093198992443324
 statlog,4,B1 Flat FCM,4,damp grey soil,0.7819905213270142
-statlog,4,B1 Flat FCM,5,soil with vegetation stubble,0.29957805907172996
+statlog,4,B1 Flat FCM,5,soil with vegetation stubble,0.2995780590717299
 statlog,4,B1 Flat FCM,7,very damp grey soil,0.6617021276595745
 statlog,4,B2 Flat FCM + max-membership,1,red soil,0.6290672451193059
 statlog,4,B2 Flat FCM + max-membership,2,cotton crop,0.8258928571428571
-statlog,4,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443325
+statlog,4,B2 Flat FCM + max-membership,3,grey soil,0.9093198992443324
 statlog,4,B2 Flat FCM + max-membership,4,damp grey soil,0.7819905213270142
-statlog,4,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.29957805907172996
+statlog,4,B2 Flat FCM + max-membership,5,soil with vegetation stubble,0.2995780590717299
 statlog,4,B2 Flat FCM + max-membership,7,very damp grey soil,0.6617021276595745
-statlog,4,SG-HFQ,1,red soil,0.37093275488069416
+statlog,4,SG-HFQ,1,red soil,0.3709327548806941
 statlog,4,SG-HFQ,2,cotton crop,0.6383928571428571
-statlog,4,SG-HFQ,3,grey soil,0.9773299748110831
-statlog,4,SG-HFQ,4,damp grey soil,0.004739336492890996
+statlog,4,SG-HFQ,3,grey soil,0.9773299748110832
+statlog,4,SG-HFQ,4,damp grey soil,0.0047393364928909
 statlog,4,SG-HFQ,5,soil with vegetation stubble,0.0
 statlog,4,SG-HFQ,7,very damp grey soil,0.0
-statlog,4,"B3 HFCM, no gating",1,red soil,0.37093275488069416
+statlog,4,"B3 HFCM, no gating",1,red soil,0.3709327548806941
 statlog,4,"B3 HFCM, no gating",2,cotton crop,0.6383928571428571
-statlog,4,"B3 HFCM, no gating",3,grey soil,0.9773299748110831
-statlog,4,"B3 HFCM, no gating",4,damp grey soil,0.004739336492890996
+statlog,4,"B3 HFCM, no gating",3,grey soil,0.9773299748110832
+statlog,4,"B3 HFCM, no gating",4,damp grey soil,0.0047393364928909
 statlog,4,"B3 HFCM, no gating",5,soil with vegetation stubble,0.0
 statlog,4,"B3 HFCM, no gating",7,very damp grey soil,0.0
-statlog,4,B4 HFCM + entropy gating,1,red soil,0.37093275488069416
+statlog,4,B4 HFCM + entropy gating,1,red soil,0.3709327548806941
 statlog,4,B4 HFCM + entropy gating,2,cotton crop,0.6383928571428571
-statlog,4,B4 HFCM + entropy gating,3,grey soil,0.9773299748110831
-statlog,4,B4 HFCM + entropy gating,4,damp grey soil,0.004739336492890996
+statlog,4,B4 HFCM + entropy gating,3,grey soil,0.9773299748110832
+statlog,4,B4 HFCM + entropy gating,4,damp grey soil,0.0047393364928909
 statlog,4,B4 HFCM + entropy gating,5,soil with vegetation stubble,0.0
 statlog,4,B4 HFCM + entropy gating,7,very damp grey soil,0.0
 statlog,4,SG-HFQ (class-seeded),1,red soil,0.2668112798264642
 statlog,4,SG-HFQ (class-seeded),2,cotton crop,0.78125
-statlog,4,SG-HFQ (class-seeded),3,grey soil,0.9143576826196473
+statlog,4,SG-HFQ (class-seeded),3,grey soil,0.9143576826196472
 statlog,4,SG-HFQ (class-seeded),4,damp grey soil,0.7298578199052133
 statlog,4,SG-HFQ (class-seeded),5,soil with vegetation stubble,0.5232067510548524
 statlog,4,SG-HFQ (class-seeded),7,very damp grey soil,0.4148936170212766
-statlog,4,SVM (RBF),1,red soil,0.9978308026030369
+statlog,4,SVM (RBF),1,red soil,0.9978308026030368
 statlog,4,SVM (RBF),2,cotton crop,0.96875
 statlog,4,SVM (RBF),3,grey soil,0.9345088161209067
 statlog,4,SVM (RBF),4,damp grey soil,0.6492890995260664
@@ -288,10 +288,10 @@ statlog,4,"SVM (RBF), Phase 1 features",4,damp grey soil,0.5118483412322274
 statlog,4,"SVM (RBF), Phase 1 features",5,soil with vegetation stubble,0.7932489451476793
 statlog,4,"SVM (RBF), Phase 1 features",7,very damp grey soil,0.9063829787234042
 statlog,4,Random Forest,1,red soil,0.9934924078091106
-statlog,4,Random Forest,2,cotton crop,0.9732142857142857
+statlog,4,Random Forest,2,cotton crop,0.9732142857142856
 statlog,4,Random Forest,3,grey soil,0.9521410579345088
 statlog,4,Random Forest,4,damp grey soil,0.6350710900473934
-statlog,4,Random Forest,5,soil with vegetation stubble,0.9029535864978903
+statlog,4,Random Forest,5,soil with vegetation stubble,0.9029535864978904
 statlog,4,Random Forest,7,very damp grey soil,0.9
 statlog,4,"Random Forest, Phase 1 features",1,red soil,0.9913232104121475
 statlog,4,"Random Forest, Phase 1 features",2,cotton crop,0.9464285714285714
@@ -299,3 +299,33 @@ statlog,4,"Random Forest, Phase 1 features",3,grey soil,0.924433249370277
 statlog,4,"Random Forest, Phase 1 features",4,damp grey soil,0.5355450236966824
 statlog,4,"Random Forest, Phase 1 features",5,soil with vegetation stubble,0.8354430379746836
 statlog,4,"Random Forest, Phase 1 features",7,very damp grey soil,0.8702127659574468
+statlog,0,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030369
+statlog,0,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,0,Gaussian process (Dirichlet GP),3,grey soil,0.9445843828715366
+statlog,0,Gaussian process (Dirichlet GP),4,damp grey soil,0.6303317535545023
+statlog,0,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9240506329113924
+statlog,0,Gaussian process (Dirichlet GP),7,very damp grey soil,0.8978723404255319
+statlog,1,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030369
+statlog,1,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,1,Gaussian process (Dirichlet GP),3,grey soil,0.9395465994962217
+statlog,1,Gaussian process (Dirichlet GP),4,damp grey soil,0.6161137440758294
+statlog,1,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9240506329113924
+statlog,1,Gaussian process (Dirichlet GP),7,very damp grey soil,0.902127659574468
+statlog,2,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030369
+statlog,2,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,2,Gaussian process (Dirichlet GP),3,grey soil,0.9395465994962217
+statlog,2,Gaussian process (Dirichlet GP),4,damp grey soil,0.6113744075829384
+statlog,2,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9282700421940928
+statlog,2,Gaussian process (Dirichlet GP),7,very damp grey soil,0.9127659574468086
+statlog,3,Gaussian process (Dirichlet GP),1,red soil,0.9956616052060737
+statlog,3,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,3,Gaussian process (Dirichlet GP),3,grey soil,0.9420654911838791
+statlog,3,Gaussian process (Dirichlet GP),4,damp grey soil,0.6113744075829384
+statlog,3,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9282700421940928
+statlog,3,Gaussian process (Dirichlet GP),7,very damp grey soil,0.9127659574468086
+statlog,4,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030369
+statlog,4,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,4,Gaussian process (Dirichlet GP),3,grey soil,0.9445843828715366
+statlog,4,Gaussian process (Dirichlet GP),4,damp grey soil,0.6161137440758294
+statlog,4,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9240506329113924
+statlog,4,Gaussian process (Dirichlet GP),7,very damp grey soil,0.9127659574468086

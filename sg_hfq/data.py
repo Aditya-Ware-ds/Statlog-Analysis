@@ -100,6 +100,7 @@ class SpectralRepresentation:
       features are reduced to the 4 band means over the 3x3 window, then
       z-scored (Eq. 1).
     * ``"full36"`` / ``"standard"``: every raw feature z-scored.
+    * ``"log36"``: natural log of every raw (positive) feature, then z-scored.
     * ``"pca"``: every feature z-scored, then projected on the first
       ``n_components`` principal axes of the training data (unwhitened). This
       is the high-dimensional analogue of the band-mean reduction: it keeps the
@@ -107,7 +108,7 @@ class SpectralRepresentation:
       covariances in hundreds of bands.
     """
 
-    KINDS = ("bandmean4", "full36", "standard", "pca")
+    KINDS = ("bandmean4", "full36", "standard", "pca", "log36")
 
     def __init__(self, kind: str = "bandmean4", n_components: int = 10):
         if kind not in self.KINDS:
@@ -117,7 +118,11 @@ class SpectralRepresentation:
 
     def _project(self, X: np.ndarray) -> np.ndarray:
         X = np.asarray(X, dtype=np.float64)
-        return band_mean(X) if self.kind == "bandmean4" else X
+        if self.kind == "bandmean4":
+            return band_mean(X)
+        if self.kind == "log36":
+            return np.log(np.maximum(X, 1.0))
+        return X
 
     def fit(self, X: np.ndarray) -> "SpectralRepresentation":
         P = self._project(X)

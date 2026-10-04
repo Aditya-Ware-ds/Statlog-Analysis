@@ -1,8 +1,9 @@
 method,OA,AA,kappa,AURC
-B1 Flat FCM,3.5,3.5,3.5,4.0
-B2 Flat FCM + max-membership,3.5,3.5,3.5,3.0
-"B3 HFCM, no gating",6.0,6.0,6.0,5.4
-B4 HFCM + entropy gating,6.0,6.0,6.0,6.2
-SG-HFQ,6.0,6.0,6.0,6.4
-SVM (RBF),1.0,1.0,1.0,1.0
-Random Forest,2.0,2.0,2.0,2.0
+B1 Flat FCM,4.5,4.5,4.5,5.0
+B2 Flat FCM + max-membership,4.5,4.5,4.5,4.0
+"B3 HFCM, no gating",7.0,7.0,7.0,6.4
+B4 HFCM + entropy gating,7.0,7.0,7.0,7.2
+SG-HFQ,7.0,7.0,7.0,7.4
+SVM (RBF),1.2,1.2,1.2,1.4
+Random Forest,3.0,3.0,3.0,2.8
+Gaussian process (Dirichlet GP),1.8,1.8,1.8,1.8

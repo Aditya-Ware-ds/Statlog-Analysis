@@ -1,7 +1,7 @@
 dataset,seed,method,class,class_name,accuracy
 sentinel2_breizhcrops,0,B1 Flat FCM,0,barley,0.0
 sentinel2_breizhcrops,0,B1 Flat FCM,1,wheat,0.0
-sentinel2_breizhcrops,0,B1 Flat FCM,2,rapeseed,0.9728729963008631
+sentinel2_breizhcrops,0,B1 Flat FCM,2,rapeseed,0.9728729963008632
 sentinel2_breizhcrops,0,B1 Flat FCM,3,corn,0.0
 sentinel2_breizhcrops,0,B1 Flat FCM,4,sunflower,0.0
 sentinel2_breizhcrops,0,B1 Flat FCM,5,orchards,0.0
@@ -10,7 +10,7 @@ sentinel2_breizhcrops,0,B1 Flat FCM,7,permanent meadows,0.6170123211142573
 sentinel2_breizhcrops,0,B1 Flat FCM,8,temporary meadows,0.0
 sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,0,barley,0.0
 sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,1,wheat,0.0
-sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,2,rapeseed,0.9728729963008631
+sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,2,rapeseed,0.9728729963008632
 sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,3,corn,0.0
 sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,4,sunflower,0.0
 sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,5,orchards,0.0
@@ -20,43 +20,43 @@ sentinel2_breizhcrops,0,B2 Flat FCM + max-membership,8,temporary meadows,0.0
 sentinel2_breizhcrops,0,SG-HFQ,0,barley,0.3338906537368333
 sentinel2_breizhcrops,0,SG-HFQ,1,wheat,0.3810335704626962
 sentinel2_breizhcrops,0,SG-HFQ,2,rapeseed,0.9318742293464858
-sentinel2_breizhcrops,0,SG-HFQ,3,corn,0.24632505341028665
+sentinel2_breizhcrops,0,SG-HFQ,3,corn,0.2463250534102866
 sentinel2_breizhcrops,0,SG-HFQ,4,sunflower,0.0
 sentinel2_breizhcrops,0,SG-HFQ,5,orchards,0.0
 sentinel2_breizhcrops,0,SG-HFQ,6,nuts,0.0
-sentinel2_breizhcrops,0,SG-HFQ,7,permanent meadows,0.002755031759393893
+sentinel2_breizhcrops,0,SG-HFQ,7,permanent meadows,0.0027550317593938
 sentinel2_breizhcrops,0,SG-HFQ,8,temporary meadows,0.1609309106055084
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",0,barley,0.3338906537368333
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",1,wheat,0.3810335704626962
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",2,rapeseed,0.9318742293464858
-sentinel2_breizhcrops,0,"B3 HFCM, no gating",3,corn,0.24632505341028665
+sentinel2_breizhcrops,0,"B3 HFCM, no gating",3,corn,0.2463250534102866
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",4,sunflower,0.0
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",5,orchards,0.0
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",6,nuts,0.0
-sentinel2_breizhcrops,0,"B3 HFCM, no gating",7,permanent meadows,0.002755031759393893
+sentinel2_breizhcrops,0,"B3 HFCM, no gating",7,permanent meadows,0.0027550317593938
 sentinel2_breizhcrops,0,"B3 HFCM, no gating",8,temporary meadows,0.1609309106055084
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,0,barley,0.3338906537368333
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,1,wheat,0.3810335704626962
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,2,rapeseed,0.9318742293464858
-sentinel2_breizhcrops,0,B4 HFCM + entropy gating,3,corn,0.24632505341028665
+sentinel2_breizhcrops,0,B4 HFCM + entropy gating,3,corn,0.2463250534102866
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,4,sunflower,0.0
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,5,orchards,0.0
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,6,nuts,0.0
-sentinel2_breizhcrops,0,B4 HFCM + entropy gating,7,permanent meadows,0.002755031759393893
+sentinel2_breizhcrops,0,B4 HFCM + entropy gating,7,permanent meadows,0.0027550317593938
 sentinel2_breizhcrops,0,B4 HFCM + entropy gating,8,temporary meadows,0.1609309106055084
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),0,barley,0.0
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),1,wheat,0.0
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),2,rapeseed,0.0
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),3,corn,0.0
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),4,sunflower,0.0
-sentinel2_breizhcrops,0,SG-HFQ (class-seeded),5,orchards,0.23369565217391305
+sentinel2_breizhcrops,0,SG-HFQ (class-seeded),5,orchards,0.233695652173913
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),6,nuts,0.0
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),7,permanent meadows,0.2934491467054412
 sentinel2_breizhcrops,0,SG-HFQ (class-seeded),8,temporary meadows,0.7467069297651898
 sentinel2_breizhcrops,0,SVM (RBF),0,barley,0.820932954355459
-sentinel2_breizhcrops,0,SVM (RBF),1,wheat,0.9476747604209537
-sentinel2_breizhcrops,0,SVM (RBF),2,rapeseed,0.9651664611590629
-sentinel2_breizhcrops,0,SVM (RBF),3,corn,0.9513727240840535
+sentinel2_breizhcrops,0,SVM (RBF),1,wheat,0.9476747604209536
+sentinel2_breizhcrops,0,SVM (RBF),2,rapeseed,0.9651664611590628
+sentinel2_breizhcrops,0,SVM (RBF),3,corn,0.9513727240840536
 sentinel2_breizhcrops,0,SVM (RBF),4,sunflower,0.0
 sentinel2_breizhcrops,0,SVM (RBF),5,orchards,0.7155797101449275
 sentinel2_breizhcrops,0,SVM (RBF),6,nuts,0.0
@@ -69,29 +69,29 @@ sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",3,corn,0.9421255699754472
 sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",5,orchards,0.6159420289855072
 sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",7,permanent meadows,0.15267467666641157
+sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",7,permanent meadows,0.1526746766664115
 sentinel2_breizhcrops,0,"SVM (RBF), Phase 1 features",8,temporary meadows,0.4344249492372573
 sentinel2_breizhcrops,0,Random Forest,0,barley,0.8642367497074068
 sentinel2_breizhcrops,0,Random Forest,1,wheat,0.8690693162443413
-sentinel2_breizhcrops,0,Random Forest,2,rapeseed,0.9546855733662145
-sentinel2_breizhcrops,0,Random Forest,3,corn,0.9589617678007717
+sentinel2_breizhcrops,0,Random Forest,2,rapeseed,0.9546855733662144
+sentinel2_breizhcrops,0,Random Forest,3,corn,0.9589617678007716
 sentinel2_breizhcrops,0,Random Forest,4,sunflower,0.0
 sentinel2_breizhcrops,0,Random Forest,5,orchards,0.6413043478260869
 sentinel2_breizhcrops,0,Random Forest,6,nuts,0.0
 sentinel2_breizhcrops,0,Random Forest,7,permanent meadows,0.2179536236320502
-sentinel2_breizhcrops,0,Random Forest,8,temporary meadows,0.41766022804185976
+sentinel2_breizhcrops,0,Random Forest,8,temporary meadows,0.4176602280418597
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",0,barley,0.740010031767263
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",1,wheat,0.694161914280675
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",2,rapeseed,0.8954993834771886
-sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",3,corn,0.9233442811134849
+sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",3,corn,0.9233442811134848
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",5,orchards,0.6086956521739131
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",7,permanent meadows,0.17023800413254764
+sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",7,permanent meadows,0.1702380041325476
 sentinel2_breizhcrops,0,"Random Forest, Phase 1 features",8,temporary meadows,0.3965741656687666
 sentinel2_breizhcrops,1,B1 Flat FCM,0,barley,0.0
 sentinel2_breizhcrops,1,B1 Flat FCM,1,wheat,0.0
-sentinel2_breizhcrops,1,B1 Flat FCM,2,rapeseed,0.9737977805178791
+sentinel2_breizhcrops,1,B1 Flat FCM,2,rapeseed,0.9737977805178792
 sentinel2_breizhcrops,1,B1 Flat FCM,3,corn,0.0
 sentinel2_breizhcrops,1,B1 Flat FCM,4,sunflower,0.0
 sentinel2_breizhcrops,1,B1 Flat FCM,5,orchards,0.6829710144927537
@@ -100,40 +100,40 @@ sentinel2_breizhcrops,1,B1 Flat FCM,7,permanent meadows,0.0
 sentinel2_breizhcrops,1,B1 Flat FCM,8,temporary meadows,0.0
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,0,barley,0.0
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,1,wheat,0.0
-sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,2,rapeseed,0.9737977805178791
+sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,2,rapeseed,0.9737977805178792
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,3,corn,0.0
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,4,sunflower,0.0
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,5,orchards,0.6829710144927537
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,6,nuts,0.0
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,7,permanent meadows,0.0
 sentinel2_breizhcrops,1,B2 Flat FCM + max-membership,8,temporary meadows,0.0
-sentinel2_breizhcrops,1,SG-HFQ,0,barley,0.004681491389399766
-sentinel2_breizhcrops,1,SG-HFQ,1,wheat,0.004527015109647834
+sentinel2_breizhcrops,1,SG-HFQ,0,barley,0.0046814913893997
+sentinel2_breizhcrops,1,SG-HFQ,1,wheat,0.0045270151096478
 sentinel2_breizhcrops,1,SG-HFQ,2,rapeseed,0.9627003699136868
 sentinel2_breizhcrops,1,SG-HFQ,3,corn,0.2608654060776123
 sentinel2_breizhcrops,1,SG-HFQ,4,sunflower,0.0
-sentinel2_breizhcrops,1,SG-HFQ,5,orchards,0.0018115942028985507
+sentinel2_breizhcrops,1,SG-HFQ,5,orchards,0.0018115942028985
 sentinel2_breizhcrops,1,SG-HFQ,6,nuts,0.0
-sentinel2_breizhcrops,1,SG-HFQ,7,permanent meadows,0.0019132164995790924
-sentinel2_breizhcrops,1,SG-HFQ,8,temporary meadows,0.13523715312125786
-sentinel2_breizhcrops,1,"B3 HFCM, no gating",0,barley,0.004681491389399766
-sentinel2_breizhcrops,1,"B3 HFCM, no gating",1,wheat,0.004527015109647834
+sentinel2_breizhcrops,1,SG-HFQ,7,permanent meadows,0.001913216499579
+sentinel2_breizhcrops,1,SG-HFQ,8,temporary meadows,0.1352371531212578
+sentinel2_breizhcrops,1,"B3 HFCM, no gating",0,barley,0.0046814913893997
+sentinel2_breizhcrops,1,"B3 HFCM, no gating",1,wheat,0.0045270151096478
 sentinel2_breizhcrops,1,"B3 HFCM, no gating",2,rapeseed,0.9627003699136868
 sentinel2_breizhcrops,1,"B3 HFCM, no gating",3,corn,0.2608654060776123
 sentinel2_breizhcrops,1,"B3 HFCM, no gating",4,sunflower,0.0
-sentinel2_breizhcrops,1,"B3 HFCM, no gating",5,orchards,0.0018115942028985507
+sentinel2_breizhcrops,1,"B3 HFCM, no gating",5,orchards,0.0018115942028985
 sentinel2_breizhcrops,1,"B3 HFCM, no gating",6,nuts,0.0
-sentinel2_breizhcrops,1,"B3 HFCM, no gating",7,permanent meadows,0.0019132164995790924
-sentinel2_breizhcrops,1,"B3 HFCM, no gating",8,temporary meadows,0.13523715312125786
-sentinel2_breizhcrops,1,B4 HFCM + entropy gating,0,barley,0.004681491389399766
-sentinel2_breizhcrops,1,B4 HFCM + entropy gating,1,wheat,0.004527015109647834
+sentinel2_breizhcrops,1,"B3 HFCM, no gating",7,permanent meadows,0.001913216499579
+sentinel2_breizhcrops,1,"B3 HFCM, no gating",8,temporary meadows,0.1352371531212578
+sentinel2_breizhcrops,1,B4 HFCM + entropy gating,0,barley,0.0046814913893997
+sentinel2_breizhcrops,1,B4 HFCM + entropy gating,1,wheat,0.0045270151096478
 sentinel2_breizhcrops,1,B4 HFCM + entropy gating,2,rapeseed,0.9627003699136868
 sentinel2_breizhcrops,1,B4 HFCM + entropy gating,3,corn,0.2608654060776123
 sentinel2_breizhcrops,1,B4 HFCM + entropy gating,4,sunflower,0.0
-sentinel2_breizhcrops,1,B4 HFCM + entropy gating,5,orchards,0.0018115942028985507
+sentinel2_breizhcrops,1,B4 HFCM + entropy gating,5,orchards,0.0018115942028985
 sentinel2_breizhcrops,1,B4 HFCM + entropy gating,6,nuts,0.0
-sentinel2_breizhcrops,1,B4 HFCM + entropy gating,7,permanent meadows,0.0019132164995790924
-sentinel2_breizhcrops,1,B4 HFCM + entropy gating,8,temporary meadows,0.13523715312125786
+sentinel2_breizhcrops,1,B4 HFCM + entropy gating,7,permanent meadows,0.001913216499579
+sentinel2_breizhcrops,1,B4 HFCM + entropy gating,8,temporary meadows,0.1352371531212578
 sentinel2_breizhcrops,1,SG-HFQ (class-seeded),0,barley,0.0
 sentinel2_breizhcrops,1,SG-HFQ (class-seeded),1,wheat,0.0
 sentinel2_breizhcrops,1,SG-HFQ (class-seeded),2,rapeseed,0.0
@@ -144,7 +144,7 @@ sentinel2_breizhcrops,1,SG-HFQ (class-seeded),6,nuts,0.0
 sentinel2_breizhcrops,1,SG-HFQ (class-seeded),7,permanent meadows,0.3008341623938165
 sentinel2_breizhcrops,1,SG-HFQ (class-seeded),8,temporary meadows,0.7441037121882647
 sentinel2_breizhcrops,1,SVM (RBF),0,barley,0.8712589867915065
-sentinel2_breizhcrops,1,SVM (RBF),1,wheat,0.9337409606678817
+sentinel2_breizhcrops,1,SVM (RBF),1,wheat,0.9337409606678816
 sentinel2_breizhcrops,1,SVM (RBF),2,rapeseed,0.9549938347718866
 sentinel2_breizhcrops,1,SVM (RBF),3,corn,0.9347916201651733
 sentinel2_breizhcrops,1,SVM (RBF),4,sunflower,0.0
@@ -155,30 +155,30 @@ sentinel2_breizhcrops,1,SVM (RBF),8,temporary meadows,0.6494507210912688
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",0,barley,0.7836482193613108
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",1,wheat,0.7888176847551296
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",2,rapeseed,0.9189272503082614
-sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",3,corn,0.9136825994069067
+sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",3,corn,0.9136825994069068
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",5,orchards,0.5887681159420289
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",7,permanent meadows,0.20815795515420524
+sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",7,permanent meadows,0.2081579551542052
 sentinel2_breizhcrops,1,"SVM (RBF), Phase 1 features",8,temporary meadows,0.4631644712865101
 sentinel2_breizhcrops,1,Random Forest,0,barley,0.8662431031600066
 sentinel2_breizhcrops,1,Random Forest,1,wheat,0.8478452583926157
 sentinel2_breizhcrops,1,Random Forest,2,rapeseed,0.9506781750924784
-sentinel2_breizhcrops,1,Random Forest,3,corn,0.9560600746149677
+sentinel2_breizhcrops,1,Random Forest,3,corn,0.9560600746149676
 sentinel2_breizhcrops,1,Random Forest,4,sunflower,0.0
 sentinel2_breizhcrops,1,Random Forest,5,orchards,0.6159420289855072
 sentinel2_breizhcrops,1,Random Forest,6,nuts,0.0
-sentinel2_breizhcrops,1,Random Forest,7,permanent meadows,0.27730159944899363
+sentinel2_breizhcrops,1,Random Forest,7,permanent meadows,0.2773015994489936
 sentinel2_breizhcrops,1,Random Forest,8,temporary meadows,0.4296870932472536
 sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",0,barley,0.7562280555091122
 sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",1,wheat,0.7184431771415133
-sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",2,rapeseed,0.9093711467324291
-sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",3,corn,0.9232486208985683
+sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",2,rapeseed,0.9093711467324292
+sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",3,corn,0.9232486208985684
 sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",5,orchards,0.5452898550724637
 sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",7,permanent meadows,0.21638478610239534
-sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",8,temporary meadows,0.38998802519914616
+sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",7,permanent meadows,0.2163847861023953
+sentinel2_breizhcrops,1,"Random Forest, Phase 1 features",8,temporary meadows,0.3899880251991461
 sentinel2_breizhcrops,2,B1 Flat FCM,0,barley,0.0
 sentinel2_breizhcrops,2,B1 Flat FCM,1,wheat,0.0
 sentinel2_breizhcrops,2,B1 Flat FCM,2,rapeseed,0.9614673242909988
@@ -197,50 +197,50 @@ sentinel2_breizhcrops,2,B2 Flat FCM + max-membership,5,orchards,0.0
 sentinel2_breizhcrops,2,B2 Flat FCM + max-membership,6,nuts,0.0
 sentinel2_breizhcrops,2,B2 Flat FCM + max-membership,7,permanent meadows,0.6393969541593326
 sentinel2_breizhcrops,2,B2 Flat FCM + max-membership,8,temporary meadows,0.0
-sentinel2_breizhcrops,2,SG-HFQ,0,barley,0.35880287577328207
-sentinel2_breizhcrops,2,SG-HFQ,1,wheat,0.40102298782997237
-sentinel2_breizhcrops,2,SG-HFQ,2,rapeseed,0.9386559802712701
-sentinel2_breizhcrops,2,SG-HFQ,3,corn,0.24402920825228788
+sentinel2_breizhcrops,2,SG-HFQ,0,barley,0.358802875773282
+sentinel2_breizhcrops,2,SG-HFQ,1,wheat,0.4010229878299723
+sentinel2_breizhcrops,2,SG-HFQ,2,rapeseed,0.93865598027127
+sentinel2_breizhcrops,2,SG-HFQ,3,corn,0.2440292082522878
 sentinel2_breizhcrops,2,SG-HFQ,4,sunflower,0.0
 sentinel2_breizhcrops,2,SG-HFQ,5,orchards,0.0
 sentinel2_breizhcrops,2,SG-HFQ,6,nuts,0.0
-sentinel2_breizhcrops,2,SG-HFQ,7,permanent meadows,0.00352031835922553
-sentinel2_breizhcrops,2,SG-HFQ,8,temporary meadows,0.13903785078356848
-sentinel2_breizhcrops,2,"B3 HFCM, no gating",0,barley,0.35880287577328207
-sentinel2_breizhcrops,2,"B3 HFCM, no gating",1,wheat,0.40102298782997237
-sentinel2_breizhcrops,2,"B3 HFCM, no gating",2,rapeseed,0.9386559802712701
-sentinel2_breizhcrops,2,"B3 HFCM, no gating",3,corn,0.24402920825228788
+sentinel2_breizhcrops,2,SG-HFQ,7,permanent meadows,0.0035203183592255
+sentinel2_breizhcrops,2,SG-HFQ,8,temporary meadows,0.1390378507835684
+sentinel2_breizhcrops,2,"B3 HFCM, no gating",0,barley,0.358802875773282
+sentinel2_breizhcrops,2,"B3 HFCM, no gating",1,wheat,0.4010229878299723
+sentinel2_breizhcrops,2,"B3 HFCM, no gating",2,rapeseed,0.93865598027127
+sentinel2_breizhcrops,2,"B3 HFCM, no gating",3,corn,0.2440292082522878
 sentinel2_breizhcrops,2,"B3 HFCM, no gating",4,sunflower,0.0
 sentinel2_breizhcrops,2,"B3 HFCM, no gating",5,orchards,0.0
 sentinel2_breizhcrops,2,"B3 HFCM, no gating",6,nuts,0.0
-sentinel2_breizhcrops,2,"B3 HFCM, no gating",7,permanent meadows,0.00352031835922553
-sentinel2_breizhcrops,2,"B3 HFCM, no gating",8,temporary meadows,0.13903785078356848
-sentinel2_breizhcrops,2,B4 HFCM + entropy gating,0,barley,0.35880287577328207
-sentinel2_breizhcrops,2,B4 HFCM + entropy gating,1,wheat,0.40102298782997237
-sentinel2_breizhcrops,2,B4 HFCM + entropy gating,2,rapeseed,0.9386559802712701
-sentinel2_breizhcrops,2,B4 HFCM + entropy gating,3,corn,0.24402920825228788
+sentinel2_breizhcrops,2,"B3 HFCM, no gating",7,permanent meadows,0.0035203183592255
+sentinel2_breizhcrops,2,"B3 HFCM, no gating",8,temporary meadows,0.1390378507835684
+sentinel2_breizhcrops,2,B4 HFCM + entropy gating,0,barley,0.358802875773282
+sentinel2_breizhcrops,2,B4 HFCM + entropy gating,1,wheat,0.4010229878299723
+sentinel2_breizhcrops,2,B4 HFCM + entropy gating,2,rapeseed,0.93865598027127
+sentinel2_breizhcrops,2,B4 HFCM + entropy gating,3,corn,0.2440292082522878
 sentinel2_breizhcrops,2,B4 HFCM + entropy gating,4,sunflower,0.0
 sentinel2_breizhcrops,2,B4 HFCM + entropy gating,5,orchards,0.0
 sentinel2_breizhcrops,2,B4 HFCM + entropy gating,6,nuts,0.0
-sentinel2_breizhcrops,2,B4 HFCM + entropy gating,7,permanent meadows,0.00352031835922553
-sentinel2_breizhcrops,2,B4 HFCM + entropy gating,8,temporary meadows,0.13903785078356848
+sentinel2_breizhcrops,2,B4 HFCM + entropy gating,7,permanent meadows,0.0035203183592255
+sentinel2_breizhcrops,2,B4 HFCM + entropy gating,8,temporary meadows,0.1390378507835684
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),0,barley,0.0
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),1,wheat,0.0
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),2,rapeseed,0.0
-sentinel2_breizhcrops,2,SG-HFQ (class-seeded),3,corn,0.003635088166831415
+sentinel2_breizhcrops,2,SG-HFQ (class-seeded),3,corn,0.0036350881668314
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),4,sunflower,0.0
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),5,orchards,0.2246376811594203
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),6,nuts,0.0
-sentinel2_breizhcrops,2,SG-HFQ (class-seeded),7,permanent meadows,0.29184204484579473
+sentinel2_breizhcrops,2,SG-HFQ (class-seeded),7,permanent meadows,0.2918420448457947
 sentinel2_breizhcrops,2,SG-HFQ (class-seeded),8,temporary meadows,0.7497787265059613
 sentinel2_breizhcrops,2,SVM (RBF),0,barley,0.8346430362815582
-sentinel2_breizhcrops,2,SVM (RBF),1,wheat,0.9580810159327415
-sentinel2_breizhcrops,2,SVM (RBF),2,rapeseed,0.9651664611590629
-sentinel2_breizhcrops,2,SVM (RBF),3,corn,0.9107490194827971
+sentinel2_breizhcrops,2,SVM (RBF),1,wheat,0.9580810159327416
+sentinel2_breizhcrops,2,SVM (RBF),2,rapeseed,0.9651664611590628
+sentinel2_breizhcrops,2,SVM (RBF),3,corn,0.9107490194827972
 sentinel2_breizhcrops,2,SVM (RBF),4,sunflower,0.0
 sentinel2_breizhcrops,2,SVM (RBF),5,orchards,0.6793478260869565
 sentinel2_breizhcrops,2,SVM (RBF),6,nuts,0.0
-sentinel2_breizhcrops,2,SVM (RBF),7,permanent meadows,0.35987602357082726
+sentinel2_breizhcrops,2,SVM (RBF),7,permanent meadows,0.3598760235708272
 sentinel2_breizhcrops,2,SVM (RBF),8,temporary meadows,0.564768053313896
 sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",0,barley,0.7772947667614112
 sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",1,wheat,0.7567758245634664
@@ -249,28 +249,28 @@ sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",3,corn,0.8919039571442238
 sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",5,orchards,0.6684782608695652
 sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",7,permanent meadows,0.16051886431468584
-sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",8,temporary meadows,0.43583068672879677
+sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",7,permanent meadows,0.1605188643146858
+sentinel2_breizhcrops,2,"SVM (RBF), Phase 1 features",8,temporary meadows,0.4358306867287967
 sentinel2_breizhcrops,2,Random Forest,0,barley,0.8762748704230062
 sentinel2_breizhcrops,2,Random Forest,1,wheat,0.8759480275148451
-sentinel2_breizhcrops,2,Random Forest,2,rapeseed,0.9479038224414303
-sentinel2_breizhcrops,2,Random Forest,3,corn,0.9354612416695897
+sentinel2_breizhcrops,2,Random Forest,2,rapeseed,0.9479038224414305
+sentinel2_breizhcrops,2,Random Forest,3,corn,0.9354612416695895
 sentinel2_breizhcrops,2,Random Forest,4,sunflower,0.0
 sentinel2_breizhcrops,2,Random Forest,5,orchards,0.6177536231884058
 sentinel2_breizhcrops,2,Random Forest,6,nuts,0.0
-sentinel2_breizhcrops,2,Random Forest,7,permanent meadows,0.25518481671385934
-sentinel2_breizhcrops,2,Random Forest,8,temporary meadows,0.40886135263185297
+sentinel2_breizhcrops,2,Random Forest,7,permanent meadows,0.2551848167138593
+sentinel2_breizhcrops,2,Random Forest,8,temporary meadows,0.4088613526318529
 sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",0,barley,0.7654238421668618
 sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",1,wheat,0.7273796225527662
 sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",2,rapeseed,0.8850184956843403
-sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",3,corn,0.9160422180415165
+sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",3,corn,0.9160422180415164
 sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",5,orchards,0.6123188405797102
 sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",7,permanent meadows,0.19193387923777455
-sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",8,temporary meadows,0.39581923257145835
+sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",7,permanent meadows,0.1919338792377745
+sentinel2_breizhcrops,2,"Random Forest, Phase 1 features",8,temporary meadows,0.3958192325714583
 sentinel2_breizhcrops,3,B1 Flat FCM,0,barley,0.0
-sentinel2_breizhcrops,3,B1 Flat FCM,1,wheat,0.9793638661884885
+sentinel2_breizhcrops,3,B1 Flat FCM,1,wheat,0.9793638661884884
 sentinel2_breizhcrops,3,B1 Flat FCM,2,rapeseed,0.0
 sentinel2_breizhcrops,3,B1 Flat FCM,3,corn,0.0
 sentinel2_breizhcrops,3,B1 Flat FCM,4,sunflower,0.0
@@ -279,7 +279,7 @@ sentinel2_breizhcrops,3,B1 Flat FCM,6,nuts,0.0
 sentinel2_breizhcrops,3,B1 Flat FCM,7,permanent meadows,0.614754725644754
 sentinel2_breizhcrops,3,B1 Flat FCM,8,temporary meadows,0.0
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,0,barley,0.0
-sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,1,wheat,0.9793638661884885
+sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,1,wheat,0.9793638661884884
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,2,rapeseed,0.0
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,3,corn,0.0
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,4,sunflower,0.0
@@ -287,35 +287,35 @@ sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,5,orchards,0.0
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,6,nuts,0.0
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,7,permanent meadows,0.614754725644754
 sentinel2_breizhcrops,3,B2 Flat FCM + max-membership,8,temporary meadows,0.0
-sentinel2_breizhcrops,3,SG-HFQ,0,barley,0.005684668115699716
-sentinel2_breizhcrops,3,SG-HFQ,1,wheat,0.0012934328884708095
+sentinel2_breizhcrops,3,SG-HFQ,0,barley,0.0056846681156997
+sentinel2_breizhcrops,3,SG-HFQ,1,wheat,0.0012934328884708
 sentinel2_breizhcrops,3,SG-HFQ,2,rapeseed,0.9605425400739828
 sentinel2_breizhcrops,3,SG-HFQ,3,corn,0.2526067408564778
 sentinel2_breizhcrops,3,SG-HFQ,4,sunflower,0.0
 sentinel2_breizhcrops,3,SG-HFQ,5,orchards,0.0
 sentinel2_breizhcrops,3,SG-HFQ,6,nuts,0.0
-sentinel2_breizhcrops,3,SG-HFQ,7,permanent meadows,0.0009566082497895462
-sentinel2_breizhcrops,3,SG-HFQ,8,temporary meadows,0.13250377466548655
-sentinel2_breizhcrops,3,"B3 HFCM, no gating",0,barley,0.005684668115699716
-sentinel2_breizhcrops,3,"B3 HFCM, no gating",1,wheat,0.0012934328884708095
+sentinel2_breizhcrops,3,SG-HFQ,7,permanent meadows,0.0009566082497895
+sentinel2_breizhcrops,3,SG-HFQ,8,temporary meadows,0.1325037746654865
+sentinel2_breizhcrops,3,"B3 HFCM, no gating",0,barley,0.0056846681156997
+sentinel2_breizhcrops,3,"B3 HFCM, no gating",1,wheat,0.0012934328884708
 sentinel2_breizhcrops,3,"B3 HFCM, no gating",2,rapeseed,0.9605425400739828
 sentinel2_breizhcrops,3,"B3 HFCM, no gating",3,corn,0.2526067408564778
 sentinel2_breizhcrops,3,"B3 HFCM, no gating",4,sunflower,0.0
 sentinel2_breizhcrops,3,"B3 HFCM, no gating",5,orchards,0.0
 sentinel2_breizhcrops,3,"B3 HFCM, no gating",6,nuts,0.0
-sentinel2_breizhcrops,3,"B3 HFCM, no gating",7,permanent meadows,0.0009566082497895462
-sentinel2_breizhcrops,3,"B3 HFCM, no gating",8,temporary meadows,0.13250377466548655
-sentinel2_breizhcrops,3,B4 HFCM + entropy gating,0,barley,0.005684668115699716
-sentinel2_breizhcrops,3,B4 HFCM + entropy gating,1,wheat,0.0012934328884708095
+sentinel2_breizhcrops,3,"B3 HFCM, no gating",7,permanent meadows,0.0009566082497895
+sentinel2_breizhcrops,3,"B3 HFCM, no gating",8,temporary meadows,0.1325037746654865
+sentinel2_breizhcrops,3,B4 HFCM + entropy gating,0,barley,0.0056846681156997
+sentinel2_breizhcrops,3,B4 HFCM + entropy gating,1,wheat,0.0012934328884708
 sentinel2_breizhcrops,3,B4 HFCM + entropy gating,2,rapeseed,0.9605425400739828
 sentinel2_breizhcrops,3,B4 HFCM + entropy gating,3,corn,0.2526067408564778
 sentinel2_breizhcrops,3,B4 HFCM + entropy gating,4,sunflower,0.0
 sentinel2_breizhcrops,3,B4 HFCM + entropy gating,5,orchards,0.0
 sentinel2_breizhcrops,3,B4 HFCM + entropy gating,6,nuts,0.0
-sentinel2_breizhcrops,3,B4 HFCM + entropy gating,7,permanent meadows,0.0009566082497895462
-sentinel2_breizhcrops,3,B4 HFCM + entropy gating,8,temporary meadows,0.13250377466548655
-sentinel2_breizhcrops,3,SG-HFQ (class-seeded),0,barley,0.008861394415649556
-sentinel2_breizhcrops,3,SG-HFQ (class-seeded),1,wheat,0.03745076136163208
+sentinel2_breizhcrops,3,B4 HFCM + entropy gating,7,permanent meadows,0.0009566082497895
+sentinel2_breizhcrops,3,B4 HFCM + entropy gating,8,temporary meadows,0.1325037746654865
+sentinel2_breizhcrops,3,SG-HFQ (class-seeded),0,barley,0.0088613944156495
+sentinel2_breizhcrops,3,SG-HFQ (class-seeded),1,wheat,0.037450761361632
 sentinel2_breizhcrops,3,SG-HFQ (class-seeded),2,rapeseed,0.0
 sentinel2_breizhcrops,3,SG-HFQ (class-seeded),3,corn,0.0
 sentinel2_breizhcrops,3,SG-HFQ (class-seeded),4,sunflower,0.0
@@ -324,9 +324,9 @@ sentinel2_breizhcrops,3,SG-HFQ (class-seeded),6,nuts,0.0
 sentinel2_breizhcrops,3,SG-HFQ (class-seeded),7,permanent meadows,0.2950562485650876
 sentinel2_breizhcrops,3,SG-HFQ (class-seeded),8,temporary meadows,0.7454053209767272
 sentinel2_breizhcrops,3,SVM (RBF),0,barley,0.8555425514128072
-sentinel2_breizhcrops,3,SVM (RBF),1,wheat,0.9391498618378505
-sentinel2_breizhcrops,3,SVM (RBF),2,rapeseed,0.9593094944512947
-sentinel2_breizhcrops,3,SVM (RBF),3,corn,0.9358119957909505
+sentinel2_breizhcrops,3,SVM (RBF),1,wheat,0.9391498618378504
+sentinel2_breizhcrops,3,SVM (RBF),2,rapeseed,0.9593094944512948
+sentinel2_breizhcrops,3,SVM (RBF),3,corn,0.9358119957909504
 sentinel2_breizhcrops,3,SVM (RBF),4,sunflower,0.0
 sentinel2_breizhcrops,3,SVM (RBF),5,orchards,0.6920289855072463
 sentinel2_breizhcrops,3,SVM (RBF),6,nuts,0.0
@@ -339,7 +339,7 @@ sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",3,corn,0.9121520359682408
 sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",5,orchards,0.6431159420289855
 sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",7,permanent meadows,0.19380883140736205
+sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",7,permanent meadows,0.193808831407362
 sentinel2_breizhcrops,3,"SVM (RBF), Phase 1 features",8,temporary meadows,0.4453584630603426
 sentinel2_breizhcrops,3,Random Forest,0,barley,0.8789500083598061
 sentinel2_breizhcrops,3,Random Forest,1,wheat,0.8209183373508143
@@ -357,7 +357,7 @@ sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",3,corn,0.9054877076623
 sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",5,orchards,0.5797101449275363
 sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",6,nuts,0.0
-sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",7,permanent meadows,0.18294176168975282
+sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",7,permanent meadows,0.1829417616897528
 sentinel2_breizhcrops,3,"Random Forest, Phase 1 features",8,temporary meadows,0.4169052949445515
 sentinel2_breizhcrops,4,B1 Flat FCM,0,barley,0.0
 sentinel2_breizhcrops,4,B1 Flat FCM,1,wheat,0.0
@@ -367,7 +367,7 @@ sentinel2_breizhcrops,4,B1 Flat FCM,4,sunflower,0.0
 sentinel2_breizhcrops,4,B1 Flat FCM,5,orchards,0.6829710144927537
 sentinel2_breizhcrops,4,B1 Flat FCM,6,nuts,0.0
 sentinel2_breizhcrops,4,B1 Flat FCM,7,permanent meadows,0.0
-sentinel2_breizhcrops,4,B1 Flat FCM,8,temporary meadows,2.6032175769250796e-05
+sentinel2_breizhcrops,4,B1 Flat FCM,8,temporary meadows,2.60321757692508e-05
 sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,0,barley,0.0
 sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,1,wheat,0.0
 sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,2,rapeseed,0.9731812577065352
@@ -376,42 +376,42 @@ sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,4,sunflower,0.0
 sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,5,orchards,0.6829710144927537
 sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,6,nuts,0.0
 sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,7,permanent meadows,0.0
-sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,8,temporary meadows,2.6032175769250796e-05
-sentinel2_breizhcrops,4,SG-HFQ,0,barley,0.003678314663099816
-sentinel2_breizhcrops,4,SG-HFQ,1,wheat,0.0012346404844494091
+sentinel2_breizhcrops,4,B2 Flat FCM + max-membership,8,temporary meadows,2.60321757692508e-05
+sentinel2_breizhcrops,4,SG-HFQ,0,barley,0.0036783146630998
+sentinel2_breizhcrops,4,SG-HFQ,1,wheat,0.0012346404844494
 sentinel2_breizhcrops,4,SG-HFQ,2,rapeseed,0.9623921085080148
 sentinel2_breizhcrops,4,SG-HFQ,3,corn,0.2523197602117279
 sentinel2_breizhcrops,4,SG-HFQ,4,sunflower,0.0
 sentinel2_breizhcrops,4,SG-HFQ,5,orchards,0.0
 sentinel2_breizhcrops,4,SG-HFQ,6,nuts,0.0
-sentinel2_breizhcrops,4,SG-HFQ,7,permanent meadows,0.0008418152598148006
+sentinel2_breizhcrops,4,SG-HFQ,7,permanent meadows,0.0008418152598148
 sentinel2_breizhcrops,4,SG-HFQ,8,temporary meadows,0.147394179205498
-sentinel2_breizhcrops,4,"B3 HFCM, no gating",0,barley,0.003678314663099816
-sentinel2_breizhcrops,4,"B3 HFCM, no gating",1,wheat,0.0012346404844494091
+sentinel2_breizhcrops,4,"B3 HFCM, no gating",0,barley,0.0036783146630998
+sentinel2_breizhcrops,4,"B3 HFCM, no gating",1,wheat,0.0012346404844494
 sentinel2_breizhcrops,4,"B3 HFCM, no gating",2,rapeseed,0.9623921085080148
 sentinel2_breizhcrops,4,"B3 HFCM, no gating",3,corn,0.2523197602117279
 sentinel2_breizhcrops,4,"B3 HFCM, no gating",4,sunflower,0.0
 sentinel2_breizhcrops,4,"B3 HFCM, no gating",5,orchards,0.0
 sentinel2_breizhcrops,4,"B3 HFCM, no gating",6,nuts,0.0
-sentinel2_breizhcrops,4,"B3 HFCM, no gating",7,permanent meadows,0.0008418152598148006
+sentinel2_breizhcrops,4,"B3 HFCM, no gating",7,permanent meadows,0.0008418152598148
 sentinel2_breizhcrops,4,"B3 HFCM, no gating",8,temporary meadows,0.147394179205498
-sentinel2_breizhcrops,4,B4 HFCM + entropy gating,0,barley,0.003678314663099816
-sentinel2_breizhcrops,4,B4 HFCM + entropy gating,1,wheat,0.0012346404844494091
+sentinel2_breizhcrops,4,B4 HFCM + entropy gating,0,barley,0.0036783146630998
+sentinel2_breizhcrops,4,B4 HFCM + entropy gating,1,wheat,0.0012346404844494
 sentinel2_breizhcrops,4,B4 HFCM + entropy gating,2,rapeseed,0.9623921085080148
 sentinel2_breizhcrops,4,B4 HFCM + entropy gating,3,corn,0.2523197602117279
 sentinel2_breizhcrops,4,B4 HFCM + entropy gating,4,sunflower,0.0
 sentinel2_breizhcrops,4,B4 HFCM + entropy gating,5,orchards,0.0
 sentinel2_breizhcrops,4,B4 HFCM + entropy gating,6,nuts,0.0
-sentinel2_breizhcrops,4,B4 HFCM + entropy gating,7,permanent meadows,0.0008418152598148006
+sentinel2_breizhcrops,4,B4 HFCM + entropy gating,7,permanent meadows,0.0008418152598148
 sentinel2_breizhcrops,4,B4 HFCM + entropy gating,8,temporary meadows,0.147394179205498
-sentinel2_breizhcrops,4,SG-HFQ (class-seeded),0,barley,0.001839157331549908
-sentinel2_breizhcrops,4,SG-HFQ (class-seeded),1,wheat,0.008818860603210065
+sentinel2_breizhcrops,4,SG-HFQ (class-seeded),0,barley,0.0018391573315499
+sentinel2_breizhcrops,4,SG-HFQ (class-seeded),1,wheat,0.00881886060321
 sentinel2_breizhcrops,4,SG-HFQ (class-seeded),2,rapeseed,0.0
 sentinel2_breizhcrops,4,SG-HFQ (class-seeded),3,corn,0.0
 sentinel2_breizhcrops,4,SG-HFQ (class-seeded),4,sunflower,0.0
 sentinel2_breizhcrops,4,SG-HFQ (class-seeded),5,orchards,0.2210144927536232
 sentinel2_breizhcrops,4,SG-HFQ (class-seeded),6,nuts,0.0
-sentinel2_breizhcrops,4,SG-HFQ (class-seeded),7,permanent meadows,0.29819392362439734
+sentinel2_breizhcrops,4,SG-HFQ (class-seeded),7,permanent meadows,0.2981939236243973
 sentinel2_breizhcrops,4,SG-HFQ (class-seeded),8,temporary meadows,0.7462643827771125
 sentinel2_breizhcrops,4,SVM (RBF),0,barley,0.8630663768600568
 sentinel2_breizhcrops,4,SVM (RBF),1,wheat,0.9364454112528662
@@ -420,7 +420,7 @@ sentinel2_breizhcrops,4,SVM (RBF),3,corn,0.92423710978604
 sentinel2_breizhcrops,4,SVM (RBF),4,sunflower,0.0
 sentinel2_breizhcrops,4,SVM (RBF),5,orchards,0.7137681159420289
 sentinel2_breizhcrops,4,SVM (RBF),6,nuts,0.0
-sentinel2_breizhcrops,4,SVM (RBF),7,permanent meadows,0.29432922629524755
+sentinel2_breizhcrops,4,SVM (RBF),7,permanent meadows,0.2943292262952475
 sentinel2_breizhcrops,4,SVM (RBF),8,temporary meadows,0.5872338210027594
 sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",0,barley,0.7838154154823608
 sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",1,wheat,0.7680639661355753
@@ -430,7 +430,7 @@ sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",5,orchards,0.657608695652174
 sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",6,nuts,0.0
 sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",7,permanent meadows,0.1326241677508227
-sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",8,temporary meadows,0.46818868120997553
+sentinel2_breizhcrops,4,"SVM (RBF), Phase 1 features",8,temporary meadows,0.4681886812099755
 sentinel2_breizhcrops,4,Random Forest,0,barley,0.8774452432703561
 sentinel2_breizhcrops,4,Random Forest,1,wheat,0.8335587042154153
 sentinel2_breizhcrops,4,Random Forest,2,rapeseed,0.9509864364981504
@@ -438,7 +438,7 @@ sentinel2_breizhcrops,4,Random Forest,3,corn,0.955964414400051
 sentinel2_breizhcrops,4,Random Forest,4,sunflower,0.0
 sentinel2_breizhcrops,4,Random Forest,5,orchards,0.6413043478260869
 sentinel2_breizhcrops,4,Random Forest,6,nuts,0.0
-sentinel2_breizhcrops,4,Random Forest,7,permanent meadows,0.24037652100711718
+sentinel2_breizhcrops,4,Random Forest,7,permanent meadows,0.2403765210071171
 sentinel2_breizhcrops,4,Random Forest,8,temporary meadows,0.4317696673087937
 sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",0,barley,0.7632502925932119
 sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",1,wheat,0.7136809924157799
@@ -448,4 +448,49 @@ sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",4,sunflower,0.0
 sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",5,orchards,0.625
 sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",6,nuts,0.0
 sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",7,permanent meadows,0.167827351343078
-sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",8,temporary meadows,0.41786848544801375
+sentinel2_breizhcrops,4,"Random Forest, Phase 1 features",8,temporary meadows,0.4178684854480137
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),0,barley,0.8664102992810567
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),1,wheat,0.8986418954671056
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),2,rapeseed,0.9571516646115906
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),3,corn,0.9590574280156883
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),5,orchards,0.6431159420289855
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),7,permanent meadows,0.2759240835692967
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),8,temporary meadows,0.5570104649346592
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),0,barley,0.8734325363651563
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),1,wheat,0.9041683814451172
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),2,rapeseed,0.9509864364981504
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),3,corn,0.9521698925416919
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),5,orchards,0.6014492753623188
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),7,permanent meadows,0.32696869977806686
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),8,temporary meadows,0.6043629926589265
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),0,barley,0.8527002173549574
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),1,wheat,0.9427949908871773
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),2,rapeseed,0.9534525277435265
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),3,corn,0.9410733076113644
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),5,orchards,0.6231884057971014
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),7,permanent meadows,0.35298844417234254
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),8,temporary meadows,0.5638048628104337
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),0,barley,0.8560441397759572
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),1,wheat,0.8959374448821212
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),2,rapeseed,0.9528360049321825
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),3,corn,0.9494595197857211
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),5,orchards,0.6539855072463768
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),7,permanent meadows,0.33301446391673684
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),8,temporary meadows,0.5499817774769615
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),0,barley,0.8735997324862064
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),1,wheat,0.8873537538949968
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),2,rapeseed,0.9506781750924784
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),3,corn,0.9521698925416919
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),5,orchards,0.6847826086956522
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),7,permanent meadows,0.28973750669625775
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),8,temporary meadows,0.550346227937731

@@ -238,45 +238,41 @@ def make_all(ctx, results: dict) -> None:
         fig_e5(ctx, results["e5"])
 
 
-BENCH_STYLE = {
-    "SG-HFQ": (COLOR["SG-HFQ"], "-"),
-    "B4 HFCM + entropy gating": (COLOR["B4"], "-"),
-    "B2 Flat FCM + max-membership": (COLOR["B2"], "-"),
-    "B1 Flat FCM": (COLOR["B1"], (0, (4, 3))),
-    "B3 HFCM, no gating": (COLOR["B3"], (0, (4, 3))),
-    "SVM (RBF)": (COLOR["SVM"], "-"),
-    "Random Forest": (COLOR["RF"], "-"),
-}
+#: Risk-coverage facets: each row validates "all pairs" for colour (dataviz validator).
+#: Row 2 sits in the CVD warning band, so it also carries line styles. B1/B3 (no confidence
+#: score: flat lines at their error rate) are left to the tables.
+BENCH_ROWS = (
+    ("Fuzzy methods", [("SG-HFQ", "#2a78d6", "-"), ("B4 HFCM + entropy gating", "#eb6834", "-"),
+                       ("B2 Flat FCM + max-membership", "#1baf7a", "-")], 1.0),
+    ("Supervised and GP", [("SVM (RBF)", "#008300", "-"), ("Random Forest", "#4a3aa7", (0, (1.5, 2))),
+                           ("Gaussian process (Dirichlet GP)", "#e34948", (0, (6, 2, 1.5, 2)))], 0.4),
+)
 
 
 def benchmark_figures(out, keys, titles, runs) -> None:
-    """Risk-coverage small multiples (seed 0), one panel per dataset."""
+    """Risk-coverage curves (seed 0): one column per dataset, one row per method family."""
     _style()
     n = len(keys)
-    ncol = 3
-    nrow = int(np.ceil((n + 1) / ncol))
-    fig, axes = plt.subplots(nrow, ncol, figsize=(15, 4.2 * nrow), sharey=True)
-    axes = np.atleast_1d(axes).ravel()
-    for ax, key in zip(axes, keys):
+    fig, axes = plt.subplots(2, n, figsize=(4.1 * n, 7.6), sharey="row", squeeze=False)
+    for col, key in enumerate(keys):
         curves = pd.read_csv(out / "raw" / f"{key}_curves.csv")
-        for name, (color, ls) in BENCH_STYLE.items():
-            if name in curves:
-                ax.plot(curves["coverage"], curves[name], color=color, linestyle=ls, label=name, zorder=3)
-        ax.set_title(titles[key], loc="left")
-        ax.set_xlim(0, 1)
-        ax.set_ylim(0, 1)
-        ax.set_xlabel("coverage")
-    for ax in axes[::ncol]:
-        ax.set_ylabel("selective risk (1 - accuracy)")
-    legend_ax = axes[n]
-    legend_ax.axis("off")
-    handles, labels = axes[0].get_legend_handles_labels()
-    legend_ax.legend(handles, labels, loc="center left", fontsize=10, title="Method (dashed: no confidence score)",
-                     title_fontsize=10)
-    for ax in axes[n + 1:]:
-        ax.axis("off")
-    fig.suptitle("Risk-coverage curves on the test sets (seed 0). Lower is better.", x=0.01, ha="left",
-                 fontsize=11, color=INK)
+        for row, (label, series, ymax) in enumerate(BENCH_ROWS):
+            ax = axes[row, col]
+            for name, color, ls in series:
+                if name in curves:
+                    ax.plot(curves["coverage"], curves[name], color=color, linestyle=ls, label=name, zorder=3)
+            ax.set_xlim(0, 1)
+            ax.set_ylim(0, ymax)
+            if row == 0:
+                ax.set_title(titles[key], loc="left")
+            else:
+                ax.set_xlabel("coverage")
+            if col == 0:
+                ax.set_ylabel(f"{label}\nselective risk")
+    for row in range(2):
+        axes[row, -1].legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), fontsize=9)
+    fig.suptitle("Risk-coverage curves on the test sets (seed 0). Lower is better; note the different y-scales "
+                 "of the two rows.", x=0.01, ha="left", fontsize=11, color=INK)
     fig.tight_layout()
     (out / "figures").mkdir(parents=True, exist_ok=True)
     fig.savefig(out / "figures" / "risk_coverage_all_datasets.png", dpi=150, bbox_inches="tight")

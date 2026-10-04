@@ -55,8 +55,24 @@
         "SVM (RBF)": 108.0,
         "SVM (RBF), Phase 1 features": 70.3,
         "Random Forest": 15.9,
-        "Random Forest, Phase 1 features": 14.4
-      }
+        "Random Forest, Phase 1 features": 14.4,
+        "Gaussian process (Dirichlet GP)": 233.6
+      },
+      "gp_log_evidence": -28617.041365707002,
+      "gp_lengthscales": [
+        8.471,
+        7.1893,
+        4.6816,
+        4.3756,
+        3.546,
+        940.2848,
+        4.4586,
+        4.8075,
+        5.0568,
+        8.0939
+      ],
+      "gp_signal_variance": 4.65775235803595,
+      "gp_optimizer_iterations": 27
     },
     {
       "seed": 1,
@@ -85,8 +101,24 @@
         "SVM (RBF)": 104.8,
         "SVM (RBF), Phase 1 features": 39.1,
         "Random Forest": 11.4,
-        "Random Forest, Phase 1 features": 9.1
-      }
+        "Random Forest, Phase 1 features": 9.1,
+        "Gaussian process (Dirichlet GP)": 221.2
+      },
+      "gp_log_evidence": -28474.74137344911,
+      "gp_lengthscales": [
+        10.2517,
+        8.5842,
+        4.935,
+        4.3214,
+        3.5949,
+        1000.0,
+        3.9941,
+        7.4586,
+        4.5795,
+        6.1072
+      ],
+      "gp_signal_variance": 4.514948117571813,
+      "gp_optimizer_iterations": 32
     },
     {
       "seed": 2,
@@ -115,8 +147,24 @@
         "SVM (RBF)": 70.3,
         "SVM (RBF), Phase 1 features": 37.8,
         "Random Forest": 7.5,
-        "Random Forest, Phase 1 features": 6.0
-      }
+        "Random Forest, Phase 1 features": 6.0,
+        "Gaussian process (Dirichlet GP)": 179.8
+      },
+      "gp_log_evidence": -28548.982606066835,
+      "gp_lengthscales": [
+        10.0376,
+        7.5509,
+        4.7658,
+        5.6724,
+        3.7775,
+        1000.0,
+        5.1728,
+        5.0425,
+        5.0195,
+        8.0118
+      ],
+      "gp_signal_variance": 5.283509467366126,
+      "gp_optimizer_iterations": 25
     },
     {
       "seed": 3,
@@ -145,8 +193,24 @@
         "SVM (RBF)": 64.9,
         "SVM (RBF), Phase 1 features": 36.7,
         "Random Forest": 6.0,
-        "Random Forest, Phase 1 features": 5.3
-      }
+        "Random Forest, Phase 1 features": 5.3,
+        "Gaussian process (Dirichlet GP)": 178.7
+      },
+      "gp_log_evidence": -28457.673365695628,
+      "gp_lengthscales": [
+        10.6307,
+        6.114,
+        4.7117,
+        5.027,
+        3.6421,
+        1000.0,
+        4.6586,
+        5.1652,
+        6.1174,
+        5.8799
+      ],
+      "gp_signal_variance": 4.571768812933165,
+      "gp_optimizer_iterations": 27
     },
     {
       "seed": 4,
@@ -175,9 +239,92 @@
         "SVM (RBF)": 62.7,
         "SVM (RBF), Phase 1 features": 34.7,
         "Random Forest": 5.6,
-        "Random Forest, Phase 1 features": 5.2
-      }
+        "Random Forest, Phase 1 features": 5.2,
+        "Gaussian process (Dirichlet GP)": 187.6
+      },
+      "gp_log_evidence": -28661.504670632487,
+      "gp_lengthscales": [
+        12.9792,
+        6.7123,
+        4.7528,
+        4.4724,
+        3.7894,
+        821.7152,
+        4.45,
+        5.6806,
+        4.9092,
+        5.6381
+      ],
+      "gp_signal_variance": 4.57788364888165,
+      "gp_optimizer_iterations": 27
     }
   ],
-  "runtime_s": 786.4
+  "runtime_s": 1793.9,
+  "gp": {
+    "representation": "standard",
+    "groups": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "n_opt": 1500,
+    "max_iter": 150
+  }
 }

@@ -16,6 +16,7 @@ import numpy as np
 
 from .data import CLASS_NAMES as STATLOG_NAMES
 from .data import load_statlog
+from .gp import contiguous_groups, statlog_feature_permutations, statlog_groups
 
 ROOT = Path(__file__).resolve().parent.parent / "data"
 
@@ -37,6 +38,12 @@ SALINAS = (
 
 Split = tuple[np.ndarray, "np.ndarray | None", np.ndarray]
 
+#: GP configuration for StatLog: the kernel selected by marginal likelihood in ``sg_hfq.gp_statlog``
+#: (Matern-5/2, 12 band x pixel-orbit length-scales, invariant to the 8 symmetries of the 3x3 window;
+#: see results/gp_statlog/summary.md).
+STATLOG_GP = {"representation": "full36", "groups": statlog_groups("band_orbit"),
+              "permutations": statlog_feature_permutations(), "kernel": "matern52", "n_opt": 2000, "max_iter": 200}
+
 
 @dataclass
 class BenchmarkDataset:
@@ -50,6 +57,7 @@ class BenchmarkDataset:
     full: dict
     cov_estimator: str = "ledoit_wolf"
     info: dict = field(default_factory=dict)
+    gp: dict = field(default_factory=dict)  # GPDirichletClassifier keyword arguments
 
     @property
     def classes(self) -> tuple[int, ...]:
@@ -95,6 +103,7 @@ def statlog() -> BenchmarkDataset:
     return BenchmarkDataset(
         "statlog", "StatLog (Landsat MSS)", X, y, dict(STATLOG_NAMES), split,
         phase1={"representation": "bandmean4"}, full={"representation": "full36"}, cov_estimator="sample",
+        gp=STATLOG_GP,
         info={
             "sensor": "Landsat MSS (4 bands), 3x3 neighbourhoods", "features": 36, "classes": 6,
             "labelled": len(y),
@@ -123,6 +132,7 @@ def _hsi(key, title, cube, gt, names, train_frac, val_frac, sensor, extra) -> Be
     return BenchmarkDataset(
         key, title, X, y, {i + 1: n for i, n in enumerate(names)}, split,
         phase1={"representation": "pca", "n_components": 10}, full={"representation": "standard"},
+        gp={"representation": "standard", "groups": contiguous_groups(shape[2], 10), "n_opt": 1500, "max_iter": 150},
         info={
             "sensor": sensor, "image": f"{shape[0]} x {shape[1]} pixels", "bands": shape[2],
             "classes": len(names), "labelled": len(y),
@@ -169,6 +179,8 @@ def sentinel2_breizhcrops(train_cap: int = 500, val_cap: int = 200) -> Benchmark
     return BenchmarkDataset(
         "sentinel2_breizhcrops", "Sentinel-2 crop types (Brittany)", X, y, names, split,
         phase1={"representation": "pca", "n_components": 10}, full={"representation": "standard"},
+        # one length-scale per spectral band, shared by its 6 bi-monthly composites (period-major features)
+        gp={"representation": "standard", "groups": np.arange(X.shape[1]) % 10, "n_opt": 1500, "max_iter": 150},
         info={
             "sensor": "Sentinel-2 L2A, bands B2-B8A, B11, B12 (10 m / 20 m)",
             "features": X.shape[1], "classes": len(names), "labelled": len(y),

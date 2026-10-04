@@ -1,8 +1,8 @@
 dataset,seed,method,class,class_name,accuracy
 indian_pines,0,B1 Flat FCM,1,Alfalfa,0.0
-indian_pines,0,B1 Flat FCM,2,Corn-notill,0.20840197693574958
-indian_pines,0,B1 Flat FCM,3,Corn-mintill,0.16595744680851063
-indian_pines,0,B1 Flat FCM,4,Corn,0.01990049751243781
+indian_pines,0,B1 Flat FCM,2,Corn-notill,0.2084019769357495
+indian_pines,0,B1 Flat FCM,3,Corn-mintill,0.1659574468085106
+indian_pines,0,B1 Flat FCM,4,Corn,0.0199004975124378
 indian_pines,0,B1 Flat FCM,5,Grass-pasture,0.4282238442822384
 indian_pines,0,B1 Flat FCM,6,Grass-trees,0.4750402576489533
 indian_pines,0,B1 Flat FCM,7,Grass-pasture-mowed,0.95
@@ -13,12 +13,12 @@ indian_pines,0,B1 Flat FCM,11,Soybean-mintill,0.2392138063279003
 indian_pines,0,B1 Flat FCM,12,Soybean-clean,0.1746031746031746
 indian_pines,0,B1 Flat FCM,13,Wheat,0.9714285714285714
 indian_pines,0,B1 Flat FCM,14,Woods,0.3252788104089219
-indian_pines,0,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.18292682926829268
+indian_pines,0,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.1829268292682926
 indian_pines,0,B1 Flat FCM,16,Stone-Steel-Towers,0.0759493670886076
 indian_pines,0,B2 Flat FCM + max-membership,1,Alfalfa,0.0
-indian_pines,0,B2 Flat FCM + max-membership,2,Corn-notill,0.20840197693574958
-indian_pines,0,B2 Flat FCM + max-membership,3,Corn-mintill,0.16595744680851063
-indian_pines,0,B2 Flat FCM + max-membership,4,Corn,0.01990049751243781
+indian_pines,0,B2 Flat FCM + max-membership,2,Corn-notill,0.2084019769357495
+indian_pines,0,B2 Flat FCM + max-membership,3,Corn-mintill,0.1659574468085106
+indian_pines,0,B2 Flat FCM + max-membership,4,Corn,0.0199004975124378
 indian_pines,0,B2 Flat FCM + max-membership,5,Grass-pasture,0.4282238442822384
 indian_pines,0,B2 Flat FCM + max-membership,6,Grass-trees,0.4750402576489533
 indian_pines,0,B2 Flat FCM + max-membership,7,Grass-pasture-mowed,0.95
@@ -29,7 +29,7 @@ indian_pines,0,B2 Flat FCM + max-membership,11,Soybean-mintill,0.239213806327900
 indian_pines,0,B2 Flat FCM + max-membership,12,Soybean-clean,0.1746031746031746
 indian_pines,0,B2 Flat FCM + max-membership,13,Wheat,0.9714285714285714
 indian_pines,0,B2 Flat FCM + max-membership,14,Woods,0.3252788104089219
-indian_pines,0,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.18292682926829268
+indian_pines,0,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.1829268292682926
 indian_pines,0,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.0759493670886076
 indian_pines,0,SG-HFQ,1,Alfalfa,0.2894736842105263
 indian_pines,0,SG-HFQ,2,Corn-notill,0.6548599670510709
@@ -38,10 +38,10 @@ indian_pines,0,SG-HFQ,4,Corn,0.0
 indian_pines,0,SG-HFQ,5,Grass-pasture,0.0
 indian_pines,0,SG-HFQ,6,Grass-trees,0.0
 indian_pines,0,SG-HFQ,7,Grass-pasture-mowed,0.95
-indian_pines,0,SG-HFQ,8,Hay-windrowed,0.012315270935960592
+indian_pines,0,SG-HFQ,8,Hay-windrowed,0.0123152709359605
 indian_pines,0,SG-HFQ,9,Oats,0.0
-indian_pines,0,SG-HFQ,10,Soybean-notill,0.004842615012106538
-indian_pines,0,SG-HFQ,11,Soybean-mintill,0.024928092042186004
+indian_pines,0,SG-HFQ,10,Soybean-notill,0.0048426150121065
+indian_pines,0,SG-HFQ,11,Soybean-mintill,0.024928092042186
 indian_pines,0,SG-HFQ,12,Soybean-clean,0.0
 indian_pines,0,SG-HFQ,13,Wheat,0.0
 indian_pines,0,SG-HFQ,14,Woods,0.0
@@ -54,10 +54,10 @@ indian_pines,0,"B3 HFCM, no gating",4,Corn,0.0
 indian_pines,0,"B3 HFCM, no gating",5,Grass-pasture,0.0
 indian_pines,0,"B3 HFCM, no gating",6,Grass-trees,0.0
 indian_pines,0,"B3 HFCM, no gating",7,Grass-pasture-mowed,0.95
-indian_pines,0,"B3 HFCM, no gating",8,Hay-windrowed,0.012315270935960592
+indian_pines,0,"B3 HFCM, no gating",8,Hay-windrowed,0.0123152709359605
 indian_pines,0,"B3 HFCM, no gating",9,Oats,0.0
-indian_pines,0,"B3 HFCM, no gating",10,Soybean-notill,0.004842615012106538
-indian_pines,0,"B3 HFCM, no gating",11,Soybean-mintill,0.024928092042186004
+indian_pines,0,"B3 HFCM, no gating",10,Soybean-notill,0.0048426150121065
+indian_pines,0,"B3 HFCM, no gating",11,Soybean-mintill,0.024928092042186
 indian_pines,0,"B3 HFCM, no gating",12,Soybean-clean,0.0
 indian_pines,0,"B3 HFCM, no gating",13,Wheat,0.0
 indian_pines,0,"B3 HFCM, no gating",14,Woods,0.0
@@ -70,83 +70,83 @@ indian_pines,0,B4 HFCM + entropy gating,4,Corn,0.0
 indian_pines,0,B4 HFCM + entropy gating,5,Grass-pasture,0.0
 indian_pines,0,B4 HFCM + entropy gating,6,Grass-trees,0.0
 indian_pines,0,B4 HFCM + entropy gating,7,Grass-pasture-mowed,0.95
-indian_pines,0,B4 HFCM + entropy gating,8,Hay-windrowed,0.012315270935960592
+indian_pines,0,B4 HFCM + entropy gating,8,Hay-windrowed,0.0123152709359605
 indian_pines,0,B4 HFCM + entropy gating,9,Oats,0.0
-indian_pines,0,B4 HFCM + entropy gating,10,Soybean-notill,0.004842615012106538
-indian_pines,0,B4 HFCM + entropy gating,11,Soybean-mintill,0.024928092042186004
+indian_pines,0,B4 HFCM + entropy gating,10,Soybean-notill,0.0048426150121065
+indian_pines,0,B4 HFCM + entropy gating,11,Soybean-mintill,0.024928092042186
 indian_pines,0,B4 HFCM + entropy gating,12,Soybean-clean,0.0
 indian_pines,0,B4 HFCM + entropy gating,13,Wheat,0.0
 indian_pines,0,B4 HFCM + entropy gating,14,Woods,0.0
 indian_pines,0,B4 HFCM + entropy gating,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,0,B4 HFCM + entropy gating,16,Stone-Steel-Towers,0.0
 indian_pines,0,SG-HFQ (class-seeded),1,Alfalfa,0.5
-indian_pines,0,SG-HFQ (class-seeded),2,Corn-notill,0.22817133443163098
+indian_pines,0,SG-HFQ (class-seeded),2,Corn-notill,0.2281713344316309
 indian_pines,0,SG-HFQ (class-seeded),3,Corn-mintill,0.524822695035461
-indian_pines,0,SG-HFQ (class-seeded),4,Corn,0.004975124378109453
-indian_pines,0,SG-HFQ (class-seeded),5,Grass-pasture,0.46958637469586373
+indian_pines,0,SG-HFQ (class-seeded),4,Corn,0.0049751243781094
+indian_pines,0,SG-HFQ (class-seeded),5,Grass-pasture,0.4695863746958637
 indian_pines,0,SG-HFQ (class-seeded),6,Grass-trees,0.2914653784219002
 indian_pines,0,SG-HFQ (class-seeded),7,Grass-pasture-mowed,0.95
-indian_pines,0,SG-HFQ (class-seeded),8,Hay-windrowed,0.11822660098522167
+indian_pines,0,SG-HFQ (class-seeded),8,Hay-windrowed,0.1182266009852216
 indian_pines,0,SG-HFQ (class-seeded),9,Oats,0.5
-indian_pines,0,SG-HFQ (class-seeded),10,Soybean-notill,0.09322033898305085
-indian_pines,0,SG-HFQ (class-seeded),11,Soybean-mintill,0.13231064237775647
+indian_pines,0,SG-HFQ (class-seeded),10,Soybean-notill,0.0932203389830508
+indian_pines,0,SG-HFQ (class-seeded),11,Soybean-mintill,0.1323106423777564
 indian_pines,0,SG-HFQ (class-seeded),12,Soybean-clean,0.3630952380952381
 indian_pines,0,SG-HFQ (class-seeded),13,Wheat,0.9714285714285714
-indian_pines,0,SG-HFQ (class-seeded),14,Woods,0.32806691449814124
+indian_pines,0,SG-HFQ (class-seeded),14,Woods,0.3280669144981412
 indian_pines,0,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.2774390243902439
 indian_pines,0,SG-HFQ (class-seeded),16,Stone-Steel-Towers,0.0
-indian_pines,0,SVM (RBF),1,Alfalfa,0.07894736842105263
+indian_pines,0,SVM (RBF),1,Alfalfa,0.0789473684210526
 indian_pines,0,SVM (RBF),2,Corn-notill,0.728171334431631
 indian_pines,0,SVM (RBF),3,Corn-mintill,0.6212765957446809
 indian_pines,0,SVM (RBF),4,Corn,0.4925373134328358
 indian_pines,0,SVM (RBF),5,Grass-pasture,0.8588807785888077
-indian_pines,0,SVM (RBF),6,Grass-trees,0.9758454106280193
+indian_pines,0,SVM (RBF),6,Grass-trees,0.9758454106280192
 indian_pines,0,SVM (RBF),7,Grass-pasture-mowed,0.3
 indian_pines,0,SVM (RBF),8,Hay-windrowed,0.9926108374384236
-indian_pines,0,SVM (RBF),9,Oats,0.16666666666666666
+indian_pines,0,SVM (RBF),9,Oats,0.1666666666666666
 indian_pines,0,SVM (RBF),10,Soybean-notill,0.6731234866828087
 indian_pines,0,SVM (RBF),11,Soybean-mintill,0.8710450623202302
 indian_pines,0,SVM (RBF),12,Soybean-clean,0.7261904761904762
-indian_pines,0,SVM (RBF),13,Wheat,0.9885714285714285
-indian_pines,0,SVM (RBF),14,Woods,0.9646840148698885
+indian_pines,0,SVM (RBF),13,Wheat,0.9885714285714284
+indian_pines,0,SVM (RBF),14,Woods,0.9646840148698884
 indian_pines,0,SVM (RBF),15,Buildings-Grass-Trees-Drives,0.5823170731707317
 indian_pines,0,SVM (RBF),16,Stone-Steel-Towers,0.8607594936708861
-indian_pines,0,"SVM (RBF), Phase 1 features",1,Alfalfa,0.39473684210526316
+indian_pines,0,"SVM (RBF), Phase 1 features",1,Alfalfa,0.3947368421052631
 indian_pines,0,"SVM (RBF), Phase 1 features",2,Corn-notill,0.5642504118616145
 indian_pines,0,"SVM (RBF), Phase 1 features",3,Corn-mintill,0.5702127659574469
 indian_pines,0,"SVM (RBF), Phase 1 features",4,Corn,0.4527363184079602
 indian_pines,0,"SVM (RBF), Phase 1 features",5,Grass-pasture,0.7712895377128953
 indian_pines,0,"SVM (RBF), Phase 1 features",6,Grass-trees,0.9049919484702094
 indian_pines,0,"SVM (RBF), Phase 1 features",7,Grass-pasture-mowed,0.45
-indian_pines,0,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9778325123152709
+indian_pines,0,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9778325123152708
 indian_pines,0,"SVM (RBF), Phase 1 features",9,Oats,0.25
 indian_pines,0,"SVM (RBF), Phase 1 features",10,Soybean-notill,0.6138014527845036
 indian_pines,0,"SVM (RBF), Phase 1 features",11,Soybean-mintill,0.889261744966443
-indian_pines,0,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.37896825396825395
+indian_pines,0,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.3789682539682539
 indian_pines,0,"SVM (RBF), Phase 1 features",13,Wheat,1.0
-indian_pines,0,"SVM (RBF), Phase 1 features",14,Woods,0.9247211895910781
-indian_pines,0,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.42073170731707316
-indian_pines,0,"SVM (RBF), Phase 1 features",16,Stone-Steel-Towers,0.9113924050632911
-indian_pines,0,Random Forest,1,Alfalfa,0.21052631578947367
+indian_pines,0,"SVM (RBF), Phase 1 features",14,Woods,0.924721189591078
+indian_pines,0,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.4207317073170731
+indian_pines,0,"SVM (RBF), Phase 1 features",16,Stone-Steel-Towers,0.9113924050632912
+indian_pines,0,Random Forest,1,Alfalfa,0.2105263157894736
 indian_pines,0,Random Forest,2,Corn-notill,0.5650741350906096
 indian_pines,0,Random Forest,3,Corn-mintill,0.5531914893617021
-indian_pines,0,Random Forest,4,Corn,0.29850746268656714
+indian_pines,0,Random Forest,4,Corn,0.2985074626865671
 indian_pines,0,Random Forest,5,Grass-pasture,0.8175182481751825
-indian_pines,0,Random Forest,6,Grass-trees,0.9629629629629629
+indian_pines,0,Random Forest,6,Grass-trees,0.9629629629629628
 indian_pines,0,Random Forest,7,Grass-pasture-mowed,0.25
 indian_pines,0,Random Forest,8,Hay-windrowed,0.9975369458128078
 indian_pines,0,Random Forest,9,Oats,0.6666666666666666
 indian_pines,0,Random Forest,10,Soybean-notill,0.6840193704600485
 indian_pines,0,Random Forest,11,Soybean-mintill,0.8906999041227229
-indian_pines,0,Random Forest,12,Soybean-clean,0.49404761904761907
-indian_pines,0,Random Forest,13,Wheat,0.9885714285714285
+indian_pines,0,Random Forest,12,Soybean-clean,0.494047619047619
+indian_pines,0,Random Forest,13,Wheat,0.9885714285714284
 indian_pines,0,Random Forest,14,Woods,0.929368029739777
-indian_pines,0,Random Forest,15,Buildings-Grass-Trees-Drives,0.46646341463414637
+indian_pines,0,Random Forest,15,Buildings-Grass-Trees-Drives,0.4664634146341463
 indian_pines,0,Random Forest,16,Stone-Steel-Towers,0.810126582278481
-indian_pines,0,"Random Forest, Phase 1 features",1,Alfalfa,0.02631578947368421
+indian_pines,0,"Random Forest, Phase 1 features",1,Alfalfa,0.0263157894736842
 indian_pines,0,"Random Forest, Phase 1 features",2,Corn-notill,0.5461285008237232
 indian_pines,0,"Random Forest, Phase 1 features",3,Corn-mintill,0.5304964539007092
-indian_pines,0,"Random Forest, Phase 1 features",4,Corn,0.22388059701492538
+indian_pines,0,"Random Forest, Phase 1 features",4,Corn,0.2238805970149253
 indian_pines,0,"Random Forest, Phase 1 features",5,Grass-pasture,0.7031630170316302
 indian_pines,0,"Random Forest, Phase 1 features",6,Grass-trees,0.9565217391304348
 indian_pines,0,"Random Forest, Phase 1 features",7,Grass-pasture-mowed,0.45
@@ -155,112 +155,112 @@ indian_pines,0,"Random Forest, Phase 1 features",9,Oats,0.6666666666666666
 indian_pines,0,"Random Forest, Phase 1 features",10,Soybean-notill,0.6585956416464891
 indian_pines,0,"Random Forest, Phase 1 features",11,Soybean-mintill,0.8446788111217641
 indian_pines,0,"Random Forest, Phase 1 features",12,Soybean-clean,0.3551587301587302
-indian_pines,0,"Random Forest, Phase 1 features",13,Wheat,0.9885714285714285
-indian_pines,0,"Random Forest, Phase 1 features",14,Woods,0.9488847583643123
-indian_pines,0,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.31097560975609756
-indian_pines,0,"Random Forest, Phase 1 features",16,Stone-Steel-Towers,0.9113924050632911
+indian_pines,0,"Random Forest, Phase 1 features",13,Wheat,0.9885714285714284
+indian_pines,0,"Random Forest, Phase 1 features",14,Woods,0.9488847583643124
+indian_pines,0,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.3109756097560975
+indian_pines,0,"Random Forest, Phase 1 features",16,Stone-Steel-Towers,0.9113924050632912
 indian_pines,1,B1 Flat FCM,1,Alfalfa,0.0
-indian_pines,1,B1 Flat FCM,2,Corn-notill,0.22240527182866557
+indian_pines,1,B1 Flat FCM,2,Corn-notill,0.2224052718286655
 indian_pines,1,B1 Flat FCM,3,Corn-mintill,0.1829787234042553
 indian_pines,1,B1 Flat FCM,4,Corn,0.3582089552238806
 indian_pines,1,B1 Flat FCM,5,Grass-pasture,0.4257907542579075
 indian_pines,1,B1 Flat FCM,6,Grass-trees,0.4106280193236715
 indian_pines,1,B1 Flat FCM,7,Grass-pasture-mowed,0.95
 indian_pines,1,B1 Flat FCM,8,Hay-windrowed,0.5541871921182266
-indian_pines,1,B1 Flat FCM,9,Oats,0.08333333333333333
-indian_pines,1,B1 Flat FCM,10,Soybean-notill,0.22276029055690072
+indian_pines,1,B1 Flat FCM,9,Oats,0.0833333333333333
+indian_pines,1,B1 Flat FCM,10,Soybean-notill,0.2227602905569007
 indian_pines,1,B1 Flat FCM,11,Soybean-mintill,0.2799616490891659
 indian_pines,1,B1 Flat FCM,12,Soybean-clean,0.1746031746031746
 indian_pines,1,B1 Flat FCM,13,Wheat,0.92
 indian_pines,1,B1 Flat FCM,14,Woods,0.3559479553903346
-indian_pines,1,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.16158536585365854
+indian_pines,1,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.1615853658536585
 indian_pines,1,B1 Flat FCM,16,Stone-Steel-Towers,0.3670886075949367
 indian_pines,1,B2 Flat FCM + max-membership,1,Alfalfa,0.0
-indian_pines,1,B2 Flat FCM + max-membership,2,Corn-notill,0.22240527182866557
+indian_pines,1,B2 Flat FCM + max-membership,2,Corn-notill,0.2224052718286655
 indian_pines,1,B2 Flat FCM + max-membership,3,Corn-mintill,0.1829787234042553
 indian_pines,1,B2 Flat FCM + max-membership,4,Corn,0.3582089552238806
 indian_pines,1,B2 Flat FCM + max-membership,5,Grass-pasture,0.4257907542579075
 indian_pines,1,B2 Flat FCM + max-membership,6,Grass-trees,0.4106280193236715
 indian_pines,1,B2 Flat FCM + max-membership,7,Grass-pasture-mowed,0.95
 indian_pines,1,B2 Flat FCM + max-membership,8,Hay-windrowed,0.5541871921182266
-indian_pines,1,B2 Flat FCM + max-membership,9,Oats,0.08333333333333333
-indian_pines,1,B2 Flat FCM + max-membership,10,Soybean-notill,0.22276029055690072
+indian_pines,1,B2 Flat FCM + max-membership,9,Oats,0.0833333333333333
+indian_pines,1,B2 Flat FCM + max-membership,10,Soybean-notill,0.2227602905569007
 indian_pines,1,B2 Flat FCM + max-membership,11,Soybean-mintill,0.2799616490891659
 indian_pines,1,B2 Flat FCM + max-membership,12,Soybean-clean,0.1746031746031746
 indian_pines,1,B2 Flat FCM + max-membership,13,Wheat,0.92
 indian_pines,1,B2 Flat FCM + max-membership,14,Woods,0.3559479553903346
-indian_pines,1,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.16158536585365854
+indian_pines,1,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.1615853658536585
 indian_pines,1,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.3670886075949367
-indian_pines,1,SG-HFQ,1,Alfalfa,0.42105263157894735
+indian_pines,1,SG-HFQ,1,Alfalfa,0.4210526315789473
 indian_pines,1,SG-HFQ,2,Corn-notill,0.6771004942339374
 indian_pines,1,SG-HFQ,3,Corn-mintill,0.0
-indian_pines,1,SG-HFQ,4,Corn,0.004975124378109453
+indian_pines,1,SG-HFQ,4,Corn,0.0049751243781094
 indian_pines,1,SG-HFQ,5,Grass-pasture,0.0
 indian_pines,1,SG-HFQ,6,Grass-trees,0.0
 indian_pines,1,SG-HFQ,7,Grass-pasture-mowed,0.9
-indian_pines,1,SG-HFQ,8,Hay-windrowed,0.022167487684729065
+indian_pines,1,SG-HFQ,8,Hay-windrowed,0.022167487684729
 indian_pines,1,SG-HFQ,9,Oats,0.0
 indian_pines,1,SG-HFQ,10,Soybean-notill,0.0
-indian_pines,1,SG-HFQ,11,Soybean-mintill,0.006232023010546501
+indian_pines,1,SG-HFQ,11,Soybean-mintill,0.0062320230105465
 indian_pines,1,SG-HFQ,12,Soybean-clean,0.0
 indian_pines,1,SG-HFQ,13,Wheat,0.0
 indian_pines,1,SG-HFQ,14,Woods,0.0
 indian_pines,1,SG-HFQ,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,1,SG-HFQ,16,Stone-Steel-Towers,0.0
-indian_pines,1,"B3 HFCM, no gating",1,Alfalfa,0.42105263157894735
+indian_pines,1,"B3 HFCM, no gating",1,Alfalfa,0.4210526315789473
 indian_pines,1,"B3 HFCM, no gating",2,Corn-notill,0.6771004942339374
 indian_pines,1,"B3 HFCM, no gating",3,Corn-mintill,0.0
-indian_pines,1,"B3 HFCM, no gating",4,Corn,0.004975124378109453
+indian_pines,1,"B3 HFCM, no gating",4,Corn,0.0049751243781094
 indian_pines,1,"B3 HFCM, no gating",5,Grass-pasture,0.0
 indian_pines,1,"B3 HFCM, no gating",6,Grass-trees,0.0
 indian_pines,1,"B3 HFCM, no gating",7,Grass-pasture-mowed,0.9
-indian_pines,1,"B3 HFCM, no gating",8,Hay-windrowed,0.022167487684729065
+indian_pines,1,"B3 HFCM, no gating",8,Hay-windrowed,0.022167487684729
 indian_pines,1,"B3 HFCM, no gating",9,Oats,0.0
 indian_pines,1,"B3 HFCM, no gating",10,Soybean-notill,0.0
-indian_pines,1,"B3 HFCM, no gating",11,Soybean-mintill,0.006232023010546501
+indian_pines,1,"B3 HFCM, no gating",11,Soybean-mintill,0.0062320230105465
 indian_pines,1,"B3 HFCM, no gating",12,Soybean-clean,0.0
 indian_pines,1,"B3 HFCM, no gating",13,Wheat,0.0
 indian_pines,1,"B3 HFCM, no gating",14,Woods,0.0
 indian_pines,1,"B3 HFCM, no gating",15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,1,"B3 HFCM, no gating",16,Stone-Steel-Towers,0.0
-indian_pines,1,B4 HFCM + entropy gating,1,Alfalfa,0.42105263157894735
+indian_pines,1,B4 HFCM + entropy gating,1,Alfalfa,0.4210526315789473
 indian_pines,1,B4 HFCM + entropy gating,2,Corn-notill,0.6771004942339374
 indian_pines,1,B4 HFCM + entropy gating,3,Corn-mintill,0.0
-indian_pines,1,B4 HFCM + entropy gating,4,Corn,0.004975124378109453
+indian_pines,1,B4 HFCM + entropy gating,4,Corn,0.0049751243781094
 indian_pines,1,B4 HFCM + entropy gating,5,Grass-pasture,0.0
 indian_pines,1,B4 HFCM + entropy gating,6,Grass-trees,0.0
 indian_pines,1,B4 HFCM + entropy gating,7,Grass-pasture-mowed,0.9
-indian_pines,1,B4 HFCM + entropy gating,8,Hay-windrowed,0.022167487684729065
+indian_pines,1,B4 HFCM + entropy gating,8,Hay-windrowed,0.022167487684729
 indian_pines,1,B4 HFCM + entropy gating,9,Oats,0.0
 indian_pines,1,B4 HFCM + entropy gating,10,Soybean-notill,0.0
-indian_pines,1,B4 HFCM + entropy gating,11,Soybean-mintill,0.006232023010546501
+indian_pines,1,B4 HFCM + entropy gating,11,Soybean-mintill,0.0062320230105465
 indian_pines,1,B4 HFCM + entropy gating,12,Soybean-clean,0.0
 indian_pines,1,B4 HFCM + entropy gating,13,Wheat,0.0
 indian_pines,1,B4 HFCM + entropy gating,14,Woods,0.0
 indian_pines,1,B4 HFCM + entropy gating,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,1,B4 HFCM + entropy gating,16,Stone-Steel-Towers,0.0
 indian_pines,1,SG-HFQ (class-seeded),1,Alfalfa,0.5789473684210527
-indian_pines,1,SG-HFQ (class-seeded),2,Corn-notill,0.03212520593080725
+indian_pines,1,SG-HFQ (class-seeded),2,Corn-notill,0.0321252059308072
 indian_pines,1,SG-HFQ (class-seeded),3,Corn-mintill,0.4
-indian_pines,1,SG-HFQ (class-seeded),4,Corn,0.31840796019900497
+indian_pines,1,SG-HFQ (class-seeded),4,Corn,0.3184079601990049
 indian_pines,1,SG-HFQ (class-seeded),5,Grass-pasture,0.4744525547445255
-indian_pines,1,SG-HFQ (class-seeded),6,Grass-trees,0.43478260869565216
+indian_pines,1,SG-HFQ (class-seeded),6,Grass-trees,0.4347826086956521
 indian_pines,1,SG-HFQ (class-seeded),7,Grass-pasture-mowed,0.95
-indian_pines,1,SG-HFQ (class-seeded),8,Hay-windrowed,0.07389162561576355
+indian_pines,1,SG-HFQ (class-seeded),8,Hay-windrowed,0.0738916256157635
 indian_pines,1,SG-HFQ (class-seeded),9,Oats,0.75
-indian_pines,1,SG-HFQ (class-seeded),10,Soybean-notill,0.06658595641646489
+indian_pines,1,SG-HFQ (class-seeded),10,Soybean-notill,0.0665859564164648
 indian_pines,1,SG-HFQ (class-seeded),11,Soybean-mintill,0.4232981783317354
-indian_pines,1,SG-HFQ (class-seeded),12,Soybean-clean,0.22023809523809523
+indian_pines,1,SG-HFQ (class-seeded),12,Soybean-clean,0.2202380952380952
 indian_pines,1,SG-HFQ (class-seeded),13,Wheat,0.9485714285714286
-indian_pines,1,SG-HFQ (class-seeded),14,Woods,0.38661710037174724
-indian_pines,1,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.10975609756097561
+indian_pines,1,SG-HFQ (class-seeded),14,Woods,0.3866171003717472
+indian_pines,1,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.1097560975609756
 indian_pines,1,SG-HFQ (class-seeded),16,Stone-Steel-Towers,0.0
-indian_pines,1,SVM (RBF),1,Alfalfa,0.10526315789473684
+indian_pines,1,SVM (RBF),1,Alfalfa,0.1052631578947368
 indian_pines,1,SVM (RBF),2,Corn-notill,0.7248764415156508
 indian_pines,1,SVM (RBF),3,Corn-mintill,0.624113475177305
 indian_pines,1,SVM (RBF),4,Corn,0.4975124378109453
 indian_pines,1,SVM (RBF),5,Grass-pasture,0.9367396593673966
-indian_pines,1,SVM (RBF),6,Grass-trees,0.9629629629629629
+indian_pines,1,SVM (RBF),6,Grass-trees,0.9629629629629628
 indian_pines,1,SVM (RBF),7,Grass-pasture-mowed,0.85
 indian_pines,1,SVM (RBF),8,Hay-windrowed,0.9876847290640394
 indian_pines,1,SVM (RBF),9,Oats,0.9166666666666666
@@ -269,88 +269,88 @@ indian_pines,1,SVM (RBF),11,Soybean-mintill,0.8451581975071908
 indian_pines,1,SVM (RBF),12,Soybean-clean,0.6607142857142857
 indian_pines,1,SVM (RBF),13,Wheat,0.9371428571428572
 indian_pines,1,SVM (RBF),14,Woods,0.949814126394052
-indian_pines,1,SVM (RBF),15,Buildings-Grass-Trees-Drives,0.49390243902439024
+indian_pines,1,SVM (RBF),15,Buildings-Grass-Trees-Drives,0.4939024390243902
 indian_pines,1,SVM (RBF),16,Stone-Steel-Towers,0.8354430379746836
-indian_pines,1,"SVM (RBF), Phase 1 features",1,Alfalfa,0.02631578947368421
+indian_pines,1,"SVM (RBF), Phase 1 features",1,Alfalfa,0.0263157894736842
 indian_pines,1,"SVM (RBF), Phase 1 features",2,Corn-notill,0.6845140032948929
 indian_pines,1,"SVM (RBF), Phase 1 features",3,Corn-mintill,0.6269503546099291
-indian_pines,1,"SVM (RBF), Phase 1 features",4,Corn,0.31343283582089554
+indian_pines,1,"SVM (RBF), Phase 1 features",4,Corn,0.3134328358208955
 indian_pines,1,"SVM (RBF), Phase 1 features",5,Grass-pasture,0.8807785888077859
 indian_pines,1,"SVM (RBF), Phase 1 features",6,Grass-trees,0.9066022544283414
 indian_pines,1,"SVM (RBF), Phase 1 features",7,Grass-pasture-mowed,0.85
-indian_pines,1,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9852216748768473
+indian_pines,1,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9852216748768472
 indian_pines,1,"SVM (RBF), Phase 1 features",9,Oats,0.8333333333333334
 indian_pines,1,"SVM (RBF), Phase 1 features",10,Soybean-notill,0.6089588377723971
 indian_pines,1,"SVM (RBF), Phase 1 features",11,Soybean-mintill,0.8475551294343241
-indian_pines,1,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.32341269841269843
+indian_pines,1,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.3234126984126984
 indian_pines,1,"SVM (RBF), Phase 1 features",13,Wheat,0.9428571428571428
-indian_pines,1,"SVM (RBF), Phase 1 features",14,Woods,0.9330855018587361
-indian_pines,1,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.39939024390243905
+indian_pines,1,"SVM (RBF), Phase 1 features",14,Woods,0.933085501858736
+indian_pines,1,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.399390243902439
 indian_pines,1,"SVM (RBF), Phase 1 features",16,Stone-Steel-Towers,0.8607594936708861
-indian_pines,1,Random Forest,1,Alfalfa,0.21052631578947367
+indian_pines,1,Random Forest,1,Alfalfa,0.2105263157894736
 indian_pines,1,Random Forest,2,Corn-notill,0.6515650741350906
 indian_pines,1,Random Forest,3,Corn-mintill,0.5787234042553191
 indian_pines,1,Random Forest,4,Corn,0.2736318407960199
 indian_pines,1,Random Forest,5,Grass-pasture,0.8467153284671532
-indian_pines,1,Random Forest,6,Grass-trees,0.9243156199677939
+indian_pines,1,Random Forest,6,Grass-trees,0.924315619967794
 indian_pines,1,Random Forest,7,Grass-pasture-mowed,0.4
 indian_pines,1,Random Forest,8,Hay-windrowed,0.9605911330049262
-indian_pines,1,Random Forest,9,Oats,0.16666666666666666
+indian_pines,1,Random Forest,9,Oats,0.1666666666666666
 indian_pines,1,Random Forest,10,Soybean-notill,0.6368038740920097
 indian_pines,1,Random Forest,11,Soybean-mintill,0.8604985618408437
 indian_pines,1,Random Forest,12,Soybean-clean,0.4583333333333333
-indian_pines,1,Random Forest,13,Wheat,0.9257142857142857
-indian_pines,1,Random Forest,14,Woods,0.9377323420074349
+indian_pines,1,Random Forest,13,Wheat,0.9257142857142856
+indian_pines,1,Random Forest,14,Woods,0.9377323420074348
 indian_pines,1,Random Forest,15,Buildings-Grass-Trees-Drives,0.3384146341463415
 indian_pines,1,Random Forest,16,Stone-Steel-Towers,0.8481012658227848
-indian_pines,1,"Random Forest, Phase 1 features",1,Alfalfa,0.13157894736842105
+indian_pines,1,"Random Forest, Phase 1 features",1,Alfalfa,0.131578947368421
 indian_pines,1,"Random Forest, Phase 1 features",2,Corn-notill,0.6087314662273476
 indian_pines,1,"Random Forest, Phase 1 features",3,Corn-mintill,0.4950354609929078
-indian_pines,1,"Random Forest, Phase 1 features",4,Corn,0.26865671641791045
+indian_pines,1,"Random Forest, Phase 1 features",4,Corn,0.2686567164179104
 indian_pines,1,"Random Forest, Phase 1 features",5,Grass-pasture,0.7688564476885644
-indian_pines,1,"Random Forest, Phase 1 features",6,Grass-trees,0.9130434782608695
+indian_pines,1,"Random Forest, Phase 1 features",6,Grass-trees,0.9130434782608696
 indian_pines,1,"Random Forest, Phase 1 features",7,Grass-pasture-mowed,0.95
-indian_pines,1,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9827586206896551
+indian_pines,1,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9827586206896552
 indian_pines,1,"Random Forest, Phase 1 features",9,Oats,0.8333333333333334
 indian_pines,1,"Random Forest, Phase 1 features",10,Soybean-notill,0.6234866828087167
 indian_pines,1,"Random Forest, Phase 1 features",11,Soybean-mintill,0.8173537871524449
-indian_pines,1,"Random Forest, Phase 1 features",12,Soybean-clean,0.22023809523809523
-indian_pines,1,"Random Forest, Phase 1 features",13,Wheat,0.9257142857142857
+indian_pines,1,"Random Forest, Phase 1 features",12,Soybean-clean,0.2202380952380952
+indian_pines,1,"Random Forest, Phase 1 features",13,Wheat,0.9257142857142856
 indian_pines,1,"Random Forest, Phase 1 features",14,Woods,0.9182156133828996
 indian_pines,1,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.3628048780487805
 indian_pines,1,"Random Forest, Phase 1 features",16,Stone-Steel-Towers,0.8607594936708861
 indian_pines,2,B1 Flat FCM,1,Alfalfa,0.0
 indian_pines,2,B1 Flat FCM,2,Corn-notill,0.1902800658978583
-indian_pines,2,B1 Flat FCM,3,Corn-mintill,0.20425531914893616
+indian_pines,2,B1 Flat FCM,3,Corn-mintill,0.2042553191489361
 indian_pines,2,B1 Flat FCM,4,Corn,0.3283582089552239
-indian_pines,2,B1 Flat FCM,5,Grass-pasture,0.41119221411192214
+indian_pines,2,B1 Flat FCM,5,Grass-pasture,0.4111922141119221
 indian_pines,2,B1 Flat FCM,6,Grass-trees,0.4782608695652174
 indian_pines,2,B1 Flat FCM,7,Grass-pasture-mowed,0.95
 indian_pines,2,B1 Flat FCM,8,Hay-windrowed,0.6748768472906403
 indian_pines,2,B1 Flat FCM,9,Oats,0.75
-indian_pines,2,B1 Flat FCM,10,Soybean-notill,0.11016949152542373
-indian_pines,2,B1 Flat FCM,11,Soybean-mintill,0.21860019175455417
+indian_pines,2,B1 Flat FCM,10,Soybean-notill,0.1101694915254237
+indian_pines,2,B1 Flat FCM,11,Soybean-mintill,0.2186001917545541
 indian_pines,2,B1 Flat FCM,12,Soybean-clean,0.1626984126984127
-indian_pines,2,B1 Flat FCM,13,Wheat,0.9257142857142857
-indian_pines,2,B1 Flat FCM,14,Woods,0.30390334572490707
-indian_pines,2,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.19817073170731708
-indian_pines,2,B1 Flat FCM,16,Stone-Steel-Towers,0.17721518987341772
+indian_pines,2,B1 Flat FCM,13,Wheat,0.9257142857142856
+indian_pines,2,B1 Flat FCM,14,Woods,0.303903345724907
+indian_pines,2,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.198170731707317
+indian_pines,2,B1 Flat FCM,16,Stone-Steel-Towers,0.1772151898734177
 indian_pines,2,B2 Flat FCM + max-membership,1,Alfalfa,0.0
 indian_pines,2,B2 Flat FCM + max-membership,2,Corn-notill,0.1902800658978583
-indian_pines,2,B2 Flat FCM + max-membership,3,Corn-mintill,0.20425531914893616
+indian_pines,2,B2 Flat FCM + max-membership,3,Corn-mintill,0.2042553191489361
 indian_pines,2,B2 Flat FCM + max-membership,4,Corn,0.3283582089552239
-indian_pines,2,B2 Flat FCM + max-membership,5,Grass-pasture,0.41119221411192214
+indian_pines,2,B2 Flat FCM + max-membership,5,Grass-pasture,0.4111922141119221
 indian_pines,2,B2 Flat FCM + max-membership,6,Grass-trees,0.4782608695652174
 indian_pines,2,B2 Flat FCM + max-membership,7,Grass-pasture-mowed,0.95
 indian_pines,2,B2 Flat FCM + max-membership,8,Hay-windrowed,0.6748768472906403
 indian_pines,2,B2 Flat FCM + max-membership,9,Oats,0.75
-indian_pines,2,B2 Flat FCM + max-membership,10,Soybean-notill,0.11016949152542373
-indian_pines,2,B2 Flat FCM + max-membership,11,Soybean-mintill,0.21860019175455417
+indian_pines,2,B2 Flat FCM + max-membership,10,Soybean-notill,0.1101694915254237
+indian_pines,2,B2 Flat FCM + max-membership,11,Soybean-mintill,0.2186001917545541
 indian_pines,2,B2 Flat FCM + max-membership,12,Soybean-clean,0.1626984126984127
-indian_pines,2,B2 Flat FCM + max-membership,13,Wheat,0.9257142857142857
-indian_pines,2,B2 Flat FCM + max-membership,14,Woods,0.30390334572490707
-indian_pines,2,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.19817073170731708
-indian_pines,2,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.17721518987341772
+indian_pines,2,B2 Flat FCM + max-membership,13,Wheat,0.9257142857142856
+indian_pines,2,B2 Flat FCM + max-membership,14,Woods,0.303903345724907
+indian_pines,2,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.198170731707317
+indian_pines,2,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.1772151898734177
 indian_pines,2,SG-HFQ,1,Alfalfa,0.0
 indian_pines,2,SG-HFQ,2,Corn-notill,0.0
 indian_pines,2,SG-HFQ,3,Corn-mintill,0.0
@@ -400,30 +400,30 @@ indian_pines,2,B4 HFCM + entropy gating,14,Woods,0.0
 indian_pines,2,B4 HFCM + entropy gating,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,2,B4 HFCM + entropy gating,16,Stone-Steel-Towers,0.0
 indian_pines,2,SG-HFQ (class-seeded),1,Alfalfa,0.2894736842105263
-indian_pines,2,SG-HFQ (class-seeded),2,Corn-notill,0.09719934102141681
-indian_pines,2,SG-HFQ (class-seeded),3,Corn-mintill,0.14184397163120568
-indian_pines,2,SG-HFQ (class-seeded),4,Corn,0.24378109452736318
+indian_pines,2,SG-HFQ (class-seeded),2,Corn-notill,0.0971993410214168
+indian_pines,2,SG-HFQ (class-seeded),3,Corn-mintill,0.1418439716312056
+indian_pines,2,SG-HFQ (class-seeded),4,Corn,0.2437810945273631
 indian_pines,2,SG-HFQ (class-seeded),5,Grass-pasture,0.5815085158150851
 indian_pines,2,SG-HFQ (class-seeded),6,Grass-trees,0.5136876006441223
 indian_pines,2,SG-HFQ (class-seeded),7,Grass-pasture-mowed,0.0
 indian_pines,2,SG-HFQ (class-seeded),8,Hay-windrowed,0.6428571428571429
 indian_pines,2,SG-HFQ (class-seeded),9,Oats,0.0
-indian_pines,2,SG-HFQ (class-seeded),10,Soybean-notill,0.30387409200968524
+indian_pines,2,SG-HFQ (class-seeded),10,Soybean-notill,0.3038740920096852
 indian_pines,2,SG-HFQ (class-seeded),11,Soybean-mintill,0.336529242569511
-indian_pines,2,SG-HFQ (class-seeded),12,Soybean-clean,0.20436507936507936
+indian_pines,2,SG-HFQ (class-seeded),12,Soybean-clean,0.2043650793650793
 indian_pines,2,SG-HFQ (class-seeded),13,Wheat,0.9028571428571428
-indian_pines,2,SG-HFQ (class-seeded),14,Woods,0.11802973977695168
-indian_pines,2,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.19207317073170732
+indian_pines,2,SG-HFQ (class-seeded),14,Woods,0.1180297397769516
+indian_pines,2,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.1920731707317073
 indian_pines,2,SG-HFQ (class-seeded),16,Stone-Steel-Towers,0.0
 indian_pines,2,SVM (RBF),1,Alfalfa,0.0
 indian_pines,2,SVM (RBF),2,Corn-notill,0.7191103789126854
 indian_pines,2,SVM (RBF),3,Corn-mintill,0.6099290780141844
-indian_pines,2,SVM (RBF),4,Corn,0.39303482587064675
+indian_pines,2,SVM (RBF),4,Corn,0.3930348258706467
 indian_pines,2,SVM (RBF),5,Grass-pasture,0.8661800486618005
 indian_pines,2,SVM (RBF),6,Grass-trees,0.9774557165861514
 indian_pines,2,SVM (RBF),7,Grass-pasture-mowed,0.6
 indian_pines,2,SVM (RBF),8,Hay-windrowed,0.9975369458128078
-indian_pines,2,SVM (RBF),9,Oats,0.08333333333333333
+indian_pines,2,SVM (RBF),9,Oats,0.0833333333333333
 indian_pines,2,SVM (RBF),10,Soybean-notill,0.6888619854721549
 indian_pines,2,SVM (RBF),11,Soybean-mintill,0.8801534036433365
 indian_pines,2,SVM (RBF),12,Soybean-clean,0.7103174603174603
@@ -431,86 +431,86 @@ indian_pines,2,SVM (RBF),13,Wheat,0.9714285714285714
 indian_pines,2,SVM (RBF),14,Woods,0.9842007434944238
 indian_pines,2,SVM (RBF),15,Buildings-Grass-Trees-Drives,0.5701219512195121
 indian_pines,2,SVM (RBF),16,Stone-Steel-Towers,0.810126582278481
-indian_pines,2,"SVM (RBF), Phase 1 features",1,Alfalfa,0.13157894736842105
+indian_pines,2,"SVM (RBF), Phase 1 features",1,Alfalfa,0.131578947368421
 indian_pines,2,"SVM (RBF), Phase 1 features",2,Corn-notill,0.6070840197693574
 indian_pines,2,"SVM (RBF), Phase 1 features",3,Corn-mintill,0.601418439716312
-indian_pines,2,"SVM (RBF), Phase 1 features",4,Corn,0.31343283582089554
+indian_pines,2,"SVM (RBF), Phase 1 features",4,Corn,0.3134328358208955
 indian_pines,2,"SVM (RBF), Phase 1 features",5,Grass-pasture,0.732360097323601
-indian_pines,2,"SVM (RBF), Phase 1 features",6,Grass-trees,0.9468599033816425
+indian_pines,2,"SVM (RBF), Phase 1 features",6,Grass-trees,0.9468599033816424
 indian_pines,2,"SVM (RBF), Phase 1 features",7,Grass-pasture-mowed,0.1
 indian_pines,2,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9950738916256158
 indian_pines,2,"SVM (RBF), Phase 1 features",9,Oats,0.0
 indian_pines,2,"SVM (RBF), Phase 1 features",10,Soybean-notill,0.6271186440677966
 indian_pines,2,"SVM (RBF), Phase 1 features",11,Soybean-mintill,0.8494726749760306
 indian_pines,2,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.4246031746031746
-indian_pines,2,"SVM (RBF), Phase 1 features",13,Wheat,0.9657142857142857
+indian_pines,2,"SVM (RBF), Phase 1 features",13,Wheat,0.9657142857142856
 indian_pines,2,"SVM (RBF), Phase 1 features",14,Woods,0.9758364312267658
-indian_pines,2,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.31097560975609756
+indian_pines,2,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.3109756097560975
 indian_pines,2,"SVM (RBF), Phase 1 features",16,Stone-Steel-Towers,0.8227848101265823
-indian_pines,2,Random Forest,1,Alfalfa,0.18421052631578946
+indian_pines,2,Random Forest,1,Alfalfa,0.1842105263157894
 indian_pines,2,Random Forest,2,Corn-notill,0.6227347611202636
 indian_pines,2,Random Forest,3,Corn-mintill,0.5900709219858156
-indian_pines,2,Random Forest,4,Corn,0.35323383084577115
+indian_pines,2,Random Forest,4,Corn,0.3532338308457711
 indian_pines,2,Random Forest,5,Grass-pasture,0.8102189781021898
 indian_pines,2,Random Forest,6,Grass-trees,0.9838969404186796
 indian_pines,2,Random Forest,7,Grass-pasture-mowed,0.65
-indian_pines,2,Random Forest,8,Hay-windrowed,0.9778325123152709
+indian_pines,2,Random Forest,8,Hay-windrowed,0.9778325123152708
 indian_pines,2,Random Forest,9,Oats,0.25
 indian_pines,2,Random Forest,10,Soybean-notill,0.6840193704600485
 indian_pines,2,Random Forest,11,Soybean-mintill,0.8964525407478428
 indian_pines,2,Random Forest,12,Soybean-clean,0.4642857142857143
 indian_pines,2,Random Forest,13,Wheat,0.9485714285714286
 indian_pines,2,Random Forest,14,Woods,0.9804832713754646
-indian_pines,2,Random Forest,15,Buildings-Grass-Trees-Drives,0.32621951219512196
+indian_pines,2,Random Forest,15,Buildings-Grass-Trees-Drives,0.3262195121951219
 indian_pines,2,Random Forest,16,Stone-Steel-Towers,0.7468354430379747
-indian_pines,2,"Random Forest, Phase 1 features",1,Alfalfa,0.07894736842105263
+indian_pines,2,"Random Forest, Phase 1 features",1,Alfalfa,0.0789473684210526
 indian_pines,2,"Random Forest, Phase 1 features",2,Corn-notill,0.6013179571663921
 indian_pines,2,"Random Forest, Phase 1 features",3,Corn-mintill,0.5106382978723404
-indian_pines,2,"Random Forest, Phase 1 features",4,Corn,0.23880597014925373
+indian_pines,2,"Random Forest, Phase 1 features",4,Corn,0.2388059701492537
 indian_pines,2,"Random Forest, Phase 1 features",5,Grass-pasture,0.6277372262773723
 indian_pines,2,"Random Forest, Phase 1 features",6,Grass-trees,0.9565217391304348
 indian_pines,2,"Random Forest, Phase 1 features",7,Grass-pasture-mowed,0.8
-indian_pines,2,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9901477832512315
+indian_pines,2,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9901477832512317
 indian_pines,2,"Random Forest, Phase 1 features",9,Oats,0.5
 indian_pines,2,"Random Forest, Phase 1 features",10,Soybean-notill,0.6440677966101694
 indian_pines,2,"Random Forest, Phase 1 features",11,Soybean-mintill,0.8571428571428571
 indian_pines,2,"Random Forest, Phase 1 features",12,Soybean-clean,0.3273809523809524
 indian_pines,2,"Random Forest, Phase 1 features",13,Wheat,0.8914285714285715
-indian_pines,2,"Random Forest, Phase 1 features",14,Woods,0.9628252788104089
+indian_pines,2,"Random Forest, Phase 1 features",14,Woods,0.9628252788104088
 indian_pines,2,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.3231707317073171
 indian_pines,2,"Random Forest, Phase 1 features",16,Stone-Steel-Towers,0.8481012658227848
 indian_pines,3,B1 Flat FCM,1,Alfalfa,0.5
 indian_pines,3,B1 Flat FCM,2,Corn-notill,0.2257001647446458
 indian_pines,3,B1 Flat FCM,3,Corn-mintill,0.2226950354609929
-indian_pines,3,B1 Flat FCM,4,Corn,0.14925373134328357
-indian_pines,3,B1 Flat FCM,5,Grass-pasture,0.40389294403892945
+indian_pines,3,B1 Flat FCM,4,Corn,0.1492537313432835
+indian_pines,3,B1 Flat FCM,5,Grass-pasture,0.4038929440389294
 indian_pines,3,B1 Flat FCM,6,Grass-trees,0.5893719806763285
 indian_pines,3,B1 Flat FCM,7,Grass-pasture-mowed,0.0
 indian_pines,3,B1 Flat FCM,8,Hay-windrowed,0.5172413793103449
 indian_pines,3,B1 Flat FCM,9,Oats,0.6666666666666666
-indian_pines,3,B1 Flat FCM,10,Soybean-notill,0.18523002421307505
+indian_pines,3,B1 Flat FCM,10,Soybean-notill,0.185230024213075
 indian_pines,3,B1 Flat FCM,11,Soybean-mintill,0.188398849472675
 indian_pines,3,B1 Flat FCM,12,Soybean-clean,0.1984126984126984
 indian_pines,3,B1 Flat FCM,13,Wheat,0.9714285714285714
 indian_pines,3,B1 Flat FCM,14,Woods,0.3141263940520446
-indian_pines,3,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.19207317073170732
-indian_pines,3,B1 Flat FCM,16,Stone-Steel-Towers,0.22784810126582278
+indian_pines,3,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.1920731707317073
+indian_pines,3,B1 Flat FCM,16,Stone-Steel-Towers,0.2278481012658227
 indian_pines,3,B2 Flat FCM + max-membership,1,Alfalfa,0.5
 indian_pines,3,B2 Flat FCM + max-membership,2,Corn-notill,0.2257001647446458
 indian_pines,3,B2 Flat FCM + max-membership,3,Corn-mintill,0.2226950354609929
-indian_pines,3,B2 Flat FCM + max-membership,4,Corn,0.14925373134328357
-indian_pines,3,B2 Flat FCM + max-membership,5,Grass-pasture,0.40389294403892945
+indian_pines,3,B2 Flat FCM + max-membership,4,Corn,0.1492537313432835
+indian_pines,3,B2 Flat FCM + max-membership,5,Grass-pasture,0.4038929440389294
 indian_pines,3,B2 Flat FCM + max-membership,6,Grass-trees,0.5893719806763285
 indian_pines,3,B2 Flat FCM + max-membership,7,Grass-pasture-mowed,0.0
 indian_pines,3,B2 Flat FCM + max-membership,8,Hay-windrowed,0.5172413793103449
 indian_pines,3,B2 Flat FCM + max-membership,9,Oats,0.6666666666666666
-indian_pines,3,B2 Flat FCM + max-membership,10,Soybean-notill,0.18523002421307505
+indian_pines,3,B2 Flat FCM + max-membership,10,Soybean-notill,0.185230024213075
 indian_pines,3,B2 Flat FCM + max-membership,11,Soybean-mintill,0.188398849472675
 indian_pines,3,B2 Flat FCM + max-membership,12,Soybean-clean,0.1984126984126984
 indian_pines,3,B2 Flat FCM + max-membership,13,Wheat,0.9714285714285714
 indian_pines,3,B2 Flat FCM + max-membership,14,Woods,0.3141263940520446
-indian_pines,3,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.19207317073170732
-indian_pines,3,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.22784810126582278
+indian_pines,3,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.1920731707317073
+indian_pines,3,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.2278481012658227
 indian_pines,3,SG-HFQ,1,Alfalfa,0.0
 indian_pines,3,SG-HFQ,2,Corn-notill,0.6260296540362438
 indian_pines,3,SG-HFQ,3,Corn-mintill,0.0
@@ -522,7 +522,7 @@ indian_pines,3,SG-HFQ,8,Hay-windrowed,0.5049261083743842
 indian_pines,3,SG-HFQ,9,Oats,0.0
 indian_pines,3,SG-HFQ,10,Soybean-notill,0.0
 indian_pines,3,SG-HFQ,11,Soybean-mintill,0.0
-indian_pines,3,SG-HFQ,12,Soybean-clean,0.01984126984126984
+indian_pines,3,SG-HFQ,12,Soybean-clean,0.0198412698412698
 indian_pines,3,SG-HFQ,13,Wheat,0.0
 indian_pines,3,SG-HFQ,14,Woods,0.0
 indian_pines,3,SG-HFQ,15,Buildings-Grass-Trees-Drives,0.0
@@ -538,7 +538,7 @@ indian_pines,3,"B3 HFCM, no gating",8,Hay-windrowed,0.5049261083743842
 indian_pines,3,"B3 HFCM, no gating",9,Oats,0.0
 indian_pines,3,"B3 HFCM, no gating",10,Soybean-notill,0.0
 indian_pines,3,"B3 HFCM, no gating",11,Soybean-mintill,0.0
-indian_pines,3,"B3 HFCM, no gating",12,Soybean-clean,0.01984126984126984
+indian_pines,3,"B3 HFCM, no gating",12,Soybean-clean,0.0198412698412698
 indian_pines,3,"B3 HFCM, no gating",13,Wheat,0.0
 indian_pines,3,"B3 HFCM, no gating",14,Woods,0.0
 indian_pines,3,"B3 HFCM, no gating",15,Buildings-Grass-Trees-Drives,0.0
@@ -554,25 +554,25 @@ indian_pines,3,B4 HFCM + entropy gating,8,Hay-windrowed,0.5049261083743842
 indian_pines,3,B4 HFCM + entropy gating,9,Oats,0.0
 indian_pines,3,B4 HFCM + entropy gating,10,Soybean-notill,0.0
 indian_pines,3,B4 HFCM + entropy gating,11,Soybean-mintill,0.0
-indian_pines,3,B4 HFCM + entropy gating,12,Soybean-clean,0.01984126984126984
+indian_pines,3,B4 HFCM + entropy gating,12,Soybean-clean,0.0198412698412698
 indian_pines,3,B4 HFCM + entropy gating,13,Wheat,0.0
 indian_pines,3,B4 HFCM + entropy gating,14,Woods,0.0
 indian_pines,3,B4 HFCM + entropy gating,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,3,B4 HFCM + entropy gating,16,Stone-Steel-Towers,0.0
 indian_pines,3,SG-HFQ (class-seeded),1,Alfalfa,0.4473684210526316
-indian_pines,3,SG-HFQ (class-seeded),2,Corn-notill,0.08896210873146623
-indian_pines,3,SG-HFQ (class-seeded),3,Corn-mintill,0.02269503546099291
-indian_pines,3,SG-HFQ (class-seeded),4,Corn,0.23383084577114427
+indian_pines,3,SG-HFQ (class-seeded),2,Corn-notill,0.0889621087314662
+indian_pines,3,SG-HFQ (class-seeded),3,Corn-mintill,0.0226950354609929
+indian_pines,3,SG-HFQ (class-seeded),4,Corn,0.2338308457711442
 indian_pines,3,SG-HFQ (class-seeded),5,Grass-pasture,0.5450121654501217
 indian_pines,3,SG-HFQ (class-seeded),6,Grass-trees,0.3075684380032206
 indian_pines,3,SG-HFQ (class-seeded),7,Grass-pasture-mowed,0.7
-indian_pines,3,SG-HFQ (class-seeded),8,Hay-windrowed,0.33497536945812806
+indian_pines,3,SG-HFQ (class-seeded),8,Hay-windrowed,0.334975369458128
 indian_pines,3,SG-HFQ (class-seeded),9,Oats,0.9166666666666666
-indian_pines,3,SG-HFQ (class-seeded),10,Soybean-notill,0.39588377723970947
-indian_pines,3,SG-HFQ (class-seeded),11,Soybean-mintill,0.37583892617449666
-indian_pines,3,SG-HFQ (class-seeded),12,Soybean-clean,0.27380952380952384
-indian_pines,3,SG-HFQ (class-seeded),13,Wheat,0.9257142857142857
-indian_pines,3,SG-HFQ (class-seeded),14,Woods,0.24535315985130113
+indian_pines,3,SG-HFQ (class-seeded),10,Soybean-notill,0.3958837772397094
+indian_pines,3,SG-HFQ (class-seeded),11,Soybean-mintill,0.3758389261744966
+indian_pines,3,SG-HFQ (class-seeded),12,Soybean-clean,0.2738095238095238
+indian_pines,3,SG-HFQ (class-seeded),13,Wheat,0.9257142857142856
+indian_pines,3,SG-HFQ (class-seeded),14,Woods,0.2453531598513011
 indian_pines,3,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.2896341463414634
 indian_pines,3,SG-HFQ (class-seeded),16,Stone-Steel-Towers,0.0
 indian_pines,3,SVM (RBF),1,Alfalfa,0.0
@@ -588,7 +588,7 @@ indian_pines,3,SVM (RBF),10,Soybean-notill,0.6319612590799032
 indian_pines,3,SVM (RBF),11,Soybean-mintill,0.8456375838926175
 indian_pines,3,SVM (RBF),12,Soybean-clean,0.7817460317460317
 indian_pines,3,SVM (RBF),13,Wheat,0.9371428571428572
-indian_pines,3,SVM (RBF),14,Woods,0.9563197026022305
+indian_pines,3,SVM (RBF),14,Woods,0.9563197026022304
 indian_pines,3,SVM (RBF),15,Buildings-Grass-Trees-Drives,0.5335365853658537
 indian_pines,3,SVM (RBF),16,Stone-Steel-Towers,0.8227848101265823
 indian_pines,3,"SVM (RBF), Phase 1 features",1,Alfalfa,0.3684210526315789
@@ -598,16 +598,16 @@ indian_pines,3,"SVM (RBF), Phase 1 features",4,Corn,0.3880597014925373
 indian_pines,3,"SVM (RBF), Phase 1 features",5,Grass-pasture,0.7396593673965937
 indian_pines,3,"SVM (RBF), Phase 1 features",6,Grass-trees,0.9452495974235104
 indian_pines,3,"SVM (RBF), Phase 1 features",7,Grass-pasture-mowed,0.1
-indian_pines,3,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9802955665024631
+indian_pines,3,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9802955665024632
 indian_pines,3,"SVM (RBF), Phase 1 features",9,Oats,0.3333333333333333
 indian_pines,3,"SVM (RBF), Phase 1 features",10,Soybean-notill,0.572639225181598
 indian_pines,3,"SVM (RBF), Phase 1 features",11,Soybean-mintill,0.8744007670182167
 indian_pines,3,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.3869047619047619
 indian_pines,3,"SVM (RBF), Phase 1 features",13,Wheat,0.8857142857142857
-indian_pines,3,"SVM (RBF), Phase 1 features",14,Woods,0.9711895910780669
-indian_pines,3,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.31097560975609756
+indian_pines,3,"SVM (RBF), Phase 1 features",14,Woods,0.9711895910780668
+indian_pines,3,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.3109756097560975
 indian_pines,3,"SVM (RBF), Phase 1 features",16,Stone-Steel-Towers,0.7848101265822784
-indian_pines,3,Random Forest,1,Alfalfa,0.23684210526315788
+indian_pines,3,Random Forest,1,Alfalfa,0.2368421052631578
 indian_pines,3,Random Forest,2,Corn-notill,0.5831960461285008
 indian_pines,3,Random Forest,3,Corn-mintill,0.5801418439716312
 indian_pines,3,Random Forest,4,Corn,0.2935323383084577
@@ -618,61 +618,61 @@ indian_pines,3,Random Forest,8,Hay-windrowed,0.9630541871921182
 indian_pines,3,Random Forest,9,Oats,0.4166666666666667
 indian_pines,3,Random Forest,10,Soybean-notill,0.5702179176755447
 indian_pines,3,Random Forest,11,Soybean-mintill,0.861457334611697
-indian_pines,3,Random Forest,12,Soybean-clean,0.48214285714285715
-indian_pines,3,Random Forest,13,Wheat,0.9142857142857143
+indian_pines,3,Random Forest,12,Soybean-clean,0.4821428571428571
+indian_pines,3,Random Forest,13,Wheat,0.9142857142857144
 indian_pines,3,Random Forest,14,Woods,0.912639405204461
-indian_pines,3,Random Forest,15,Buildings-Grass-Trees-Drives,0.36890243902439024
+indian_pines,3,Random Forest,15,Buildings-Grass-Trees-Drives,0.3689024390243902
 indian_pines,3,Random Forest,16,Stone-Steel-Towers,0.7468354430379747
-indian_pines,3,"Random Forest, Phase 1 features",1,Alfalfa,0.15789473684210525
+indian_pines,3,"Random Forest, Phase 1 features",1,Alfalfa,0.1578947368421052
 indian_pines,3,"Random Forest, Phase 1 features",2,Corn-notill,0.5469522240527183
 indian_pines,3,"Random Forest, Phase 1 features",3,Corn-mintill,0.5177304964539007
-indian_pines,3,"Random Forest, Phase 1 features",4,Corn,0.11442786069651742
+indian_pines,3,"Random Forest, Phase 1 features",4,Corn,0.1144278606965174
 indian_pines,3,"Random Forest, Phase 1 features",5,Grass-pasture,0.6545012165450121
-indian_pines,3,"Random Forest, Phase 1 features",6,Grass-trees,0.9259259259259259
+indian_pines,3,"Random Forest, Phase 1 features",6,Grass-trees,0.925925925925926
 indian_pines,3,"Random Forest, Phase 1 features",7,Grass-pasture-mowed,0.65
-indian_pines,3,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9802955665024631
+indian_pines,3,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9802955665024632
 indian_pines,3,"Random Forest, Phase 1 features",9,Oats,0.5833333333333334
 indian_pines,3,"Random Forest, Phase 1 features",10,Soybean-notill,0.576271186440678
 indian_pines,3,"Random Forest, Phase 1 features",11,Soybean-mintill,0.8168744007670182
-indian_pines,3,"Random Forest, Phase 1 features",12,Soybean-clean,0.31746031746031744
+indian_pines,3,"Random Forest, Phase 1 features",12,Soybean-clean,0.3174603174603174
 indian_pines,3,"Random Forest, Phase 1 features",13,Wheat,0.96
 indian_pines,3,"Random Forest, Phase 1 features",14,Woods,0.9442379182156134
 indian_pines,3,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.2774390243902439
 indian_pines,3,"Random Forest, Phase 1 features",16,Stone-Steel-Towers,0.8607594936708861
 indian_pines,4,B1 Flat FCM,1,Alfalfa,0.8421052631578947
-indian_pines,4,B1 Flat FCM,2,Corn-notill,0.19192751235584843
+indian_pines,4,B1 Flat FCM,2,Corn-notill,0.1919275123558484
 indian_pines,4,B1 Flat FCM,3,Corn-mintill,0.251063829787234
-indian_pines,4,B1 Flat FCM,4,Corn,0.35323383084577115
-indian_pines,4,B1 Flat FCM,5,Grass-pasture,0.41119221411192214
-indian_pines,4,B1 Flat FCM,6,Grass-trees,0.42995169082125606
+indian_pines,4,B1 Flat FCM,4,Corn,0.3532338308457711
+indian_pines,4,B1 Flat FCM,5,Grass-pasture,0.4111922141119221
+indian_pines,4,B1 Flat FCM,6,Grass-trees,0.429951690821256
 indian_pines,4,B1 Flat FCM,7,Grass-pasture-mowed,0.0
-indian_pines,4,B1 Flat FCM,8,Hay-windrowed,0.39408866995073893
+indian_pines,4,B1 Flat FCM,8,Hay-windrowed,0.3940886699507389
 indian_pines,4,B1 Flat FCM,9,Oats,0.8333333333333334
-indian_pines,4,B1 Flat FCM,10,Soybean-notill,0.14527845036319612
-indian_pines,4,B1 Flat FCM,11,Soybean-mintill,0.20517737296260785
+indian_pines,4,B1 Flat FCM,10,Soybean-notill,0.1452784503631961
+indian_pines,4,B1 Flat FCM,11,Soybean-mintill,0.2051773729626078
 indian_pines,4,B1 Flat FCM,12,Soybean-clean,0.1626984126984127
-indian_pines,4,B1 Flat FCM,13,Wheat,0.9657142857142857
+indian_pines,4,B1 Flat FCM,13,Wheat,0.9657142857142856
 indian_pines,4,B1 Flat FCM,14,Woods,0.3736059479553903
-indian_pines,4,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.18597560975609756
+indian_pines,4,B1 Flat FCM,15,Buildings-Grass-Trees-Drives,0.1859756097560975
 indian_pines,4,B1 Flat FCM,16,Stone-Steel-Towers,0.5189873417721519
 indian_pines,4,B2 Flat FCM + max-membership,1,Alfalfa,0.8421052631578947
-indian_pines,4,B2 Flat FCM + max-membership,2,Corn-notill,0.19192751235584843
+indian_pines,4,B2 Flat FCM + max-membership,2,Corn-notill,0.1919275123558484
 indian_pines,4,B2 Flat FCM + max-membership,3,Corn-mintill,0.251063829787234
-indian_pines,4,B2 Flat FCM + max-membership,4,Corn,0.35323383084577115
-indian_pines,4,B2 Flat FCM + max-membership,5,Grass-pasture,0.41119221411192214
-indian_pines,4,B2 Flat FCM + max-membership,6,Grass-trees,0.42995169082125606
+indian_pines,4,B2 Flat FCM + max-membership,4,Corn,0.3532338308457711
+indian_pines,4,B2 Flat FCM + max-membership,5,Grass-pasture,0.4111922141119221
+indian_pines,4,B2 Flat FCM + max-membership,6,Grass-trees,0.429951690821256
 indian_pines,4,B2 Flat FCM + max-membership,7,Grass-pasture-mowed,0.0
-indian_pines,4,B2 Flat FCM + max-membership,8,Hay-windrowed,0.39408866995073893
+indian_pines,4,B2 Flat FCM + max-membership,8,Hay-windrowed,0.3940886699507389
 indian_pines,4,B2 Flat FCM + max-membership,9,Oats,0.8333333333333334
-indian_pines,4,B2 Flat FCM + max-membership,10,Soybean-notill,0.14527845036319612
-indian_pines,4,B2 Flat FCM + max-membership,11,Soybean-mintill,0.20517737296260785
+indian_pines,4,B2 Flat FCM + max-membership,10,Soybean-notill,0.1452784503631961
+indian_pines,4,B2 Flat FCM + max-membership,11,Soybean-mintill,0.2051773729626078
 indian_pines,4,B2 Flat FCM + max-membership,12,Soybean-clean,0.1626984126984127
-indian_pines,4,B2 Flat FCM + max-membership,13,Wheat,0.9657142857142857
+indian_pines,4,B2 Flat FCM + max-membership,13,Wheat,0.9657142857142856
 indian_pines,4,B2 Flat FCM + max-membership,14,Woods,0.3736059479553903
-indian_pines,4,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.18597560975609756
+indian_pines,4,B2 Flat FCM + max-membership,15,Buildings-Grass-Trees-Drives,0.1859756097560975
 indian_pines,4,B2 Flat FCM + max-membership,16,Stone-Steel-Towers,0.5189873417721519
 indian_pines,4,SG-HFQ,1,Alfalfa,0.0
-indian_pines,4,SG-HFQ,2,Corn-notill,0.019769357495881382
+indian_pines,4,SG-HFQ,2,Corn-notill,0.0197693574958813
 indian_pines,4,SG-HFQ,3,Corn-mintill,0.0
 indian_pines,4,SG-HFQ,4,Corn,0.0
 indian_pines,4,SG-HFQ,5,Grass-pasture,0.0
@@ -688,7 +688,7 @@ indian_pines,4,SG-HFQ,14,Woods,0.0
 indian_pines,4,SG-HFQ,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,4,SG-HFQ,16,Stone-Steel-Towers,0.0
 indian_pines,4,"B3 HFCM, no gating",1,Alfalfa,0.0
-indian_pines,4,"B3 HFCM, no gating",2,Corn-notill,0.019769357495881382
+indian_pines,4,"B3 HFCM, no gating",2,Corn-notill,0.0197693574958813
 indian_pines,4,"B3 HFCM, no gating",3,Corn-mintill,0.0
 indian_pines,4,"B3 HFCM, no gating",4,Corn,0.0
 indian_pines,4,"B3 HFCM, no gating",5,Grass-pasture,0.0
@@ -704,7 +704,7 @@ indian_pines,4,"B3 HFCM, no gating",14,Woods,0.0
 indian_pines,4,"B3 HFCM, no gating",15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,4,"B3 HFCM, no gating",16,Stone-Steel-Towers,0.0
 indian_pines,4,B4 HFCM + entropy gating,1,Alfalfa,0.0
-indian_pines,4,B4 HFCM + entropy gating,2,Corn-notill,0.019769357495881382
+indian_pines,4,B4 HFCM + entropy gating,2,Corn-notill,0.0197693574958813
 indian_pines,4,B4 HFCM + entropy gating,3,Corn-mintill,0.0
 indian_pines,4,B4 HFCM + entropy gating,4,Corn,0.0
 indian_pines,4,B4 HFCM + entropy gating,5,Grass-pasture,0.0
@@ -721,81 +721,161 @@ indian_pines,4,B4 HFCM + entropy gating,15,Buildings-Grass-Trees-Drives,0.0
 indian_pines,4,B4 HFCM + entropy gating,16,Stone-Steel-Towers,0.0
 indian_pines,4,SG-HFQ (class-seeded),1,Alfalfa,0.3157894736842105
 indian_pines,4,SG-HFQ (class-seeded),2,Corn-notill,0.3245469522240527
-indian_pines,4,SG-HFQ (class-seeded),3,Corn-mintill,0.17872340425531916
-indian_pines,4,SG-HFQ (class-seeded),4,Corn,0.004975124378109453
-indian_pines,4,SG-HFQ (class-seeded),5,Grass-pasture,0.46958637469586373
-indian_pines,4,SG-HFQ (class-seeded),6,Grass-trees,0.017713365539452495
+indian_pines,4,SG-HFQ (class-seeded),3,Corn-mintill,0.1787234042553191
+indian_pines,4,SG-HFQ (class-seeded),4,Corn,0.0049751243781094
+indian_pines,4,SG-HFQ (class-seeded),5,Grass-pasture,0.4695863746958637
+indian_pines,4,SG-HFQ (class-seeded),6,Grass-trees,0.0177133655394524
 indian_pines,4,SG-HFQ (class-seeded),7,Grass-pasture-mowed,0.05
 indian_pines,4,SG-HFQ (class-seeded),8,Hay-windrowed,0.4630541871921182
 indian_pines,4,SG-HFQ (class-seeded),9,Oats,0.9166666666666666
-indian_pines,4,SG-HFQ (class-seeded),10,Soybean-notill,0.002421307506053269
-indian_pines,4,SG-HFQ (class-seeded),11,Soybean-mintill,0.44151486097794823
-indian_pines,4,SG-HFQ (class-seeded),12,Soybean-clean,0.04365079365079365
+indian_pines,4,SG-HFQ (class-seeded),10,Soybean-notill,0.0024213075060532
+indian_pines,4,SG-HFQ (class-seeded),11,Soybean-mintill,0.4415148609779482
+indian_pines,4,SG-HFQ (class-seeded),12,Soybean-clean,0.0436507936507936
 indian_pines,4,SG-HFQ (class-seeded),13,Wheat,0.9314285714285714
-indian_pines,4,SG-HFQ (class-seeded),14,Woods,0.34014869888475835
-indian_pines,4,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.31097560975609756
+indian_pines,4,SG-HFQ (class-seeded),14,Woods,0.3401486988847583
+indian_pines,4,SG-HFQ (class-seeded),15,Buildings-Grass-Trees-Drives,0.3109756097560975
 indian_pines,4,SG-HFQ (class-seeded),16,Stone-Steel-Towers,0.0
-indian_pines,4,SVM (RBF),1,Alfalfa,0.23684210526315788
+indian_pines,4,SVM (RBF),1,Alfalfa,0.2368421052631578
 indian_pines,4,SVM (RBF),2,Corn-notill,0.7273476112026359
 indian_pines,4,SVM (RBF),3,Corn-mintill,0.6085106382978723
-indian_pines,4,SVM (RBF),4,Corn,0.40298507462686567
+indian_pines,4,SVM (RBF),4,Corn,0.4029850746268656
 indian_pines,4,SVM (RBF),5,Grass-pasture,0.8540145985401459
 indian_pines,4,SVM (RBF),6,Grass-trees,0.9710144927536232
 indian_pines,4,SVM (RBF),7,Grass-pasture-mowed,0.55
-indian_pines,4,SVM (RBF),8,Hay-windrowed,0.9852216748768473
+indian_pines,4,SVM (RBF),8,Hay-windrowed,0.9852216748768472
 indian_pines,4,SVM (RBF),9,Oats,0.5833333333333334
 indian_pines,4,SVM (RBF),10,Soybean-notill,0.6937046004842615
 indian_pines,4,SVM (RBF),11,Soybean-mintill,0.8533077660594439
 indian_pines,4,SVM (RBF),12,Soybean-clean,0.6984126984126984
 indian_pines,4,SVM (RBF),13,Wheat,0.9714285714285714
-indian_pines,4,SVM (RBF),14,Woods,0.9721189591078067
+indian_pines,4,SVM (RBF),14,Woods,0.9721189591078068
 indian_pines,4,SVM (RBF),15,Buildings-Grass-Trees-Drives,0.5701219512195121
 indian_pines,4,SVM (RBF),16,Stone-Steel-Towers,0.6708860759493671
-indian_pines,4,"SVM (RBF), Phase 1 features",1,Alfalfa,0.07894736842105263
+indian_pines,4,"SVM (RBF), Phase 1 features",1,Alfalfa,0.0789473684210526
 indian_pines,4,"SVM (RBF), Phase 1 features",2,Corn-notill,0.6523887973640856
 indian_pines,4,"SVM (RBF), Phase 1 features",3,Corn-mintill,0.550354609929078
-indian_pines,4,"SVM (RBF), Phase 1 features",4,Corn,0.23383084577114427
+indian_pines,4,"SVM (RBF), Phase 1 features",4,Corn,0.2338308457711442
 indian_pines,4,"SVM (RBF), Phase 1 features",5,Grass-pasture,0.7664233576642335
 indian_pines,4,"SVM (RBF), Phase 1 features",6,Grass-trees,0.9710144927536232
 indian_pines,4,"SVM (RBF), Phase 1 features",7,Grass-pasture-mowed,0.25
-indian_pines,4,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9901477832512315
-indian_pines,4,"SVM (RBF), Phase 1 features",9,Oats,0.08333333333333333
+indian_pines,4,"SVM (RBF), Phase 1 features",8,Hay-windrowed,0.9901477832512317
+indian_pines,4,"SVM (RBF), Phase 1 features",9,Oats,0.0833333333333333
 indian_pines,4,"SVM (RBF), Phase 1 features",10,Soybean-notill,0.6283292978208233
 indian_pines,4,"SVM (RBF), Phase 1 features",11,Soybean-mintill,0.8537871524448706
-indian_pines,4,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.36706349206349204
-indian_pines,4,"SVM (RBF), Phase 1 features",13,Wheat,0.9771428571428571
-indian_pines,4,"SVM (RBF), Phase 1 features",14,Woods,0.9730483271375465
-indian_pines,4,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.25609756097560976
+indian_pines,4,"SVM (RBF), Phase 1 features",12,Soybean-clean,0.367063492063492
+indian_pines,4,"SVM (RBF), Phase 1 features",13,Wheat,0.9771428571428572
+indian_pines,4,"SVM (RBF), Phase 1 features",14,Woods,0.9730483271375464
+indian_pines,4,"SVM (RBF), Phase 1 features",15,Buildings-Grass-Trees-Drives,0.2560975609756097
 indian_pines,4,"SVM (RBF), Phase 1 features",16,Stone-Steel-Towers,0.7341772151898734
 indian_pines,4,Random Forest,1,Alfalfa,0.3157894736842105
 indian_pines,4,Random Forest,2,Corn-notill,0.6252059308072487
 indian_pines,4,Random Forest,3,Corn-mintill,0.5333333333333333
-indian_pines,4,Random Forest,4,Corn,0.36318407960199006
+indian_pines,4,Random Forest,4,Corn,0.36318407960199
 indian_pines,4,Random Forest,5,Grass-pasture,0.851581508515815
-indian_pines,4,Random Forest,6,Grass-trees,0.9742351046698873
+indian_pines,4,Random Forest,6,Grass-trees,0.9742351046698872
 indian_pines,4,Random Forest,7,Grass-pasture-mowed,0.05
 indian_pines,4,Random Forest,8,Hay-windrowed,0.9704433497536946
 indian_pines,4,Random Forest,9,Oats,0.6666666666666666
 indian_pines,4,Random Forest,10,Soybean-notill,0.6767554479418886
 indian_pines,4,Random Forest,11,Soybean-mintill,0.8720038350910834
-indian_pines,4,Random Forest,12,Soybean-clean,0.47023809523809523
+indian_pines,4,Random Forest,12,Soybean-clean,0.4702380952380952
 indian_pines,4,Random Forest,13,Wheat,0.9714285714285714
 indian_pines,4,Random Forest,14,Woods,0.966542750929368
 indian_pines,4,Random Forest,15,Buildings-Grass-Trees-Drives,0.3567073170731707
 indian_pines,4,Random Forest,16,Stone-Steel-Towers,0.7974683544303798
-indian_pines,4,"Random Forest, Phase 1 features",1,Alfalfa,0.05263157894736842
+indian_pines,4,"Random Forest, Phase 1 features",1,Alfalfa,0.0526315789473684
 indian_pines,4,"Random Forest, Phase 1 features",2,Corn-notill,0.5667215815485996
 indian_pines,4,"Random Forest, Phase 1 features",3,Corn-mintill,0.4907801418439716
-indian_pines,4,"Random Forest, Phase 1 features",4,Corn,0.24875621890547264
+indian_pines,4,"Random Forest, Phase 1 features",4,Corn,0.2487562189054726
 indian_pines,4,"Random Forest, Phase 1 features",5,Grass-pasture,0.6374695863746959
-indian_pines,4,"Random Forest, Phase 1 features",6,Grass-trees,0.9468599033816425
+indian_pines,4,"Random Forest, Phase 1 features",6,Grass-trees,0.9468599033816424
 indian_pines,4,"Random Forest, Phase 1 features",7,Grass-pasture-mowed,0.55
-indian_pines,4,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9729064039408867
+indian_pines,4,"Random Forest, Phase 1 features",8,Hay-windrowed,0.9729064039408868
 indian_pines,4,"Random Forest, Phase 1 features",9,Oats,0.6666666666666666
 indian_pines,4,"Random Forest, Phase 1 features",10,Soybean-notill,0.6295399515738499
 indian_pines,4,"Random Forest, Phase 1 features",11,Soybean-mintill,0.826941514860978
-indian_pines,4,"Random Forest, Phase 1 features",12,Soybean-clean,0.36507936507936506
+indian_pines,4,"Random Forest, Phase 1 features",12,Soybean-clean,0.365079365079365
 indian_pines,4,"Random Forest, Phase 1 features",13,Wheat,0.9714285714285714
-indian_pines,4,"Random Forest, Phase 1 features",14,Woods,0.9637546468401487
-indian_pines,4,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.31097560975609756
+indian_pines,4,"Random Forest, Phase 1 features",14,Woods,0.9637546468401488
+indian_pines,4,"Random Forest, Phase 1 features",15,Buildings-Grass-Trees-Drives,0.3109756097560975
 indian_pines,4,"Random Forest, Phase 1 features",16,Stone-Steel-Towers,0.8734177215189873
+indian_pines,0,Gaussian process (Dirichlet GP),1,Alfalfa,0.5
+indian_pines,0,Gaussian process (Dirichlet GP),2,Corn-notill,0.7018121911037891
+indian_pines,0,Gaussian process (Dirichlet GP),3,Corn-mintill,0.6226950354609929
+indian_pines,0,Gaussian process (Dirichlet GP),4,Corn,0.527363184079602
+indian_pines,0,Gaussian process (Dirichlet GP),5,Grass-pasture,0.8321167883211679
+indian_pines,0,Gaussian process (Dirichlet GP),6,Grass-trees,0.9758454106280193
+indian_pines,0,Gaussian process (Dirichlet GP),7,Grass-pasture-mowed,0.75
+indian_pines,0,Gaussian process (Dirichlet GP),8,Hay-windrowed,0.9926108374384236
+indian_pines,0,Gaussian process (Dirichlet GP),9,Oats,0.75
+indian_pines,0,Gaussian process (Dirichlet GP),10,Soybean-notill,0.7324455205811138
+indian_pines,0,Gaussian process (Dirichlet GP),11,Soybean-mintill,0.9036433365292426
+indian_pines,0,Gaussian process (Dirichlet GP),12,Soybean-clean,0.6924603174603174
+indian_pines,0,Gaussian process (Dirichlet GP),13,Wheat,1.0
+indian_pines,0,Gaussian process (Dirichlet GP),14,Woods,0.9572490706319703
+indian_pines,0,Gaussian process (Dirichlet GP),15,Buildings-Grass-Trees-Drives,0.5
+indian_pines,0,Gaussian process (Dirichlet GP),16,Stone-Steel-Towers,0.8354430379746836
+indian_pines,1,Gaussian process (Dirichlet GP),1,Alfalfa,0.23684210526315788
+indian_pines,1,Gaussian process (Dirichlet GP),2,Corn-notill,0.757001647446458
+indian_pines,1,Gaussian process (Dirichlet GP),3,Corn-mintill,0.6326241134751773
+indian_pines,1,Gaussian process (Dirichlet GP),4,Corn,0.5124378109452736
+indian_pines,1,Gaussian process (Dirichlet GP),5,Grass-pasture,0.8856447688564477
+indian_pines,1,Gaussian process (Dirichlet GP),6,Grass-trees,0.9710144927536232
+indian_pines,1,Gaussian process (Dirichlet GP),7,Grass-pasture-mowed,0.8
+indian_pines,1,Gaussian process (Dirichlet GP),8,Hay-windrowed,0.9876847290640394
+indian_pines,1,Gaussian process (Dirichlet GP),9,Oats,0.75
+indian_pines,1,Gaussian process (Dirichlet GP),10,Soybean-notill,0.6900726392251816
+indian_pines,1,Gaussian process (Dirichlet GP),11,Soybean-mintill,0.8815915627996165
+indian_pines,1,Gaussian process (Dirichlet GP),12,Soybean-clean,0.75
+indian_pines,1,Gaussian process (Dirichlet GP),13,Wheat,0.96
+indian_pines,1,Gaussian process (Dirichlet GP),14,Woods,0.9553903345724907
+indian_pines,1,Gaussian process (Dirichlet GP),15,Buildings-Grass-Trees-Drives,0.4695121951219512
+indian_pines,1,Gaussian process (Dirichlet GP),16,Stone-Steel-Towers,0.8354430379746836
+indian_pines,2,Gaussian process (Dirichlet GP),1,Alfalfa,0.34210526315789475
+indian_pines,2,Gaussian process (Dirichlet GP),2,Corn-notill,0.7182866556836903
+indian_pines,2,Gaussian process (Dirichlet GP),3,Corn-mintill,0.5716312056737589
+indian_pines,2,Gaussian process (Dirichlet GP),4,Corn,0.39800995024875624
+indian_pines,2,Gaussian process (Dirichlet GP),5,Grass-pasture,0.8442822384428224
+indian_pines,2,Gaussian process (Dirichlet GP),6,Grass-trees,0.9838969404186796
+indian_pines,2,Gaussian process (Dirichlet GP),7,Grass-pasture-mowed,0.9
+indian_pines,2,Gaussian process (Dirichlet GP),8,Hay-windrowed,0.9926108374384236
+indian_pines,2,Gaussian process (Dirichlet GP),9,Oats,0.9166666666666666
+indian_pines,2,Gaussian process (Dirichlet GP),10,Soybean-notill,0.7457627118644068
+indian_pines,2,Gaussian process (Dirichlet GP),11,Soybean-mintill,0.9122722914669223
+indian_pines,2,Gaussian process (Dirichlet GP),12,Soybean-clean,0.6607142857142857
+indian_pines,2,Gaussian process (Dirichlet GP),13,Wheat,0.9542857142857143
+indian_pines,2,Gaussian process (Dirichlet GP),14,Woods,0.9795539033457249
+indian_pines,2,Gaussian process (Dirichlet GP),15,Buildings-Grass-Trees-Drives,0.46646341463414637
+indian_pines,2,Gaussian process (Dirichlet GP),16,Stone-Steel-Towers,0.8354430379746836
+indian_pines,3,Gaussian process (Dirichlet GP),1,Alfalfa,0.42105263157894735
+indian_pines,3,Gaussian process (Dirichlet GP),2,Corn-notill,0.7388797364085667
+indian_pines,3,Gaussian process (Dirichlet GP),3,Corn-mintill,0.6425531914893617
+indian_pines,3,Gaussian process (Dirichlet GP),4,Corn,0.4577114427860697
+indian_pines,3,Gaussian process (Dirichlet GP),5,Grass-pasture,0.8491484184914841
+indian_pines,3,Gaussian process (Dirichlet GP),6,Grass-trees,0.9806763285024155
+indian_pines,3,Gaussian process (Dirichlet GP),7,Grass-pasture-mowed,0.7
+indian_pines,3,Gaussian process (Dirichlet GP),8,Hay-windrowed,0.9852216748768473
+indian_pines,3,Gaussian process (Dirichlet GP),9,Oats,0.5
+indian_pines,3,Gaussian process (Dirichlet GP),10,Soybean-notill,0.6464891041162227
+indian_pines,3,Gaussian process (Dirichlet GP),11,Soybean-mintill,0.8763183125599233
+indian_pines,3,Gaussian process (Dirichlet GP),12,Soybean-clean,0.7003968253968254
+indian_pines,3,Gaussian process (Dirichlet GP),13,Wheat,0.9485714285714286
+indian_pines,3,Gaussian process (Dirichlet GP),14,Woods,0.9516728624535316
+indian_pines,3,Gaussian process (Dirichlet GP),15,Buildings-Grass-Trees-Drives,0.5182926829268293
+indian_pines,3,Gaussian process (Dirichlet GP),16,Stone-Steel-Towers,0.759493670886076
+indian_pines,4,Gaussian process (Dirichlet GP),1,Alfalfa,0.3157894736842105
+indian_pines,4,Gaussian process (Dirichlet GP),2,Corn-notill,0.7380560131795717
+indian_pines,4,Gaussian process (Dirichlet GP),3,Corn-mintill,0.6198581560283688
+indian_pines,4,Gaussian process (Dirichlet GP),4,Corn,0.527363184079602
+indian_pines,4,Gaussian process (Dirichlet GP),5,Grass-pasture,0.8394160583941606
+indian_pines,4,Gaussian process (Dirichlet GP),6,Grass-trees,0.9871175523349437
+indian_pines,4,Gaussian process (Dirichlet GP),7,Grass-pasture-mowed,0.75
+indian_pines,4,Gaussian process (Dirichlet GP),8,Hay-windrowed,0.9950738916256158
+indian_pines,4,Gaussian process (Dirichlet GP),9,Oats,0.75
+indian_pines,4,Gaussian process (Dirichlet GP),10,Soybean-notill,0.7070217917675545
+indian_pines,4,Gaussian process (Dirichlet GP),11,Soybean-mintill,0.8998082454458294
+indian_pines,4,Gaussian process (Dirichlet GP),12,Soybean-clean,0.75
+indian_pines,4,Gaussian process (Dirichlet GP),13,Wheat,0.9771428571428571
+indian_pines,4,Gaussian process (Dirichlet GP),14,Woods,0.9674721189591078
+indian_pines,4,Gaussian process (Dirichlet GP),15,Buildings-Grass-Trees-Drives,0.49085365853658536
+indian_pines,4,Gaussian process (Dirichlet GP),16,Stone-Steel-Towers,0.7848101265822784

@@ -4,19 +4,19 @@ pavia_university,0,B1 Flat FCM,2,Meadows,0.3536490914507
 pavia_university,0,B1 Flat FCM,3,Gravel,0.5330862890418211
 pavia_university,0,B1 Flat FCM,4,Trees,0.8604060913705583
 pavia_university,0,B1 Flat FCM,5,Painted metal sheets,0.5871180842279108
-pavia_university,0,B1 Flat FCM,6,Bare Soil,0.43494588027391207
+pavia_university,0,B1 Flat FCM,6,Bare Soil,0.434945880273912
 pavia_university,0,B1 Flat FCM,7,Bitumen,0.9173622704507512
-pavia_university,0,B1 Flat FCM,8,Self-Blocking Bricks,0.44870247435123717
-pavia_university,0,B1 Flat FCM,9,Shadows,0.9988276670574443
+pavia_university,0,B1 Flat FCM,8,Self-Blocking Bricks,0.4487024743512371
+pavia_university,0,B1 Flat FCM,9,Shadows,0.9988276670574444
 pavia_university,0,B2 Flat FCM + max-membership,1,Asphalt,0.5699681582034524
 pavia_university,0,B2 Flat FCM + max-membership,2,Meadows,0.3536490914507
 pavia_university,0,B2 Flat FCM + max-membership,3,Gravel,0.5330862890418211
 pavia_university,0,B2 Flat FCM + max-membership,4,Trees,0.8604060913705583
 pavia_university,0,B2 Flat FCM + max-membership,5,Painted metal sheets,0.5871180842279108
-pavia_university,0,B2 Flat FCM + max-membership,6,Bare Soil,0.43494588027391207
+pavia_university,0,B2 Flat FCM + max-membership,6,Bare Soil,0.434945880273912
 pavia_university,0,B2 Flat FCM + max-membership,7,Bitumen,0.9173622704507512
-pavia_university,0,B2 Flat FCM + max-membership,8,Self-Blocking Bricks,0.44870247435123717
-pavia_university,0,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574443
+pavia_university,0,B2 Flat FCM + max-membership,8,Self-Blocking Bricks,0.4487024743512371
+pavia_university,0,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574444
 pavia_university,0,SG-HFQ,1,Asphalt,0.0
 pavia_university,0,SG-HFQ,2,Meadows,0.0
 pavia_university,0,SG-HFQ,3,Gravel,0.0
@@ -25,7 +25,7 @@ pavia_university,0,SG-HFQ,5,Painted metal sheets,1.0
 pavia_university,0,SG-HFQ,6,Bare Soil,0.0
 pavia_university,0,SG-HFQ,7,Bitumen,0.0
 pavia_university,0,SG-HFQ,8,Self-Blocking Bricks,0.0
-pavia_university,0,SG-HFQ,9,Shadows,0.007033997655334115
+pavia_university,0,SG-HFQ,9,Shadows,0.0070339976553341
 pavia_university,0,"B3 HFCM, no gating",1,Asphalt,0.0
 pavia_university,0,"B3 HFCM, no gating",2,Meadows,0.0
 pavia_university,0,"B3 HFCM, no gating",3,Gravel,0.0
@@ -34,7 +34,7 @@ pavia_university,0,"B3 HFCM, no gating",5,Painted metal sheets,1.0
 pavia_university,0,"B3 HFCM, no gating",6,Bare Soil,0.0
 pavia_university,0,"B3 HFCM, no gating",7,Bitumen,0.0
 pavia_university,0,"B3 HFCM, no gating",8,Self-Blocking Bricks,0.0
-pavia_university,0,"B3 HFCM, no gating",9,Shadows,0.007033997655334115
+pavia_university,0,"B3 HFCM, no gating",9,Shadows,0.0070339976553341
 pavia_university,0,B4 HFCM + entropy gating,1,Asphalt,0.0
 pavia_university,0,B4 HFCM + entropy gating,2,Meadows,0.0
 pavia_university,0,B4 HFCM + entropy gating,3,Gravel,0.0
@@ -43,18 +43,18 @@ pavia_university,0,B4 HFCM + entropy gating,5,Painted metal sheets,1.0
 pavia_university,0,B4 HFCM + entropy gating,6,Bare Soil,0.0
 pavia_university,0,B4 HFCM + entropy gating,7,Bitumen,0.0
 pavia_university,0,B4 HFCM + entropy gating,8,Self-Blocking Bricks,0.0
-pavia_university,0,B4 HFCM + entropy gating,9,Shadows,0.007033997655334115
+pavia_university,0,B4 HFCM + entropy gating,9,Shadows,0.0070339976553341
 pavia_university,0,SG-HFQ (class-seeded),1,Asphalt,0.6577844813138931
 pavia_university,0,SG-HFQ (class-seeded),2,Meadows,0.5101578790586834
 pavia_university,0,SG-HFQ (class-seeded),3,Gravel,0.3493912122816305
 pavia_university,0,SG-HFQ (class-seeded),4,Trees,0.7084844089920233
-pavia_university,0,SG-HFQ (class-seeded),5,Painted metal sheets,0.38398018166804293
+pavia_university,0,SG-HFQ (class-seeded),5,Painted metal sheets,0.3839801816680429
 pavia_university,0,SG-HFQ (class-seeded),6,Bare Soil,0.2849569251159708
 pavia_university,0,SG-HFQ (class-seeded),7,Bitumen,0.8213689482470785
 pavia_university,0,SG-HFQ (class-seeded),8,Self-Blocking Bricks,0.6925165962582981
 pavia_university,0,SG-HFQ (class-seeded),9,Shadows,0.9953106682297772
 pavia_university,0,SVM (RBF),1,Asphalt,0.9467068878833584
-pavia_university,0,SVM (RBF),2,Meadows,0.9709264224009533
+pavia_university,0,SVM (RBF),2,Meadows,0.9709264224009532
 pavia_university,0,SVM (RBF),3,Gravel,0.7469560614081525
 pavia_university,0,SVM (RBF),4,Trees,0.9452501812907904
 pavia_university,0,SVM (RBF),5,Painted metal sheets,0.9925681255161024
@@ -63,7 +63,7 @@ pavia_university,0,SVM (RBF),7,Bitumen,0.7646076794657763
 pavia_university,0,SVM (RBF),8,Self-Blocking Bricks,0.8593844296922148
 pavia_university,0,SVM (RBF),9,Shadows,0.9976553341148886
 pavia_university,0,"SVM (RBF), Phase 1 features",1,Asphalt,0.917881682587565
-pavia_university,0,"SVM (RBF), Phase 1 features",2,Meadows,0.9701519213583557
+pavia_university,0,"SVM (RBF), Phase 1 features",2,Meadows,0.9701519213583556
 pavia_university,0,"SVM (RBF), Phase 1 features",3,Gravel,0.7427210164107994
 pavia_university,0,"SVM (RBF), Phase 1 features",4,Trees,0.8843364757070341
 pavia_university,0,"SVM (RBF), Phase 1 features",5,Painted metal sheets,0.9933938893476466
@@ -79,124 +79,124 @@ pavia_university,0,Random Forest,5,Painted metal sheets,0.9851362510322048
 pavia_university,0,Random Forest,6,Bare Soil,0.5427435387673957
 pavia_university,0,Random Forest,7,Bitumen,0.7245409015025042
 pavia_university,0,Random Forest,8,Self-Blocking Bricks,0.8566686783343391
-pavia_university,0,Random Forest,9,Shadows,0.9929660023446659
-pavia_university,0,"Random Forest, Phase 1 features",1,Asphalt,0.9219038042567455
-pavia_university,0,"Random Forest, Phase 1 features",2,Meadows,0.9671730711945189
+pavia_university,0,Random Forest,9,Shadows,0.992966002344666
+pavia_university,0,"Random Forest, Phase 1 features",1,Asphalt,0.9219038042567456
+pavia_university,0,"Random Forest, Phase 1 features",2,Meadows,0.9671730711945188
 pavia_university,0,"Random Forest, Phase 1 features",3,Gravel,0.5749073583906829
 pavia_university,0,"Random Forest, Phase 1 features",4,Trees,0.8462654097171863
-pavia_university,0,"Random Forest, Phase 1 features",5,Painted metal sheets,0.9892650701899257
+pavia_university,0,"Random Forest, Phase 1 features",5,Painted metal sheets,0.9892650701899256
 pavia_university,0,"Random Forest, Phase 1 features",6,Bare Soil,0.5297106251380606
 pavia_university,0,"Random Forest, Phase 1 features",7,Bitumen,0.5717863105175293
 pavia_university,0,"Random Forest, Phase 1 features",8,Self-Blocking Bricks,0.839770669885335
-pavia_university,0,"Random Forest, Phase 1 features",9,Shadows,0.9988276670574443
+pavia_university,0,"Random Forest, Phase 1 features",9,Shadows,0.9988276670574444
 pavia_university,1,B1 Flat FCM,1,Asphalt,0.5547176135411429
 pavia_university,1,B1 Flat FCM,2,Meadows,0.4343163538873995
 pavia_university,1,B1 Flat FCM,3,Gravel,0.5463208046585495
 pavia_university,1,B1 Flat FCM,4,Trees,0.7878897751994198
 pavia_university,1,B1 Flat FCM,5,Painted metal sheets,0.5995045417010735
-pavia_university,1,B1 Flat FCM,6,Bare Soil,0.36072454163905454
-pavia_university,1,B1 Flat FCM,7,Bitumen,0.9198664440734557
+pavia_university,1,B1 Flat FCM,6,Bare Soil,0.3607245416390545
+pavia_university,1,B1 Flat FCM,7,Bitumen,0.9198664440734556
 pavia_university,1,B1 Flat FCM,8,Self-Blocking Bricks,0.4287869643934822
-pavia_university,1,B1 Flat FCM,9,Shadows,0.9988276670574443
+pavia_university,1,B1 Flat FCM,9,Shadows,0.9988276670574444
 pavia_university,1,B2 Flat FCM + max-membership,1,Asphalt,0.5547176135411429
 pavia_university,1,B2 Flat FCM + max-membership,2,Meadows,0.4343163538873995
 pavia_university,1,B2 Flat FCM + max-membership,3,Gravel,0.5463208046585495
 pavia_university,1,B2 Flat FCM + max-membership,4,Trees,0.7878897751994198
 pavia_university,1,B2 Flat FCM + max-membership,5,Painted metal sheets,0.5995045417010735
-pavia_university,1,B2 Flat FCM + max-membership,6,Bare Soil,0.36072454163905454
-pavia_university,1,B2 Flat FCM + max-membership,7,Bitumen,0.9198664440734557
+pavia_university,1,B2 Flat FCM + max-membership,6,Bare Soil,0.3607245416390545
+pavia_university,1,B2 Flat FCM + max-membership,7,Bitumen,0.9198664440734556
 pavia_university,1,B2 Flat FCM + max-membership,8,Self-Blocking Bricks,0.4287869643934822
-pavia_university,1,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574443
+pavia_university,1,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574444
 pavia_university,1,SG-HFQ,1,Asphalt,0.0
-pavia_university,1,SG-HFQ,2,Meadows,0.45427464998510575
+pavia_university,1,SG-HFQ,2,Meadows,0.4542746499851057
 pavia_university,1,SG-HFQ,3,Gravel,0.0
-pavia_university,1,SG-HFQ,4,Trees,0.9659173313995649
+pavia_university,1,SG-HFQ,4,Trees,0.9659173313995648
 pavia_university,1,SG-HFQ,5,Painted metal sheets,1.0
-pavia_university,1,SG-HFQ,6,Bare Soil,0.16655621824607908
+pavia_university,1,SG-HFQ,6,Bare Soil,0.166556218246079
 pavia_university,1,SG-HFQ,7,Bitumen,0.0
 pavia_university,1,SG-HFQ,8,Self-Blocking Bricks,0.0
-pavia_university,1,SG-HFQ,9,Shadows,0.005861664712778429
+pavia_university,1,SG-HFQ,9,Shadows,0.0058616647127784
 pavia_university,1,"B3 HFCM, no gating",1,Asphalt,0.0
-pavia_university,1,"B3 HFCM, no gating",2,Meadows,0.45427464998510575
+pavia_university,1,"B3 HFCM, no gating",2,Meadows,0.4542746499851057
 pavia_university,1,"B3 HFCM, no gating",3,Gravel,0.0
-pavia_university,1,"B3 HFCM, no gating",4,Trees,0.9659173313995649
+pavia_university,1,"B3 HFCM, no gating",4,Trees,0.9659173313995648
 pavia_university,1,"B3 HFCM, no gating",5,Painted metal sheets,1.0
-pavia_university,1,"B3 HFCM, no gating",6,Bare Soil,0.16655621824607908
+pavia_university,1,"B3 HFCM, no gating",6,Bare Soil,0.166556218246079
 pavia_university,1,"B3 HFCM, no gating",7,Bitumen,0.0
 pavia_university,1,"B3 HFCM, no gating",8,Self-Blocking Bricks,0.0
-pavia_university,1,"B3 HFCM, no gating",9,Shadows,0.005861664712778429
+pavia_university,1,"B3 HFCM, no gating",9,Shadows,0.0058616647127784
 pavia_university,1,B4 HFCM + entropy gating,1,Asphalt,0.0
-pavia_university,1,B4 HFCM + entropy gating,2,Meadows,0.45427464998510575
+pavia_university,1,B4 HFCM + entropy gating,2,Meadows,0.4542746499851057
 pavia_university,1,B4 HFCM + entropy gating,3,Gravel,0.0
-pavia_university,1,B4 HFCM + entropy gating,4,Trees,0.9659173313995649
+pavia_university,1,B4 HFCM + entropy gating,4,Trees,0.9659173313995648
 pavia_university,1,B4 HFCM + entropy gating,5,Painted metal sheets,1.0
-pavia_university,1,B4 HFCM + entropy gating,6,Bare Soil,0.16655621824607908
+pavia_university,1,B4 HFCM + entropy gating,6,Bare Soil,0.166556218246079
 pavia_university,1,B4 HFCM + entropy gating,7,Bitumen,0.0
 pavia_university,1,B4 HFCM + entropy gating,8,Self-Blocking Bricks,0.0
-pavia_university,1,B4 HFCM + entropy gating,9,Shadows,0.005861664712778429
+pavia_university,1,B4 HFCM + entropy gating,9,Shadows,0.0058616647127784
 pavia_university,1,SG-HFQ (class-seeded),1,Asphalt,0.6157197921903804
 pavia_university,1,SG-HFQ (class-seeded),2,Meadows,0.5054512957998213
-pavia_university,1,SG-HFQ (class-seeded),3,Gravel,0.39015352038115403
+pavia_university,1,SG-HFQ (class-seeded),3,Gravel,0.390153520381154
 pavia_university,1,SG-HFQ (class-seeded),4,Trees,0.7965917331399565
-pavia_university,1,SG-HFQ (class-seeded),5,Painted metal sheets,0.38480594549958713
+pavia_university,1,SG-HFQ (class-seeded),5,Painted metal sheets,0.3848059454995871
 pavia_university,1,SG-HFQ (class-seeded),6,Bare Soil,0.2551358515573227
 pavia_university,1,SG-HFQ (class-seeded),7,Bitumen,0.8647746243739566
 pavia_university,1,SG-HFQ (class-seeded),8,Self-Blocking Bricks,0.6656608328304164
-pavia_university,1,SG-HFQ (class-seeded),9,Shadows,0.9964830011723329
-pavia_university,1,SVM (RBF),1,Asphalt,0.9378247025305849
+pavia_university,1,SG-HFQ (class-seeded),9,Shadows,0.9964830011723328
+pavia_university,1,SVM (RBF),1,Asphalt,0.9378247025305848
 pavia_university,1,SVM (RBF),2,Meadows,0.9748585046172178
 pavia_university,1,SVM (RBF),3,Gravel,0.7316040232927475
-pavia_university,1,SVM (RBF),4,Trees,0.9401740391588107
+pavia_university,1,SVM (RBF),4,Trees,0.9401740391588108
 pavia_university,1,SVM (RBF),5,Painted metal sheets,0.9925681255161024
 pavia_university,1,SVM (RBF),6,Bare Soil,0.9001546277888226
 pavia_university,1,SVM (RBF),7,Bitumen,0.830550918196995
 pavia_university,1,SVM (RBF),8,Self-Blocking Bricks,0.8980084490042245
-pavia_university,1,SVM (RBF),9,Shadows,0.9988276670574443
+pavia_university,1,SVM (RBF),9,Shadows,0.9988276670574444
 pavia_university,1,"SVM (RBF), Phase 1 features",1,Asphalt,0.9250879839115134
-pavia_university,1,"SVM (RBF), Phase 1 features",2,Meadows,0.9638963360142985
+pavia_university,1,"SVM (RBF), Phase 1 features",2,Meadows,0.9638963360142984
 pavia_university,1,"SVM (RBF), Phase 1 features",3,Gravel,0.7109581789306512
 pavia_university,1,"SVM (RBF), Phase 1 features",4,Trees,0.8894126178390138
 pavia_university,1,"SVM (RBF), Phase 1 features",5,Painted metal sheets,0.9925681255161024
 pavia_university,1,"SVM (RBF), Phase 1 features",6,Bare Soil,0.7830793019659819
 pavia_university,1,"SVM (RBF), Phase 1 features",7,Bitumen,0.7462437395659433
 pavia_university,1,"SVM (RBF), Phase 1 features",8,Self-Blocking Bricks,0.8750754375377188
-pavia_university,1,"SVM (RBF), Phase 1 features",9,Shadows,0.9988276670574443
+pavia_university,1,"SVM (RBF), Phase 1 features",9,Shadows,0.9988276670574444
 pavia_university,1,Random Forest,1,Asphalt,0.9079939668174962
 pavia_university,1,Random Forest,2,Meadows,0.9697944593386952
 pavia_university,1,Random Forest,3,Gravel,0.6151402858655374
 pavia_university,1,Random Forest,4,Trees,0.8923132704858593
-pavia_university,1,Random Forest,5,Painted metal sheets,0.9900908340214699
+pavia_university,1,Random Forest,5,Painted metal sheets,0.99009083402147
 pavia_university,1,Random Forest,6,Bare Soil,0.5915617406671084
 pavia_university,1,Random Forest,7,Bitumen,0.7020033388981636
 pavia_university,1,Random Forest,8,Self-Blocking Bricks,0.8732649366324683
 pavia_university,1,Random Forest,9,Shadows,0.9976553341148886
-pavia_university,1,"Random Forest, Phase 1 features",1,Asphalt,0.9150326797385621
-pavia_university,1,"Random Forest, Phase 1 features",2,Meadows,0.9661006851355377
+pavia_university,1,"Random Forest, Phase 1 features",1,Asphalt,0.915032679738562
+pavia_university,1,"Random Forest, Phase 1 features",2,Meadows,0.9661006851355376
 pavia_university,1,"Random Forest, Phase 1 features",3,Gravel,0.5314981471678136
 pavia_university,1,"Random Forest, Phase 1 features",4,Trees,0.8527918781725888
 pavia_university,1,"Random Forest, Phase 1 features",5,Painted metal sheets,0.9917423616845582
 pavia_university,1,"Random Forest, Phase 1 features",6,Bare Soil,0.6149768058316766
 pavia_university,1,"Random Forest, Phase 1 features",7,Bitumen,0.5993322203672788
 pavia_university,1,"Random Forest, Phase 1 features",8,Self-Blocking Bricks,0.8636089318044659
-pavia_university,1,"Random Forest, Phase 1 features",9,Shadows,0.9988276670574443
+pavia_university,1,"Random Forest, Phase 1 features",9,Shadows,0.9988276670574444
 pavia_university,2,B1 Flat FCM,1,Asphalt,0.562761856879504
-pavia_university,2,B1 Flat FCM,2,Meadows,0.37056896038129283
-pavia_university,2,B1 Flat FCM,3,Gravel,0.23133933298041293
+pavia_university,2,B1 Flat FCM,2,Meadows,0.3705689603812928
+pavia_university,2,B1 Flat FCM,3,Gravel,0.2313393329804129
 pavia_university,2,B1 Flat FCM,4,Trees,0.7980420594633792
 pavia_university,2,B1 Flat FCM,5,Painted metal sheets,0.6069364161849711
 pavia_university,2,B1 Flat FCM,6,Bare Soil,0.4073337751270157
 pavia_university,2,B1 Flat FCM,7,Bitumen,0.9165275459098498
 pavia_university,2,B1 Flat FCM,8,Self-Blocking Bricks,0.5380205190102595
-pavia_university,2,B1 Flat FCM,9,Shadows,0.9988276670574443
+pavia_university,2,B1 Flat FCM,9,Shadows,0.9988276670574444
 pavia_university,2,B2 Flat FCM + max-membership,1,Asphalt,0.562761856879504
-pavia_university,2,B2 Flat FCM + max-membership,2,Meadows,0.37056896038129283
-pavia_university,2,B2 Flat FCM + max-membership,3,Gravel,0.23133933298041293
+pavia_university,2,B2 Flat FCM + max-membership,2,Meadows,0.3705689603812928
+pavia_university,2,B2 Flat FCM + max-membership,3,Gravel,0.2313393329804129
 pavia_university,2,B2 Flat FCM + max-membership,4,Trees,0.7980420594633792
 pavia_university,2,B2 Flat FCM + max-membership,5,Painted metal sheets,0.6069364161849711
 pavia_university,2,B2 Flat FCM + max-membership,6,Bare Soil,0.4073337751270157
 pavia_university,2,B2 Flat FCM + max-membership,7,Bitumen,0.9165275459098498
 pavia_university,2,B2 Flat FCM + max-membership,8,Self-Blocking Bricks,0.5380205190102595
-pavia_university,2,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574443
+pavia_university,2,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574444
 pavia_university,2,SG-HFQ,1,Asphalt,0.0
 pavia_university,2,SG-HFQ,2,Meadows,0.0
 pavia_university,2,SG-HFQ,3,Gravel,0.0
@@ -205,7 +205,7 @@ pavia_university,2,SG-HFQ,5,Painted metal sheets,1.0
 pavia_university,2,SG-HFQ,6,Bare Soil,0.0
 pavia_university,2,SG-HFQ,7,Bitumen,0.0
 pavia_university,2,SG-HFQ,8,Self-Blocking Bricks,0.0
-pavia_university,2,SG-HFQ,9,Shadows,0.004689331770222743
+pavia_university,2,SG-HFQ,9,Shadows,0.0046893317702227
 pavia_university,2,"B3 HFCM, no gating",1,Asphalt,0.0
 pavia_university,2,"B3 HFCM, no gating",2,Meadows,0.0
 pavia_university,2,"B3 HFCM, no gating",3,Gravel,0.0
@@ -214,7 +214,7 @@ pavia_university,2,"B3 HFCM, no gating",5,Painted metal sheets,1.0
 pavia_university,2,"B3 HFCM, no gating",6,Bare Soil,0.0
 pavia_university,2,"B3 HFCM, no gating",7,Bitumen,0.0
 pavia_university,2,"B3 HFCM, no gating",8,Self-Blocking Bricks,0.0
-pavia_university,2,"B3 HFCM, no gating",9,Shadows,0.004689331770222743
+pavia_university,2,"B3 HFCM, no gating",9,Shadows,0.0046893317702227
 pavia_university,2,B4 HFCM + entropy gating,1,Asphalt,0.0
 pavia_university,2,B4 HFCM + entropy gating,2,Meadows,0.0
 pavia_university,2,B4 HFCM + entropy gating,3,Gravel,0.0
@@ -223,18 +223,18 @@ pavia_university,2,B4 HFCM + entropy gating,5,Painted metal sheets,1.0
 pavia_university,2,B4 HFCM + entropy gating,6,Bare Soil,0.0
 pavia_university,2,B4 HFCM + entropy gating,7,Bitumen,0.0
 pavia_university,2,B4 HFCM + entropy gating,8,Self-Blocking Bricks,0.0
-pavia_university,2,B4 HFCM + entropy gating,9,Shadows,0.004689331770222743
+pavia_university,2,B4 HFCM + entropy gating,9,Shadows,0.0046893317702227
 pavia_university,2,SG-HFQ (class-seeded),1,Asphalt,0.6542651248533602
-pavia_university,2,SG-HFQ (class-seeded),2,Meadows,0.49728924635090854
+pavia_university,2,SG-HFQ (class-seeded),2,Meadows,0.4972892463509085
 pavia_university,2,SG-HFQ (class-seeded),3,Gravel,0.3022763366860773
 pavia_university,2,SG-HFQ (class-seeded),4,Trees,0.6439448875997099
 pavia_university,2,SG-HFQ (class-seeded),5,Painted metal sheets,0.3831544178364988
-pavia_university,2,SG-HFQ (class-seeded),6,Bare Soil,0.31566158603931965
+pavia_university,2,SG-HFQ (class-seeded),6,Bare Soil,0.3156615860393196
 pavia_university,2,SG-HFQ (class-seeded),7,Bitumen,0.8313856427378965
 pavia_university,2,SG-HFQ (class-seeded),8,Self-Blocking Bricks,0.7217863608931805
-pavia_university,2,SG-HFQ (class-seeded),9,Shadows,0.9964830011723329
+pavia_university,2,SG-HFQ (class-seeded),9,Shadows,0.9964830011723328
 pavia_university,2,SVM (RBF),1,Asphalt,0.9421820010055304
-pavia_university,2,SVM (RBF),2,Meadows,0.9771224307417337
+pavia_university,2,SVM (RBF),2,Meadows,0.9771224307417335
 pavia_university,2,SVM (RBF),3,Gravel,0.7580730545262043
 pavia_university,2,SVM (RBF),4,Trees,0.9405366207396664
 pavia_university,2,SVM (RBF),5,Painted metal sheets,0.9925681255161024
@@ -242,16 +242,16 @@ pavia_university,2,SVM (RBF),6,Bare Soil,0.8489065606361829
 pavia_university,2,SVM (RBF),7,Bitumen,0.7637729549248747
 pavia_university,2,SVM (RBF),8,Self-Blocking Bricks,0.8868436934218467
 pavia_university,2,SVM (RBF),9,Shadows,1.0
-pavia_university,2,"SVM (RBF), Phase 1 features",1,Asphalt,0.9383274677392325
+pavia_university,2,"SVM (RBF), Phase 1 features",1,Asphalt,0.9383274677392324
 pavia_university,2,"SVM (RBF), Phase 1 features",2,Meadows,0.960619600834078
 pavia_university,2,"SVM (RBF), Phase 1 features",3,Gravel,0.7241926945473796
 pavia_university,2,"SVM (RBF), Phase 1 features",4,Trees,0.8567802755620014
-pavia_university,2,"SVM (RBF), Phase 1 features",5,Painted metal sheets,0.9942196531791907
+pavia_university,2,"SVM (RBF), Phase 1 features",5,Painted metal sheets,0.9942196531791908
 pavia_university,2,"SVM (RBF), Phase 1 features",6,Bare Soil,0.7371327590015463
 pavia_university,2,"SVM (RBF), Phase 1 features",7,Bitumen,0.6135225375626043
 pavia_university,2,"SVM (RBF), Phase 1 features",8,Self-Blocking Bricks,0.8762824381412191
 pavia_university,2,"SVM (RBF), Phase 1 features",9,Shadows,1.0
-pavia_university,2,Random Forest,1,Asphalt,0.9214010390480979
+pavia_university,2,Random Forest,1,Asphalt,0.921401039048098
 pavia_university,2,Random Forest,2,Meadows,0.9746201966041108
 pavia_university,2,Random Forest,3,Gravel,0.644785600847009
 pavia_university,2,Random Forest,4,Trees,0.8803480783176215
@@ -264,59 +264,59 @@ pavia_university,2,"Random Forest, Phase 1 features",1,Asphalt,0.931623931623931
 pavia_university,2,"Random Forest, Phase 1 features",2,Meadows,0.9746201966041108
 pavia_university,2,"Random Forest, Phase 1 features",3,Gravel,0.5918475383800953
 pavia_university,2,"Random Forest, Phase 1 features",4,Trees,0.8183466279912981
-pavia_university,2,"Random Forest, Phase 1 features",5,Painted metal sheets,0.9900908340214699
+pavia_university,2,"Random Forest, Phase 1 features",5,Painted metal sheets,0.99009083402147
 pavia_university,2,"Random Forest, Phase 1 features",6,Bare Soil,0.5312569030262867
 pavia_university,2,"Random Forest, Phase 1 features",7,Bitumen,0.5200333889816361
 pavia_university,2,"Random Forest, Phase 1 features",8,Self-Blocking Bricks,0.8301146650573326
 pavia_university,2,"Random Forest, Phase 1 features",9,Shadows,1.0
 pavia_university,3,B1 Flat FCM,1,Asphalt,0.5329311211664153
 pavia_university,3,B1 Flat FCM,2,Meadows,0.3681263032469467
-pavia_university,3,B1 Flat FCM,3,Gravel,0.21069348861831658
+pavia_university,3,B1 Flat FCM,3,Gravel,0.2106934886183165
 pavia_university,3,B1 Flat FCM,4,Trees,0.8234227701232777
 pavia_university,3,B1 Flat FCM,5,Painted metal sheets,0.6961189099917423
-pavia_university,3,B1 Flat FCM,6,Bare Soil,0.41373978352109564
+pavia_university,3,B1 Flat FCM,6,Bare Soil,0.4137397835210956
 pavia_university,3,B1 Flat FCM,7,Bitumen,0.9098497495826378
 pavia_university,3,B1 Flat FCM,8,Self-Blocking Bricks,0.5805672902836452
-pavia_university,3,B1 Flat FCM,9,Shadows,0.9988276670574443
+pavia_university,3,B1 Flat FCM,9,Shadows,0.9988276670574444
 pavia_university,3,B2 Flat FCM + max-membership,1,Asphalt,0.5329311211664153
 pavia_university,3,B2 Flat FCM + max-membership,2,Meadows,0.3681263032469467
-pavia_university,3,B2 Flat FCM + max-membership,3,Gravel,0.21069348861831658
+pavia_university,3,B2 Flat FCM + max-membership,3,Gravel,0.2106934886183165
 pavia_university,3,B2 Flat FCM + max-membership,4,Trees,0.8234227701232777
 pavia_university,3,B2 Flat FCM + max-membership,5,Painted metal sheets,0.6961189099917423
-pavia_university,3,B2 Flat FCM + max-membership,6,Bare Soil,0.41373978352109564
+pavia_university,3,B2 Flat FCM + max-membership,6,Bare Soil,0.4137397835210956
 pavia_university,3,B2 Flat FCM + max-membership,7,Bitumen,0.9098497495826378
 pavia_university,3,B2 Flat FCM + max-membership,8,Self-Blocking Bricks,0.5805672902836452
-pavia_university,3,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574443
+pavia_university,3,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574444
 pavia_university,3,SG-HFQ,1,Asphalt,0.0
 pavia_university,3,SG-HFQ,2,Meadows,0.4525469168900804
 pavia_university,3,SG-HFQ,3,Gravel,0.0
-pavia_university,3,SG-HFQ,4,Trees,0.9728063814358231
+pavia_university,3,SG-HFQ,4,Trees,0.9728063814358232
 pavia_university,3,SG-HFQ,5,Painted metal sheets,1.0
-pavia_university,3,SG-HFQ,6,Bare Soil,0.15860393196377293
+pavia_university,3,SG-HFQ,6,Bare Soil,0.1586039319637729
 pavia_university,3,SG-HFQ,7,Bitumen,0.0
 pavia_university,3,SG-HFQ,8,Self-Blocking Bricks,0.0
-pavia_university,3,SG-HFQ,9,Shadows,0.004689331770222743
+pavia_university,3,SG-HFQ,9,Shadows,0.0046893317702227
 pavia_university,3,"B3 HFCM, no gating",1,Asphalt,0.0
 pavia_university,3,"B3 HFCM, no gating",2,Meadows,0.4525469168900804
 pavia_university,3,"B3 HFCM, no gating",3,Gravel,0.0
-pavia_university,3,"B3 HFCM, no gating",4,Trees,0.9728063814358231
+pavia_university,3,"B3 HFCM, no gating",4,Trees,0.9728063814358232
 pavia_university,3,"B3 HFCM, no gating",5,Painted metal sheets,1.0
-pavia_university,3,"B3 HFCM, no gating",6,Bare Soil,0.15860393196377293
+pavia_university,3,"B3 HFCM, no gating",6,Bare Soil,0.1586039319637729
 pavia_university,3,"B3 HFCM, no gating",7,Bitumen,0.0
 pavia_university,3,"B3 HFCM, no gating",8,Self-Blocking Bricks,0.0
-pavia_university,3,"B3 HFCM, no gating",9,Shadows,0.004689331770222743
+pavia_university,3,"B3 HFCM, no gating",9,Shadows,0.0046893317702227
 pavia_university,3,B4 HFCM + entropy gating,1,Asphalt,0.0
 pavia_university,3,B4 HFCM + entropy gating,2,Meadows,0.4525469168900804
 pavia_university,3,B4 HFCM + entropy gating,3,Gravel,0.0
-pavia_university,3,B4 HFCM + entropy gating,4,Trees,0.9728063814358231
+pavia_university,3,B4 HFCM + entropy gating,4,Trees,0.9728063814358232
 pavia_university,3,B4 HFCM + entropy gating,5,Painted metal sheets,1.0
-pavia_university,3,B4 HFCM + entropy gating,6,Bare Soil,0.15860393196377293
+pavia_university,3,B4 HFCM + entropy gating,6,Bare Soil,0.1586039319637729
 pavia_university,3,B4 HFCM + entropy gating,7,Bitumen,0.0
 pavia_university,3,B4 HFCM + entropy gating,8,Self-Blocking Bricks,0.0
-pavia_university,3,B4 HFCM + entropy gating,9,Shadows,0.004689331770222743
+pavia_university,3,B4 HFCM + entropy gating,9,Shadows,0.0046893317702227
 pavia_university,3,SG-HFQ (class-seeded),1,Asphalt,0.5987933634992458
 pavia_university,3,SG-HFQ (class-seeded),2,Meadows,0.5100387250521299
-pavia_university,3,SG-HFQ (class-seeded),3,Gravel,0.39174166225516144
+pavia_university,3,SG-HFQ (class-seeded),3,Gravel,0.3917416622551614
 pavia_university,3,SG-HFQ (class-seeded),4,Trees,0.8299492385786802
 pavia_university,3,SG-HFQ (class-seeded),5,Painted metal sheets,0.4665565648224608
 pavia_university,3,SG-HFQ (class-seeded),6,Bare Soil,0.2652971062513806
@@ -332,7 +332,7 @@ pavia_university,3,SVM (RBF),6,Bare Soil,0.8780649436713055
 pavia_university,3,SVM (RBF),7,Bitumen,0.7846410684474123
 pavia_university,3,SVM (RBF),8,Self-Blocking Bricks,0.8847314423657212
 pavia_university,3,SVM (RBF),9,Shadows,0.9976553341148886
-pavia_university,3,"SVM (RBF), Phase 1 features",1,Asphalt,0.9215686274509803
+pavia_university,3,"SVM (RBF), Phase 1 features",1,Asphalt,0.9215686274509804
 pavia_university,3,"SVM (RBF), Phase 1 features",2,Meadows,0.9601429848078642
 pavia_university,3,"SVM (RBF), Phase 1 features",3,Gravel,0.7167813658020117
 pavia_university,3,"SVM (RBF), Phase 1 features",4,Trees,0.8495286439448876
@@ -341,15 +341,15 @@ pavia_university,3,"SVM (RBF), Phase 1 features",6,Bare Soil,0.7369118621603711
 pavia_university,3,"SVM (RBF), Phase 1 features",7,Bitumen,0.662771285475793
 pavia_university,3,"SVM (RBF), Phase 1 features",8,Self-Blocking Bricks,0.8503319251659626
 pavia_university,3,"SVM (RBF), Phase 1 features",9,Shadows,0.9976553341148886
-pavia_university,3,Random Forest,1,Asphalt,0.9111781464722641
+pavia_university,3,Random Forest,1,Asphalt,0.911178146472264
 pavia_university,3,Random Forest,2,Meadows,0.9798033958891867
 pavia_university,3,Random Forest,3,Gravel,0.6283748014822658
 pavia_university,3,Random Forest,4,Trees,0.8709209572153734
-pavia_university,3,Random Forest,5,Painted metal sheets,0.9892650701899257
+pavia_university,3,Random Forest,5,Painted metal sheets,0.9892650701899256
 pavia_university,3,Random Forest,6,Bare Soil,0.5467196819085487
 pavia_university,3,Random Forest,7,Bitumen,0.6861435726210351
 pavia_university,3,Random Forest,8,Self-Blocking Bricks,0.8433916716958358
-pavia_university,3,Random Forest,9,Shadows,0.9964830011723329
+pavia_university,3,Random Forest,9,Shadows,0.9964830011723328
 pavia_university,3,"Random Forest, Phase 1 features",1,Asphalt,0.9126864420982068
 pavia_university,3,"Random Forest, Phase 1 features",2,Meadows,0.9764075067024128
 pavia_university,3,"Random Forest, Phase 1 features",3,Gravel,0.5346744309158284
@@ -364,88 +364,133 @@ pavia_university,4,B1 Flat FCM,2,Meadows,0.4387846291331546
 pavia_university,4,B1 Flat FCM,3,Gravel,0.5161461090524087
 pavia_university,4,B1 Flat FCM,4,Trees,0.8332124728063814
 pavia_university,4,B1 Flat FCM,5,Painted metal sheets,0.5722543352601156
-pavia_university,4,B1 Flat FCM,6,Bare Soil,0.34636624696266843
+pavia_university,4,B1 Flat FCM,6,Bare Soil,0.3463662469626684
 pavia_university,4,B1 Flat FCM,7,Bitumen,0.9023372287145242
 pavia_university,4,B1 Flat FCM,8,Self-Blocking Bricks,0.5171997585998793
-pavia_university,4,B1 Flat FCM,9,Shadows,0.9988276670574443
+pavia_university,4,B1 Flat FCM,9,Shadows,0.9988276670574444
 pavia_university,4,B2 Flat FCM + max-membership,1,Asphalt,0.5419808949220714
 pavia_university,4,B2 Flat FCM + max-membership,2,Meadows,0.4387846291331546
 pavia_university,4,B2 Flat FCM + max-membership,3,Gravel,0.5161461090524087
 pavia_university,4,B2 Flat FCM + max-membership,4,Trees,0.8332124728063814
 pavia_university,4,B2 Flat FCM + max-membership,5,Painted metal sheets,0.5722543352601156
-pavia_university,4,B2 Flat FCM + max-membership,6,Bare Soil,0.34636624696266843
+pavia_university,4,B2 Flat FCM + max-membership,6,Bare Soil,0.3463662469626684
 pavia_university,4,B2 Flat FCM + max-membership,7,Bitumen,0.9023372287145242
 pavia_university,4,B2 Flat FCM + max-membership,8,Self-Blocking Bricks,0.5171997585998793
-pavia_university,4,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574443
+pavia_university,4,B2 Flat FCM + max-membership,9,Shadows,0.9988276670574444
 pavia_university,4,SG-HFQ,1,Asphalt,0.0
 pavia_university,4,SG-HFQ,2,Meadows,0.3618707179028895
 pavia_university,4,SG-HFQ,3,Gravel,0.0
 pavia_university,4,SG-HFQ,4,Trees,0.9590282813633068
 pavia_university,4,SG-HFQ,5,Painted metal sheets,1.0
-pavia_university,4,SG-HFQ,6,Bare Soil,0.24784625579854208
+pavia_university,4,SG-HFQ,6,Bare Soil,0.247846255798542
 pavia_university,4,SG-HFQ,7,Bitumen,0.0
 pavia_university,4,SG-HFQ,8,Self-Blocking Bricks,0.0
-pavia_university,4,SG-HFQ,9,Shadows,0.009378663540445486
+pavia_university,4,SG-HFQ,9,Shadows,0.0093786635404454
 pavia_university,4,"B3 HFCM, no gating",1,Asphalt,0.0
 pavia_university,4,"B3 HFCM, no gating",2,Meadows,0.3618707179028895
 pavia_university,4,"B3 HFCM, no gating",3,Gravel,0.0
 pavia_university,4,"B3 HFCM, no gating",4,Trees,0.9590282813633068
 pavia_university,4,"B3 HFCM, no gating",5,Painted metal sheets,1.0
-pavia_university,4,"B3 HFCM, no gating",6,Bare Soil,0.24784625579854208
+pavia_university,4,"B3 HFCM, no gating",6,Bare Soil,0.247846255798542
 pavia_university,4,"B3 HFCM, no gating",7,Bitumen,0.0
 pavia_university,4,"B3 HFCM, no gating",8,Self-Blocking Bricks,0.0
-pavia_university,4,"B3 HFCM, no gating",9,Shadows,0.009378663540445486
+pavia_university,4,"B3 HFCM, no gating",9,Shadows,0.0093786635404454
 pavia_university,4,B4 HFCM + entropy gating,1,Asphalt,0.0
 pavia_university,4,B4 HFCM + entropy gating,2,Meadows,0.3618707179028895
 pavia_university,4,B4 HFCM + entropy gating,3,Gravel,0.0
 pavia_university,4,B4 HFCM + entropy gating,4,Trees,0.9590282813633068
 pavia_university,4,B4 HFCM + entropy gating,5,Painted metal sheets,1.0
-pavia_university,4,B4 HFCM + entropy gating,6,Bare Soil,0.24784625579854208
+pavia_university,4,B4 HFCM + entropy gating,6,Bare Soil,0.247846255798542
 pavia_university,4,B4 HFCM + entropy gating,7,Bitumen,0.0
 pavia_university,4,B4 HFCM + entropy gating,8,Self-Blocking Bricks,0.0
-pavia_university,4,B4 HFCM + entropy gating,9,Shadows,0.009378663540445486
+pavia_university,4,B4 HFCM + entropy gating,9,Shadows,0.0093786635404454
 pavia_university,4,SG-HFQ (class-seeded),1,Asphalt,0.6430367018602313
-pavia_university,4,SG-HFQ (class-seeded),2,Meadows,0.40571939231456655
+pavia_university,4,SG-HFQ (class-seeded),2,Meadows,0.4057193923145665
 pavia_university,4,SG-HFQ (class-seeded),3,Gravel,0.3276866066701959
 pavia_university,4,SG-HFQ (class-seeded),4,Trees,0.8161711385061639
-pavia_university,4,SG-HFQ (class-seeded),5,Painted metal sheets,0.37241948802642444
+pavia_university,4,SG-HFQ (class-seeded),5,Painted metal sheets,0.3724194880264244
 pavia_university,4,SG-HFQ (class-seeded),6,Bare Soil,0.3421692069803402
 pavia_university,4,SG-HFQ (class-seeded),7,Bitumen,0.7988313856427379
 pavia_university,4,SG-HFQ (class-seeded),8,Self-Blocking Bricks,0.7232951116475558
-pavia_university,4,SG-HFQ (class-seeded),9,Shadows,0.9964830011723329
-pavia_university,4,SVM (RBF),1,Asphalt,0.9381598793363499
-pavia_university,4,SVM (RBF),2,Meadows,0.9780160857908847
+pavia_university,4,SG-HFQ (class-seeded),9,Shadows,0.9964830011723328
+pavia_university,4,SVM (RBF),1,Asphalt,0.93815987933635
+pavia_university,4,SVM (RBF),2,Meadows,0.9780160857908848
 pavia_university,4,SVM (RBF),3,Gravel,0.7501323451561673
 pavia_university,4,SVM (RBF),4,Trees,0.934010152284264
-pavia_university,4,SVM (RBF),5,Painted metal sheets,0.9892650701899257
+pavia_university,4,SVM (RBF),5,Painted metal sheets,0.9892650701899256
 pavia_university,4,SVM (RBF),6,Bare Soil,0.8617185774243429
 pavia_university,4,SVM (RBF),7,Bitumen,0.7996661101836394
 pavia_university,4,SVM (RBF),8,Self-Blocking Bricks,0.8883524441762221
-pavia_university,4,SVM (RBF),9,Shadows,0.9964830011723329
-pavia_university,4,"SVM (RBF), Phase 1 features",1,Asphalt,0.9215686274509803
+pavia_university,4,SVM (RBF),9,Shadows,0.9964830011723328
+pavia_university,4,"SVM (RBF), Phase 1 features",1,Asphalt,0.9215686274509804
 pavia_university,4,"SVM (RBF), Phase 1 features",2,Meadows,0.962645218945487
 pavia_university,4,"SVM (RBF), Phase 1 features",3,Gravel,0.7008999470619375
 pavia_university,4,"SVM (RBF), Phase 1 features",4,Trees,0.859680928208847
-pavia_university,4,"SVM (RBF), Phase 1 features",5,Painted metal sheets,0.9892650701899257
+pavia_university,4,"SVM (RBF), Phase 1 features",5,Painted metal sheets,0.9892650701899256
 pavia_university,4,"SVM (RBF), Phase 1 features",6,Bare Soil,0.7525955378838083
 pavia_university,4,"SVM (RBF), Phase 1 features",7,Bitumen,0.7295492487479132
 pavia_university,4,"SVM (RBF), Phase 1 features",8,Self-Blocking Bricks,0.8786964393482197
-pavia_university,4,"SVM (RBF), Phase 1 features",9,Shadows,0.9964830011723329
-pavia_university,4,Random Forest,1,Asphalt,0.9190548014077425
-pavia_university,4,Random Forest,2,Meadows,0.9740244265713435
+pavia_university,4,"SVM (RBF), Phase 1 features",9,Shadows,0.9964830011723328
+pavia_university,4,Random Forest,1,Asphalt,0.9190548014077424
+pavia_university,4,Random Forest,2,Meadows,0.9740244265713436
 pavia_university,4,Random Forest,3,Gravel,0.5547908946532557
 pavia_university,4,Random Forest,4,Trees,0.8658448150833937
-pavia_university,4,Random Forest,5,Painted metal sheets,0.9884393063583815
+pavia_university,4,Random Forest,5,Painted metal sheets,0.9884393063583816
 pavia_university,4,Random Forest,6,Bare Soil,0.5959796774906119
 pavia_university,4,Random Forest,7,Bitumen,0.7529215358931552
 pavia_university,4,Random Forest,8,Self-Blocking Bricks,0.8584791792395896
-pavia_university,4,Random Forest,9,Shadows,0.9906213364595545
-pavia_university,4,"Random Forest, Phase 1 features",1,Asphalt,0.9214010390480979
-pavia_university,4,"Random Forest, Phase 1 features",2,Meadows,0.9696157283288651
+pavia_university,4,Random Forest,9,Shadows,0.9906213364595544
+pavia_university,4,"Random Forest, Phase 1 features",1,Asphalt,0.921401039048098
+pavia_university,4,"Random Forest, Phase 1 features",2,Meadows,0.9696157283288652
 pavia_university,4,"Random Forest, Phase 1 features",3,Gravel,0.5606140815246162
 pavia_university,4,"Random Forest, Phase 1 features",4,Trees,0.8375634517766497
 pavia_university,4,"Random Forest, Phase 1 features",5,Painted metal sheets,0.990916597853014
 pavia_university,4,"Random Forest, Phase 1 features",6,Bare Soil,0.6136514247846255
 pavia_university,4,"Random Forest, Phase 1 features",7,Bitumen,0.6477462437395659
 pavia_university,4,"Random Forest, Phase 1 features",8,Self-Blocking Bricks,0.8530476765238383
-pavia_university,4,"Random Forest, Phase 1 features",9,Shadows,0.9988276670574443
+pavia_university,4,"Random Forest, Phase 1 features",9,Shadows,0.9988276670574444
+pavia_university,0,Gaussian process (Dirichlet GP),1,Asphalt,0.9379922909334674
+pavia_university,0,Gaussian process (Dirichlet GP),2,Meadows,0.9857015192135835
+pavia_university,0,Gaussian process (Dirichlet GP),3,Gravel,0.7194282689253574
+pavia_university,0,Gaussian process (Dirichlet GP),4,Trees,0.9155184916606236
+pavia_university,0,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9900908340214699
+pavia_university,0,Gaussian process (Dirichlet GP),6,Bare Soil,0.7830793019659819
+pavia_university,0,Gaussian process (Dirichlet GP),7,Bitumen,0.5943238731218697
+pavia_university,0,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.8946891973445986
+pavia_university,0,Gaussian process (Dirichlet GP),9,Shadows,0.9988276670574443
+pavia_university,1,Gaussian process (Dirichlet GP),1,Asphalt,0.9276018099547512
+pavia_university,1,Gaussian process (Dirichlet GP),2,Meadows,0.9883229073577599
+pavia_university,1,Gaussian process (Dirichlet GP),3,Gravel,0.6638433033350979
+pavia_university,1,Gaussian process (Dirichlet GP),4,Trees,0.9097171863669326
+pavia_university,1,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9917423616845582
+pavia_university,1,Gaussian process (Dirichlet GP),6,Bare Soil,0.8131212723658051
+pavia_university,1,Gaussian process (Dirichlet GP),7,Bitumen,0.7053422370617696
+pavia_university,1,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.9290887145443573
+pavia_university,1,Gaussian process (Dirichlet GP),9,Shadows,1.0
+pavia_university,2,Gaussian process (Dirichlet GP),1,Asphalt,0.93883023294788
+pavia_university,2,Gaussian process (Dirichlet GP),2,Meadows,0.9905272564789991
+pavia_university,2,Gaussian process (Dirichlet GP),3,Gravel,0.6664902064584436
+pavia_university,2,Gaussian process (Dirichlet GP),4,Trees,0.9002900652646846
+pavia_university,2,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9892650701899257
+pavia_university,2,Gaussian process (Dirichlet GP),6,Bare Soil,0.7669538325601943
+pavia_university,2,Gaussian process (Dirichlet GP),7,Bitumen,0.6460767946577629
+pavia_university,2,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.8865419432709717
+pavia_university,2,Gaussian process (Dirichlet GP),9,Shadows,1.0
+pavia_university,3,Gaussian process (Dirichlet GP),1,Asphalt,0.934640522875817
+pavia_university,3,Gaussian process (Dirichlet GP),2,Meadows,0.9907655644921061
+pavia_university,3,Gaussian process (Dirichlet GP),3,Gravel,0.6580201164637375
+pavia_university,3,Gaussian process (Dirichlet GP),4,Trees,0.896301667875272
+pavia_university,3,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.990916597853014
+pavia_university,3,Gaussian process (Dirichlet GP),6,Bare Soil,0.7773359840954275
+pavia_university,3,Gaussian process (Dirichlet GP),7,Bitumen,0.6093489148580968
+pavia_university,3,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.8952926976463488
+pavia_university,3,Gaussian process (Dirichlet GP),9,Shadows,0.9988276670574443
+pavia_university,4,Gaussian process (Dirichlet GP),1,Asphalt,0.9354784648902296
+pavia_university,4,Gaussian process (Dirichlet GP),2,Meadows,0.9868930592791183
+pavia_university,4,Gaussian process (Dirichlet GP),3,Gravel,0.6437268395976707
+pavia_university,4,Gaussian process (Dirichlet GP),4,Trees,0.887962291515591
+pavia_university,4,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9801816680429397
+pavia_university,4,Gaussian process (Dirichlet GP),6,Bare Soil,0.7936823503423901
+pavia_university,4,Gaussian process (Dirichlet GP),7,Bitumen,0.6978297161936561
+pavia_university,4,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.9188292094146047
+pavia_university,4,Gaussian process (Dirichlet GP),9,Shadows,0.9976553341148886

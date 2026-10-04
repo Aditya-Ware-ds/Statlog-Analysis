@@ -25,6 +25,7 @@ from sklearn.metrics import cohen_kappa_score, f1_score
 
 from .baselines import FlatFCM, SupervisedReference
 from .datasets import LOADERS, BenchmarkDataset
+from .gp import GPDirichletClassifier
 from .metrics import risk_coverage, routing_summary, selective_summary
 from .model import SGHFQ
 
@@ -40,7 +41,9 @@ MAIN = [
     "SG-HFQ",
     "SVM (RBF)",
     "Random Forest",
+    "Gaussian process (Dirichlet GP)",
 ]
+GP_NAME = "Gaussian process (Dirichlet GP)"
 SUPPLEMENTARY = ["SG-HFQ (class-seeded)", "SVM (RBF), Phase 1 features", "Random Forest, Phase 1 features"]
 GATED = ["B4 HFCM + entropy gating", "SG-HFQ", "SG-HFQ (class-seeded)"]
 DATASET_ORDER = list(LOADERS)
@@ -57,7 +60,10 @@ def classification_metrics(y: np.ndarray, pred: np.ndarray, classes) -> tuple[di
     return out, recall
 
 
-def evaluate(ds: BenchmarkDataset, seed: int) -> dict:
+GROUPS = ("fcm", "supervised", "gp")
+
+
+def evaluate(ds: BenchmarkDataset, seed: int, groups=GROUPS) -> dict:
     tr, va, te = ds.split(seed)
     Xtr, ytr, Xte, yte = ds.X[tr], ds.y[tr], ds.X[te], ds.y[te]
     Xva, yva = (None, None) if va is None else (ds.X[va], ds.y[va])
@@ -66,6 +72,29 @@ def evaluate(ds: BenchmarkDataset, seed: int) -> dict:
     timing: dict[str, float] = {}
     info: dict = {"n_train": len(tr), "n_val": 0 if va is None else len(va), "n_test": len(te)}
 
+    if "fcm" in groups:
+        _evaluate_fcm(ds, seed, Xtr, ytr, Xte, yte, zeros, methods, timing, info)
+    if "supervised" in groups:
+        _evaluate_supervised(ds, seed, Xtr, ytr, Xva, yva, Xte, methods, timing, info)
+    if "gp" in groups:
+        _evaluate_gp(ds, seed, Xtr, ytr, Xte, methods, timing, info)
+    return _score(ds, seed, yte, methods, info, timing)
+
+
+def _evaluate_gp(ds, seed, Xtr, ytr, Xte, methods, timing, info) -> None:
+    """Dirichlet GP; hyper-parameters by marginal likelihood only (no validation data used)."""
+    t = time.time()
+    gp = GPDirichletClassifier(**ds.gp, alpha_eps=0.01, random_state=seed).fit(Xtr, ytr)
+    s = gp.scores(Xte)
+    methods[GP_NAME] = {"pred": s["pred"], "score": s["max_prob"]}
+    info["gp_log_evidence"] = gp.log_marginal_likelihood()
+    info["gp_lengthscales"] = gp.lengthscales_.round(4).tolist()
+    info["gp_signal_variance"] = gp.signal_variance_
+    info["gp_optimizer_iterations"] = int(gp.opt_result_.nit)
+    timing[GP_NAME] = time.time() - t
+
+
+def _evaluate_fcm(ds, seed, Xtr, ytr, Xte, yte, zeros, methods, timing, info) -> None:
     t = time.time()
     flat = FlatFCM(**ds.phase1, random_state=seed).fit(Xtr, ytr)
     sc = flat.scores(Xte)
@@ -98,6 +127,8 @@ def evaluate(ds: BenchmarkDataset, seed: int) -> dict:
                 info["phase1_explained_variance"] = float(m.rep_.explained_variance_ratio_.sum())
         timing[label] = time.time() - t
 
+
+def _evaluate_supervised(ds, seed, Xtr, ytr, Xva, yva, Xte, methods, timing, info) -> None:
     for kind, label in (("svm", "SVM (RBF)"), ("rf", "Random Forest")):
         for rep, suffix in ((ds.full, ""), (ds.phase1, ", Phase 1 features")):
             t = time.time()
@@ -108,6 +139,8 @@ def evaluate(ds: BenchmarkDataset, seed: int) -> dict:
                 info[f"svm_params{suffix}"] = ref.best_params_
             timing[label + suffix] = time.time() - t
 
+
+def _score(ds, seed, yte, methods, info, timing) -> dict:
     rows, per_class, curves = [], [], {}
     grid = np.linspace(0.005, 1.0, 200)
     for name, mth in methods.items():
@@ -130,29 +163,56 @@ def evaluate(ds: BenchmarkDataset, seed: int) -> dict:
     return out
 
 
-def run(datasets, seeds: int, out: Path) -> None:
+def _json_default(o):
+    return o.tolist() if hasattr(o, "tolist") else str(o)
+
+
+def run(datasets, seeds: int, out: Path, groups=GROUPS) -> None:
+    """Evaluate ``groups`` of methods; with a subset of groups, merge into existing raw results."""
     raw = out / "raw"
     raw.mkdir(parents=True, exist_ok=True)
+    partial = tuple(groups) != GROUPS
     for key in datasets:
         t0 = time.time()
         ds = LOADERS[key]()
-        rows, per_class, infos = [], [], []
+        rows, per_class, infos, curves = [], [], [], None
         for seed in range(seeds):
             ts = time.time()
-            r = evaluate(ds, seed)
+            r = evaluate(ds, seed, groups)
             rows += r["rows"]
             per_class += r["per_class"]
             infos.append({"seed": seed, **r["info"], "timing_s": {k: round(v, 1) for k, v in r["timing"].items()}})
             if "curves" in r:
-                r["curves"].to_csv(raw / f"{key}_curves.csv", index=False)
+                curves = r["curves"]
             print(f"[{key}] seed {seed} done in {time.time() - ts:.0f}s", flush=True)
-        pd.DataFrame(rows).to_csv(raw / f"{key}_runs.csv", index=False)
-        pd.DataFrame(per_class).to_csv(raw / f"{key}_per_class.csv", index=False)
+        runs, pc = pd.DataFrame(rows), pd.DataFrame(per_class)
         class_counts = {ds.class_names[c]: int(n) for c, n in zip(*np.unique(ds.y, return_counts=True))}
         meta = {"key": key, "title": ds.title, "info": ds.info, "class_counts": class_counts,
-                "phase1": ds.phase1, "full": ds.full, "cov_estimator": ds.cov_estimator, "seeds": infos,
-                "runtime_s": round(time.time() - t0, 1)}
-        (raw / f"{key}_meta.json").write_text(json.dumps(meta, indent=2, default=str))
+                "phase1": ds.phase1, "full": ds.full, "cov_estimator": ds.cov_estimator, "gp": ds.gp,
+                "seeds": infos, "runtime_s": round(time.time() - t0, 1)}
+        if partial and (raw / f"{key}_runs.csv").exists():
+            new = set(runs.method)
+            old = pd.read_csv(raw / f"{key}_runs.csv")
+            runs = pd.concat([old[~old.method.isin(new)], runs], ignore_index=True)
+            old_pc = pd.read_csv(raw / f"{key}_per_class.csv")
+            pc = pd.concat([old_pc[~old_pc.method.isin(new)], pc], ignore_index=True)
+            if curves is not None:
+                old_c = pd.read_csv(raw / f"{key}_curves.csv")
+                for col in curves.columns.drop("coverage"):
+                    old_c[col] = curves[col].to_numpy()
+                curves = old_c
+            old_meta = json.loads((raw / f"{key}_meta.json").read_text())
+            for old_seed, new_seed in zip(old_meta["seeds"], infos):
+                timing = {**old_seed.get("timing_s", {}), **new_seed.pop("timing_s")}
+                old_seed.update(new_seed)
+                old_seed["timing_s"] = timing
+            meta = {**old_meta, "gp": ds.gp, "seeds": old_meta["seeds"],
+                    "runtime_s": round(old_meta.get("runtime_s", 0) + meta["runtime_s"], 1)}
+        runs.to_csv(raw / f"{key}_runs.csv", index=False)
+        pc.to_csv(raw / f"{key}_per_class.csv", index=False)
+        if curves is not None:
+            curves.to_csv(raw / f"{key}_curves.csv", index=False)
+        (raw / f"{key}_meta.json").write_text(json.dumps(meta, indent=2, default=_json_default))
         print(f"[{key}] finished in {time.time() - t0:.0f}s", flush=True)
 
 
@@ -313,12 +373,13 @@ def main(argv=None) -> None:
     r.add_argument("--datasets", default="all")
     r.add_argument("--seeds", type=int, default=5)
     r.add_argument("--out", type=Path, default=OUT)
+    r.add_argument("--only", default=",".join(GROUPS), help=f"comma-separated subset of {GROUPS}")
     q = sub.add_parser("report")
     q.add_argument("--out", type=Path, default=OUT)
     a = p.parse_args(argv)
     if a.cmd == "run":
         keys = DATASET_ORDER if a.datasets == "all" else [k.strip() for k in a.datasets.split(",")]
-        run(keys, a.seeds, a.out)
+        run(keys, a.seeds, a.out, tuple(g.strip() for g in a.only.split(",")))
     else:
         report(a.out)
 
