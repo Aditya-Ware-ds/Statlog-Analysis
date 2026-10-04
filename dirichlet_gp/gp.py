@@ -415,8 +415,19 @@ class GPDirichletClassifier:
 
     def log_marginal_likelihood(self, theta=None) -> float:
         """Summed log marginal likelihood (over classes) on the hyper-parameter optimisation subset."""
+        if getattr(self, "_D_opt", None) is None:
+            raise RuntimeError("the training cache was released; the evidence at the learned hyper-parameters "
+                               "is kept in log_evidence_ when the model was fitted by fit_gp_v2")
         theta = self.theta_ if theta is None else np.asarray(theta)
         return -self._neg_lml(theta, self._D_opt, self._T_opt, self._members_opt)[0]
+
+    def release_training_cache(self) -> "GPDirichletClassifier":
+        """Drop the pairwise distances kept for hyper-parameter optimisation (O(groups x n^2) memory).
+
+        Prediction, ``refit`` and the selection steps do not need them; ``log_marginal_likelihood`` does.
+        """
+        self._D_opt = None
+        return self
 
     def _subset(self, y: np.ndarray, rng) -> np.ndarray:
         if len(y) <= self.n_opt:
