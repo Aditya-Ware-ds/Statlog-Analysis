@@ -37,7 +37,6 @@ On Indian Pines (seed 0) this call reproduces the published GP v2 predictions ex
 
 ```bash
 git clone https://github.com/Aditya-Ware-ds/Statlog-Analysis.git && cd Statlog-Analysis
-git checkout claude/paper-implementation-repo-sor4q5   # until this work is merged into main
 pip install -e .                       # numpy, scipy, pandas
 ```
 
