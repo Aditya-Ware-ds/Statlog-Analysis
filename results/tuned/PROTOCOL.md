@@ -190,3 +190,17 @@ held-out departments of seeds 1 and 2 as well.
 * **Secondary metrics:** AA, kappa, macro-F1, AURC, NLL, ECE.
 * **Results are reported as they come out**, including any dataset where GP v2
   does not beat the SVM. No setting is changed after a test result has been seen.
+
+### 5c. Sentinel-2 decision (applied before any Sentinel-2 GP v2 test evaluation)
+
+Best-grid deployment-weighted held-out accuracy (%):
+
+| Finalist | seed 0 | seed 1 | seed 2 | mean |
+|---|---|---|---|---|
+| band + linear | 75.47 | 77.41 | 74.18 | 75.69 |
+| **band + angle + linear** | 75.40 | 77.44 | 74.56 | **75.80** |
+| *SVM, same criterion (for reference only)* | *75.55* | *75.61* | *73.48* | *74.88* |
+
+The means differ by 0.11 points, which is not less than 0.1. The rule of section 5b
+therefore selects **band + angle + linear**:
+`SENTINEL2_KERNEL = "band+angle+linear"` in `dirichlet_gp/tuned.py`.
