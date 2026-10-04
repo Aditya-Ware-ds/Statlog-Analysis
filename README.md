@@ -19,9 +19,107 @@ maximising the marginal likelihood. It comes in two variants:
 
 ```bash
 pip install -r requirements.txt                    # numpy, scipy, pandas (+ pytest, pyreadr, h5py for dev/data)
-python -m pytest                                   # 34 unit tests
+python -m pytest                                   # 40 unit tests
 python -m dirichlet_gp.benchmark run --datasets statlog --seeds 5 && python -m dirichlet_gp.benchmark report
 ```
+
+## Use GP v2 on your own data
+
+One function call, or one command on CSV files, runs the whole GP v2 procedure on any labelled numeric
+data:
+- fits the kernel by marginal likelihood;
+- selects the smoothing settings and calibrates on a validation set;
+- optionally corrects for the class frequencies where the model will be used.
+
+On Indian Pines (seed 0) this call reproduces the published GP v2 predictions exactly.
+
+**1. Install.**
+
+```bash
+git clone https://github.com/Aditya-Ware-ds/Statlog-Analysis.git && cd Statlog-Analysis
+pip install -e .                       # numpy, scipy, pandas
+```
+
+**2. Prepare three sets of samples.** Features form a numeric matrix with one row per sample. Raw
+values are fine: standardisation uses training statistics internally. No NaN. Labels can be integers or
+strings.
+
+| Set | Used for | Advice |
+|---|---|---|
+| Training | learning the kernel | up to about 5,000 samples (see step 7); with more, cap the number per class |
+| Validation | choosing α_ε, the length-scale multiplier, the temperature (and the prior correction) | 10-20% of your labels, at least a few per class; it must not share pixels or windows with the training samples, and ideally comes from where the model will be used (another area, another date) |
+| New / test | prediction only | never used for any choice |
+
+If your samples are independent, you can split one labelled pool per class. Do not do this for
+overlapping patches or neighbouring pixels: use a spatially separate validation area instead.
+
+```python
+from dirichlet_gp.datasets import stratified_split
+tr, va, te = stratified_split(y, seed=0, train_frac=0.6, val_frac=0.2)   # index arrays; the rest is test
+```
+
+**3. Choose the kernel.**
+
+| Your features | `kernel=` | What the kernel sees |
+|---|---|---|
+| One spectrum per sample, bands in wavelength order (hyperspectral or multispectral reflectance or radiance) | `"spectral"` | z-scored bands + brightness-free spectral shape + spectral slopes (three Matérn-5/2 terms) |
+| A band x date time series stored date by date (all bands of date 1, then date 2, ...), e.g. Sentinel-2 composites | `"series"` with `n_periods=` | per-band RBF + spectral shape + a per-band linear term (the Sentinel-2 kernel) |
+| Any other numeric features (indices, texture, tabular data) | `"ard"` | Matérn-5/2 with one length-scale per feature |
+
+**4. Fit and predict in Python.**
+
+```python
+from dirichlet_gp.gpv2 import fit_gp_v2
+
+gp = fit_gp_v2(X_train, y_train, X_val, y_val, kernel="spectral")
+labels = gp.predict(X_new)
+proba = gp.predict_proba(X_new)       # one column per class, in the order of gp.classes_
+confidence = proba.max(axis=1)        # low values flag pixels worth checking
+print(gp.selection_)                  # chosen alpha_eps, length-scale multiplier, temperature, validation scores
+```
+
+**5. Or from the command line.** Each CSV has one row per sample, the feature columns in the same order in
+every file, and a label column. `--drop` lists non-feature columns (ids, coordinates), which are copied to
+the output.
+
+```bash
+python -m dirichlet_gp.gpv2 --train train.csv --val val.csv --predict new.csv --out predictions.csv \
+    --label label --drop pixel_id --kernel spectral --save model.pkl
+```
+
+`predictions.csv` holds the dropped columns, then `predicted`, `confidence` and one probability column per
+class (`p_<class>`). If `new.csv` has a label column, the accuracy is printed. For a time series, use
+`--kernel series --n-periods 6`. After `pip install -e .` the same tool is also available as the command `dirichlet-gp`.
+
+**6. When classes are more or less common where you deploy.** If the training sample's class mix differs
+from the deployment area's (for example, training was capped per class), pass the expected
+frequencies. The correction's strength is then chosen on the validation set, weighted to those
+frequencies. Estimate the frequencies from labelled data you already have, never from the test set.
+
+```python
+gp = fit_gp_v2(X_train, y_train, X_val, y_val, kernel="series", n_periods=6,
+               target_priors={"corn": 0.25, "wheat": 0.15, "meadow": 0.60})
+```
+
+From the command line: `--target-priors-from labelled_pool.csv` uses the class frequencies of that file's
+label column.
+
+**7. Size, time and saving.**
+- **Time:** exact inference grows with the cube of the training-set size. The measured cost per run on
+  one CPU core, including selection, was about 1.5 min at 1,000 training samples, 10-25 min at 2,000-2,700,
+  and 30-50 min at 3,500. Multithreaded BLAS (`OPENBLAS_NUM_THREADS`) shortens it.
+- **Memory:** about 2.3 GB was measured at 3,500 samples. It grows with the square of the training-set
+  size: roughly 5 GB at 5,000 and 18 GB at 10,000.
+- **Saving:** `pickle.dump(gp, f)` saves a fitted model, and `pickle.load` gives it back ready to
+  predict.
+
+**8. Pitfalls.**
+- **Without a validation set nothing is tuned:** α_ε = 0.01, the learned length-scales and T = 1 are
+  kept.
+- **The reported validation accuracy is optimistic,** because it picked the setting. Judge the model on
+  separate test data.
+- **A validation set that overlaps the training data** (the same windows, adjacent pixels) chooses too
+  little smoothing.
 
 ## Results
 
@@ -293,6 +391,7 @@ dirichlet_gp/
   statlog_study.py   StatLog kernel selection by evidence, final refit, post-hoc check; writes results/gp_statlog/
   selection.py       GP v2: held-out choice of alpha_eps and length-scale multiplier, temperature
   priors.py          class-prior correction (Saerens et al.) and its held-out exponent
+  gpv2.py            GP v2 for your own data: fit_gp_v2(...) and the CSV command line
   tuned.py           GP v2: 10-seed evaluation, paired comparison with the SVM reference; writes results/tuned/
 scripts/             data download / preparation (StatLog, hyperspectral scenes, Sentinel-2)
 tests/               unit tests (gradient check, invariance, Woodbury vs. direct GPs, metrics, splits)

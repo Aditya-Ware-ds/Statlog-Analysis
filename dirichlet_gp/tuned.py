@@ -37,7 +37,8 @@ from scipy.stats import binomtest, ttest_1samp
 
 from .data import CompositeFeatures
 from .datasets import LOADERS, BenchmarkDataset
-from .gp import GPDirichletClassifier, GroupedKernel, LinearKernel, SumKernel, contiguous_groups
+from .gp import GPDirichletClassifier, GroupedKernel, LinearKernel, SumKernel
+from .gpv2 import composite_spectral
 from .metrics import calibration, classification_metrics, selective_summary
 from .priors import class_frequencies
 from .selection import ALPHAS, SCALES, grid_search
@@ -51,26 +52,6 @@ DATASET_ORDER = list(LOADERS)
 
 
 # ------------------------------------------------------------------ models
-def composite_spectral(n_bands: int, family: str, z_groups: int = 10, deriv_groups: int = 5):
-    """Sum kernel on [z-scored spectrum | unit-norm spectrum (angle) | smoothed first derivative].
-
-    The z block has ``z_groups`` contiguous length-scale groups, the angle block one
-    length-scale, the derivative block ``deriv_groups`` contiguous groups; each term
-    has its own signal variance.
-    """
-    feats = CompositeFeatures(("z", "angle", "deriv"))
-    n = 3 * n_bands - 1
-    blocks = {"z": (0, n_bands), "angle": (n_bands, 2 * n_bands), "deriv": (2 * n_bands, n)}
-    within = {"z": contiguous_groups(n_bands, z_groups), "angle": np.zeros(n_bands, int),
-              "deriv": contiguous_groups(n_bands - 1, deriv_groups)}
-    kernels = []
-    for b, (lo, hi) in blocks.items():
-        g = np.full(n, -1)
-        g[lo:hi] = within[b]
-        kernels.append(GroupedKernel(g, family))
-    return feats, SumKernel(*kernels)
-
-
 def gp_for(ds: BenchmarkDataset, seed: int) -> GPDirichletClassifier:
     common = {"alpha_eps": ML_ALPHA_EPS, "rule": RULE, "random_state": seed, "max_iter": 200}
     if ds.key in ("indian_pines", "pavia_university", "salinas"):
