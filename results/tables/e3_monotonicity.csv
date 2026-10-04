@@ -1,5 +1,0 @@
-variant,scope,monotone_non_increasing,"spearman_rho(grade,error)",error_Q1,error_Q5
-SG-HFQ,node-local,False,-0.6,0.4715568862275449,0.2780049059689289
-SG-HFQ,path,False,0.3,0.602322206095791,0.8111888111888113
-SG-HFQ (class-seeded),node-local,True,-0.9999999999999999,0.3309914129586261,0.04242928452579031
-SG-HFQ (class-seeded),path,False,-0.8999999999999998,0.5,0.13725490196078427

@@ -1,0 +1,46 @@
+{
+  "candidate": "rbf_band_invariant",
+  "round": 1,
+  "representation": "full36",
+  "groups": "band",
+  "kernel": "rbf",
+  "invariant": true,
+  "centre_kernel": false,
+  "n_hyperparameters": 5,
+  "n_opt": 1999,
+  "log_evidence": -22274.004308425105,
+  "bic_adjusted_evidence": -22293.005314261354,
+  "optimizer_iterations": 11,
+  "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "fit_seconds": 60.6,
+  "theta": [
+    0.7640217185481508,
+    0.547348814850814,
+    1.3809283203147855,
+    1.214589051940708,
+    2.5292772306237925
+  ],
+  "lengthscales": [
+    2.1469,
+    1.7287,
+    3.9786,
+    3.3689
+  ],
+  "signal_variance": 12.544436125026786,
+  "OA": 0.9095,
+  "AA": 0.8900012201855095,
+  "kappa": 0.8885305992742788,
+  "macro_F1": 0.8949330650979269,
+  "AURC": 0.013077596710445206,
+  "risk@80": 0.028125,
+  "NLL": 0.23830986669684626,
+  "ECE": 0.017846287939609996,
+  "per_class_accuracy": {
+    "1": 0.9978308026030369,
+    "2": 0.9776785714285714,
+    "3": 0.9370277078085643,
+    "4": 0.6161137440758294,
+    "5": 0.9156118143459916,
+    "7": 0.8957446808510638
+  }
+}

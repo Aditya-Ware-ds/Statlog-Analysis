@@ -1,0 +1,46 @@
+dataset,seed,method,class,class_name,accuracy
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),0,barley,0.8664102992810567
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),1,wheat,0.8986418954671056
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),2,rapeseed,0.9571516646115906
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),3,corn,0.9590574280156884
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),5,orchards,0.6431159420289855
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),7,permanent meadows,0.2759240835692967
+sentinel2_breizhcrops,0,Gaussian process (Dirichlet GP),8,temporary meadows,0.5570104649346592
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),0,barley,0.8734325363651563
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),1,wheat,0.9041683814451172
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),2,rapeseed,0.9509864364981504
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),3,corn,0.952169892541692
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),5,orchards,0.6014492753623188
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),7,permanent meadows,0.3269686997780668
+sentinel2_breizhcrops,1,Gaussian process (Dirichlet GP),8,temporary meadows,0.6043629926589265
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),0,barley,0.8527002173549574
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),1,wheat,0.9427949908871772
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),2,rapeseed,0.9534525277435264
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),3,corn,0.9410733076113644
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),5,orchards,0.6231884057971014
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),7,permanent meadows,0.3529884441723425
+sentinel2_breizhcrops,2,Gaussian process (Dirichlet GP),8,temporary meadows,0.5638048628104337
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),0,barley,0.8560441397759572
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),1,wheat,0.8959374448821212
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),2,rapeseed,0.9528360049321823
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),3,corn,0.9494595197857212
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),5,orchards,0.6539855072463768
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),7,permanent meadows,0.3330144639167368
+sentinel2_breizhcrops,3,Gaussian process (Dirichlet GP),8,temporary meadows,0.5499817774769615
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),0,barley,0.8735997324862064
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),1,wheat,0.8873537538949968
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),2,rapeseed,0.9506781750924784
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),3,corn,0.952169892541692
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),4,sunflower,0.0
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),5,orchards,0.6847826086956522
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),6,nuts,0.0
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),7,permanent meadows,0.2897375066962577
+sentinel2_breizhcrops,4,Gaussian process (Dirichlet GP),8,temporary meadows,0.550346227937731

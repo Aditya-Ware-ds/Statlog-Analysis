@@ -1,0 +1,94 @@
+{
+  "source": "https://breizhcrops.s3.eu-central-1.amazonaws.com (BreizhCrops, Sentinel-2 L2A, 2017)",
+  "regions": {
+    "frh01": "Cotes-d'Armor (22)",
+    "frh02": "Finistere (29)",
+    "frh03": "Ille-et-Vilaine (35)",
+    "frh04": "Morbihan (56)"
+  },
+  "bands": [
+    "B2",
+    "B3",
+    "B4",
+    "B5",
+    "B6",
+    "B7",
+    "B8",
+    "B8A",
+    "B11",
+    "B12"
+  ],
+  "periods": [
+    "Jan-Feb",
+    "Mar-Apr",
+    "May-Jun",
+    "Jul-Aug",
+    "Sep-Oct",
+    "Nov-Dec"
+  ],
+  "clear_rule": "B2 < 1500.0 DN and EDG == 0 and SAT == 0",
+  "dropped_no_clear_obs": {
+    "frh01": 0,
+    "frh02": 0,
+    "frh03": 0,
+    "frh04": 0
+  },
+  "n_parcels": 608489,
+  "class_counts": {
+    "barley": {
+      "frh01": 13051,
+      "frh02": 10736,
+      "frh03": 7154,
+      "frh04": 5981
+    },
+    "corn": {
+      "frh01": 44003,
+      "frh02": 36620,
+      "frh03": 42011,
+      "frh04": 31361
+    },
+    "nuts": {
+      "frh01": 10,
+      "frh02": 18,
+      "frh03": 10,
+      "frh04": 11
+    },
+    "orchards": {
+      "frh01": 937,
+      "frh02": 348,
+      "frh03": 1217,
+      "frh04": 552
+    },
+    "permanent meadows": {
+      "frh01": 32641,
+      "frh02": 36536,
+      "frh03": 32524,
+      "frh04": 26134
+    },
+    "rapeseed": {
+      "frh01": 5596,
+      "frh02": 2349,
+      "frh03": 3557,
+      "frh04": 3244
+    },
+    "sunflower": {
+      "frh01": 1,
+      "frh02": 6,
+      "frh03": 10,
+      "frh04": 2
+    },
+    "temporary meadows": {
+      "frh01": 52013,
+      "frh02": 39143,
+      "frh03": 52682,
+      "frh04": 38414
+    },
+    "wheat": {
+      "frh01": 30380,
+      "frh02": 15026,
+      "frh03": 27202,
+      "frh04": 17009
+    }
+  },
+  "median_clear_obs_per_parcel": 28.0
+}

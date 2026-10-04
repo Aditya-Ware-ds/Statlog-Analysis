@@ -1,0 +1,46 @@
+dataset,seed,method,class,class_name,accuracy
+pavia_university,0,Gaussian process (Dirichlet GP),1,Asphalt,0.9379922909334674
+pavia_university,0,Gaussian process (Dirichlet GP),2,Meadows,0.9857015192135836
+pavia_university,0,Gaussian process (Dirichlet GP),3,Gravel,0.7194282689253574
+pavia_university,0,Gaussian process (Dirichlet GP),4,Trees,0.9155184916606236
+pavia_university,0,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.99009083402147
+pavia_university,0,Gaussian process (Dirichlet GP),6,Bare Soil,0.7830793019659819
+pavia_university,0,Gaussian process (Dirichlet GP),7,Bitumen,0.5943238731218697
+pavia_university,0,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.8946891973445986
+pavia_university,0,Gaussian process (Dirichlet GP),9,Shadows,0.9988276670574444
+pavia_university,1,Gaussian process (Dirichlet GP),1,Asphalt,0.9276018099547512
+pavia_university,1,Gaussian process (Dirichlet GP),2,Meadows,0.98832290735776
+pavia_university,1,Gaussian process (Dirichlet GP),3,Gravel,0.6638433033350979
+pavia_university,1,Gaussian process (Dirichlet GP),4,Trees,0.9097171863669326
+pavia_university,1,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9917423616845582
+pavia_university,1,Gaussian process (Dirichlet GP),6,Bare Soil,0.8131212723658051
+pavia_university,1,Gaussian process (Dirichlet GP),7,Bitumen,0.7053422370617696
+pavia_university,1,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.9290887145443572
+pavia_university,1,Gaussian process (Dirichlet GP),9,Shadows,1.0
+pavia_university,2,Gaussian process (Dirichlet GP),1,Asphalt,0.93883023294788
+pavia_university,2,Gaussian process (Dirichlet GP),2,Meadows,0.9905272564789992
+pavia_university,2,Gaussian process (Dirichlet GP),3,Gravel,0.6664902064584436
+pavia_university,2,Gaussian process (Dirichlet GP),4,Trees,0.9002900652646846
+pavia_university,2,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9892650701899256
+pavia_university,2,Gaussian process (Dirichlet GP),6,Bare Soil,0.7669538325601943
+pavia_university,2,Gaussian process (Dirichlet GP),7,Bitumen,0.6460767946577629
+pavia_university,2,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.8865419432709717
+pavia_university,2,Gaussian process (Dirichlet GP),9,Shadows,1.0
+pavia_university,3,Gaussian process (Dirichlet GP),1,Asphalt,0.934640522875817
+pavia_university,3,Gaussian process (Dirichlet GP),2,Meadows,0.990765564492106
+pavia_university,3,Gaussian process (Dirichlet GP),3,Gravel,0.6580201164637375
+pavia_university,3,Gaussian process (Dirichlet GP),4,Trees,0.896301667875272
+pavia_university,3,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.990916597853014
+pavia_university,3,Gaussian process (Dirichlet GP),6,Bare Soil,0.7773359840954275
+pavia_university,3,Gaussian process (Dirichlet GP),7,Bitumen,0.6093489148580968
+pavia_university,3,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.8952926976463488
+pavia_university,3,Gaussian process (Dirichlet GP),9,Shadows,0.9988276670574444
+pavia_university,4,Gaussian process (Dirichlet GP),1,Asphalt,0.9354784648902296
+pavia_university,4,Gaussian process (Dirichlet GP),2,Meadows,0.9868930592791184
+pavia_university,4,Gaussian process (Dirichlet GP),3,Gravel,0.6437268395976707
+pavia_university,4,Gaussian process (Dirichlet GP),4,Trees,0.887962291515591
+pavia_university,4,Gaussian process (Dirichlet GP),5,Painted metal sheets,0.9801816680429396
+pavia_university,4,Gaussian process (Dirichlet GP),6,Bare Soil,0.7936823503423901
+pavia_university,4,Gaussian process (Dirichlet GP),7,Bitumen,0.6978297161936561
+pavia_university,4,Gaussian process (Dirichlet GP),8,Self-Blocking Bricks,0.9188292094146048
+pavia_university,4,Gaussian process (Dirichlet GP),9,Shadows,0.9976553341148886

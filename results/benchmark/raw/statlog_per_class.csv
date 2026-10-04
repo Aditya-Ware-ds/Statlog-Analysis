@@ -1,0 +1,31 @@
+dataset,seed,method,class,class_name,accuracy
+statlog,0,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030368
+statlog,0,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,0,Gaussian process (Dirichlet GP),3,grey soil,0.9445843828715366
+statlog,0,Gaussian process (Dirichlet GP),4,damp grey soil,0.6303317535545023
+statlog,0,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9240506329113924
+statlog,0,Gaussian process (Dirichlet GP),7,very damp grey soil,0.8978723404255319
+statlog,1,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030368
+statlog,1,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,1,Gaussian process (Dirichlet GP),3,grey soil,0.9395465994962215
+statlog,1,Gaussian process (Dirichlet GP),4,damp grey soil,0.6161137440758294
+statlog,1,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9240506329113924
+statlog,1,Gaussian process (Dirichlet GP),7,very damp grey soil,0.902127659574468
+statlog,2,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030368
+statlog,2,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,2,Gaussian process (Dirichlet GP),3,grey soil,0.9395465994962215
+statlog,2,Gaussian process (Dirichlet GP),4,damp grey soil,0.6113744075829384
+statlog,2,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9282700421940928
+statlog,2,Gaussian process (Dirichlet GP),7,very damp grey soil,0.9127659574468086
+statlog,3,Gaussian process (Dirichlet GP),1,red soil,0.9956616052060736
+statlog,3,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,3,Gaussian process (Dirichlet GP),3,grey soil,0.9420654911838792
+statlog,3,Gaussian process (Dirichlet GP),4,damp grey soil,0.6113744075829384
+statlog,3,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9282700421940928
+statlog,3,Gaussian process (Dirichlet GP),7,very damp grey soil,0.9127659574468086
+statlog,4,Gaussian process (Dirichlet GP),1,red soil,0.9978308026030368
+statlog,4,Gaussian process (Dirichlet GP),2,cotton crop,0.9776785714285714
+statlog,4,Gaussian process (Dirichlet GP),3,grey soil,0.9445843828715366
+statlog,4,Gaussian process (Dirichlet GP),4,damp grey soil,0.6161137440758294
+statlog,4,Gaussian process (Dirichlet GP),5,soil with vegetation stubble,0.9240506329113924
+statlog,4,Gaussian process (Dirichlet GP),7,very damp grey soil,0.9127659574468086
