@@ -45,3 +45,27 @@ def test_classifier_with_sum_kernel_and_warm_start():
     assert len(m.theta_) == 10 and (m.predict(X) == y).mean() > 0.9
     m2 = GPDirichletClassifier(representation="log36", kernel=s, max_iter=5, theta_init=m.theta_).fit(X, y)
     assert m2.log_marginal_likelihood() >= m.log_marginal_likelihood() - 1e-6
+
+
+def test_linear_kernel_in_sum_gradient_and_refit():
+    from scipy.optimize import approx_fprime
+
+    from dirichlet_gp.gp import LinearKernel
+
+    rng = np.random.default_rng(3)
+    X = rng.normal(size=(50, 12))
+    y = rng.integers(0, 3, 50)
+    groups = np.arange(12) % 3
+    s = SumKernel(GroupedKernel(groups, "rbf"), LinearKernel(groups))
+    assert s.n_params == 4 + 3 and s.lengthscale_mask().tolist() == [True] * 3 + [False] * 4
+    for cache in (True, False):
+        m = GPDirichletClassifier(kernel=s, max_iter=1, cache=cache).fit(X, y)
+        theta = np.r_[rng.normal(0.5, 0.2, 3), 0.3, rng.normal(-2, 0.3, 3)]
+        K, _ = s.gram_and_grad_fn(m._D_opt, theta)
+        assert np.allclose(K, s(m.Z_, m.Z_, theta), rtol=1e-5, atol=1e-5)
+        assert np.allclose(np.diag(K), s.diag(m.Z_, theta), rtol=1e-5)
+        f = lambda t: m._neg_lml(t, m._D_opt, m._T_opt, m._members_opt)[0]  # noqa: E731
+        _, g = m._neg_lml(theta, m._D_opt, m._T_opt, m._members_opt)
+        assert np.allclose(g, approx_fprime(theta, f, 1e-6), rtol=1e-3, atol=1e-3)
+    m.refit(lengthscale_scale=2.0)
+    assert np.allclose(m.theta_ - m.theta_ml_, np.log(2.0) * s.lengthscale_mask())

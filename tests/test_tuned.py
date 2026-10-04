@@ -92,3 +92,14 @@ def test_grid_search_with_deployment_priors():
     yi = np.searchsorted(m.classes_, yv)
     w = np.where(yi == 0, 0.8 / 0.5, 0.2 / 0.5)
     assert np.isclose(np.average(m.predict(Xv) == yv, weights=w), best["accuracy"])
+
+
+def test_composite_features_segmented_angle():
+    rng = np.random.default_rng(5)
+    X = rng.uniform(100, 3000, (30, 60))
+    f = CompositeFeatures(("z", "angle"), segment=10).fit(X)
+    X2 = X.copy()
+    X2[:, 10:20] *= 2.5  # rescale the second date only
+    sl = f.block_slices_["angle"]
+    assert np.allclose(f.transform(X)[:, sl], f.transform(X2)[:, sl])
+    assert not np.allclose(CompositeFeatures(("angle",)).fit(X).transform(X), CompositeFeatures(("angle",)).fit(X).transform(X2))

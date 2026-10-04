@@ -190,11 +190,74 @@ class GroupedKernel:
 
         return K, trace_grad
 
+    def lengthscale_mask(self) -> np.ndarray:
+        """True for the log-length-scale entries of theta (False for the log signal variance)."""
+        return np.r_[np.ones(self.n_groups, bool), False]
+
+    def initial_theta(self, target_var: float) -> np.ndarray:
+        return _initial_theta(self, target_var)
+
+
+class LinearKernel:
+    """Grouped linear (dot-product) kernel k(x, x') = sum_g v_g <x_g, x'_g>, theta = log v_g.
+
+    Used inside a :class:`SumKernel` it adds a Bayesian linear model on the (standardised)
+    inputs to a stationary kernel. It has no length-scales, so ``refit``'s length-scale
+    multiplier leaves it unchanged.
+    """
+
+    def __init__(self, groups: np.ndarray):
+        self.groups = np.asarray(groups, dtype=int)  # -1 = feature not used
+        self.n_groups = int(self.groups.max()) + 1
+        self.members = [np.flatnonzero(self.groups == g) for g in range(self.n_groups)]
+
+    @property
+    def n_params(self) -> int:
+        return self.n_groups
+
+    def _dot(self, A, B, g):
+        idx = self.members[g]
+        return A[:, idx] @ B[:, idx].T
+
+    def __call__(self, A, B, theta):
+        v = np.exp(theta)
+        return sum(v[g] * self._dot(A, B, g) for g in range(self.n_groups))
+
+    def diag(self, A, theta):
+        v = np.exp(theta)
+        return sum(v[g] * (A[:, idx] ** 2).sum(1) for g, idx in enumerate(self.members))
+
+    def precompute(self, X, cache: bool = True):
+        if not cache:
+            return ("uncached", X)
+        return np.stack([self._dot(X, X, g) for g in range(self.n_groups)]).astype(np.float32)
+
+    def gram_and_grad_fn(self, D, theta):
+        v = np.exp(theta)
+        if isinstance(D, tuple) and D[0] == "uncached":
+            X = D[1]
+            dots = [self._dot(X, X, g) for g in range(self.n_groups)]
+        else:
+            dots = list(D)
+        K = sum(v[g] * dots[g] for g in range(self.n_groups))
+
+        def trace_grad(W):
+            return np.array([v[g] * np.sum(W * dots[g]) for g in range(self.n_groups)])
+
+        return K, trace_grad
+
+    def lengthscale_mask(self) -> np.ndarray:
+        return np.zeros(self.n_groups, bool)
+
+    def initial_theta(self, target_var: float) -> np.ndarray:
+        used = sum(len(m) for m in self.members)
+        return np.full(self.n_groups, np.log(target_var / max(used, 1)))
+
 
 class SumKernel:
     """k_1 + ... + k_N with concatenated hyper-parameters (theta = [theta_1, ..., theta_N])."""
 
-    def __init__(self, *kernels: GroupedKernel):
+    def __init__(self, *kernels):
         if len(kernels) < 2:
             raise ValueError("a sum kernel needs at least two terms")
         self.kernels = list(kernels)
@@ -235,11 +298,11 @@ class SumKernel:
 
     def initial_theta(self, target_var: float) -> np.ndarray:
         share = target_var / len(self.kernels)
-        return np.concatenate([_initial_theta(k, share) for k in self.kernels])
+        return np.concatenate([k.initial_theta(share) for k in self.kernels])
 
     def lengthscale_mask(self) -> np.ndarray:
-        """True for the log-length-scale entries of theta (False for log signal variances)."""
-        return np.concatenate([np.r_[np.ones(k.n_groups, bool), False] for k in self.kernels])
+        """True for the log-length-scale entries of theta (False for variances)."""
+        return np.concatenate([k.lengthscale_mask() for k in self.kernels])
 
 
 def _initial_theta(k: GroupedKernel, target_var: float) -> np.ndarray:
@@ -374,7 +437,7 @@ class GPDirichletClassifier:
         Z = self.rep_.transform(X)
         self.classes_ = np.unique(y)
         self.s_on_, self.s_off_ = self._noise_levels(self.alpha_eps)
-        if isinstance(self.kernel, (GroupedKernel, SumKernel)):
+        if isinstance(self.kernel, (GroupedKernel, SumKernel, LinearKernel)):
             self.kernel_ = self.kernel
         else:
             groups = np.arange(Z.shape[1]) if self.groups is None else np.asarray(self.groups)
@@ -394,10 +457,8 @@ class GPDirichletClassifier:
             target_var = T.var(axis=0).mean()
             if self.theta_init is not None:
                 theta0 = np.asarray(self.theta_init, dtype=float)
-            elif isinstance(self.kernel_, SumKernel):
-                theta0 = self.kernel_.initial_theta(target_var)
             else:
-                theta0 = _initial_theta(self.kernel_, target_var)
+                theta0 = self.kernel_.initial_theta(target_var)
             bounds = [(np.log(1e-2), np.log(1e3))] * self.kernel_.n_params
             res = minimize(self._neg_lml, theta0, args=(self._D_opt, self._T_opt, self._members_opt), jac=True,
                            method="L-BFGS-B", bounds=bounds, options={"maxiter": self.max_iter})
@@ -409,9 +470,7 @@ class GPDirichletClassifier:
         return self
 
     def _lengthscale_mask(self) -> np.ndarray:
-        if isinstance(self.kernel_, SumKernel):
-            return self.kernel_.lengthscale_mask()
-        return np.r_[np.ones(self.kernel_.n_groups, bool), False]
+        return self.kernel_.lengthscale_mask()
 
     def refit(self, alpha_eps: float | None = None, lengthscale_scale: float = 1.0) -> "GPDirichletClassifier":
         """Re-condition on the training data with a new alpha_eps and/or all length-scales multiplied
@@ -500,13 +559,13 @@ class GPDirichletClassifier:
 
     @property
     def lengthscales_(self) -> np.ndarray:
-        """Length-scales (for a sum kernel: those of both kernels, signal variances excluded)."""
-        if isinstance(self.kernel_, SumKernel):
-            return np.exp(np.concatenate([t[:-1] for t in self.kernel_._split(self.theta_)]))
-        return np.exp(self.theta_[:-1])
+        """Length-scales (for a sum kernel: those of all its stationary terms, in order)."""
+        return np.exp(self.theta_[self._lengthscale_mask()])
 
     @property
     def signal_variance_(self) -> float:
+        """Signal variance of the stationary term(s) (summed for a sum kernel)."""
         if isinstance(self.kernel_, SumKernel):
-            return float(sum(np.exp(t[-1]) for t in self.kernel_._split(self.theta_)))
+            return float(sum(np.exp(t[-1]) for k, t in zip(self.kernel_.kernels, self.kernel_._split(self.theta_))
+                             if isinstance(k, GroupedKernel)))
         return float(np.exp(self.theta_[-1]))

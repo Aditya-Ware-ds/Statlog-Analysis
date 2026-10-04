@@ -1,6 +1,6 @@
 """Validation-tuned Dirichlet GP ("GP v2") on all datasets, compared with an RBF-SVM reference.
 
-    python -m dirichlet_gp.tuned run --datasets all --seeds 10
+    python -m dirichlet_gp.tuned run --datasets all --seeds 10      # or --seeds 0-4, --seeds 5-9 in parallel
     python -m dirichlet_gp.tuned report
 
 The protocol is fixed in ``results/tuned/PROTOCOL.md`` (written before any test
@@ -37,10 +37,10 @@ from scipy.stats import binomtest
 
 from .data import CompositeFeatures
 from .datasets import LOADERS, BenchmarkDataset
-from .gp import GPDirichletClassifier, GroupedKernel, SumKernel, contiguous_groups
+from .gp import GPDirichletClassifier, GroupedKernel, LinearKernel, SumKernel, contiguous_groups
 from .metrics import calibration, classification_metrics, selective_summary
 from .priors import class_frequencies
-from .selection import grid_search
+from .selection import ALPHAS, SCALES, grid_search
 
 OUT = Path("results/tuned")
 METHOD = "GP v2 (validation-tuned Dirichlet GP)"
@@ -77,9 +77,36 @@ def gp_for(ds: BenchmarkDataset, seed: int) -> GPDirichletClassifier:
         feats, kernel = composite_spectral(ds.X.shape[1], "matern52")
         return GPDirichletClassifier(features=feats, kernel=kernel, n_opt=10**9, **common)
     if ds.key == "sentinel2_breizhcrops":
-        return GPDirichletClassifier(representation="standard", groups=np.arange(ds.X.shape[1]) % 10,
-                                     kernel="rbf", n_opt=10**9, **common)
+        feats, kernel = sentinel2_kernel(SENTINEL2_KERNEL)
+        return GPDirichletClassifier(features=feats, kernel=kernel, n_opt=10**9, **common)
     raise ValueError(f"no validation-tuned configuration for {ds.key}")
+
+
+#: Sentinel-2 kernel, chosen on held-out departments only (PROTOCOL.md, section 5b)
+SENTINEL2_KERNEL = None
+#: Sentinel-2 length-scale multipliers: 2^(k/2), k = -3..8 (0.35 ... 16); wider than SCALES because the
+#: selected settings make the stationary term nearly flat next to the linear one (PROTOCOL.md, 5a)
+SENTINEL2_SCALES = tuple(float(x) for x in np.round(2.0 ** (np.arange(-3, 9) / 2), 3))
+
+
+def sentinel2_kernel(variant: str):
+    """Features and kernel for the 60 bi-monthly Sentinel-2 values (period-major, 10 bands per period).
+
+    ``"band+linear"``: RBF with one length-scale per band (shared by the 6 periods) + a linear kernel
+    with one weight per band. ``"band+angle+linear"``: the same plus an RBF on the unit-norm series
+    (spectral-angle block, one length-scale).
+    """
+    from .data import Standardizer
+
+    band = np.arange(60) % 10
+    if variant == "band+linear":
+        return Standardizer("standard"), SumKernel(GroupedKernel(band, "rbf"), LinearKernel(band))
+    if variant == "band+angle+linear":
+        z = np.r_[band, np.full(60, -1)]
+        angle = np.r_[np.full(60, -1), np.zeros(60, int)]
+        kernels = (GroupedKernel(z, "rbf"), GroupedKernel(angle, "rbf"), LinearKernel(z))
+        return CompositeFeatures(("z", "angle")), SumKernel(*kernels)
+    raise ValueError(f"unknown Sentinel-2 kernel {variant!r}")
 
 
 def statlog_frozen(seed: int) -> GPDirichletClassifier:
@@ -109,7 +136,8 @@ def evaluate(ds: BenchmarkDataset, seed: int, preds: Path) -> dict:
         if ds.prior_pool is not None:
             priors = (class_frequencies(ds.y[tr], gp.classes_), class_frequencies(ds.y[ds.prior_pool], gp.classes_))
             info["prior_target"] = priors[1].round(5).tolist()
-        best, table = grid_search(gp, ds.X[va], ds.y[va], priors=priors)
+        scales = SENTINEL2_SCALES if ds.key == "sentinel2_breizhcrops" else SCALES
+        best, table = grid_search(gp, ds.X[va], ds.y[va], alphas=ALPHAS, scales=scales, priors=priors)
         info.update(alpha_eps=best["alpha_eps"], scale=best["scale"], val_accuracy=best["accuracy"],
                     temperature=best["temperature"], prior_tau=best.get("prior_tau"), grid=table)
     P = gp.predict_proba(ds.X[te])
@@ -134,21 +162,39 @@ def _json_default(o):
     return o.tolist() if hasattr(o, "tolist") else str(o)
 
 
-def run(datasets, seeds: int, out: Path) -> None:
-    raw, preds = out / "raw", out / "predictions"
-    raw.mkdir(parents=True, exist_ok=True)
+def run(datasets, seeds, out: Path) -> None:
+    """Evaluate every seed in ``seeds``; each seed is saved on its own (raw/<dataset>/seed_<n>.json), so
+    several processes can share the seeds of one dataset. StatLog is deterministic and runs once (seed 0)."""
+    preds = out / "predictions"
     preds.mkdir(parents=True, exist_ok=True)
     for key in datasets:
         ds = LOADERS[key]()
-        rows, infos = [], []
-        for seed in range(1 if ds.split(0)[1] is None else seeds):  # StatLog: deterministic, one run
+        (out / "raw" / key).mkdir(parents=True, exist_ok=True)
+        for seed in ([0] if ds.split(0)[1] is None else seeds):
             r = evaluate(ds, seed, preds)
-            rows.append(r["row"])
-            infos.append(r["info"])
+            (out / "raw" / key / f"seed_{seed}.json").write_text(json.dumps(r, indent=1, default=_json_default))
             print(f"[{key}] seed {seed}: OA {100 * r['row']['OA']:.2f}% ({r['info']['seconds']:.0f}s)", flush=True)
-            pd.DataFrame(rows).to_csv(raw / f"{key}_runs.csv", index=False)
-            (raw / f"{key}_meta.json").write_text(json.dumps(
-                {"key": key, "title": ds.title, "info": ds.info, "seeds": infos}, indent=1, default=_json_default))
+        collect(ds, out)
+
+
+def collect(ds: BenchmarkDataset, out: Path) -> None:
+    """Merge the per-seed files of one dataset into raw/<dataset>_runs.csv and raw/<dataset>_meta.json."""
+    files = sorted((out / "raw" / ds.key).glob("seed_*.json"), key=lambda f: int(f.stem.split("_")[1]))
+    results = [json.loads(f.read_text()) for f in files]
+    pd.DataFrame([r["row"] for r in results]).to_csv(out / "raw" / f"{ds.key}_runs.csv", index=False)
+    (out / "raw" / f"{ds.key}_meta.json").write_text(json.dumps(
+        {"key": ds.key, "title": ds.title, "info": ds.info, "seeds": [r["info"] for r in results]},
+        indent=1, default=_json_default))
+
+
+def _seed_list(text: str) -> list[int]:
+    """"10" -> 0..9; "3-5" -> 3, 4, 5; "1,4" -> 1, 4."""
+    if "-" in text:
+        lo, hi = text.split("-")
+        return list(range(int(lo), int(hi) + 1))
+    if "," in text:
+        return [int(x) for x in text.split(",")]
+    return list(range(int(text)))
 
 
 # ------------------------------------------------------------------ report
@@ -236,14 +282,14 @@ def main(argv=None) -> None:
     sub = p.add_subparsers(dest="cmd", required=True)
     r = sub.add_parser("run")
     r.add_argument("--datasets", default="all")
-    r.add_argument("--seeds", type=int, default=10)
+    r.add_argument("--seeds", default="10", help='number of seeds ("10" = 0-9), a range "3-5" or a list "1,4"')
     r.add_argument("--out", type=Path, default=OUT)
     q = sub.add_parser("report")
     q.add_argument("--out", type=Path, default=OUT)
     a = p.parse_args(argv)
     if a.cmd == "run":
         keys = DATASET_ORDER if a.datasets == "all" else [k.strip() for k in a.datasets.split(",")]
-        run(keys, a.seeds, a.out)
+        run(keys, _seed_list(a.seeds), a.out)
     else:
         report(a.out)
 

@@ -17,13 +17,14 @@ The code is `dirichlet_gp/tuned.py`, `dirichlet_gp/selection.py` and
   used. Prototype results on validation accuracy, seed 0, are below. "+grid" means
   after the alpha_eps x length-scale grid of section 3. The hyperspectral configuration
   was fixed from Indian Pines and Pavia University, where both prototypes were complete.
-  The Salinas prototype was still running; it is reported here but did not decide anything.
+  The Salinas prototype finished afterwards (row filled in later). It agrees with that choice but
+  did not decide anything.
 
   | Scene | v1 kernel | + full-data ML | + angle block | + derivative block | same, Matérn-5/2 | SVM (refined grid) |
   |---|---|---|---|---|---|---|
   | Indian Pines, default / +grid | 83.37 / 85.30 | 83.37 / 85.30 | 83.75 / 85.11 | 84.53 / 85.49 | 84.53 / **85.88** | 82.21 |
   | Pavia University, default / +grid | 91.02 / 93.07 | 91.02 / 93.07 | 92.75 / 94.01 | 93.12 / 94.34 | 93.50 / **94.53** | 93.96 |
-  | Salinas, default / +grid | 92.28 / 92.94 | 92.35 / 92.76 | 92.76 / 93.75 | (running) | (running) | 93.75 |
+  | Salinas, default / +grid | 92.28 / 92.94 | 92.35 / 92.76 | 92.76 / 93.75 | 92.79 / 93.75 | 92.87 / **93.83** | 93.75 |
 
 * The SVM reference runs (section 4) were run while the GP design was being
   prototyped, and their test accuracies were printed to the console and seen
@@ -134,8 +135,45 @@ therefore get the same handling:
   plain-accuracy choice scored 68.5% on the weighted criterion, against 72.6% for
   the best setting.
 
-GP v2 kernel for Sentinel-2: *to be fixed below from the seed-0 validation
-prototype, before the Sentinel-2 test runs.*
+### 5a. Sentinel-2 kernel prototypes (seed-0 held-out department only)
+
+All rows use the pipeline above:
+* type-II ML at alpha_eps = 0.01 on all training parcels;
+* grid alpha_eps ∈ {0.003, …, 1} × s ∈ {2^(k/2): k = −3 … 8} = {0.35, …, 16};
+* temperature, then prior correction.
+
+The score is the deployment-weighted held-out accuracy at the best grid point
+(the SVM's equivalent on seed 0: **75.55**).
+
+| Kernel on the 60 bi-monthly band values (z-scored unless noted) | Default (alpha 0.01, s 1) | Best grid point |
+|---|---|---|
+| RBF, one length-scale per band (v1 kernel) | 71.33 | 73.20 |
+| RBF, isotropic | 71.76 | 73.11 |
+| RBF per band + RBF per period (sum) | 73.14 | 74.23 |
+| RBF per band + spectral-angle block (whole series, 1 length-scale) | 74.13 | 74.13 |
+| RBF per band + per-date spectral-angle block (1 length-scale / per band) | 72.42 / 72.81 | 73.45 / 73.71 |
+| **RBF per band + linear per band** | 73.32 | **75.47** |
+| **RBF per band + angle block + linear per band** | 73.39 | **75.40** |
+
+Larger alpha_eps (3, 10) did not help with the v1 kernel: at best 73.3.
+The deciding ingredient is the **linear term**.
+* The selected settings stretch the RBF length-scales (s = 4–16), so the model
+  is mostly a Bayesian linear model, plus a smooth correction.
+* The SVM's own choices point the same way: very small gamma and large C on
+  several seeds.
+* A plausible reason is that the test department differs from the training
+  departments, and linear functions extrapolate across that shift better than
+  local ones.
+
+### 5b. Sentinel-2 decision rule (fixed before the seed-1/2 prototypes reported)
+
+The two finalists, "band + linear" and "band + angle + linear", are run on the
+held-out departments of seeds 1 and 2 as well.
+* **Choice:** the finalist with the higher mean best-grid score over seeds 0–2.
+  If the means differ by less than 0.1 points, take the simpler "band + linear".
+* **Final runs:** that kernel, with the same alpha_eps × s grid (72 points) and
+  the post-processing above, on seeds 0–9.
+* **Note on the SVM:** it uses its 44-point grid, as on the other datasets.
 
 ## 6. Comparison and claims
 

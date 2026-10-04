@@ -115,20 +115,28 @@ class CompositeFeatures:
     * ``"deriv"``: first difference along the bands of the 3-band moving-average-smoothed raw
       spectrum, z-scored per feature.
 
+    With ``segment = L`` the angle block normalises every run of L consecutive features
+    separately (for a time series stored date-major, the spectrum of each date).
     ``block_slices_`` gives the column range of each block in the output.
     """
 
     BLOCKS = ("z", "angle", "deriv")
 
-    def __init__(self, blocks=("z", "angle", "deriv")):
+    def __init__(self, blocks=("z", "angle", "deriv"), segment: int | None = None):
         unknown = set(blocks) - set(self.BLOCKS)
         if unknown:
             raise ValueError(f"unknown blocks {unknown}")
         self.blocks = tuple(blocks)
+        self.segment = segment
 
-    @staticmethod
-    def _unit(X):
-        return X / np.maximum(np.linalg.norm(X, axis=1, keepdims=True), 1e-12)
+    def _unit(self, X):
+        if self.segment is None:
+            return X / np.maximum(np.linalg.norm(X, axis=1, keepdims=True), 1e-12)
+        n, d = X.shape
+        if d % self.segment:
+            raise ValueError(f"{d} features are not a multiple of segment={self.segment}")
+        S = X.reshape(n, d // self.segment, self.segment)
+        return (S / np.maximum(np.linalg.norm(S, axis=2, keepdims=True), 1e-12)).reshape(n, d)
 
     @staticmethod
     def _deriv(X):
