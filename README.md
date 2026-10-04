@@ -9,15 +9,74 @@ land-cover classification and its evaluation on five datasets:
 
 The classifier is the Dirichlet-based GP of Milios et al. (NeurIPS 2018). It uses exact GP inference,
 kernels with grouped length-scales and optional symmetry invariance, and hyper-parameters learned by
-maximising the marginal likelihood. No validation data or cross-validation is used anywhere.
+maximising the marginal likelihood. It comes in two variants:
+
+- **GP v1:** evidence only. All hyper-parameters come from the marginal likelihood; no held-out
+  data or cross-validation is used.
+- **GP v2:** validation-tuned. It adds composite spectral kernels (a linear term on Sentinel-2),
+  full-data maximum likelihood, held-out selection of two smoothing parameters, temperature
+  calibration and a class-prior correction. Its protocol was fixed before any test evaluation.
 
 ```bash
 pip install -r requirements.txt                    # numpy, scipy, pandas (+ pytest, pyreadr, h5py for dev/data)
-python -m pytest                                   # 25 unit tests
+python -m pytest                                   # 34 unit tests
 python -m dirichlet_gp.benchmark run --datasets statlog --seeds 5 && python -m dirichlet_gp.benchmark report
 ```
 
 ## Results
+
+### GP v2 vs a tuned RBF SVM
+
+Test overall accuracy (%), mean ± standard deviation over seeds 0-9. The GP and the SVM use the same
+splits and the same held-out samples for selection
+([`results/tuned/summary.md`](results/tuned/summary.md),
+protocol in [`results/tuned/PROTOCOL.md`](results/tuned/PROTOCOL.md)):
+
+| Dataset | GP v1 | **GP v2** | RBF SVM | GP v2 − SVM (paired) | Seeds GP v2 ahead / behind | Significant? |
+|---|---|---|---|---|---|---|
+| StatLog (Landsat MSS) | 91.45 | **91.65** | 91.48 | +0.17 | 10 / 0 | no (McNemar p > 0.05 every seed) |
+| Indian Pines (AVIRIS) | 81.06 | **83.90** | 80.44 | **+3.46** | 10 / 0 | yes: McNemar 10/10 seeds, t-test p = 3e-8 |
+| Pavia University (ROSIS) | 91.72 | **93.90** | 93.41 | **+0.49** | 10 / 0 | yes: McNemar 7/10 seeds, t-test p = 0.004 |
+| Salinas (AVIRIS) | 91.33 | **93.17** | 92.50 | **+0.67** | 10 / 0 | yes: McNemar 10/10 seeds, t-test p = 1e-6 |
+| Sentinel-2 crop types (Brittany) | 68.29 | **76.51** | 76.32 | +0.18 | 6 / 4 | no (t-test over seeds p = 0.3) |
+
+**What the table supports:**
+- **GP v2 has the higher mean accuracy on all five datasets.** That is the pre-registered meaning of
+  "beats".
+- **The lead is clear and consistent on the three hyperspectral scenes.** GP v2 is ahead on every seed
+  there, and most per-seed McNemar tests are significant.
+- **On StatLog and Sentinel-2 the two models are tied within noise.**
+  - On Sentinel-2 the per-seed winner changes from seed to seed.
+  - On StatLog, 2,000 test samples give a standard error of about 0.6 points.
+- **The published Crammer-Singer results on StatLog (92.35-92.45%) are still not reached.**
+
+**Other metrics** (full tables in the summary):
+- GP v2 has a higher average accuracy and kappa than the SVM on all four hyperspectral and Sentinel-2
+  datasets.
+- It has the lower AURC and calibration error on Indian Pines and Pavia University.
+- The SVM has the lower NLL and AURC on Salinas and Sentinel-2, and the lower calibration error on
+  Sentinel-2 and StatLog.
+
+**Caveats:**
+- **Kernel structure.** The SVM is the usual single RBF on z-scored bands, while GP v2 learns a
+  structured sum kernel. Repeating the SVM protocol on the GP's composite features did *not* help the
+  SVM: 79.4 / 93.0 / 92.5 on Indian Pines / Pavia / Salinas. So the extra features alone do not explain
+  the gap.
+- **Sentinel-2 handling.** On Sentinel-2 the SVM got exactly the GP's prior correction and
+  deployment-weighted selection criterion. That raised it from 68.8% (earlier version) to 76.3%.
+- **How the design was chosen.** GP v2 was designed on seed-0 held-out samples, seeds 0-2 for
+  Sentinel-2's kernel. The SVM test accuracies had been seen while that design was prototyped; no GP
+  choice used them.
+- **Grid edge.** On Indian Pines and Pavia, the held-out selection usually picked the grid's largest
+  α_ε (1.0). A wider grid might do better, but it was not tried after the test results were known.
+- **Cost.** GP v2 is far more expensive. One CPU core per dataset and seed, including selection and
+  prediction:
+
+  | Indian Pines | Pavia | Salinas | Sentinel-2 | SVM |
+  |---|---|---|---|---|
+  | about 1.5 min | about 12 min | about 18 min | about 45 min | seconds to 3 min |
+
+### GP v1 (evidence only)
 
 Test-set percentages, mean ± standard deviation over 5 seeds
 ([`results/benchmark/summary.md`](results/benchmark/summary.md)):
@@ -33,6 +92,9 @@ Test-set percentages, mean ± standard deviation over 5 seeds
 AURC is the area under the risk-coverage curve when test samples are ranked by the GP's maximum class
 probability: the error accumulated when the most confident predictions are accepted first.
 Per-class accuracies and the learned length-scales are in the summary file.
+
+GP v1 has no prior correction. Its Sentinel-2 accuracy therefore reflects the balanced training
+priors, and is not comparable with GP v2's 76.5%.
 
 ### StatLog: kernel selection without cross-validation
 
@@ -77,24 +139,26 @@ sigma2_ic = log(1 / alpha_ic + 1)          # known heteroscedastic noise
 target_ic = log(alpha_ic) - sigma2_ic / 2  # regression target
 ```
 
-Classification thus becomes C exact GP regressions sharing one kernel. Class probabilities are the
-Monte-Carlo mean of softmax(f), with f drawn from the C Gaussian predictive marginals. α_ε = 0.01, the
-authors' default, is fixed.
+Classification thus becomes C exact GP regressions sharing one kernel.
+- In GP v1, class probabilities are the Monte-Carlo mean of softmax(f), with f drawn from the C Gaussian
+  predictive marginals, and α_ε = 0.01 (the authors' default) is fixed.
+- GP v2 changes both; see below.
 
 **Kernels.** Stationary RBF or Matérn-5/2 on z-scored inputs with *grouped ARD*: features in a group
 share a length-scale.
 - `GroupedKernel(groups, kind, permutations)` can be made invariant to a finite group of feature
   permutations, k_inv(x, x') = mean_t k(x, t x'). This is positive semi-definite when the length-scale
   groups are unions of permutation orbits.
-- `SumKernel` adds two kernels. A group id of -1 excludes a feature from a kernel.
+- `SumKernel` adds kernels, and `LinearKernel` is a grouped dot-product kernel. A group id of -1
+  excludes a feature from a kernel.
 
-| Dataset | Kernel (fixed a priori) |
+| Dataset | GP v1 kernel (fixed a priori) |
 |---|---|
 | StatLog | Evidence-selected: Matérn-5/2, 12 band x pixel-orbit length-scales, dihedral-invariant over the 3x3 window |
 | Indian Pines, Pavia University, Salinas | RBF over all bands, 10 length-scales for contiguous spectral blocks |
 | Sentinel-2 Brittany | RBF over 60 features, one length-scale per spectral band shared by its 6 bi-monthly composites |
 
-**Hyper-parameters.**
+**Hyper-parameters (GP v1).**
 - Length-scales and signal variance are learned by type-II maximum likelihood, with analytic gradients
   and L-BFGS-B.
 - The optimisation runs on a class-stratified subset of up to 1,500 training samples (2,000 on
@@ -116,6 +180,46 @@ P = gp.predict_proba(d.X_test)            # (2000, 6) class probabilities
 print(gp.lengthscales_, gp.log_marginal_likelihood())
 ```
 
+### GP v2: the validation-tuned variant
+
+GP v2 (`dirichlet_gp/tuned.py`) keeps the same exact Dirichlet GP and changes the following. Its
+protocol was written and committed before any test evaluation:
+[`results/tuned/PROTOCOL.md`](results/tuned/PROTOCOL.md).
+
+1. **Full-data type-II ML.** The kernel hyper-parameters are learned on *all* training samples, not a
+   1,500-sample subset.
+2. **Composite spectral kernel** on the hyperspectral scenes (`CompositeFeatures`, `composite_spectral`).
+   It is a sum of three Matérn-5/2 kernels, each with its own signal variance:
+   - z-scored bands, with 10 contiguous length-scale groups;
+   - the unit-norm spectrum, a spectral-angle block that ignores brightness, with 1 length-scale;
+   - the first derivative of the smoothed spectrum, with 5 groups.
+3. **Linear + stationary kernel on Sentinel-2.** The kernel sums three terms:
+   - an RBF with one length-scale per band;
+   - an RBF on the unit-norm 60-value series;
+   - a grouped **linear** kernel, `LinearKernel`, with one weight per band.
+
+   On the held-out department, the linear term was the decisive ingredient. Linear decision functions
+   carry over to an unseen department better than local ones.
+4. **Held-out selection** (`dirichlet_gp/selection.py`), with the same criterion as the SVM's
+   (C, γ) grid. Marginal likelihood cannot choose two quantities, so held-out accuracy does:
+   - the Dirichlet concentration α_ε, which sets how much the regression smooths, much as C does;
+   - a common multiplier of the learned length-scales, much as γ does.
+
+   A temperature is then fitted on held-out log-loss.
+5. **Deterministic log-normal decision rule**: p_c ∝ exp((μ_c + σ²_c / 2) / T). The temperature only
+   recalibrates the probabilities; it never changes the predicted class.
+6. **Class-prior correction on Sentinel-2** (`dirichlet_gp/priors.py`; Saerens et al., 2002).
+   - The training and held-out samples are capped per class, while the test department keeps its natural
+     crop frequencies.
+   - Probabilities are re-weighted towards the class frequencies of the labelled training-side
+     departments.
+   - The exponent is chosen on the held-out department.
+   - The SVM gets exactly the same correction.
+
+StatLog has no held-out split, and cross-validation would leak pixels between overlapping
+neighbourhoods. GP v2 therefore uses the frozen evidence-selected model there, with only the decision
+rule changed.
+
 ## Datasets
 
 | | StatLog | Indian Pines | Pavia University | Salinas | Sentinel-2 Brittany |
@@ -128,8 +232,10 @@ print(gp.lengthscales_, gp.log_marginal_likelihood())
 | Train / held out / test (seed 0) | 4,435 / - / 2,000 (official) | 1,030 / 517 / 8,702 | 2,137 / 2,137 / 38,502 | 2,706 / 2,706 / 48,717 | 3,535 / 1,420 / 122,708 |
 | Split | official UCI split | 10% / 5% / rest per class (min 5 / 3) | 5% / 5% / rest per class | 5% / 5% / rest per class | spatial: by department |
 
-The GP is trained on the training samples only. The held-out samples are used by no step; they are kept
-so that the test sets stay the same as in the published results. The hyperspectral splits are the
+Both GPs and the SVM are trained on the training samples only.
+- GP v1 uses the held-out samples in no step.
+- GP v2 and the SVM reference use them for selection.
+- The test sets are the same throughout. The hyperspectral splits are the
 usual random per-class pixel samples. Training and test pixels are spatial neighbours there, which makes
 the scores optimistic. The Sentinel-2 task uses a spatially disjoint split instead.
 
@@ -156,7 +262,7 @@ Common Agricultural Policy monitoring system.
 | Classes | barley, wheat, rapeseed, corn, sunflower, orchards, nuts, permanent meadows, temporary meadows |
 | Number of samples | 608,489 parcels: FRH01 178,632; FRH02 140,782; FRH03 166,367; FRH04 122,708. No parcel was dropped for lack of a clear observation |
 | Preprocessing | (1) Clear-sky screening: keep an observation if B2 < 0.15 reflectance and its edge and saturation flags are 0. The provided cloud flag marks about 57% of spectrally clear observations as cloudy, so it is not used. (2) Bi-monthly median composites of each band. (3) Linear interpolation across empty periods. (4) z-scoring with training statistics |
-| Train / held out / test | Spatially disjoint by department. Train: up to 500 parcels per class from FRH01 + FRH02 (3,535). Held out (unused): up to 200 per class from FRH03. Test: **all 122,708 parcels of FRH04**, with their real class distribution. 5 seeds |
+| Train / held out / test | Spatially disjoint by department. Train: up to 500 parcels per class from FRH01 + FRH02 (3,535). Held out (selection for GP v2 and the SVM; unused by GP v1): up to 200 per class from FRH03. Test: **all 122,708 parcels of FRH04**, with their real class distribution. 5 seeds (GP v1) or 10 seeds (GP v2, SVM) |
 
 | Class | FRH01 | FRH02 | FRH03 | FRH04 (test) |
 |---|---:|---:|---:|---:|
@@ -183,8 +289,11 @@ dirichlet_gp/
   data.py            StatLog loader (official split, class-count check) and input standardisation
   datasets.py        the five evaluation datasets and their splits; per-dataset GP configuration
   metrics.py         accuracy, kappa, macro F1, risk-coverage / AURC, NLL and calibration error
-  benchmark.py       5-seed evaluation on all datasets; writes results/benchmark/
+  benchmark.py       GP v1: 5-seed evaluation on all datasets; writes results/benchmark/
   statlog_study.py   StatLog kernel selection by evidence, final refit, post-hoc check; writes results/gp_statlog/
+  selection.py       GP v2: held-out choice of alpha_eps and length-scale multiplier, temperature
+  priors.py          class-prior correction (Saerens et al.) and its held-out exponent
+  tuned.py           GP v2: 10-seed evaluation, paired comparison with the SVM reference; writes results/tuned/
 scripts/             data download / preparation (StatLog, hyperspectral scenes, Sentinel-2)
 tests/               unit tests (gradient check, invariance, Woodbury vs. direct GPs, metrics, splits)
 results/             committed outputs of the two studies
@@ -198,7 +307,14 @@ python -m dirichlet_gp.benchmark report
 python -m dirichlet_gp.statlog_study run --candidates all         # 12 kernels, about 25 min in 4 processes
 python -m dirichlet_gp.statlog_study final                        # full-data refit, about 1 h
 python -m dirichlet_gp.statlog_study sensitivity && python -m dirichlet_gp.statlog_study report
+python -m dirichlet_gp.tuned run --datasets all --seeds 10       # GP v2; about 12 CPU-hours, mostly Sentinel-2
+python -m dirichlet_gp.tuned run --datasets salinas --seeds 0-4  # ...or split the seeds over processes
+python -m dirichlet_gp.tuned report
 ```
+
+The SVM reference in `results/tuned/svm_reference/` was produced outside this repository. This
+repository holds only GP code. The SVM protocol is in `results/tuned/PROTOCOL.md`, section 4, and its
+per-seed metrics, selected (C, γ) and test predictions are committed.
 
 All randomness is seeded. The committed results were checked against this code. Re-running StatLog
 candidates reproduces them exactly. An Indian Pines re-run reproduces the per-class accuracies exactly

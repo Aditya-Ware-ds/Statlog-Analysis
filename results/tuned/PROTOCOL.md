@@ -204,3 +204,21 @@ Best-grid deployment-weighted held-out accuracy (%):
 The means differ by 0.11 points, which is not less than 0.1. The rule of section 5b
 therefore selects **band + angle + linear**:
 `SENTINEL2_KERNEL = "band+angle+linear"` in `dirichlet_gp/tuned.py`.
+
+## 7. Execution notes and post-hoc additions (written after the test runs)
+
+* **Method:** run exactly as fixed above, with no deviations. The code changes after the hyperspectral
+  runs had started (the `LinearKernel` refactor, the segmented angle option, the report) leave those
+  runs' computations unchanged.
+* **Parallel seeds:** seeds were split over parallel processes (`--seeds 0-4`, `5-9`, ...). On
+  Sentinel-2, two processes were stopped after their seed had been saved, and the remaining seeds were
+  given separate processes. Every seed was evaluated once.
+* **Paired t-test (post hoc):** a paired t-test over the 10 seeds was added to the report after the
+  results were known. It is labelled as such and does not change the pre-registered claims.
+* **Supplementary SVM (post hoc):** an SVM on the GP v2 composite features was run on the
+  hyperspectral scenes. It is reported as supplementary.
+* **Outcome under the section 6 wording:**
+  * GP v2 "beats" the SVM on all five datasets (positive mean paired difference).
+  * It does so "significantly" (McNemar p < 0.05 on at least 6 of 10 seeds) on Indian Pines (10/10),
+    Pavia University (7/10) and Salinas (10/10).
+  * It does not do so significantly on StatLog (0/10) or Sentinel-2 (5 seeds for the GP, 4 for the SVM).

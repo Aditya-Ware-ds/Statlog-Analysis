@@ -33,7 +33,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from scipy.stats import binomtest
+from scipy.stats import binomtest, ttest_1samp
 
 from .data import CompositeFeatures
 from .datasets import LOADERS, BenchmarkDataset
@@ -249,23 +249,29 @@ def report(out: Path) -> None:
              "probability of the true class and is not multiplied by 100; all other columns are percentages.", "",
              "## Overall accuracy", "",
              "| Dataset | GP v1 (evidence only) | **GP v2** | SVM | GP v2 − SVM (paired mean) | "
-             "seeds GP v2 ahead / behind | seeds with McNemar p < 0.05 (GP v2 / SVM better) |",
-             "|---|---|---|---|---|---|---|"]
+             "seeds GP v2 ahead / behind | seeds with McNemar p < 0.05 (GP v2 / SVM better) | "
+             "paired t-test over seeds, p (not pre-registered) |",
+             "|---|---|---|---|---|---|---|---|"]
     for k in keys:
         pr = pairs[pairs.dataset == k]
         g, s = gp[gp.dataset == k], svm[svm.dataset == k]
         sig_g = int(((pr.mcnemar_p < 0.05) & (pr["diff"] > 0)).sum())
         sig_s = int(((pr.mcnemar_p < 0.05) & (pr["diff"] < 0)).sum())
         old = _cell(v1[k].OA) if k in v1 else "-"
+        t_p = f"{ttest_1samp(pr['diff'], 0.0).pvalue:.2g}" if len(g) > 1 and len(pr) > 2 else "-"
         lines.append(f"| {metas[k]['title']} | {old} | **{_cell(g.OA)}** | {_cell(s.OA)} | "
                      f"{100 * pr['diff'].mean():+.2f} | {int((pr['diff'] > 0).sum())} / {int((pr['diff'] < 0).sum())} | "
-                     f"{sig_g} / {sig_s} |")
+                     f"{sig_g} / {sig_s} | {t_p} |")
     lines += ["",
               "GP v1 is the evidence-only GP of `results/benchmark/` (5 seeds). On StatLog GP v2 is one "
               "deterministic run (the frozen model of `results/gp_statlog/`); it is compared with each of the 10 "
               "SVM runs, which differ only in the random state of libsvm's probability calibration. McNemar: exact "
               "binomial test on the test samples that exactly one of the two models classifies correctly "
-              "(per-seed counts in `paired_comparison.csv`)."]
+              "(per-seed counts in `paired_comparison.csv`). The paired t-test treats the seeds (independent "
+              "draws of the training and held-out samples) as the unit; it was added after the protocol was fixed, "
+              "because on the 122,708-parcel Sentinel-2 test set McNemar flags even 0.3-point differences in either "
+              "direction, so variation between training draws, not test-set noise, decides there. It is not "
+              "computed for StatLog, where the GP is a single deterministic run."]
     for name, table in (("GP v2", gp), ("SVM", svm)):
         lines += ["", f"## All metrics: {name}", "", "| Dataset | " + " | ".join(n for _, n in METRICS) + " |",
                   "|---|" + "---|" * len(METRICS)]
