@@ -1,6 +1,6 @@
 import numpy as np
 
-from sg_hfq.gp import GPDirichletClassifier, GroupedKernel, SumKernel, statlog_feature_permutations, statlog_groups
+from dirichlet_gp.gp import GPDirichletClassifier, GroupedKernel, SumKernel, statlog_feature_permutations, statlog_groups
 
 
 def test_uncached_matches_cached():

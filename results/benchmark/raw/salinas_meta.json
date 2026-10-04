@@ -7,7 +7,7 @@
     "bands": 204,
     "classes": 16,
     "labelled": 54129,
-    "split": "stratified random per class: 5% train (min 5), 5% validation (min 3), rest test; 5 seeds",
+    "split": "stratified random per class: 5% train (min 5), 5% held out (min 3, unused), rest test; 5 seeds",
     "preprocessing": "corrected cube: 20 water-absorption bands removed (224 -> 204)"
   },
   "class_counts": {
@@ -28,247 +28,6 @@
     "Vinyard_untrained": 7268,
     "Vinyard_vertical_trellis": 1807
   },
-  "phase1": {
-    "representation": "pca",
-    "n_components": 10
-  },
-  "full": {
-    "representation": "standard"
-  },
-  "cov_estimator": "ledoit_wolf",
-  "seeds": [
-    {
-      "seed": 0,
-      "n_train": 2706,
-      "n_val": 2706,
-      "n_test": 48717,
-      "hierarchy": "((((1, 2), 7), (((8, 15), 16), 14)), (((((3, 5), (12, 13)), (9, (10, 11))), 4), 6))",
-      "max_depth": 6,
-      "fcm_nodes": 15,
-      "fcm_nodes_converged": 15,
-      "mean_xie_beni": 0.21890876716023533,
-      "phase1_dims": 10,
-      "phase1_explained_variance": 0.997148744536259,
-      "svm_params": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "svm_params, Phase 1 features": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "timing_s": {
-        "flat FCM": 7.3,
-        "SG-HFQ": 5.8,
-        "SG-HFQ (class-seeded)": 9.6,
-        "SVM (RBF)": 89.8,
-        "SVM (RBF), Phase 1 features": 26.3,
-        "Random Forest": 14.0,
-        "Random Forest, Phase 1 features": 13.6,
-        "Gaussian process (Dirichlet GP)": 119.9
-      },
-      "gp_log_evidence": -42728.60857705711,
-      "gp_lengthscales": [
-        1000.0,
-        1.7052,
-        13.1542,
-        11.766,
-        7.2722,
-        1000.0,
-        3.1028,
-        3.5358,
-        2.6965,
-        1000.0
-      ],
-      "gp_signal_variance": 4.054013072118795,
-      "gp_optimizer_iterations": 37
-    },
-    {
-      "seed": 1,
-      "n_train": 2706,
-      "n_val": 2706,
-      "n_test": 48717,
-      "hierarchy": "((((1, 2), 7), (((8, 15), 14), 16)), ((((3, 5), ((9, (10, 11)), (12, 13))), 4), 6))",
-      "max_depth": 7,
-      "fcm_nodes": 15,
-      "fcm_nodes_converged": 15,
-      "mean_xie_beni": 0.20024223372161862,
-      "phase1_dims": 10,
-      "phase1_explained_variance": 0.9971989642776395,
-      "svm_params": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "svm_params, Phase 1 features": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "timing_s": {
-        "flat FCM": 4.1,
-        "SG-HFQ": 4.7,
-        "SG-HFQ (class-seeded)": 7.4,
-        "SVM (RBF)": 93.6,
-        "SVM (RBF), Phase 1 features": 31.2,
-        "Random Forest": 10.3,
-        "Random Forest, Phase 1 features": 6.4,
-        "Gaussian process (Dirichlet GP)": 96.0
-      },
-      "gp_log_evidence": -42711.406732716816,
-      "gp_lengthscales": [
-        1000.0,
-        2.0356,
-        4.6868,
-        88.5527,
-        5.9194,
-        1000.0,
-        4.1977,
-        3.3926,
-        2.4224,
-        1000.0
-      ],
-      "gp_signal_variance": 4.051087944802017,
-      "gp_optimizer_iterations": 24
-    },
-    {
-      "seed": 2,
-      "n_train": 2706,
-      "n_val": 2706,
-      "n_test": 48717,
-      "hierarchy": "(((1, 2), 7), (((((3, 12), (9, (10, 11))), (13, 14)), ((4, 5), ((8, 15), 16))), 6))",
-      "max_depth": 7,
-      "fcm_nodes": 15,
-      "fcm_nodes_converged": 15,
-      "mean_xie_beni": 0.19348322144423638,
-      "phase1_dims": 10,
-      "phase1_explained_variance": 0.9973784302966903,
-      "svm_params": {
-        "C": 1000,
-        "gamma": 0.001
-      },
-      "svm_params, Phase 1 features": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "timing_s": {
-        "flat FCM": 2.1,
-        "SG-HFQ": 6.3,
-        "SG-HFQ (class-seeded)": 7.6,
-        "SVM (RBF)": 55.0,
-        "SVM (RBF), Phase 1 features": 22.4,
-        "Random Forest": 8.5,
-        "Random Forest, Phase 1 features": 6.7,
-        "Gaussian process (Dirichlet GP)": 99.6
-      },
-      "gp_log_evidence": -42850.92928656533,
-      "gp_lengthscales": [
-        1000.0,
-        1.8965,
-        5.0126,
-        132.6396,
-        7.0079,
-        1000.0,
-        3.5027,
-        2.6279,
-        2.2544,
-        1000.0
-      ],
-      "gp_signal_variance": 3.8165254441022816,
-      "gp_optimizer_iterations": 28
-    },
-    {
-      "seed": 3,
-      "n_train": 2706,
-      "n_val": 2706,
-      "n_test": 48717,
-      "hierarchy": "((((1, 2), 7), (((8, 15), 16), 14)), (((((3, 5), (12, 13)), ((9, 11), 10)), 6), 4))",
-      "max_depth": 6,
-      "fcm_nodes": 15,
-      "fcm_nodes_converged": 15,
-      "mean_xie_beni": 0.2649344091590852,
-      "phase1_dims": 10,
-      "phase1_explained_variance": 0.9971746428762963,
-      "svm_params": {
-        "C": 1000,
-        "gamma": 0.001
-      },
-      "svm_params, Phase 1 features": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "timing_s": {
-        "flat FCM": 1.8,
-        "SG-HFQ": 4.0,
-        "SG-HFQ (class-seeded)": 2.9,
-        "SVM (RBF)": 53.9,
-        "SVM (RBF), Phase 1 features": 15.4,
-        "Random Forest": 6.2,
-        "Random Forest, Phase 1 features": 5.1,
-        "Gaussian process (Dirichlet GP)": 114.2
-      },
-      "gp_log_evidence": -42886.52188974501,
-      "gp_lengthscales": [
-        111.1548,
-        1.9208,
-        4.349,
-        118.1384,
-        6.3393,
-        1000.0,
-        3.5188,
-        2.9285,
-        2.5395,
-        682.1401
-      ],
-      "gp_signal_variance": 3.5865590920782027,
-      "gp_optimizer_iterations": 30
-    },
-    {
-      "seed": 4,
-      "n_train": 2706,
-      "n_val": 2706,
-      "n_test": 48717,
-      "hierarchy": "((((1, 2), 7), (((8, 15), 16), 14)), ((((3, 5), ((9, (10, 11)), (12, 13))), 4), 6))",
-      "max_depth": 7,
-      "fcm_nodes": 15,
-      "fcm_nodes_converged": 15,
-      "mean_xie_beni": 0.2172608349983384,
-      "phase1_dims": 10,
-      "phase1_explained_variance": 0.9972107705386501,
-      "svm_params": {
-        "C": 1000,
-        "gamma": 0.01
-      },
-      "svm_params, Phase 1 features": {
-        "C": 100,
-        "gamma": 0.01
-      },
-      "timing_s": {
-        "flat FCM": 1.7,
-        "SG-HFQ": 1.6,
-        "SG-HFQ (class-seeded)": 3.0,
-        "SVM (RBF)": 53.1,
-        "SVM (RBF), Phase 1 features": 14.2,
-        "Random Forest": 6.3,
-        "Random Forest, Phase 1 features": 4.6,
-        "Gaussian process (Dirichlet GP)": 112.8
-      },
-      "gp_log_evidence": -42748.273533887324,
-      "gp_lengthscales": [
-        1000.0,
-        1.937,
-        5.1057,
-        1000.0,
-        7.1233,
-        1000.0,
-        3.0853,
-        3.1007,
-        2.3699,
-        1000.0
-      ],
-      "gp_signal_variance": 3.924478384966838,
-      "gp_optimizer_iterations": 49
-    }
-  ],
-  "runtime_s": 1161.2,
   "gp": {
     "representation": "standard",
     "groups": [
@@ -479,5 +238,119 @@
     ],
     "n_opt": 1500,
     "max_iter": 150
-  }
+  },
+  "alpha_eps": 0.01,
+  "seeds": [
+    {
+      "seed": 0,
+      "n_train": 2706,
+      "n_heldout": 2706,
+      "n_test": 48717,
+      "gp_log_evidence": -42728.60857705711,
+      "gp_lengthscales": [
+        1000.0,
+        1.7052,
+        13.1542,
+        11.766,
+        7.2722,
+        1000.0,
+        3.1028,
+        3.5358,
+        2.6965,
+        1000.0
+      ],
+      "gp_signal_variance": 4.054013072118795,
+      "gp_optimizer_iterations": 37,
+      "fit_and_predict_s": 119.9
+    },
+    {
+      "seed": 1,
+      "n_train": 2706,
+      "n_heldout": 2706,
+      "n_test": 48717,
+      "gp_log_evidence": -42711.406732716816,
+      "gp_lengthscales": [
+        1000.0,
+        2.0356,
+        4.6868,
+        88.5527,
+        5.9194,
+        1000.0,
+        4.1977,
+        3.3926,
+        2.4224,
+        1000.0
+      ],
+      "gp_signal_variance": 4.051087944802017,
+      "gp_optimizer_iterations": 24,
+      "fit_and_predict_s": 96.0
+    },
+    {
+      "seed": 2,
+      "n_train": 2706,
+      "n_heldout": 2706,
+      "n_test": 48717,
+      "gp_log_evidence": -42850.92928656533,
+      "gp_lengthscales": [
+        1000.0,
+        1.8965,
+        5.0126,
+        132.6396,
+        7.0079,
+        1000.0,
+        3.5027,
+        2.6279,
+        2.2544,
+        1000.0
+      ],
+      "gp_signal_variance": 3.8165254441022816,
+      "gp_optimizer_iterations": 28,
+      "fit_and_predict_s": 99.6
+    },
+    {
+      "seed": 3,
+      "n_train": 2706,
+      "n_heldout": 2706,
+      "n_test": 48717,
+      "gp_log_evidence": -42886.52188974501,
+      "gp_lengthscales": [
+        111.1548,
+        1.9208,
+        4.349,
+        118.1384,
+        6.3393,
+        1000.0,
+        3.5188,
+        2.9285,
+        2.5395,
+        682.1401
+      ],
+      "gp_signal_variance": 3.5865590920782027,
+      "gp_optimizer_iterations": 30,
+      "fit_and_predict_s": 114.2
+    },
+    {
+      "seed": 4,
+      "n_train": 2706,
+      "n_heldout": 2706,
+      "n_test": 48717,
+      "gp_log_evidence": -42748.273533887324,
+      "gp_lengthscales": [
+        1000.0,
+        1.937,
+        5.1057,
+        1000.0,
+        7.1233,
+        1000.0,
+        3.0853,
+        3.1007,
+        2.3699,
+        1000.0
+      ],
+      "gp_signal_variance": 3.924478384966838,
+      "gp_optimizer_iterations": 49,
+      "fit_and_predict_s": 112.8
+    }
+  ],
+  "runtime_s": 542.5
 }

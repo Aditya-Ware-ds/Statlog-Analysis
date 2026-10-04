@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from scipy.optimize import approx_fprime
 
-from sg_hfq.gp import (
+from dirichlet_gp.gp import (
     GPDirichletClassifier,
     GroupedKernel,
     contiguous_groups,

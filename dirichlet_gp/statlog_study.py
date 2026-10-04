@@ -9,10 +9,10 @@ log marginal likelihood (evidence, computed on the same 2,000-sample training
 subset for all candidates) is selected. The test set is used once per
 candidate, only to report results; it plays no part in the selection.
 
-    python -m sg_hfq.gp_statlog run --candidates all       # or a comma list
-    python -m sg_hfq.gp_statlog final                      # refit the selected kernel on all training data
-    python -m sg_hfq.gp_statlog sensitivity                # post-hoc test-set checks (not used for choices)
-    python -m sg_hfq.gp_statlog report
+    python -m dirichlet_gp.statlog_study run --candidates all   # or a comma list
+    python -m dirichlet_gp.statlog_study final                  # refit the selected kernel on all training data
+    python -m dirichlet_gp.statlog_study sensitivity            # post-hoc test-set check (not used for choices)
+    python -m dirichlet_gp.statlog_study report
 """
 
 from __future__ import annotations
@@ -25,10 +25,9 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from .benchmark import classification_metrics
 from .data import CLASS_CODES, load_statlog
 from .gp import GPDirichletClassifier, GroupedKernel, SumKernel, statlog_feature_permutations, statlog_groups
-from .metrics import selective_summary
+from .metrics import calibration, classification_metrics, selective_summary
 
 OUT = Path("results/gp_statlog")
 ALPHA_EPS = 0.01  # Dirichlet concentration, fixed a priori (Milios et al., 2018)
@@ -57,8 +56,8 @@ ROUND_2 = {"rbf_band_orbit_invariant_log", "matern52_band_orbit_invariant_log", 
 
 #: Reference results on the same official split (test OA, %).
 REFERENCES = {
-    "SVM (RBF), this repo, 36-D": 91.5,
-    "Random Forest, this repo, 36-D": 91.2,
+    "RBF SVM, earlier version of this repository (commit 126d53a)": 91.5,
+    "Random Forest, earlier version of this repository (commit 126d53a)": 91.2,
     "Crammer-Singer SVM, Hsu & Lin (2002), as quoted": 92.35,
     "L2-loss Crammer-Singer SVM, Lee & Lin, as quoted": 92.45,
 }
@@ -78,19 +77,6 @@ def make(name: str, n_opt: int = N_OPT, cache: bool = True, theta_init=None, the
         alpha_eps=alpha_eps, n_opt=n_opt, max_iter=200, random_state=0, cache=cache, theta_init=theta_init,
         theta=theta,
     )
-
-
-def calibration(P: np.ndarray, y_idx: np.ndarray, bins: int = 15) -> tuple[float, float]:
-    """Negative log-likelihood and expected calibration error (top-label, equal-width bins)."""
-    nll = float(-np.mean(np.log(np.clip(P[np.arange(len(y_idx)), y_idx], 1e-12, None))))
-    conf, pred = P.max(1), P.argmax(1)
-    ece = 0.0
-    edges = np.linspace(0, 1, bins + 1)
-    for lo, hi in zip(edges[:-1], edges[1:]):
-        sel = (conf > lo) & (conf <= hi)
-        if sel.any():
-            ece += sel.mean() * abs(np.mean(pred[sel] == y_idx[sel]) - conf[sel].mean())
-    return nll, float(ece)
 
 
 def evaluate(m: GPDirichletClassifier, d) -> tuple[dict, np.ndarray, np.ndarray]:
@@ -155,15 +141,10 @@ SENSITIVITY_ALPHAS = (0.001, 0.003, 0.01, 0.03, 0.1)
 
 
 def sensitivity(out: Path) -> dict:
-    """Post-hoc analyses on the test set (not used for any modelling choice).
+    """Post-hoc check on the test set (not used for any modelling choice).
 
-    1. alpha_eps sensitivity of the final model, with its kernel hyper-parameters held fixed.
-    2. Exact McNemar test of the final GP against the repo's SVM on the same test samples.
+    alpha_eps sensitivity of the final model, with its kernel hyper-parameters held fixed.
     """
-    from scipy.stats import binomtest
-
-    from .baselines import SupervisedReference
-
     fin = json.loads((out / "final.json").read_text())
     d = load_statlog()
     rows = []
@@ -172,16 +153,10 @@ def sensitivity(out: Path) -> dict:
         metrics, _, _ = evaluate(m, d)
         rows.append({"alpha_eps": a, **{k: metrics[k] for k in ("OA", "AA", "kappa", "AURC", "NLL", "ECE")}})
         print(f"alpha_eps={a}: OA {100 * metrics['OA']:.2f}%", flush=True)
-    gp_pred = pd.read_csv(out / "final_test_probabilities.csv.gz")["pred"].to_numpy()
-    svm = SupervisedReference("svm", "full36", random_state=0).fit(d.X_train, d.y_train)
-    svm_pred = svm.scores(d.X_test)["pred"]
-    gp_ok, svm_ok = gp_pred == d.y_test, svm_pred == d.y_test
-    b, c = int(np.sum(gp_ok & ~svm_ok)), int(np.sum(~gp_ok & svm_ok))
+    gp_ok = pd.read_csv(out / "final_test_probabilities.csv.gz")["pred"].to_numpy() == d.y_test
     res = {
         "alpha_sensitivity": rows,
-        "mcnemar_vs_svm": {"svm_params": svm.best_params_, "svm_OA": float(svm_ok.mean()), "gp_OA": float(gp_ok.mean()),
-                           "gp_right_svm_wrong": b, "gp_wrong_svm_right": c,
-                           "p_value": float(binomtest(b, b + c, 0.5).pvalue) if b + c else 1.0},
+        "final_OA": float(gp_ok.mean()),
         "accuracy_standard_error": float(np.sqrt(gp_ok.mean() * (1 - gp_ok.mean()) / len(gp_ok))),
     }
     (out / "sensitivity.json").write_text(json.dumps(res, indent=2))
@@ -249,7 +224,6 @@ def report(out: Path) -> None:
     lines.append("")
     if (out / "sensitivity.json").exists():
         sens = json.loads((out / "sensitivity.json").read_text())
-        mc = sens["mcnemar_vs_svm"]
         lines += [
             "## Post-hoc checks on the test set (not used for any choice)",
             "",
@@ -264,10 +238,8 @@ def report(out: Path) -> None:
         lines += [
             "",
             f"**Statistical resolution.** With 2,000 test samples, the standard error of an accuracy near "
-            f"{pct(mc['gp_OA'])}% is {100 * sens['accuracy_standard_error']:.2f} points. Paired exact McNemar "
-            f"test, final GP vs. this repo's SVM ({pct(mc['svm_OA'])}%, {mc['svm_params']}): GP right and SVM "
-            f"wrong on {mc['gp_right_svm_wrong']} samples, the reverse on {mc['gp_wrong_svm_right']}, "
-            f"p = {mc['p_value']:.2f}.",
+            f"{pct(sens['final_OA'])}% is {100 * sens['accuracy_standard_error']:.2f} points. Differences of a few "
+            "tenths of a point between methods are therefore within noise.",
             "",
         ]
     (out / "summary.md").write_text("\n".join(lines) + "\n")

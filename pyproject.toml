@@ -3,28 +3,27 @@ requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sg-hfq"
-version = "0.1.0"
-description = "Spectral-Graph-Guided Hierarchical Fuzzy Quantization for selective land-cover classification (StatLog Landsat)"
+name = "dirichlet-gp"
+version = "1.0.0"
+description = "Dirichlet-based Gaussian-process classification for land-cover data (StatLog, Indian Pines, Pavia University, Salinas, Sentinel-2)"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.24",
     "scipy>=1.10",
-    "scikit-learn>=1.3",
     "pandas>=2.0",
-    "matplotlib>=3.7",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7", "scikit-fuzzy>=0.4.2", "pyreadr>=0.5", "h5py>=3"]
+dev = ["pytest>=7", "pyreadr>=0.5", "h5py>=3"]
 
 [project.scripts]
-sg-hfq-experiments = "sg_hfq.experiments:main"
+dirichlet-gp-benchmark = "dirichlet_gp.benchmark:main"
+dirichlet-gp-statlog = "dirichlet_gp.statlog_study:main"
 
 [tool.setuptools]
-packages = ["sg_hfq"]
+packages = ["dirichlet_gp"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

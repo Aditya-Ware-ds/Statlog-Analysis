@@ -40,11 +40,11 @@ environment could not reach `archive.ics.uci.edu`. They were checked as follows:
 
 The script verifies a SHA-256 digest of the parsed integer arrays, so either
 route must produce identical contents.
-`sg_hfq.data.load_statlog()` also re-checks the per-class counts on every load.
+`dirichlet_gp.data.load_statlog()` also re-checks the per-class counts on every load.
 
 ---
 
-# Hyperspectral benchmarks (`data/hsi/`, not committed)
+# Hyperspectral scenes (`data/hsi/`, not committed)
 
 Run `python scripts/fetch_hsi.py`. It tries the canonical UPV/EHU host
 (<https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes>)
@@ -73,4 +73,4 @@ public BreizhCrops L2A archives
 (<https://breizhcrops.s3.eu-central-1.amazonaws.com>; Russwurm et al., 2020)
 and writes `breizhcrops_l2a_2017_bimonthly.npz` (608,489 parcels x 60
 features) plus a JSON summary. The script documents every preprocessing step;
-see `BENCHMARK.md` for the full dataset description.
+see the main `README.md` for the full dataset description.

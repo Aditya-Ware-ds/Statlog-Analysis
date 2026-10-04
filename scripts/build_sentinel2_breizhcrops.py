@@ -1,4 +1,4 @@
-"""Build the Sentinel-2 crop-type dataset (BreizhCrops, Brittany, 2017) used by the benchmark.
+"""Build the Sentinel-2 crop-type dataset (BreizhCrops, Brittany, 2017) used for evaluation.
 
 Source: BreizhCrops (Russwurm et al., 2020), public S3 bucket
 ``breizhcrops.s3.eu-central-1.amazonaws.com``. For every agricultural parcel

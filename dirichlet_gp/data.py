@@ -1,10 +1,10 @@
-"""StatLog (Landsat Satellite) data loading and Phase 1 spectral representation.
+"""StatLog (Landsat Satellite) data loading and input standardisation.
 
 The StatLog Landsat data (UCI ML repository, dataset 146) stores, for each
 3x3 pixel neighbourhood, the four Landsat MSS spectral values of every pixel.
 Features are ordered pixel-major: the 4 band values of the top-left pixel come
 first, then the 4 values of the top-middle pixel, and so on, so feature index
-``4 * p + b`` holds band ``b`` of pixel ``p``.
+``4 * p + b`` holds band ``b`` of pixel ``p`` (pixel 4 is the centre).
 """
 
 from __future__ import annotations
@@ -28,14 +28,6 @@ CLASS_NAMES: dict[int, str] = {
     5: "soil with vegetation stubble",
     7: "very damp grey soil",
 }
-SHORT_NAMES: dict[int, str] = {
-    1: "red",
-    2: "cotton",
-    3: "grey",
-    4: "damp grey",
-    5: "stubble",
-    7: "v. damp grey",
-}
 
 #: Official split sizes and per-class counts (from the UCI documentation).
 OFFICIAL_COUNTS = {
@@ -52,10 +44,6 @@ class StatLogData:
     y_train: np.ndarray
     X_test: np.ndarray
     y_test: np.ndarray
-
-    @property
-    def classes(self) -> tuple[int, ...]:
-        return CLASS_CODES
 
 
 def read_sat_file(path: str | Path) -> tuple[np.ndarray, np.ndarray]:
@@ -85,71 +73,33 @@ def verify_official_split(data: StatLogData) -> None:
             raise ValueError(f"{split} split does not match the official class counts: {got}")
 
 
-def band_mean(X: np.ndarray) -> np.ndarray:
-    """Average each spectral band over the 3x3 neighbourhood: (N, 36) -> (N, 4)."""
-    X = np.asarray(X, dtype=np.float64)
-    if X.shape[1] != N_FEATURES:
-        raise ValueError(f"expected {N_FEATURES} features, got {X.shape[1]}")
-    return X.reshape(len(X), N_PIXELS, N_BANDS).mean(axis=1)
+class Standardizer:
+    """Z-score every feature with training statistics, optionally after a log transform.
 
-
-class SpectralRepresentation:
-    """Phase 1: spectral representation standardised with training statistics.
-
-    * ``"bandmean4"`` (the paper's recommendation for StatLog): the 36 raw
-      features are reduced to the 4 band means over the 3x3 window, then
-      z-scored (Eq. 1).
-    * ``"full36"`` / ``"standard"``: every raw feature z-scored.
-    * ``"log36"``: natural log of every raw (positive) feature, then z-scored.
-    * ``"pca"``: every feature z-scored, then projected on the first
-      ``n_components`` principal axes of the training data (unwhitened). This
-      is the high-dimensional analogue of the band-mean reduction: it keeps the
-      dominant spectral structure while avoiding near-singular class
-      covariances in hundreds of bands.
+    ``kind="standard"`` (alias ``"full36"``) z-scores the raw features;
+    ``kind="log36"`` takes the natural log of the (positive) raw values first.
     """
 
-    KINDS = ("bandmean4", "full36", "standard", "pca", "log36")
+    KINDS = ("standard", "full36", "log36")
 
-    def __init__(self, kind: str = "bandmean4", n_components: int = 10):
+    def __init__(self, kind: str = "standard"):
         if kind not in self.KINDS:
             raise ValueError(f"unknown representation {kind!r}; choose from {self.KINDS}")
         self.kind = kind
-        self.n_components = n_components
 
     def _project(self, X: np.ndarray) -> np.ndarray:
         X = np.asarray(X, dtype=np.float64)
-        if self.kind == "bandmean4":
-            return band_mean(X)
-        if self.kind == "log36":
-            return np.log(np.maximum(X, 1.0))
-        return X
+        return np.log(np.maximum(X, 1.0)) if self.kind == "log36" else X
 
-    def fit(self, X: np.ndarray) -> "SpectralRepresentation":
+    def fit(self, X: np.ndarray) -> "Standardizer":
         P = self._project(X)
         self.mean_ = P.mean(axis=0)
         std = P.std(axis=0)
         self.std_ = np.where(std > 0, std, 1.0)
-        if self.kind == "pca":
-            Z = (P - self.mean_) / self.std_
-            k = min(self.n_components, Z.shape[1], Z.shape[0])
-            _, s, Vt = np.linalg.svd(Z - Z.mean(axis=0), full_matrices=False)
-            # deterministic sign: largest loading of each axis is positive
-            signs = np.sign(Vt[np.arange(k), np.abs(Vt[:k]).argmax(axis=1)])
-            self.components_ = Vt[:k] * signs[:, None]
-            self.explained_variance_ratio_ = (s[:k] ** 2) / (s**2).sum()
         return self
 
     def transform(self, X: np.ndarray) -> np.ndarray:
-        Z = (self._project(X) - self.mean_) / self.std_
-        return Z @ self.components_.T if self.kind == "pca" else Z
+        return (self._project(X) - self.mean_) / self.std_
 
     def fit_transform(self, X: np.ndarray) -> np.ndarray:
         return self.fit(X).transform(X)
-
-    @property
-    def n_dims(self) -> int:
-        if self.kind == "bandmean4":
-            return N_BANDS
-        if self.kind == "pca":
-            return len(self.components_)
-        return len(self.mean_)

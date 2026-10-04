@@ -1,36 +1,19 @@
 import numpy as np
 import pytest
 
-from sg_hfq.data import DEFAULT_DATA_DIR, OFFICIAL_COUNTS, SpectralRepresentation, band_mean, load_statlog
+from dirichlet_gp.data import DEFAULT_DATA_DIR, OFFICIAL_COUNTS, Standardizer, load_statlog
 
 
-def test_band_mean_layout():
-    # pixel-major: feature 4*p + b is band b of pixel p
-    X = np.array([[b + 10 * p for p in range(9) for b in range(4)]], dtype=float)
-    assert band_mean(X).tolist() == [[40.0, 41.0, 42.0, 43.0]]
-
-
-def test_representation_standardises_with_training_stats():
+def test_standardizer_uses_training_statistics():
     rng = np.random.default_rng(0)
     X = rng.normal(50, 10, size=(100, 36))
-    rep = SpectralRepresentation("bandmean4").fit(X)
-    Z = rep.transform(X)
-    assert Z.shape == (100, 4) and np.allclose(Z.mean(0), 0) and np.allclose(Z.std(0), 1)
-    assert SpectralRepresentation("full36").fit_transform(X).shape == (100, 36)
+    Z = Standardizer("standard").fit_transform(X)
+    assert Z.shape == (100, 36) and np.allclose(Z.mean(0), 0) and np.allclose(Z.std(0), 1)
+    assert np.allclose(Standardizer("full36").fit_transform(X), Z)
+    L = Standardizer("log36").fit_transform(np.abs(X) + 1)
+    assert np.allclose(L.mean(0), 0)
     with pytest.raises(ValueError):
-        SpectralRepresentation("ica")
-
-
-def test_pca_representation():
-    rng = np.random.default_rng(1)
-    latent = rng.normal(size=(300, 3))
-    X = latent @ rng.normal(size=(3, 50)) + 0.01 * rng.normal(size=(300, 50))
-    rep = SpectralRepresentation("pca", n_components=5).fit(X)
-    Z = rep.transform(X)
-    assert Z.shape == (300, 5) and rep.n_dims == 5
-    assert rep.explained_variance_ratio_[:3].sum() > 0.99
-    assert np.all(np.diff(Z.var(axis=0)) <= 1e-9)  # ordered by variance, unwhitened
-    assert np.allclose(np.corrcoef(Z[:, :3], rowvar=False), np.eye(3), atol=1e-6)
+        Standardizer("pca")
 
 
 @pytest.mark.skipif(not (DEFAULT_DATA_DIR / "sat.trn").exists(), reason="StatLog data not present")

@@ -1,4 +1,0 @@
-seeding,runs,accuracy_ungated,accuracy_ungated_std,aurc_grade,aurc_grade_std,mean_xie_beni,total_fcm_iterations,nodes_identity_mapping,same_optimum_as_graph
-(A) random,10,0.35150000000000003,5.851389114294502e-17,0.6976952757346632,0.0,0.15724478322530214,118.4,0.48,10/10
-(B) class-centroid,1,0.567,,0.3435669127815289,,0.1477218132847877,619.0,1.0,-
-(C) graph-derived,1,0.3515,,0.6976952757346632,,0.1572448148364027,125.0,1.0,(itself)

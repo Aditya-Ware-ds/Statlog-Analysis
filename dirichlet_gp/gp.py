@@ -33,7 +33,7 @@ import numpy as np
 from scipy.linalg import cho_factor, cho_solve, solve_triangular
 from scipy.optimize import minimize
 
-from .data import N_BANDS, N_PIXELS, SpectralRepresentation
+from .data import N_BANDS, N_PIXELS, Standardizer
 
 SQRT5 = np.sqrt(5.0)
 
@@ -237,9 +237,10 @@ class GPDirichletClassifier:
 
     Parameters
     ----------
-    groups : length-scale group of each feature (after the representation);
+    representation : input standardisation, "standard" (alias "full36") or "log36".
+    groups : length-scale group of each feature (after standardisation);
         ``None`` gives one length-scale per feature.
-    kernel : "rbf" or "matern52".
+    kernel : "rbf", "matern52", or a ``GroupedKernel`` / ``SumKernel`` instance.
     permutations : optional feature permutations the kernel is made invariant to.
     alpha_eps : Dirichlet concentration of the non-observed classes.
     cache : cache the pairwise group distances during optimisation (fast,
@@ -251,7 +252,7 @@ class GPDirichletClassifier:
 
     def __init__(self, representation: str = "standard", groups=None, kernel: str = "rbf", permutations=None,
                  alpha_eps: float = 0.01, n_opt: int = 2000, max_iter: int = 100, n_mc: int = 256,
-                 jitter: float = 1e-6, random_state: int = 0, n_components: int = 10, theta=None,
+                 jitter: float = 1e-6, random_state: int = 0, theta=None,
                  cache: bool = True, theta_init=None):
         self.representation = representation
         self.groups = groups
@@ -263,7 +264,6 @@ class GPDirichletClassifier:
         self.n_mc = n_mc
         self.jitter = jitter
         self.random_state = random_state
-        self.n_components = n_components
         self.theta = theta
         self.cache = cache
         self.theta_init = theta_init
@@ -341,7 +341,7 @@ class GPDirichletClassifier:
 
     def fit(self, X: np.ndarray, y: np.ndarray, X_val=None, y_val=None):
         y = np.asarray(y)
-        self.rep_ = SpectralRepresentation(self.representation, self.n_components).fit(X)
+        self.rep_ = Standardizer(self.representation).fit(X)
         Z = self.rep_.transform(X)
         self.classes_ = np.unique(y)
         self.s_on_, self.s_off_ = self._noise_levels(self.alpha_eps)

@@ -1,8 +1,7 @@
 import numpy as np
 import pytest
 
-from sg_hfq.benchmark import classification_metrics
-from sg_hfq.datasets import capped_sample, stratified_split
+from dirichlet_gp.datasets import capped_sample, stratified_split
 
 
 def test_stratified_split_is_disjoint_and_covers_all():
@@ -25,12 +24,3 @@ def test_capped_sample():
     y = np.repeat([0, 1], [1000, 7])
     idx = capped_sample(np.arange(len(y)), y, 50, np.random.default_rng(0))
     assert (y[idx] == 0).sum() == 50 and (y[idx] == 1).sum() == 7
-
-
-def test_classification_metrics():
-    y = np.array([1, 1, 1, 1, 2, 2])
-    p = np.array([1, 1, 1, 2, 2, 1])
-    m, recall = classification_metrics(y, p, (1, 2))
-    assert m["OA"] == pytest.approx(4 / 6)
-    assert recall == {1: 0.75, 2: 0.5} and m["AA"] == pytest.approx(0.625)
-    assert -1 <= m["kappa"] <= 1

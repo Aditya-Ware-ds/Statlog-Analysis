@@ -1,0 +1,6 @@
+Dataset,Overall accuracy,Average accuracy,Kappa x100,Macro F1 x100,AURC,Risk @ 80% coverage
+StatLog (Landsat MSS),91.5 ± 0.1,89.5 ± 0.1,89.5 ± 0.2,90.0 ± 0.1,1.2 ± 0.0,2.1 ± 0.1
+Indian Pines (AVIRIS),81.1 ± 0.6,75.4 ± 1.5,78.2 ± 0.7,77.8 ± 1.9,5.8 ± 0.2,11.1 ± 0.3
+Pavia University (ROSIS),91.7 ± 0.4,86.9 ± 0.7,88.9 ± 0.5,89.1 ± 0.6,1.5 ± 0.1,2.5 ± 0.2
+Salinas (AVIRIS),91.3 ± 0.1,94.7 ± 0.2,90.3 ± 0.2,94.9 ± 0.1,1.7 ± 0.1,2.6 ± 0.0
+Sentinel-2 crop types (Brittany),68.3 ± 1.2,57.7 ± 0.3,60.6 ± 1.3,49.7 ± 0.6,14.0 ± 1.0,24.7 ± 1.3

@@ -44,9 +44,9 @@ Per-class accuracy: class 1: 99.6%, class 2: 97.8%, class 3: 94.2%, class 4: 61.
 | L2-loss Crammer-Singer SVM, Lee & Lin, as quoted | 92.45 |
 | Crammer-Singer SVM, Hsu & Lin (2002), as quoted | 92.35 |
 | **GP, `matern52_band_orbit_invariant`, final model** | 91.65 |
-| SVM (RBF), this repo, 36-D | 91.50 |
+| RBF SVM, earlier version of this repository (commit 126d53a) | 91.50 |
 | GP, `matern52_band_orbit_invariant`, subset hyper-parameters | 91.40 |
-| Random Forest, this repo, 36-D | 91.20 |
+| Random Forest, earlier version of this repository (commit 126d53a) | 91.20 |
 
 ## Post-hoc checks on the test set (not used for any choice)
 
@@ -60,5 +60,5 @@ Per-class accuracy: class 1: 99.6%, class 2: 97.8%, class 3: 94.2%, class 4: 61.
 | 0.03 | 91.65 | 89.69 | 89.71 | 1.19 | 0.252 | 3.92 |
 | 0.1 | 91.70 | 89.80 | 89.78 | 1.23 | 0.396 | 17.55 |
 
-**Statistical resolution.** With 2,000 test samples, the standard error of an accuracy near 91.65% is 0.62 points. Paired exact McNemar test, final GP vs. this repo's SVM (91.50%, {'C': 10, 'gamma': 0.1}): GP right and SVM wrong on 50 samples, the reverse on 47, p = 0.84.
+**Statistical resolution.** With 2,000 test samples, the standard error of an accuracy near 91.65% is 0.62 points. Differences of a few tenths of a point between methods are therefore within noise.
 

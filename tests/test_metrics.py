@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from sg_hfq.metrics import aurc, optimal_aurc, pairwise_error_rates, risk_at_coverage, risk_coverage
+from dirichlet_gp.metrics import aurc, calibration, classification_metrics, optimal_aurc, risk_at_coverage, risk_coverage
 
 
 def test_risk_coverage_simple():
@@ -34,8 +34,20 @@ def test_optimal_aurc_is_a_lower_bound():
     assert risk_at_coverage(correct, correct.astype(float), 0.5) == 0.0
 
 
-def test_pairwise_error_rates():
-    y = np.array([1, 1, 2, 2, 3])
-    p = np.array([1, 2, 2, 1, 3])
-    E = pairwise_error_rates(y, p, (1, 2, 3))
-    assert E[0, 1] == pytest.approx(2 / 4) and E[0, 2] == 0 and np.allclose(E, E.T)
+def test_classification_metrics_hand_computed():
+    y = np.array([1, 1, 1, 1, 2, 2])
+    p = np.array([1, 1, 1, 2, 2, 1])
+    m, recall = classification_metrics(y, p, (1, 2))
+    assert m["OA"] == pytest.approx(4 / 6)
+    assert recall == {1: 0.75, 2: 0.5} and m["AA"] == pytest.approx(0.625)
+    # p_o = 4/6, p_e = (4/6)(4/6) + (2/6)(2/6) = 20/36
+    assert m["kappa"] == pytest.approx((4 / 6 - 20 / 36) / (1 - 20 / 36))
+    # F1(1) = 2*3/(4+4) = 0.75, F1(2) = 2*1/(2+2) = 0.5
+    assert m["macro_F1"] == pytest.approx(0.625)
+
+
+def test_calibration():
+    P = np.array([[0.9, 0.1], [0.2, 0.8], [0.6, 0.4]])
+    nll, ece = calibration(P, np.array([0, 1, 1]))
+    assert nll == pytest.approx(-np.mean(np.log([0.9, 0.8, 0.4])))
+    assert 0 <= ece <= 1
